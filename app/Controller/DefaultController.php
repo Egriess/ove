@@ -68,4 +68,37 @@ class DefaultController extends Controller
 		$authManager->logUserOut();
 		$this->redirectToRoute('login');
 	}
+
+	public function mail()
+	{
+		$addCC='';
+		$addBCC='';
+		$mailReplyTo = '';
+		$mailRecipient='';
+		$email = $_POST['mail'];
+		$subject = $_POST['subject'];
+		$message = $_POST['message'];
+
+
+		$mail = new PHPMailer;
+
+		$mail->setFrom($email, 'Mailer');
+		$mail->addAddress($email, 'Joe User');     // Add a recipient
+		$mail->addAddress($mailRecipient);               // Name is optional
+		$mail->addReplyTo($mailReplyTo, 'Information');
+		$mail->addCC($addCC);
+		$mail->addBCC($addBCC);
+		
+		$mail->Subject = $subject;
+		$mail->Body    = $message;
+		$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+		
+		if(!$mail->send()) {
+		    echo '<h1>Message could not be sent.';
+		    echo 'Mailer Error: </h1>' . $mail->ErrorInfo;
+		} else {
+			
+		    echo '<h1>Message has been sent</h1>';
+		}
+			}
 }

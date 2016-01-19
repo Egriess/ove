@@ -1,3 +1,111 @@
+
+#gallery{
+  /* The pics container */
+  width:100%;
+  height:580px;
+  background: #E3E3E3;
+  margin: auto;
+}
+
+#album{
+  height: 580px;
+}
+
+.pic, .pic a{
+  /* Each picture and the hyperlink inside it */
+  width:100px;
+  height:100px;
+  overflow:hidden;  
+}
+
+.pic{
+  /* Styles specific to the pic class */
+  
+  border:5px solid #EEEEEE;
+  border-bottom:18px solid #eeeeee;
+  
+  /* CSS3 Box Shadow */
+  -moz-box-shadow:2px 2px 3px #333333;
+  -webkit-box-shadow:2px 2px 3px #333333;
+  box-shadow:2px 2px 3px #333333;
+}
+
+.pic a{
+  /* Specific styles for the hyperlinks */
+  text-indent:-999px;
+  display:block;
+  /* Setting display to block enables advanced styling for links */
+}
+
+.drop-box{
+  /* The share box */
+  width:240px;
+  height:130px;
+  position:absolute;
+  bottom:0;
+  right:0;
+  z-index:0;
+  
+  background:url(img/drop_box.png) no-repeat;
+}
+
+.drop-box.active{
+  /* The active style is in effect when there is a pic hovering above the box */
+  background-position:bottom right;
+}
+
+label, input{
+  /* The modal dialog URL field */
+  display:block;
+  padding:3px;
+}
+
+label{
+  font-size:10px;
+}
+
+fieldset{
+  border:0;
+  margin-top:10px;
+}
+
+#url{
+  /* The URL field */
+  width:240px;
+}
+
+
+#orig{
+  /* The link that is positioned above the title */
+  font-family:"MyRiad Pro",Arial;
+  font-size:10px;
+  letter-spacing:1px;
+  padding-bottom:15px;
+  text-transform:uppercase;
+  float:right;
+}
+
+hr{
+  /* The horizontal ruler */
+  background-color:#BBBBBB;
+  border:medium none;
+  color:#BBBBBB;
+  height:1px;
+  margin:30px auto;
+  width:450px;
+}
+
+.clear{
+  /* The clearfix hack */
+  clear:both;
+}
+
+.container{
+  /* The main container */
+  width:1360px;
+  margin: auto;
+}
+
 h1{
 	text-transform: uppercase;
 }
@@ -6,7 +114,6 @@ header{
 	margin: auto;
 	width: 100%;
   height: 120px;
-
 }
 
 header nav h1 {
@@ -32,11 +139,10 @@ header nav h1 {
   text-align: center;
 }
 
-#gallery{
-	width: 100%;
-	height: 450px;
-	background: #E3E3E3;
-}
+
+
+
+
 #loginform{
   width: 50%;
 }
@@ -62,7 +168,6 @@ header nav h1 {
 #backheader a{
   text-decoration: none;
   margin-left: 20px;
- 
 }
 
 /* CSS Library */ 
@@ -310,3 +415,179 @@ h4 {
 .bottom-text p {
   max-width: 650px;
 }
+
+form{
+  width: 100%;
+  background: rgba(97,97,97,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(97,97,97,1) 0%, rgba(0,0,0,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(97,97,97,1)), color-stop(100%, rgba(0,0,0,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(97,97,97,1) 0%, rgba(0,0,0,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(97,97,97,1) 0%, rgba(0,0,0,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(97,97,97,1) 0%, rgba(0,0,0,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(97,97,97,1) 0%, rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#616161', endColorstr='#000000', GradientType=1 );
+  margin: auto; 
+  border-radius: 1em;
+  color: #D3D3D3;
+}
+
+
+#contact{
+  width: 100%;
+  height: 53em;
+  background-color: #A5A5A5;
+  padding-top: 2em;
+  margin: auto;
+}
+
+#contact textarea{
+  width: 80%;
+  margin-left: 4em;
+  margin-right: 2em;
+  height: 10em;
+}
+
+form:hover{
+  box-shadow: 1em 1em 1em ;
+}
+
+#contact label{
+
+  padding: 2%;
+  font-size: 1.5em;
+}
+
+#contact input{
+margin: auto;
+margin-left: 4em;
+margin-right: 2em;
+}
+
+.form-control{
+  width: 90%;
+}
+
+.btn{
+  margin-left: 4em;
+  margin-bottom: 3em;
+}
+
+@media screen and (min-width:768px) and (max-width:1024px ) {
+
+      form{
+      width: 65%;
+      background: rgba(97,97,97,1);
+      background: -moz-radial-gradient(center, ellipse cover, rgba(97,97,97,1) 0%, rgba(0,0,0,1) 100%);
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(97,97,97,1)), color-stop(100%, rgba(0,0,0,1)));
+      background: -webkit-radial-gradient(center, ellipse cover, rgba(97,97,97,1) 0%, rgba(0,0,0,1) 100%);
+      background: -o-radial-gradient(center, ellipse cover, rgba(97,97,97,1) 0%, rgba(0,0,0,1) 100%);
+      background: -ms-radial-gradient(center, ellipse cover, rgba(97,97,97,1) 0%, rgba(0,0,0,1) 100%);
+      background: radial-gradient(ellipse at center, rgba(97,97,97,1) 0%, rgba(0,0,0,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#616161', endColorstr='#000000', GradientType=1 );
+      margin: auto;
+     
+      border-radius: 1em;
+      color: #D3D3D3;
+    }
+    
+    
+    #contact{
+      width: 100%;
+      height: 53em;
+      background-color: #A5A5A5;
+      padding-top: 2em;
+      margin: auto;  
+    }
+    
+    #contact textarea{
+      width: 80%;
+      margin-left: 4em;
+      margin-right: 2em;
+      height: 10em;
+    }
+    
+    form:hover{
+      box-shadow: 1em 1em 1em ;
+    }
+    
+    #contact label{
+    
+      padding: 1%;
+      font-size: 1.5em;
+    }
+    
+    #contact input{
+    margin: auto;
+    margin-left: 4em;
+    margin-right: 2em;
+    }
+    
+    .form-control{
+      width: 80%;
+    }
+    
+    .btn{
+      margin-left: 4em;
+      margin-bottom: 3em;
+    }
+}
+
+@media screen and (max-width:768px){
+  
+    form{
+      width: 50%;
+      background: rgba(97,97,97,1);
+      background: -moz-radial-gradient(center, ellipse cover, rgba(97,97,97,1) 0%, rgba(0,0,0,1) 100%);
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(97,97,97,1)), color-stop(100%, rgba(0,0,0,1)));
+      background: -webkit-radial-gradient(center, ellipse cover, rgba(97,97,97,1) 0%, rgba(0,0,0,1) 100%);
+      background: -o-radial-gradient(center, ellipse cover, rgba(97,97,97,1) 0%, rgba(0,0,0,1) 100%);
+      background: -ms-radial-gradient(center, ellipse cover, rgba(97,97,97,1) 0%, rgba(0,0,0,1) 100%);
+      background: radial-gradient(ellipse at center, rgba(97,97,97,1) 0%, rgba(0,0,0,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#616161', endColorstr='#000000', GradientType=1 );
+      margin: auto;
+      border-radius: 1em;
+      color: #D3D3D3;
+    }
+
+
+    #contact{
+      width: 100%;
+      height: 53em;
+      background-color: #A5A5A5;
+      padding-top: 2em;
+      margin: auto;  
+    }
+
+    #contact textarea{
+      width: 80%;
+      margin-left: 4em;
+      margin-right: 2em;
+      height: 10em;
+    }
+    
+    form:hover{
+      box-shadow: 1em 1em 1em ;
+    }
+    
+    #contact label{
+    
+      padding: 1%;
+      font-size: 1.5em;
+    }
+    
+    #contact input{
+    margin: auto;
+    margin-left: 4em;
+    margin-right: 2em;
+    }
+    
+    .form-control{
+      width: 80%;
+    }
+    
+    .btn{
+      margin-left: 4em;
+      margin-bottom: 3em;
+    }
+}
+
