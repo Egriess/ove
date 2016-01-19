@@ -27,8 +27,48 @@
 	</div>
 
 	<div id="testimoniaux">
-		<div class="container">
+			<a href="#testimonialpopup" class="hinge">Editer le testimonial</a>
+			<div id="testimonialpopup" class="white-popup mfp-with-anim mfp-hide">
+
+				<form enctype="multipart/form-data" action="#" method="post">
+					<img src="assets/imgs/<?= $avatars[0] ?>" />
+					<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+					<input type="file" name="img_avatar_1" value="Modifier">
+					<input type="submit" name="submit_avatar_1" value="Envoyer">	
+				</form>
+
+				<form enctype="multipart/form-data" action="#" method="post">
+					<img src="assets/imgs/<?= $avatars[1] ?>" />
+					<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+					<input type="file" name="img_avatar_2" value="Modifier">
+					<input type="submit" name="submit_avatar_2" value="Envoyer">	
+				</form>
+
+				<form enctype="multipart/form-data" action="#" method="post">
+					<img src="assets/imgs/<?= $avatars[2] ?>" />
+					<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+					<input type="file" name="img_avatar_3" value="Modifier">
+					<input type="submit" name="submit_avatar_3" value="Envoyer">	
+				</form>
+
+
+
+				<form action="#" method="POST" accept-charset="utf-8">
+					<textarea name="testi-area" placeholder=""><?= $testis[0] ?></textarea>
+					<input type="submit" name="submit_text" value="submit">
+				</form>
+
+				<form action="#" method="POST" accept-charset="utf-8">
+					<textarea name="testi-area" placeholder=""><?= $testis[1] ?></textarea>
+					<input type="submit" name="submit_text" value="submit">
+				</form>
+
+				<form action="#" method="POST" accept-charset="utf-8">
+					<textarea name="testi-area" placeholder=""><?= $testis[2] ?></textarea>
+					<input type="submit" name="submit_text" value="submit">
+				</form> 
 			
 		</div>
 	</div>
+	
 <?php $this->stop('main_content') ?>

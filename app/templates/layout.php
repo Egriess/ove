@@ -10,13 +10,16 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/modals.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/bootstrap.min.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/bootstrap.min.css.map') ?>">
+	<link rel="stylesheet" href="<?= $this->assetUrl('css/testimonial.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
+
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-2.2.0.min.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/bootstrap.min.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/buttons.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/core.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/header.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery.magnific-popup.min.js') ?>"></script>
+	<script type="text/javascript" src="<?= $this->assetUrl('js/testimonial.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/modal.js') ?>"></script>
 </head>
 <body>
@@ -37,7 +40,7 @@
 			</nav>
 		
 	</header>
-
+		
 		<section>
 			<?= $this->section('main_content') ?>
 		</section>
