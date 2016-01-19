@@ -117,7 +117,14 @@ class DefaultController extends Controller
 		$optionAvatarToDisplay2 = $optionManager->getAvatar(2);
 		$optionAvatarToDisplay3 = $optionManager->getAvatar(3);
 
-		$this->show('default/backoffice',['avatars'=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3]]);
+		$optionUpTestiToDisplay1 = $optionManager->GetTestimonial(1);
+		$optionUpTestiToDisplay2 = $optionManager->GetTestimonial(2);
+		$optionUpTestiToDisplay3 = $optionManager->GetTestimonial(3);
+
+		$this->show('default/backoffice',[
+			'avatars'=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
+			'testis'=> [$optionUpTestiToDisplay1, $optionUpTestiToDisplay2, $optionUpTestiToDisplay3],
+		]);
 	}
 
 	public function register(){
@@ -188,11 +195,13 @@ class DefaultController extends Controller
 
 	public function GetTesti()
 	{
+		/*
 		$optionManager = new \Manager\OptionsManager();
 		$optionTestiToDisplay1 = $optionManager->GetTestimonial(1);
 		$optionTestiToDisplay2 = $optionManager->GetTestimonial(2);
 		$optionTestiToDisplay3 = $optionManager->GetTestimonial(3);
 		$this->show('default/backoffice',['testis'=>[$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3]]);
+		*/
 	}
 
 	public function Uptesti()
