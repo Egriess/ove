@@ -6,10 +6,6 @@ $(function(){
 	 var h,t;
 	 var y = 0;
 
-	$( window ).scroll(function() {
-		$('nav').addClass('emptybg');
-	});
-
 
 	$('a[href]').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
@@ -47,12 +43,7 @@ $('a.hinge').magnificPopup({
 });
 
 
-// Sliders
-$('#fontSize, #strokeSize').slider({
-	formatter: function(value) {
-		return value + 'px';
-	}
-});
+
 
 $('#fontSize, #strokeSize').on('slide', function() {
   update();
