@@ -11,6 +11,9 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/bootstrap.min.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/bootstrap.min.css.map') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
+	<link rel="stylesheet" href="<?= $this->assetUrl('css/demo.css') ?>">
+	
+	<link rel="stylesheet" href="<?= $this->assetUrl('css/jquery.fancybox-1.2.6.css') ?>">
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-2.2.0.min.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/bootstrap.min.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/buttons.js') ?>"></script>
@@ -18,6 +21,12 @@
 	<script type="text/javascript" src="<?= $this->assetUrl('js/header.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery.magnific-popup.min.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/modal.js') ?>"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery.fancybox-1.2.6.pack.js') ?>"></script>
+	<script type="text/javascript" src="<?= $this->assetUrl('js/script.js') ?>"></script>
+
+	
 </head>
 <body>
 	
@@ -40,6 +49,7 @@
 
 		<section>
 			<?= $this->section('main_content') ?>
+		
 		</section>
 
 		<footer>
