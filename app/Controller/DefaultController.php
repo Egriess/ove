@@ -99,31 +99,29 @@ class DefaultController extends Controller
 			}
 
 			$optionManager->changeAvatar(3, $filePath);
-			// Appel de la fonction changePicSlider
-
 		}
 
-		if(isset($_POST['submit_text'])){
-			UpdateTesti(1, $_POST['testi-area']);
+		if(isset($_POST['submit_text1'])){
+			$optionManager->UpdateTesti(1, $_POST['testi-area']);
 		}
-		if(isset($_POST['submit_text'])){
-			UpdateTesti(2, $_POST['testi-area']);
+		if(isset($_POST['submit_text2'])){
+			$optionManager->UpdateTesti(2, $_POST['testi-area']);
 		}
-		if(isset($_POST['submit_text'])){
-			UpdateTesti(3, $_POST['testi-area']);
+		if(isset($_POST['submit_text3'])){
+			$optionManager->UpdateTesti(3, $_POST['testi-area']);
 		}
 		
 		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
 		$optionAvatarToDisplay2 = $optionManager->getAvatar(2);
 		$optionAvatarToDisplay3 = $optionManager->getAvatar(3);
 
-		$optionUpTestiToDisplay1 = $optionManager->GetTestimonial(1);
-		$optionUpTestiToDisplay2 = $optionManager->GetTestimonial(2);
-		$optionUpTestiToDisplay3 = $optionManager->GetTestimonial(3);
+		$optionTestiToDisplay1 = $optionManager->GetTestimonial(1);
+		$optionTestiToDisplay2 = $optionManager->GetTestimonial(2);
+		$optionTestiToDisplay3 = $optionManager->GetTestimonial(3);
 
 		$this->show('default/backoffice',[
 			'avatars'=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
-			'testis'=> [$optionUpTestiToDisplay1, $optionUpTestiToDisplay2, $optionUpTestiToDisplay3],
+			'testis'=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 		]);
 	}
 
@@ -131,8 +129,21 @@ class DefaultController extends Controller
 		$this->show('default/register');
 	}
 
-	public function onepage(){
-		$this->show('default/onepage');
+	public function onepage()
+	{
+		$optionManager = new \Manager\OptionsManager();
+		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
+		$optionAvatarToDisplay2 = $optionManager->getAvatar(2);
+		$optionAvatarToDisplay3 = $optionManager->getAvatar(3);
+
+		$optionTestiToDisplay1 = $optionManager->GetTestimonial(1);
+		$optionTestiToDisplay2 = $optionManager->GetTestimonial(2);
+		$optionTestiToDisplay3 = $optionManager->GetTestimonial(3);
+
+		$this->show('default/onepage',[
+			'avatars'=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
+			'testis'=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
+		]);
 	}
 
 	public function login()
@@ -212,4 +223,5 @@ class DefaultController extends Controller
 		$optionUpTestiToDisplay3 = $optionManager->UpdateTesti(3, $newText);
 		$this->show('default/backoffice',['textTesti'=>[$optionUpTestiToDisplay1, $optionUpTestiToDisplay2, $optionUpTestiToDisplay3]]);
 	}
+
 }

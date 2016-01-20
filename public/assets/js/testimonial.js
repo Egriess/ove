@@ -1,5 +1,4 @@
-$(function(){
-	console.log('DOM Loaded');	
+$(function(){	
 
 	//fonction flip testimonial
 
@@ -14,7 +13,7 @@ $(function(){
 			// If the element has already been flipped, use the revertFlip method
 			// defined by the plug-in to revert to the default state automatically:
 
-			elem.revertFlip().css({backgroundImage: 'url("imgs/back50.jpg")'});
+			elem.revertFlip()//.css({backgroundImage: 'url("imgs/back50.jpg")'});
 
 
 			// Unsetting the flag:
@@ -40,7 +39,7 @@ $(function(){
 
 			// Setting the flag:
 			elem.data('flipped',true);
-			$('#back50').css({backgroundImage: 'none'});
+			//$('#back50').css({backgroundImage: 'none'});
 		}
 	});
 });

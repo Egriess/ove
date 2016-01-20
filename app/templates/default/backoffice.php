@@ -55,17 +55,17 @@
 
 				<form action="#" method="POST" accept-charset="utf-8">
 					<textarea name="testi-area" placeholder=""><?= $testis[0] ?></textarea>
-					<input type="submit" name="submit_text" value="submit">
+					<input type="submit" name="submit_text1" value="submit">
 				</form>
 
 				<form action="#" method="POST" accept-charset="utf-8">
 					<textarea name="testi-area" placeholder=""><?= $testis[1] ?></textarea>
-					<input type="submit" name="submit_text" value="submit">
+					<input type="submit" name="submit_text2" value="submit">
 				</form>
 
 				<form action="#" method="POST" accept-charset="utf-8">
 					<textarea name="testi-area" placeholder=""><?= $testis[2] ?></textarea>
-					<input type="submit" name="submit_text" value="submit">
+					<input type="submit" name="submit_text3" value="submit">
 				</form> 
 			
 		</div>

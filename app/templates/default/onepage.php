@@ -7,7 +7,6 @@
 
 	</div>
 </div>
-
 <div id="testimoniaux">
 	<div class="container">
 		<!-- Testimonial 1-->
@@ -18,8 +17,8 @@
 			</div>
 
 			<div class="sponsorData">
-				<div class="sponsorDescription2">
-					<p><?= $optionTestiToDisplay1 ?></p>
+				<div class="sponsorDescription">
+					<p><?= $testis[0] ?></p>
 				</div>
 			</div>
 		</div>
@@ -27,13 +26,13 @@
 		<!-- Testimonial 2-->
 		<div title="Click to flip" class="testimonial">
 			<div id="back50" class="testiFlip">
-				<img class="avat" alt="Avatar" src="imgs/<?= $avatars[1] ?>">
+				<img class="avat" alt="Avatar" src="assets/imgs/<?= $avatars[1] ?>">
 				<p>John Doe 2</p>
 			</div>
 
 			<div class="sponsorData">
 				<div class="sponsorDescription">
-					<p><?= $optionTestiToDisplay2 ?></p>
+					<p><?= $testis[1] ?></p>
 					
 				</div>
 			</div>
@@ -42,13 +41,13 @@
 		<!-- Testimonial 3-->
 		<div title="Click to flip" class="testimonial">
 			<div id="back100" class="testiFlip">
-				<img class="avat" alt="Avatar" src="imgs/<?= $avatars[2] ?>">
+				<img class="avat" alt="Avatar" src="assets/imgs/<?= $avatars[2]?>">
 				<p>John Doe 3</p>
 			</div>
 
 			<div class="sponsorData">
 				<div class="sponsorDescription">
-					<p id="back100text"><?= $optionTestiToDisplay3 ?></p>
+					<p id="back100text"><?= $testis[2] ?></p>
 					
 				</div>
 			</div>
