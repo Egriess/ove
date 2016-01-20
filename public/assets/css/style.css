@@ -32,11 +32,6 @@ header nav h1 {
   text-align: center;
 }
 
-#gallery{
-	width: 100%;
-	height: 450px;
-	background: #E3E3E3;
-}
 #loginform{
   width: 50%;
 }
@@ -309,4 +304,155 @@ h4 {
 }
 .bottom-text p {
   max-width: 650px;
+}
+
+#gallery{
+  /* The pics container */
+ 
+  width:100%;
+  position:relative;
+  height: 450px;
+  background: url("https://michelelie.files.wordpress.com/2013/10/3097-mur-en-bois-wallfizz.jpg");
+ 
+}
+
+#galleryback{
+    width:100%;
+  position:relative;
+  height: 450px;
+}
+ 
+.pic, .pic a{
+  /* Each picture and the hyperlink inside it */
+  width:100px;
+  height:100px;
+  overflow:hidden;
+}
+ 
+.pic{
+  /* Styles specific to the pic class */
+  position:absolute;
+  border:5px solid #EEEEEE;
+  border-bottom:18px solid #eeeeee;
+  /* CSS3 Box Shadow */
+  -moz-box-shadow:2px 2px 3px #333333;
+  -webkit-box-shadow:2px 2px 3px #333333;
+  box-shadow:2px 2px 3px #333333;
+}
+ 
+.pic a{
+  /* Specific styles for the hyperlinks */
+  text-indent:-999px;
+  display:block;
+  /* Setting display to block enables advanced styling for links */
+}
+ 
+.drop-box{
+  /* The share box */
+  width:240px;
+  height:130px;
+  position:absolute;
+  bottom:0;
+  right:0;
+  z-index:0;
+ 
+  background:url(img/drop_box.png) no-repeat;
+}
+ 
+.drop-box.active{
+  /* The active style is in effect when there is a pic hovering above the box */
+  background-position:bottom left;
+}
+ 
+label, input{
+  /* The modal dialog URL field */
+  display:block;
+  padding:3px;
+}
+ 
+label{
+  font-size:10px;
+}
+ 
+fieldset{
+  border:0;
+  margin-top:10px;
+}
+ 
+#url{
+  /* The URL field */
+  width:240px;
+}
+#loginform{
+  width: 50%;
+}
+ 
+#testimoniaux{
+  height: 450px;
+  width: 100%;
+  background: #8464EE;
+}
+ 
+#text{
+  width: 100%;
+  height: 860px;
+  background: #408ff4;
+}
+ 
+#backheader{
+  padding: 20px;
+  width: 100%;
+  height: 30px;
+  background: #9bdbf4;
+}
+#backheader a{
+  text-decoration: none;
+  margin-left: 20px;
+ 
+}
+ 
+/* CSS Library */
+ 
+ 
+ 
+/* text-based popup styling */
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 25px;
+  width: auto;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* ====== Form ====== */
+
+#maps form{
+  
+  background-color:#E4E4E4; 
+  display: inline-block;
+}
+
+/* ====== Maps ====== */
+#maps{
+  height: 450px;
+  width: 100%;
+  background: #EEE364;
+}
+
+#map{
+  height: 400px;
+  width: 40%;
+  margin: 20px;
+  border-radius: 20px;
+  float: left;
+  
+}
+
+#floating-panel{
+  background-color: #D6D6D6;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
 }

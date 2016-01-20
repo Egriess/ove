@@ -8,4 +8,13 @@ class OptionsManager extends \W\Manager\Manager
 	{
 		//...
 	}
+
+	function saveAdress(){
+
+		$sql = 'UPDATE options SET option_value  WHERE option_name = "adresse"';
+		$stmt = $this->$dbh->prepare($sql);
+		$stmt->execute();
+	}
+
+
 }

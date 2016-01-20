@@ -25,6 +25,8 @@ class DefaultController extends Controller
 	}
 
 	public function onepage(){
+		$optionManager= new \Manager\OptionsManager();
+
 		$this->show('default/onepage');
 	}
 
@@ -68,4 +70,7 @@ class DefaultController extends Controller
 		$authManager->logUserOut();
 		$this->redirectToRoute('login');
 	}
+
+	
+
 }

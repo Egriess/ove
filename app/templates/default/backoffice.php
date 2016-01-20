@@ -18,10 +18,59 @@
 						<span> Choisir la couleur du menu</span>
 						<input type="color" value="#fad345" name="textcolor">
 					</div>
-	</div>
 
-	<div id="gallery">
-		<div class="container">
+	</div>
+			<a href="#gallerypopup" class="hinge">Choisir les image</a>
+					<div id="gallerypopup" class="white-popup mfp-with-anim mfp-hide">
+					<span> Choisir les images</span>
+	<div id="galleryback">
+		<div class="containerback">
+					<!-- POP UP edit -->
+
+			<form enctype="multipart/form-data" action="#" method="post">
+				<input type="hidden" name="MAX_FILE_SIZE" value="300000000" />
+				Sélectionner un fichier : <input name="my-file" type="file" />
+				<input type="submit" name="submit" value="Envoyer le fichier" />	
+			</form>
+
+			<?php 
+
+				if (isset($_POST['submit'])){
+
+			$finfo = new \finfo(FILEINFO_MIME_TYPE);
+
+	
+			$mimeType = $finfo->file($_FILES['my-file']['tmp_name']);
+
+
+			$extFoundInArray = array_search(
+       		 $mimeType,
+        		array(
+        	    	'jpg' => 'image/jpeg',
+        	   		'png' => 'image/png',
+      		     	 'gif' => 'image/gif',
+       			 )
+   			 );
+
+    		if ($extFoundInArray === false) {
+    			echo 'Le fichier n\'est pas une image';
+    		die();
+   			 }
+
+
+			$path = 'assets/img/thumbs/'. sha1_file($_FILES['my-file']['tmp_name']) . '.' . $extFoundInArray;	
+			$path2 = 'assets/img/original/'. sha1_file($_FILES['my-file']['tmp_name']) . '.' . $extFoundInArray;	
+			$moved = move_uploaded_file($_FILES['my-file']['tmp_name'], $path);
+			
+			if($moved){
+				copy($path,$path2);
+			};
+		
+}	
+		
+	?>		
+		
+	</div>					
 
 		</div>
 	</div>
@@ -31,4 +80,27 @@
 			
 		</div>
 	</div>
+
+
+<div id="maps">
+	<div class="container">
+		<div id="map"></div>
+			<div id="floating-panel">
+				<form action="#" method="POST" accept-charset="utf-8">
+      			<input id="address" type="textbox" value="" placeholder="Entrée votre adresse">
+      			<input id="submit" name="submit_adress" type="button" value="Validé cette adresse">
+     		 </form>
+
+     		 <?php
+
+     		 	if(isset( $_POST["submit_adress"])){
+
+
+     		 		saveAdress();
+     		 	}
+
+     		 ?>
+   			</div>
+	</div>
+</div>
 <?php $this->stop('main_content') ?>
