@@ -290,6 +290,7 @@ a:visited {
 
 a:hover {
   color: #408ff4;
+  cursor: pointer;
 }
 
 .links li {

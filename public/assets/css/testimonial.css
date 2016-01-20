@@ -3,11 +3,12 @@
   width:250px;
   height:350px;
   float:left;
-  margin:4px;
+  margin-right:80px;
+  margin-top: 6px;
 
   /* Giving the sponsor div a relative positioning: */
   position:relative;
-  left: 555px;
+  left: 255px;
   cursor:pointer;
 }
 
