@@ -30,42 +30,54 @@
 			<a href="#testimonialpopup" class="hinge">Editer le testimonial</a>
 			<div id="testimonialpopup" class="white-popup mfp-with-anim mfp-hide">
 
-				<form enctype="multipart/form-data" action="#" method="post">
+				<form class="selectAvatar" enctype="multipart/form-data" action="#" method="post">
 					<img src="assets/imgs/<?= $avatars[0] ?>" />
 					<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
-					<input type="file" name="img_avatar_1" value="Modifier">
+					<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+					<div class="fileUpload btn btn-primary">
+						<span>Upload</span>
+						<input id="uploadBtn" type="file" name="img_avatar_1" class="upload"/>
+					</div>
 					<input type="submit" name="submit_avatar_1" value="Envoyer">	
 				</form>
 
-				<form enctype="multipart/form-data" action="#" method="post">
+				<form class="selectAvatar" enctype="multipart/form-data" action="#" method="post">
 					<img src="assets/imgs/<?= $avatars[1] ?>" />
 					<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
-					<input type="file" name="img_avatar_2" value="Modifier">
+					<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+					<div class="fileUpload btn btn-primary">
+						<span>Upload</span>
+						<input id="uploadBtn" type="file" name="img_avatar_2" class="upload"/>
+					</div>
 					<input type="submit" name="submit_avatar_2" value="Envoyer">	
 				</form>
 
-				<form enctype="multipart/form-data" action="#" method="post">
+				<form class="selectAvatar" enctype="multipart/form-data" action="#" method="post">
 					<img src="assets/imgs/<?= $avatars[2] ?>" />
 					<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
-					<input type="file" name="img_avatar_3" value="Modifier">
+					<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+					<div class="fileUpload btn btn-primary">
+						<span>Upload</span>
+						<input id="uploadBtn" type="file" name="img_avatar_3" value="Modifier" class="upload"/>
+					</div>
 					<input type="submit" name="submit_avatar_3" value="Envoyer">	
 				</form>
 
 
 
-				<form action="#" method="POST" accept-charset="utf-8">
+				<form class="testitext" action="#" method="POST" accept-charset="utf-8">
 					<textarea name="testi-area" placeholder=""><?= $testis[0] ?></textarea>
-					<input type="submit" name="submit_text1" value="submit">
+					<input type="submit" name="submit_text1" value="Envoyer">
 				</form>
 
-				<form action="#" method="POST" accept-charset="utf-8">
+				<form class="testitext" action="#" method="POST" accept-charset="utf-8">
 					<textarea name="testi-area" placeholder=""><?= $testis[1] ?></textarea>
-					<input type="submit" name="submit_text2" value="submit">
+					<input type="submit" name="submit_text2" value="Envoyer">
 				</form>
 
-				<form action="#" method="POST" accept-charset="utf-8">
+				<form class="testitext" action="#" method="POST" accept-charset="utf-8">
 					<textarea name="testi-area" placeholder=""><?= $testis[2] ?></textarea>
-					<input type="submit" name="submit_text3" value="submit">
+					<input type="submit" name="submit_text3" value="Envoyer">
 				</form> 
 			
 		</div>

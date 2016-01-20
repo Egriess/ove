@@ -311,3 +311,89 @@ h4 {
 .bottom-text p {
   max-width: 650px;
 }
+
+
+/*
+
+=====Formatting popup Testimonial=====
+
+*/
+form{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-bottom: 2px dotted #CCC;
+}
+form.selectAvatar input[type="file"]{
+  margin-top: 5px;
+  color: white;
+  background-color: #39C7B7;
+  border-radius: 10px;
+  border-style: none;
+  width: 8em;
+  height: 2em;
+}
+form.selectAvatar input[type="file"]:hover{
+  background-color: #54C7A1;  
+  box-shadow: 5px 5px 30px 0px #CCCCCC;
+}
+
+
+
+
+form.testitext input[type="submit"]{
+  margin-top: 5px;
+  color: white;
+  background-color: #39C7B7;
+  border-radius: 10px;
+  border-style: none;
+  width: 8em;
+  height: 2em;
+}
+form.testitext input[type="submit"]:hover{
+  background-color: #54C7A1;  
+  box-shadow: 5px 5px 30px 0px #CCCCCC;
+}
+
+
+input[type="submit"]{
+  margin-top: 5px;
+  color: white;
+  background-color: #54C739;
+  border-radius: 10px;
+  border-style: none;
+  width: 8em;
+  height: 2em;
+}
+input[type="submit"]:hover{
+  background-color: #54C739;  
+  box-shadow: 5px 5px 30px 0px #CCCCCC;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
