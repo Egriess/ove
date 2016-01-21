@@ -7,4 +7,7 @@
 		['GET',	'/logoff','Default#logoff','logoff'],   // Page de déco 
 		['GET|POST', '/backoffice', 'Default#backoffice', 'backoffice'], // Page de gestion et édition
 		['GET', '/page', 'Default#onepage', 'onepage'],
+
+		['POST', '/saveAdress', 'Default#saveAdress', 'saveAdress' ],
+		['GET', '/getAdress', 'Default#getAdress', 'getAdress' ],
 	);

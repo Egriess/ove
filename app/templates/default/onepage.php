@@ -88,16 +88,18 @@ closedir($dir_handle);
 
 <div id="testimoniaux">
 	<div class="container">
-		
 	</div>
 </div>
 
 <div id="maps">
-		<div class="container">
+	<div class="container">
 		<div id="map">
+			<div id="floating-panel">
+			</div>
+		</div>			
+		<div id="adresspage">
+				<p>Voici mon adresse ! </p>			
 		</div>
-			
-			
 	</div>
 </div>
 

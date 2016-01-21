@@ -456,3 +456,19 @@ fieldset{
   border-radius: 10px;
   display: inline-block;
 }
+
+#adressActu{
+  background-color: #D6D6D6;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  display:inline-block;
+}
+
+#adresspage{
+   background-color: #D6D6D6;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  display:inline-block;
+}

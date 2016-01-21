@@ -2,6 +2,9 @@
 
 <?php $this->start('main_content') ?>
 	
+	<input type="hidden" name="" value="<?php $Lat ?>">
+	<input type="hidden" name="" value="<?php $Lng ?>">
+
 	<div id="backheader">
 		<a href="#titlepopup" class="hinge">Editer le titre du site</a>
 					<!-- POP UP edit -->
@@ -86,21 +89,13 @@
 	<div class="container">
 		<div id="map"></div>
 			<div id="floating-panel">
-				<form action="#" method="POST" accept-charset="utf-8">
-      			<input id="address" type="textbox" value="" placeholder="Entrée votre adresse">
-      			<input id="submit" name="submit_adress" type="button" value="Validé cette adresse">
+				<form action="/saveAdress" method="POST" accept-charset="utf-8">
+      			<input id="address" name="address" type="textbox" value="" placeholder="Entrer votre adresse">
+      			<input id="submit" name="button" type="submit" value="Valider cette adresse">
+     		<p><?=  $currentadresse; ?></p>
      		 </form>
 
-     		 <?php
-
-     		 	if(isset( $_POST["submit_adress"])){
-
-
-     		 		saveAdress();
-     		 	}
-
-     		 ?>
-   			</div>
+  			</div>
 	</div>
 </div>
 <?php $this->stop('main_content') ?>

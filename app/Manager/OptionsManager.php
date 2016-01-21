@@ -9,12 +9,21 @@ class OptionsManager extends \W\Manager\Manager
 		//...
 	}
 
-	function saveAdress(){
+	function saveAdress($address){
 
-		$sql = 'UPDATE options SET option_value  WHERE option_name = "adresse"';
-		$stmt = $this->$dbh->prepare($sql);
+		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'adresse'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $address);
 		$stmt->execute();
 	}
 
+	function getAdress($address){
+
+		$sql="SELECT option_value from options where option_name = 'adresse'";
+		$stmt = $this->dbh-> query($sql);
+		$adresse = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $adresse['option_value'];
+
+	}
 
 }

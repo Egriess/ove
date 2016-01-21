@@ -71,6 +71,28 @@ class DefaultController extends Controller
 		$this->redirectToRoute('login');
 	}
 
+	//Fonction du controleur pour sauvergarder l'adresse en bdd
+	// Controller Function to save the address in bdd
+	public function saveAdress(){
+				$optionManager = new \Manager\OptionsManager();
+     		 	if(isset( $_POST["button"])){
+					$address = $_POST['address'];
+     		 		$optionManager -> saveAdress($address);
+     		 		
+     		 	}
+
+     		 	$this->redirectToRoute('backoffice');
+
+	}
+
+	public function getAdress(){
+		$optionManager = new \Manager\OptionsManager();
+		
+		$address = $_POST['address'];
+     	$adressToDisplay=$optionManager->getAdress($address);
+     	$this->show('default/backoffice', ['currentadresse' => $adressToDisplay]);
+
 	
+	}
 
 }
