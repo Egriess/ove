@@ -17,7 +17,16 @@ class DefaultController extends Controller
 
 	public function backoffice()
 	{
-		$this->show('default/backoffice');
+		$optionManager= new \Manager\OptionsManager();
+		// Recuperer les coordonnees
+		$address = $_POST['address'];
+     	$adressToDisplay=$optionManager->getAdress($address);
+     
+		// Recuperer l'adresse en texte
+
+		// Les passer a la vue
+
+		$this->show('default/backoffice', ['currentadresse' => $adressToDisplay]);
 	}
 
 	public function register(){
@@ -26,8 +35,15 @@ class DefaultController extends Controller
 
 	public function onepage(){
 		$optionManager= new \Manager\OptionsManager();
+		// Recuperer les coordonnees
+		//$address = $_POST['address'];
+     	//$adressToDisplay=$optionManager->getAdress($address);
+     
+		// Recuperer l'adresse en texte + coords
 
-		$this->show('default/onepage');
+		// Les passer a la vue
+
+		$this->show('default/onepage', ['currentadresse' => $adressToDisplay]);
 	}
 
 	public function login()
@@ -78,7 +94,7 @@ class DefaultController extends Controller
      		 	if(isset( $_POST["button"])){
 					$address = $_POST['address'];
      		 		$optionManager -> saveAdress($address);
-     		 		
+     		 		$optionManager -> saveLatLon($lat, $lon);
      		 	}
 
      		 	$this->redirectToRoute('backoffice');

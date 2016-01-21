@@ -90,11 +90,16 @@
 		<div id="map"></div>
 			<div id="floating-panel">
 				<form action="/saveAdress" method="POST" accept-charset="utf-8">
-      			<input id="address" name="address" type="textbox" value="" placeholder="Entrer votre adresse">
-      			<input id="submit" name="button" type="submit" value="Valider cette adresse">
-     		<p><?=  $currentadresse; ?></p>
+				deux hidden qui se remplissent quand on clique sur trouver l'adresse
+				<input type="hidden" name="lat" value="<?=  $lat; ?>">
+				<input type="hidden" name="lon" value="<?=  $lon; ?>">
+      			<input id="address" name="address" type="textbox" value="" placeholder="Entrer votre nouvelle adresse">
+      			<input id="submit" name="button" type="submit" value="Valider">
+      			<input id="setMap" type="button" value="Trouver l'adresse">
      		 </form>
 
+			<h3>Mon adresse actuel :</h3>
+     		<p><?=  $currentadresse; ?></p>
   			</div>
 	</div>
 </div>

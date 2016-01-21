@@ -98,7 +98,8 @@ closedir($dir_handle);
 			</div>
 		</div>			
 		<div id="adresspage">
-				<p>Voici mon adresse ! </p>			
+				<p>Voici mon adresse !  </p><br>
+				<?=  $currentadresse; ?>			
 		</div>
 	</div>
 </div>

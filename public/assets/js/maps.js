@@ -5,7 +5,7 @@ function initMap(Lat, Lng) {
        });
   var geocoder = new google.maps.Geocoder();
 
-  document.getElementById('submit').addEventListener('click', function() {
+  document.getElementById('setMap').addEventListener('click', function() {
     geocodeAddress(geocoder, map);
   });
 
@@ -23,8 +23,16 @@ function geocodeAddress(geocoder, resultsMap) {
    	 animation: google.maps.Animation.DROP,
         position: results[0].geometry.location
       });
+
+      // Si on recu un resultat
+     var lon = results[0].geometry.location.lng;
+     var lat = results[0].geometry.location.lat;
+
+     // Mettre lat et lon dans des hidden
+
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
+
 }
