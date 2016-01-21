@@ -58,16 +58,76 @@ header nav h1 {
   width: 100%;
   height: 30px;
   background: #9bdbf4;
+  margin:auto;
 }
 #backheader a{
   text-decoration: none;
   margin-left: 20px;
  
 }
+#titlepopup{
+  margin: auto;
+}
 
+#titlepopup span {
+  font-weight: bold;
+}
 /* CSS Library */ 
 
+.input .control { width: 160px; float: left; margin-right: 15px; text-align: center; }
 
+.input .controls_container {
+  margin-bottom: 25px;
+}
+
+.control .controller { height: 50px; margin: 15px auto; }
+#angle_slider { background-color: #639DBC; height: 50px; width: 50px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius:    25px;
+  border-radius:         25px;
+  -moz-box-shadow:    1px 1px 1px #333333;
+  -webkit-box-shadow: 1px 1px 1px #333333;
+  box-shadow:         1px 1px 1px #333333;
+  cursor: pointer;
+  color: #DDD;
+}
+#ts_angle_slider { background-color: #639DBC; height: 50px; width: 50px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius:    25px;
+  border-radius:         25px;
+  -moz-box-shadow:    1px 1px 1px #333333;
+  -webkit-box-shadow: 1px 1px 1px #333333;
+  box-shadow:         1px 1px 1px #333333;
+  cursor: pointer;
+  colour: #ddd;
+}
+#bs_angle_slider { background-color: #639DBC; height: 50px; width: 50px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius:    25px;
+  border-radius:         25px;
+  -moz-box-shadow:    1px 1px 1px #333333;
+  -webkit-box-shadow: 1px 1px 1px #333333;
+  box-shadow:         1px 1px 1px #333333;
+  cursor: pointer;
+}
+
+
+
+.slider_container { background-color: #639DBC; border: 1px solid #444444; display: block; height: 9px; margin: auto; position: relative; top: 20px; width: 75%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius:    5px;
+  border-radius:         5px;
+  -moz-box-shadow:    1px 1px 1px #555;
+  -webkit-box-shadow: 1px 1px 1px #555;
+  box-shadow:         1px 1px 1px #5;
+}
+.nth_slider { top: 2px; }
+.slider_label { float: left; line-height: 15px; padding-top: 3px; position: relative; top: -4px; }
+.slider_button { background-color: #DDDDDD; cursor: pointer; display: block; height: 9px; margin-left: 15px; width: 9px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius:    5px;
+  border-radius:         5px;
+}
 
 /* text-based popup styling */
 .white-popup {

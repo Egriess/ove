@@ -10,8 +10,11 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/modals.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/bootstrap.min.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/bootstrap.min.css.map') ?>">
+	<link rel="stylesheet" href="<?= $this->assetUrl('css/jquery-ui.min.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-2.2.0.min.js') ?>"></script>
+	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-ui.min.js') ?>"></script>
+	<script type="text/javascript" src="<?= $this->assetUrl('js/jscolor.min.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/bootstrap.min.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/buttons.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/core.js') ?>"></script>
@@ -24,7 +27,7 @@
 		<header>
 		
 			<nav class="navbar navbar-fixed-top">
-				<h1>hello world</h1>
+				<h1 id="text_shadow" style="text-shadow: rgb(150, 150, 150) 4px 4px 2px;" >hello world</h1>
 				<!-- POP UP edit end -->
 				<ul class="nav nav-pills">
 				  <li role="presentation"><a href="/login">Loginpage</a></li>
