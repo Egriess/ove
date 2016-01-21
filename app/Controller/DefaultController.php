@@ -237,6 +237,20 @@ class DefaultController extends Controller
 		$optionUpTestiToDisplay1 = $optionManager->UpdateTesti(1, $newText);
 		$optionUpTestiToDisplay2= $optionManager->UpdateTesti(2, $newText);
 		$optionUpTestiToDisplay3 = $optionManager->UpdateTesti(3, $newText);
-		$this->show('default/backoffice',['textTesti'=>[$optionUpTestiToDisplay1, $optionUpTestiToDisplay2, $optionUpTestiToDisplay3]]);
+		$this->show('default/backoffice',['Testi'=>[$optionUpTestiToDisplay1, $optionUpTestiToDisplay2, $optionUpTestiToDisplay3]]);
+	}
+
+
+	/*
+	* SECTION_TEXT
+	*/
+
+	public function changeText()
+	{
+		$optionManager = new \Manager\OptionsManager();
+		$optionUpTextToDisplay1 = $optionManager->changeText(1, $newSecText);
+		$optionUpTextToDisplay2= $optionManager->changeText(2, $newSecText);
+		$optionUpTextToDisplay3 = $optionManager->changeText(3, $newSecText);
+		$this->show('default/backoffice',['text'=>[$optionUpTextToDisplay1, $optionUpTextToDisplay2, $optionUpTextToDisplay3]]);
 	}
 }
