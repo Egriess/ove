@@ -11,21 +11,31 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/bootstrap.min.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/bootstrap.min.css.map') ?>">
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/jquery-ui.min.css') ?>">
 =======
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/testimonial.css') ?>">
 >>>>>>> testimonial
+=======
+>>>>>>> 204a32582e7f4cd8e29a393b9ed38be2936855f9
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
+	<link rel="stylesheet" href="<?= $this->assetUrl('css/sectiontext.css') ?>">
+	<link rel="stylesheet" href="<?= $this->assetUrl('css/testimonial.css') ?>">
 
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-2.2.0.min.js') ?>"></script>
+<<<<<<< HEAD
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-ui.min.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jscolor.min.js') ?>"></script>
+=======
+	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery.flip.min.js') ?>"></script>
+	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-ui.min.js') ?>"></script>
+>>>>>>> 204a32582e7f4cd8e29a393b9ed38be2936855f9
 	<script type="text/javascript" src="<?= $this->assetUrl('js/bootstrap.min.js') ?>"></script>
+	<script type="text/javascript" src="<?= $this->assetUrl('js/testimonial.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/buttons.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/core.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/header.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery.magnific-popup.min.js') ?>"></script>
-	<script type="text/javascript" src="<?= $this->assetUrl('js/testimonial.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/modal.js') ?>"></script>
 </head>
 <body>
@@ -53,6 +63,5 @@
 
 		<footer>
 		</footer>
-	</div>
 </body>
 </html>

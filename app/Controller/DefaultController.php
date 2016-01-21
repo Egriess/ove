@@ -99,33 +99,78 @@ class DefaultController extends Controller
 			}
 
 			$optionManager->changeAvatar(3, $filePath);
-			// Appel de la fonction changePicSlider
-
 		}
 
-		if(isset($_POST['submit_text'])){
-			UpdateTesti(1, $_POST['testi-area']);
+		//modification du text testimonial
+		if(isset($_POST['submit_text1'])){
+			$optionManager->UpdateTesti(1, $_POST['testi-area']);
 		}
-		if(isset($_POST['submit_text'])){
-			UpdateTesti(2, $_POST['testi-area']);
+		if(isset($_POST['submit_text2'])){
+			$optionManager->UpdateTesti(2, $_POST['testi-area']);
 		}
-		if(isset($_POST['submit_text'])){
-			UpdateTesti(3, $_POST['testi-area']);
+		if(isset($_POST['submit_text3'])){
+			$optionManager->UpdateTesti(3, $_POST['testi-area']);
 		}
-		
+
+		//modification de la sectin text
+		if(isset($_POST['submit_Sectiontext1'])){
+			$optionManager->changeText(1, $_POST['sec_text']);
+		}
+		if(isset($_POST['submit_Sectiontext2'])){
+			$optionManager->changeText(2, $_POST['sec_text']);
+		}
+		if(isset($_POST['submit_Sectiontext3'])){
+			$optionManager->changeText(3, $_POST['sec_text']);
+		}
+
+		//testimoniaux
 		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
 		$optionAvatarToDisplay2 = $optionManager->getAvatar(2);
 		$optionAvatarToDisplay3 = $optionManager->getAvatar(3);
 
-		$this->show('default/backoffice',['avatars'=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3]]);
+		$optionTestiToDisplay1 = $optionManager->GetTestimonial(1);
+		$optionTestiToDisplay2 = $optionManager->GetTestimonial(2);
+		$optionTestiToDisplay3 = $optionManager->GetTestimonial(3);
+		
+		//sextion_text
+		$optionTextToDisplay1 = $optionManager->getText(1);
+		$optionTextToDisplay2 = $optionManager->getText(2);
+		$optionTextToDisplay3 = $optionManager->getText(3);
+
+		$this->show('default/backoffice',[
+			'avatars'=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
+			'testis'=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
+			'texts'=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
+		]);
 	}
 
 	public function register(){
 		$this->show('default/register');
 	}
 
-	public function onepage(){
-		$this->show('default/onepage');
+	public function onepage()
+	{
+		$optionManager = new \Manager\OptionsManager();
+
+		//testimoniaux
+		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
+		$optionAvatarToDisplay2 = $optionManager->getAvatar(2);
+		$optionAvatarToDisplay3 = $optionManager->getAvatar(3);
+
+		$optionTestiToDisplay1 = $optionManager->GetTestimonial(1);
+		$optionTestiToDisplay2 = $optionManager->GetTestimonial(2);
+		$optionTestiToDisplay3 = $optionManager->GetTestimonial(3);
+
+		//sextion_text
+		$optionTextToDisplay1 = $optionManager->getText(1);
+		$optionTextToDisplay2 = $optionManager->getText(2);
+		$optionTextToDisplay3 = $optionManager->getText(3);
+
+		$this->show('default/onepage',[
+			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
+			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
+			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
+		]);
 	}
 
 	public function login()
@@ -184,15 +229,6 @@ class DefaultController extends Controller
 		$optionManager = new \Manager\OptionsManager();
 		$optionToDisplay = $optionManager->submitAvatar();
 		$this->show('default/backoffice',['Submit'=>$optionToDisplay]);
-	}
-
-	public function GetTesti()
-	{
-		$optionManager = new \Manager\OptionsManager();
-		$optionTestiToDisplay1 = $optionManager->GetTestimonial(1);
-		$optionTestiToDisplay2 = $optionManager->GetTestimonial(2);
-		$optionTestiToDisplay3 = $optionManager->GetTestimonial(3);
-		$this->show('default/backoffice',['testis'=>[$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3]]);
 	}
 
 	public function Uptesti()
