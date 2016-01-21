@@ -20,6 +20,11 @@
 	height: 1500px;
 }
 
+.illu{
+	margin: auto;
+	margin-bottom: 50px;
+}
+
 #section3{
 	margin-left: 300px;
 	margin-bottom: 10px;
@@ -74,4 +79,10 @@
 .principal{
 	font-family: 'Pacifico', cursive;
 	margin-bottom: 40px;
+}
+
+hr{
+ box-shadow: 0 0 10px 1px black;
+ margin-top: 25px;
+ margin-bottom: 25px;
 }
