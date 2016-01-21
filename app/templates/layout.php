@@ -7,49 +7,26 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/animate.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/reset.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/effeckt.css') ?>">
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/magnific-popup.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/modals.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/bootstrap.min.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/bootstrap.min.css.map') ?>">
-<<<<<<< HEAD
-<<<<<<< HEAD
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/jquery-ui.min.css') ?>">
-=======
-	<link rel="stylesheet" href="<?= $this->assetUrl('css/testimonial.css') ?>">
->>>>>>> testimonial
-=======
->>>>>>> 204a32582e7f4cd8e29a393b9ed38be2936855f9
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
-<<<<<<< HEAD
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
-=======
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/sectiontext.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/testimonial.css') ?>">
-
->>>>>>> a34a12be5a34fb4cb67ee2024fa8a397f8cfc825
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-2.2.0.min.js') ?>"></script>
-<<<<<<< HEAD
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-ui.min.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jscolor.min.js') ?>"></script>
-=======
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery.flip.min.js') ?>"></script>
-	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-ui.min.js') ?>"></script>
->>>>>>> 204a32582e7f4cd8e29a393b9ed38be2936855f9
 	<script type="text/javascript" src="<?= $this->assetUrl('js/bootstrap.min.js') ?>"></script>
-<<<<<<< HEAD
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.js"></script>
-	
-=======
 	<script type="text/javascript" src="<?= $this->assetUrl('js/testimonial.js') ?>"></script>
->>>>>>> a34a12be5a34fb4cb67ee2024fa8a397f8cfc825
-	<script type="text/javascript" src="<?= $this->assetUrl('js/buttons.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/core.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/header.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery.magnific-popup.min.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/modal.js') ?>"></script>
-
 	<script type="text/javascript" src="<?= $this->assetUrl('js/gallery.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/maps.js') ?>"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfOcKIL3WNVtPGJYuHeNsvYEYBOHW65U4&callback=initMap" async defer></script>

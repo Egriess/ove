@@ -9,7 +9,7 @@ class OptionsManager extends \W\Manager\Manager
 		//...
 	}
 
-<<<<<<< HEAD
+
 	function saveAdress($address){
 
 		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'adresse'";
@@ -34,7 +34,7 @@ class OptionsManager extends \W\Manager\Manager
 		$stmt->bindParam(':option_value', $lon);
 		$stmt->execute();
 	}
-=======
+
 
 	/*
 	*function Testimonial
@@ -93,5 +93,4 @@ class OptionsManager extends \W\Manager\Manager
 		$stmt->execute();
 	}
 
->>>>>>> a34a12be5a34fb4cb67ee2024fa8a397f8cfc825
 }

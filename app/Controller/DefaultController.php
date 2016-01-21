@@ -161,17 +161,6 @@ class DefaultController extends Controller
 		$this->show('default/register');
 	}
 
-	public function onepage(){
-		$optionManager= new \Manager\OptionsManager();
-		// Recuperer les coordonnees
-		//$address = $_POST['address'];
-     	//$adressToDisplay=$optionManager->getAdress($address);
-     
-		// Recuperer l'adresse en texte + coords
-
-		// Les passer a la vue
-
-		$this->show('default/onepage', ['currentadresse' => $adressToDisplay]);
 
 	public function onepage()
 	{
@@ -195,6 +184,7 @@ class DefaultController extends Controller
 			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
 			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
+			'currentadresse' => [$adressToDisplay],
 		]);
 
 	}
