@@ -87,7 +87,7 @@ closedir($dir_handle);
 </div>
 <div id="testimoniaux">
 	<div class="container">
-<<<<<<< HEAD
+
 	</div>
 </div>
 
@@ -101,7 +101,7 @@ closedir($dir_handle);
 				<p>Voici mon adresse !  </p><br>
 				<?=  $currentadresse; ?>			
 		</div>
-=======
+
 		<!-- Testimonial 1-->
 		<div class="testimonial">
 			<div class="testiFlip">
@@ -146,7 +146,7 @@ closedir($dir_handle);
 			</div>
 		</div>
 		
->>>>>>> a34a12be5a34fb4cb67ee2024fa8a397f8cfc825
+
 	</div>
 </div>
 

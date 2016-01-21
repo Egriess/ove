@@ -17,7 +17,7 @@ class DefaultController extends Controller
 
 	public function backoffice()
 	{
-<<<<<<< HEAD
+
 		$optionManager= new \Manager\OptionsManager();
 		// Recuperer les coordonnees
 		$address = $_POST['address'];
@@ -28,7 +28,7 @@ class DefaultController extends Controller
 		// Les passer a la vue
 
 		$this->show('default/backoffice', ['currentadresse' => $adressToDisplay]);
-=======
+
 		$optionManager = new \Manager\OptionsManager();
 
 		if(isset($_POST['submit_avatar_1'])) {
@@ -154,14 +154,13 @@ class DefaultController extends Controller
 			'testis'=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 			'texts'=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
 		]);
->>>>>>> a34a12be5a34fb4cb67ee2024fa8a397f8cfc825
+
 	}
 
 	public function register(){
 		$this->show('default/register');
 	}
 
-<<<<<<< HEAD
 	public function onepage(){
 		$optionManager= new \Manager\OptionsManager();
 		// Recuperer les coordonnees
@@ -173,7 +172,7 @@ class DefaultController extends Controller
 		// Les passer a la vue
 
 		$this->show('default/onepage', ['currentadresse' => $adressToDisplay]);
-=======
+
 	public function onepage()
 	{
 		$optionManager = new \Manager\OptionsManager();
@@ -197,7 +196,7 @@ class DefaultController extends Controller
 			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
 		]);
->>>>>>> a34a12be5a34fb4cb67ee2024fa8a397f8cfc825
+
 	}
 
 	public function login()
@@ -241,7 +240,6 @@ class DefaultController extends Controller
 		$this->redirectToRoute('login');
 	}
 
-<<<<<<< HEAD
 	//Fonction du controleur pour sauvergarder l'adresse en bdd
 	// Controller Function to save the address in bdd
 	public function saveAdress(){
@@ -266,7 +264,6 @@ class DefaultController extends Controller
 	
 	}
 
-=======
 	/*
 	* TESTIMONIAL
 	*/
@@ -306,5 +303,5 @@ class DefaultController extends Controller
 		$optionUpTextToDisplay3 = $optionManager->changeText(3, $newSecText);
 		$this->show('default/backoffice',['text'=>[$optionUpTextToDisplay1, $optionUpTextToDisplay2, $optionUpTextToDisplay3]]);
 	}
->>>>>>> a34a12be5a34fb4cb67ee2024fa8a397f8cfc825
+
 }

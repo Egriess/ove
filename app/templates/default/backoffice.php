@@ -224,7 +224,7 @@
 		</div>
 	</div>
 
-<<<<<<< HEAD
+
 
 <div id="maps">
 	<div class="container">
@@ -244,7 +244,7 @@
   			</div>
 	</div>
 </div>
-=======
+
 	<!--	section Text	-->
 	<div id="text">
 		<a href="#textpopup" class="hinge">Editer les textes du site</a>
@@ -282,5 +282,5 @@
 		</div>
 	</div>
 	
->>>>>>> a34a12be5a34fb4cb67ee2024fa8a397f8cfc825
+
 <?php $this->stop('main_content') ?>
