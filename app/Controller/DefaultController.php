@@ -101,6 +101,7 @@ class DefaultController extends Controller
 			$optionManager->changeAvatar(3, $filePath);
 		}
 
+		//modification du text testimonial
 		if(isset($_POST['submit_text1'])){
 			$optionManager->UpdateTesti(1, $_POST['testi-area']);
 		}
@@ -110,7 +111,19 @@ class DefaultController extends Controller
 		if(isset($_POST['submit_text3'])){
 			$optionManager->UpdateTesti(3, $_POST['testi-area']);
 		}
-		
+
+		//modification de la sectin text
+		if(isset($_POST['submit_Sectiontext1'])){
+			$optionManager->changeText(1, $_POST['sec_text']);
+		}
+		if(isset($_POST['submit_Sectiontext2'])){
+			$optionManager->changeText(2, $_POST['sec_text']);
+		}
+		if(isset($_POST['submit_Sectiontext3'])){
+			$optionManager->changeText(3, $_POST['sec_text']);
+		}
+
+		//testimoniaux
 		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
 		$optionAvatarToDisplay2 = $optionManager->getAvatar(2);
 		$optionAvatarToDisplay3 = $optionManager->getAvatar(3);
@@ -118,10 +131,16 @@ class DefaultController extends Controller
 		$optionTestiToDisplay1 = $optionManager->GetTestimonial(1);
 		$optionTestiToDisplay2 = $optionManager->GetTestimonial(2);
 		$optionTestiToDisplay3 = $optionManager->GetTestimonial(3);
+		
+		//sextion_text
+		$optionTextToDisplay1 = $optionManager->getText(1);
+		$optionTextToDisplay2 = $optionManager->getText(2);
+		$optionTextToDisplay3 = $optionManager->getText(3);
 
 		$this->show('default/backoffice',[
 			'avatars'=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
 			'testis'=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
+			'texts'=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
 		]);
 	}
 
@@ -132,6 +151,8 @@ class DefaultController extends Controller
 	public function onepage()
 	{
 		$optionManager = new \Manager\OptionsManager();
+
+		//testimoniaux
 		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
 		$optionAvatarToDisplay2 = $optionManager->getAvatar(2);
 		$optionAvatarToDisplay3 = $optionManager->getAvatar(3);
@@ -140,9 +161,15 @@ class DefaultController extends Controller
 		$optionTestiToDisplay2 = $optionManager->GetTestimonial(2);
 		$optionTestiToDisplay3 = $optionManager->GetTestimonial(3);
 
+		//sextion_text
+		$optionTextToDisplay1 = $optionManager->getText(1);
+		$optionTextToDisplay2 = $optionManager->getText(2);
+		$optionTextToDisplay3 = $optionManager->getText(3);
+
 		$this->show('default/onepage',[
-			'avatars'=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
-			'testis'=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
+			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
+			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
+			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
 		]);
 	}
 
@@ -204,24 +231,26 @@ class DefaultController extends Controller
 		$this->show('default/backoffice',['Submit'=>$optionToDisplay]);
 	}
 
-	public function GetTesti()
-	{
-		/*
-		$optionManager = new \Manager\OptionsManager();
-		$optionTestiToDisplay1 = $optionManager->GetTestimonial(1);
-		$optionTestiToDisplay2 = $optionManager->GetTestimonial(2);
-		$optionTestiToDisplay3 = $optionManager->GetTestimonial(3);
-		$this->show('default/backoffice',['testis'=>[$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3]]);
-		*/
-	}
-
 	public function Uptesti()
 	{
 		$optionManager = new \Manager\OptionsManager();
 		$optionUpTestiToDisplay1 = $optionManager->UpdateTesti(1, $newText);
 		$optionUpTestiToDisplay2= $optionManager->UpdateTesti(2, $newText);
 		$optionUpTestiToDisplay3 = $optionManager->UpdateTesti(3, $newText);
-		$this->show('default/backoffice',['textTesti'=>[$optionUpTestiToDisplay1, $optionUpTestiToDisplay2, $optionUpTestiToDisplay3]]);
+		$this->show('default/backoffice',['Testi'=>[$optionUpTestiToDisplay1, $optionUpTestiToDisplay2, $optionUpTestiToDisplay3]]);
 	}
 
+
+	/*
+	* SECTION_TEXT
+	*/
+
+	public function changeText()
+	{
+		$optionManager = new \Manager\OptionsManager();
+		$optionUpTextToDisplay1 = $optionManager->changeText(1, $newSecText);
+		$optionUpTextToDisplay2= $optionManager->changeText(2, $newSecText);
+		$optionUpTextToDisplay3 = $optionManager->changeText(3, $newSecText);
+		$this->show('default/backoffice',['text'=>[$optionUpTextToDisplay1, $optionUpTextToDisplay2, $optionUpTextToDisplay3]]);
+	}
 }

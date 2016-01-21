@@ -47,4 +47,24 @@ class OptionsManager extends \W\Manager\Manager
 		return $row['option_value'];
 	}
 
+	/*
+	=====Function Text=====
+	*/
+
+	public function getText($textNb)
+	{
+		$sql="SELECT option_value FROM options WHERE option_name = 'text_".$textNb."'";
+		$stmt = $this->dbh->query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];
+	}
+
+	public function changeText($textNb, $newSecText)
+	{
+		$sql ="UPDATE options SET option_value ='$newSecText' WHERE option_name = 'text_".$textNb."'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':newSecText', $newSecText, \PDO::PARAM_INT);
+		$stmt->execute();
+	}
+
 }
