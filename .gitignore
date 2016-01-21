@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #################
 ## Eclipse
 #################
@@ -215,7 +214,5 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
-=======
-app/config.php
->>>>>>> testimonial
+
 app/config.php
