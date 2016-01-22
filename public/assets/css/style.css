@@ -367,7 +367,7 @@ h4 {
   max-width: 650px;
 }
 
-<<<<<<< HEAD
+
 #gallery{
   /* The pics container */
  
@@ -533,7 +533,7 @@ fieldset{
   padding: 20px;
   border-radius: 10px;
   display:inline-block;
-=======
+
 
 /*
 
@@ -606,5 +606,5 @@ input[type="submit"]:hover{
     cursor: pointer;
     opacity: 0;
     filter: alpha(opacity=0);
->>>>>>> a34a12be5a34fb4cb67ee2024fa8a397f8cfc825
+
 }
