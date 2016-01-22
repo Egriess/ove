@@ -27,10 +27,16 @@ class OptionsManager extends \W\Manager\Manager
 
 	}
 
-	function saveLatLon($lat, $lon){
-		$sql = "(UPDATE options SET option_value = :option_value  WHERE option_name = 'latitude') UNION (UPDATE options SET option_value = :option_value  WHERE option_name = 'longitude')";
+	function saveLat($lat){
+		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'latitude'";
 		$stmt = $this->dbh->prepare($sql);
 		$stmt->bindParam(':option_value', $lat);
+		$stmt->execute();
+	}
+
+	function saveLon($lon){
+		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'longitude'";
+		$stmt = $this->dbh->prepare($sql);
 		$stmt->bindParam(':option_value', $lon);
 		$stmt->execute();
 	}

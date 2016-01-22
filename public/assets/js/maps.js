@@ -1,12 +1,13 @@
-function initMap(Lat, Lng) {
+function initMap(geocoder, resultsMap) {
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 8,
-    center: {lat: -34.397, lng: 150.644}
+    zoom: 6,
+    center: {lat: 43.296, lng: 5.3697}
        });
   var geocoder = new google.maps.Geocoder();
 
   document.getElementById('setMap').addEventListener('click', function() {
     geocodeAddress(geocoder, map);
+
   });
 
 
@@ -20,19 +21,26 @@ function geocodeAddress(geocoder, resultsMap) {
       resultsMap.setCenter(results[0].geometry.location);
       var marker = new google.maps.Marker({
         map: resultsMap,
-   	 animation: google.maps.Animation.DROP,
+        animation: google.maps.Animation.DROP,
         position: results[0].geometry.location
+        
       });
 
+    
+    var lat = results[0].geometry.location.lat();
+    var lon = results[0].geometry.location.lng();
       // Si on recu un resultat
-     var lon = results[0].geometry.location.lng;
-     var lat = results[0].geometry.location.lat;
+    document.getElementById('lat').value = lat;
+    document.getElementById('lon').value = lon;
+   
+  
 
-     // Mettre lat et lon dans des hidden
 
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
+
+
 
 }

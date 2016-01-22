@@ -2,8 +2,7 @@
 
 <?php $this->start('main_content') ?>
 	
-	<input type="hidden" name="" value="<?php $Lat ?>">
-	<input type="hidden" name="" value="<?php $Lng ?>">
+	
 
 	<div id="backheader">
 		<a href="#titlepopup" class="hinge">Editer le titre du site</a>
@@ -231,12 +230,11 @@
 		<div id="map"></div>
 			<div id="floating-panel">
 				<form action="/saveAdress" method="POST" accept-charset="utf-8">
-				deux hidden qui se remplissent quand on clique sur trouver l'adresse
-				<input type="hidden" name="lat" value="<?=  $lat; ?>">
-				<input type="hidden" name="lon" value="<?=  $lon; ?>">
+				<input id="lat" type="hidden" name="lat" value="<?=  $lat; ?>">
+				<input id="lon" type="hidden" name="lon" value="<?=  $lon; ?>">
       			<input id="address" name="address" type="textbox" value="" placeholder="Entrer votre nouvelle adresse">
-      			<input id="submit" name="button" type="submit" value="Valider">
       			<input id="setMap" type="button" value="Trouver l'adresse">
+      			<input id="submit" name="button" type="submit" value="Valider">
      		 </form>
 
 			<h3>Mon adresse actuel :</h3>

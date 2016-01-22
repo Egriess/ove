@@ -153,6 +153,7 @@ class DefaultController extends Controller
 			'avatars'=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
 			'testis'=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 			'texts'=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
+			'currentadresse' => $adressToDisplay,
 		]);
 
 	}
@@ -165,6 +166,10 @@ class DefaultController extends Controller
 	public function onepage()
 	{
 		$optionManager = new \Manager\OptionsManager();
+
+		//map
+		$address = $_POST['address'];
+     	$adressToDisplay=$optionManager->getAdress($address);
 
 		//testimoniaux
 		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
@@ -184,6 +189,7 @@ class DefaultController extends Controller
 			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
 			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
+			'currentadresse' => $adressToDisplay,
 		]);
 
 	}
@@ -235,8 +241,11 @@ class DefaultController extends Controller
 				$optionManager = new \Manager\OptionsManager();
      		 	if(isset( $_POST["button"])){
 					$address = $_POST['address'];
+					$lat = $_POST['lat'];
+					$lon = $_POST['lon'];
      		 		$optionManager -> saveAdress($address);
-     		 		$optionManager -> saveLatLon($lat, $lon);
+     		 		$optionManager -> saveLat($lat);
+     		 		$optionManager -> saveLon($lon);
      		 	}
 
      		 	$this->redirectToRoute('backoffice');
