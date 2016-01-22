@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/sectiontext.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/testimonial.css') ?>">
+	
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-2.2.0.min.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-ui.min.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jscolor.min.js') ?>"></script>

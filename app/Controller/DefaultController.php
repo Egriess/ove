@@ -17,21 +17,21 @@ class DefaultController extends Controller
 
 	public function backoffice()
 	{
-
 		$optionManager= new \Manager\OptionsManager();
 		// Recuperer les coordonnees
-		$address = $_POST['address'];
-     	$adressToDisplay=$optionManager->getAdress($address);
+		//$address = $_POST['address'];
+     	//$adressToDisplay=$optionManager->getAdress($address);
      
 		// Recuperer l'adresse en texte
 
 		// Les passer a la vue
 
-		$this->show('default/backoffice', ['currentadresse' => $adressToDisplay]);
+		//$this->show('default/backoffice', ['currentadresse' => $adressToDisplay]);
 
-		$optionManager = new \Manager\OptionsManager();
+		//$optionManager = new \Manager\OptionsManager();
 
-		if(isset($_POST['submit_avatar_1'])) {
+		if(isset($_POST['submit_avatar_1']))
+		{
 
 			// Upload du fichier (move_uploaded_file, etc.)
 			$finfo = new \finfo(FILEINFO_MIME_TYPE);
@@ -59,7 +59,9 @@ class DefaultController extends Controller
 
 			$optionManager->changeAvatar(1, $filePath);
 
-		}elseif(isset($_POST['submit_avatar_2'])) {
+		}
+		elseif(isset($_POST['submit_avatar_2']))
+		{
 			// Upload du fichier (move_uploaded_file, etc.)
 			// Upload du fichier (move_uploaded_file, etc.)
 			$finfo = new \finfo(FILEINFO_MIME_TYPE);
@@ -85,14 +87,15 @@ class DefaultController extends Controller
 			}
 
 			$optionManager->changeAvatar(2, $filePath);
-		} elseif(isset($_POST['submit_avatar_3'])) {
-			// Upload du fichier (move_uploaded_file, etc.)
+		} 
+		elseif(isset($_POST['submit_avatar_3']))
+		{
 			// Upload du fichier (move_uploaded_file, etc.)
 			$finfo = new \finfo(FILEINFO_MIME_TYPE);
 			$mimeType = $finfo->file($_FILES['img_avatar_3']['tmp_name']);
 			$allowed =array_search(
 		        $mimeType, array('png' 	=> 'image/png',
-							 	'jpg'	=> 'image/jpeg',
+							 	 'jpg'	=> 'image/jpeg',
 								 'gif' 	=> 'image/gif'));
 			$filePath = sha1_file($_FILES['img_avatar_3']['tmp_name']). '.' . $allowed;
 			$destinationFilePath = 'assets/imgs/' . $filePath;
@@ -113,33 +116,60 @@ class DefaultController extends Controller
 			$optionManager->changeAvatar(3, $filePath);
 		}
 
+		//rename
+		if(isset($_POST['submit_name1']))
+		{
+			$optionManager->UpName(1, $_POST['name_area']);
+		}
+		if(isset($_POST['submit_name2']))
+		{
+			$optionManager->UpName(2, $_POST['name_area']);
+		}
+		if(isset($_POST['submit_name3']))
+		{
+			$optionManager->UpName(3, $_POST['name_area']);
+		}
+
 		//modification du text testimonial
-		if(isset($_POST['submit_text1'])){
+		if(isset($_POST['submit_text1']))
+		{
 			$optionManager->UpdateTesti(1, $_POST['testi-area']);
 		}
-		if(isset($_POST['submit_text2'])){
+		if(isset($_POST['submit_text2']))
+		{
 			$optionManager->UpdateTesti(2, $_POST['testi-area']);
 		}
-		if(isset($_POST['submit_text3'])){
+		if(isset($_POST['submit_text3']))
+		{
 			$optionManager->UpdateTesti(3, $_POST['testi-area']);
 		}
 
 		//modification de la sectin text
-		if(isset($_POST['submit_Sectiontext1'])){
+		if(isset($_POST['submit_Sectiontext1']))
+		{
 			$optionManager->changeText(1, $_POST['sec_text']);
 		}
-		if(isset($_POST['submit_Sectiontext2'])){
+		if(isset($_POST['submit_Sectiontext2']))
+		{
 			$optionManager->changeText(2, $_POST['sec_text']);
 		}
-		if(isset($_POST['submit_Sectiontext3'])){
+		if(isset($_POST['submit_Sectiontext3']))
+		{
 			$optionManager->changeText(3, $_POST['sec_text']);
 		}
 
 		//testimoniaux
+			//view name
+		$optionNameToDisplay1 = $optionManager->getName(1);
+		$optionNameToDisplay2 = $optionManager->getName(2);
+		$optionNameToDisplay3 = $optionManager->getName(3);
+
+			//view avatar
 		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
 		$optionAvatarToDisplay2 = $optionManager->getAvatar(2);
 		$optionAvatarToDisplay3 = $optionManager->getAvatar(3);
 
+			//view description
 		$optionTestiToDisplay1 = $optionManager->GetTestimonial(1);
 		$optionTestiToDisplay2 = $optionManager->GetTestimonial(2);
 		$optionTestiToDisplay3 = $optionManager->GetTestimonial(3);
@@ -150,9 +180,10 @@ class DefaultController extends Controller
 		$optionTextToDisplay3 = $optionManager->getText(3);
 
 		$this->show('default/backoffice',[
-			'avatars'=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
-			'testis'=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
-			'texts'=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
+			'names'		=> [$optionNameToDisplay1, $optionNameToDisplay2, $optionNameToDisplay3],
+			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
+			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
+			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
 		]);
 
 	}
@@ -167,10 +198,17 @@ class DefaultController extends Controller
 		$optionManager = new \Manager\OptionsManager();
 
 		//testimoniaux
+			//view name
+		$optionNameToDisplay1 = $optionManager->getName(1);
+		$optionNameToDisplay2 = $optionManager->getName(2);
+		$optionNameToDisplay3 = $optionManager->getName(3);
+
+			//view avatar
 		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
 		$optionAvatarToDisplay2 = $optionManager->getAvatar(2);
 		$optionAvatarToDisplay3 = $optionManager->getAvatar(3);
 
+			//view description
 		$optionTestiToDisplay1 = $optionManager->GetTestimonial(1);
 		$optionTestiToDisplay2 = $optionManager->GetTestimonial(2);
 		$optionTestiToDisplay3 = $optionManager->GetTestimonial(3);
@@ -181,6 +219,7 @@ class DefaultController extends Controller
 		$optionTextToDisplay3 = $optionManager->getText(3);
 
 		$this->show('default/onepage',[
+			'names'		=> [$optionNameToDisplay1, $optionNameToDisplay2, $optionNameToDisplay3],
 			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
 			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
@@ -256,6 +295,17 @@ class DefaultController extends Controller
 	/*
 	* TESTIMONIAL
 	*/
+	//name
+	public function UpdateName()
+	{
+		$optionManager = new \Manager\OptionsManager();
+		$optionUpNameToDisplay1 = $optionManager->UpName(1, $newName);
+		$optionUpNameToDisplay2 = $optionManager->UpName(2, $newName);
+		$optionUpNameToDisplay3 = $optionManager->UpName(3, $newName);
+		$this->show('default/backoffice',['text'=>[$optionUpNameToDisplay1, $optionUpNameToDisplay2, $optionUpNameToDisplay3]]);
+	}
+
+	//avatar
 	public function ChangeAva()
 	{
 		$optionManager = new \Manager\OptionsManager();
@@ -270,6 +320,7 @@ class DefaultController extends Controller
 		$this->show('default/backoffice',['Submit'=>$optionToDisplay]);
 	}
 
+	//function description
 	public function Uptesti()
 	{
 		$optionManager = new \Manager\OptionsManager();
@@ -292,5 +343,4 @@ class DefaultController extends Controller
 		$optionUpTextToDisplay3 = $optionManager->changeText(3, $newSecText);
 		$this->show('default/backoffice',['text'=>[$optionUpTextToDisplay1, $optionUpTextToDisplay2, $optionUpTextToDisplay3]]);
 	}
-
 }

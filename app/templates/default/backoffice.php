@@ -119,6 +119,33 @@
 			<a href="#testimonialpopup" class="hinge">Editer le testimonial</a>
 			<div id="testimonialpopup" class="white-popup mfp-with-anim mfp-hide">
 
+				<!--
+					name change
+				-->
+				<form class="name" action="#" method="POST" accept-charset="utf-8">
+					<span>Limité à 25 caractères</span>
+					<label>nom et prénom</label>
+					<input type="text" name="name_area" value="<?= $names[0] ?>"maxlength="25"> 
+					<input type="submit" name="submit_name1" value="Envoyer">
+				</form>
+
+				<form class="name" action="#" method="POST" accept-charset="utf-8">
+					<span>Limité à 25 caractères</span>
+					<label>nom et prénom</label>
+					<input type="text" name="name_area" value="<?= $names[1] ?>"maxlength="25">
+					<input type="submit" name="submit_name2" value="Envoyer">
+				</form>
+
+				<form class="name" action="#" method="POST" accept-charset="utf-8">
+					<span>Limité à 25 caractères</span>
+					<label>nom et prénom</label>
+					<input type="text" name="name_area" value="<?= $names[2] ?>"maxlength="25">
+					<input type="submit" name="submit_name3" value="Envoyer">
+				</form>
+
+				<!--
+					change avatar
+				-->
 				<form class="selectAvatar" enctype="multipart/form-data" action="#" method="post">
 					<img src="assets/imgs/<?= $avatars[0] ?>" />
 					<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
@@ -152,8 +179,9 @@
 					<input type="submit" name="submit_avatar_3" value="Envoyer">	
 				</form>
 
-
-
+				<!--
+					change text
+				-->
 				<form class="testitext" action="#" method="POST" accept-charset="utf-8">
 					<span>Limité à 170 caractères</span>
 					<textarea name="testi-area" placeholder="" maxlength="170"><?= $testis[0] ?></textarea>
@@ -181,7 +209,7 @@
 			<div class="testimonial">
 				<div class="testiFlip">
 					<img class="avat" alt="Avatar" src="assets/imgs/<?= $avatars[0] ?>">
-					<p>John Doe</p>
+					<p><?= $names[0] ?></p>
 				</div>
 
 				<div class="sponsorData">
@@ -195,7 +223,7 @@
 			<div title="Click to flip" class="testimonial">
 				<div id="back50" class="testiFlip">
 					<img class="avat" alt="Avatar" src="assets/imgs/<?= $avatars[1] ?>">
-					<p>John Doe 2</p>
+					<p><?= $names[1] ?></p>
 				</div>
 
 				<div class="sponsorData">
@@ -210,7 +238,7 @@
 			<div title="Click to flip" class="testimonial">
 				<div id="back100" class="testiFlip">
 					<img class="avat" alt="Avatar" src="assets/imgs/<?= $avatars[2]?>">
-					<p>John Doe 3</p>
+					<p><?= $names[2] ?></p>
 				</div>
 
 				<div class="sponsorData">
@@ -231,7 +259,7 @@
 		<div id="map"></div>
 			<div id="floating-panel">
 				<form action="/saveAdress" method="POST" accept-charset="utf-8">
-				deux hidden qui se remplissent quand on clique sur trouver l'adresse
+				<!--deux hidden qui se remplissent quand on clique sur trouver l'adresse-->
 				<input type="hidden" name="lat" value="<?=  $lat; ?>">
 				<input type="hidden" name="lon" value="<?=  $lon; ?>">
       			<input id="address" name="address" type="textbox" value="" placeholder="Entrer votre nouvelle adresse">

@@ -110,7 +110,7 @@ closedir($dir_handle);
 			<div class="testimonial">
 				<div class="testiFlip">
 					<img class="avat" alt="Avatar" src="assets/imgs/<?= $avatars[0] ?>">
-					<p>John Doe</p>
+					<p><?= $names[0] ?></p>
 				</div>
 
 				<div class="sponsorData">
@@ -124,7 +124,7 @@ closedir($dir_handle);
 			<div title="Click to flip" class="testimonial">
 				<div id="back50" class="testiFlip">
 					<img class="avat" alt="Avatar" src="assets/imgs/<?= $avatars[1] ?>">
-					<p>John Doe 2</p>
+					<p><?= $names[1] ?></p>
 				</div>
 
 				<div class="sponsorData">
@@ -139,7 +139,7 @@ closedir($dir_handle);
 			<div title="Click to flip" class="testimonial">
 				<div id="back100" class="testiFlip">
 					<img class="avat" alt="Avatar" src="assets/imgs/<?= $avatars[2]?>">
-					<p>John Doe 3</p>
+					<p><?= $names[2] ?></p>
 				</div>
 
 				<div class="sponsorData">

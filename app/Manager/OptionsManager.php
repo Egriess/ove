@@ -37,7 +37,7 @@ class OptionsManager extends \W\Manager\Manager
 
 
 	/*
-	*function Testimonial
+	=====function Testimonial=====
 	*/
 	public function GetTestimonial($testiNb)
 	{
@@ -57,6 +57,14 @@ class OptionsManager extends \W\Manager\Manager
 
 	//function change_avatar
 
+	public function getAvatar($avatarNb)
+	{
+		$sql="SELECT option_value FROM options WHERE option_name = 'avatar_".$avatarNb."'";
+		$stmt = $this->dbh->query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];
+	}
+
 	public function changeAvatar($avatarNb, $newUrl)
 	{
 		$sql ="UPDATE options SET option_value ='$newUrl' WHERE option_name = 'avatar_".$avatarNb."'";
@@ -65,12 +73,21 @@ class OptionsManager extends \W\Manager\Manager
 		$stmt->execute();
 	}
 
-	public function getAvatar($avatarNb)
+	//function rename
+	public function getName($nameNb)
 	{
-		$sql="SELECT option_value FROM options WHERE option_name = 'avatar_".$avatarNb."'";
-		$stmt = $this->dbh->query($sql);
+		$sql="SELECT option_value FROM options WHERE option_name='name_".$nameNb."'";
+		$stmt= $this->dbh->query($sql);
 		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
 		return $row['option_value'];
+	}
+
+	public function UpName($nameNb, $newName)
+	{
+		$sql="UPDATE options SET option_value ='$newName' WHERE option_name = 'name_".$nameNb."'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':newName', $newName, \PDO::PARAM_INT);
+		$stmt->execute();
 	}
 
 	/*
