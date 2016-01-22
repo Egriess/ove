@@ -4,18 +4,11 @@
 
 <header>
 		
-			<nav class="navbar navbar-fixed-top">
-				<h1 id="text_shadow" style="text-shadow: rgb(150, 150, 150) 4px 4px 2px;" >   </h1>
+			
+				<h1 id="text_shadow" style="text-align:center; text-shadow: rgb(150, 150, 150) 4px 4px 2px;" > ADMINISTRATION DE VOTRE PAGE </h1>
 				<!-- POP UP edit end -->
-				<ul class="nav nav-pills">
-				  <li role="presentation"><a href="/login">Loginpage</a></li>
-				  <li role="presentation"><a href="/backoffice">Backoffice</a></li>
-				  <li role="presentation"><a href="/register">Register</a></li>
-				  <li role="presentation"><a href="/page">Page coté client</a></li>
-				  <li role="presentation"><a href="#">Menu5</a></li>
-				  <li role="presentation"><a href="#">Menu6</a></li>  
-				</ul>
-			</nav>
+				
+			
 		
 	</header>
 	
