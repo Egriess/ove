@@ -1,105 +1,55 @@
 <?php $this->layout('layout', ['title' => 'Titre de cette Onepage']) ?>
 
 <?php $this->start('main_content') ?>
-
-
-
-	<div id="gallery">
-    
-<?php
-
-/* Configuration Start */
-
-$thumb_directory = './assets/img/thumbs';
-$orig_directory = './assets/img/original';
-
-$stage_width=600;	// How big is the area the images are scattered on
-$stage_height=400;
-
-/* Configuration end */
-
-$allowed_types=array('jpg','jpeg','gif','png');
-$file_parts=array();
-$ext='';
-$title='';
-$i=0;
-
-/* Opening the thumbnail directory and looping through all the thumbs: */
-
-$dir_handle = @opendir($thumb_directory) or die("There is an error with your image directory!");
-
-$i=1;
-while ($file = readdir($dir_handle)) 
-{
-	/* Skipping the system files: */
-	if($file=='.' || $file == '..') continue;
-	
-	$file_parts = explode('.',$file);
-	$ext = strtolower(array_pop($file_parts));
-
-	/* Using the file name (withouth the extension) as a image title: */
-	$title = implode('.',$file_parts);
-	$title = htmlspecialchars($title);
-
-	/* If the file extension is allowed: */	
-	if(in_array($ext,$allowed_types))
-	{
-		/* Generating random values for the position and rotation: */
-		$left=rand(0,$stage_width);
-		$top=rand(0,400);
-		$rot = rand(-40,40);
+<header>
 		
-		if($top>$stage_height-130 && $left > $stage_width-230)
-		{
-			/* Prevent the images from hiding the drop box */
-			$top-=120+130;
-			$left-=230;
-		}
+			<nav class="navbar navbar-fixed-top">
+				<h1 id="text_shadow" style="text-shadow: rgb(150, 150, 150) 4px 4px 2px;" ><?= $titledisplay[0] ?></h1>
+				<!-- POP UP edit end -->
+				<ul class="nav nav-pills">
+				  <li role="presentation"><a href="/login">Loginpage</a></li>
+				  <li role="presentation"><a href="/backoffice">Backoffice</a></li>
+				  <li role="presentation"><a href="/register">Register</a></li>
+				  <li role="presentation"><a href="/page">Page coté client</a></li>
+				  <li role="presentation"><a href="#">Menu5</a></li>
+				  <li role="presentation"><a href="#">Menu6</a></li>  
+				</ul>
+			</nav>
 		
-		/* Outputting each image: */
-		
-		echo '
-		<div id="pic-'.($i++).'" class="pic" style="top:'.$top.'px;left:'.$left.'px;background:url('.$thumb_directory.'/'.$file.') no-repeat 50% 50%; -moz-transform:rotate('.$rot.'deg); -webkit-transform:rotate('.$rot.'deg);">
-		<a class="fancybox" rel="fncbx" href="'.$orig_directory.'/'.$file.'" target="_blank">'.$title.'</a>
-		</div>';
-	}
-}
+	</header>
 
-/* Closing the directory */
-closedir($dir_handle);
+<div id="gallery">
+	<div class="container">
+		<ul class="gallery">
 
-?>
-    <div class="drop-box">
-    </div>
-    
-	</div>
-    
-	<div class="clear"></div>
+			<li id="draggable " class="pics1 ui-widget-content"><img src="<?= $this->assetUrl('imgs/gallery/1.jpg') ?>" alt="Gallery img1" /><br>pics 1</li>
 
-	<div id="modal" title="Share this picture">
-	<form action="">
-	<fieldset>
-		<label for="url">URL of the image</label>
-		<input type="text" name="url" id="url" class="text ui-widget-content ui-corner-all" onfocus="this.select()" />
-	</fieldset>
-	</form>
+			<li id="draggable" class="pics2"><img src="<?= $this->assetUrl('imgs/gallery/2.jpg') ?>" alt="Gallery img2" /><br>pics 2</li>
 
+			<li id="draggable" class="pics3"><img src="<?= $this->assetUrl('imgs/gallery/3.jpg') ?>" alt="Gallery img3" /><br>pics 3</li>
+
+			<li id="draggable" class="pics4"><img src="<?= $this->assetUrl('imgs/gallery/4.jpg') ?>" alt="Gallery img4" /><br>pics 4</li>
+
+			<li id="draggable" class="pics5"><img src="<?= $this->assetUrl('imgs/gallery/5.jpg') ?>" alt="Gallery img5" /><br>pics 5</li>
+
+			<li id="draggable" class="pics6"><img src="<?= $this->assetUrl('imgs/gallery/6.jpg') ?>" alt="Gallery img6" /><br>pics 6</li>
+
+		</ul>
+ 	</div>
 </div>
-
-	
-
 
 
 <div id="maps">
 	<div class="container">
+		
 		<div id="map">
 			<div id="floating-panel">
 			</div>
 		</div>	
 
 		<div id="adresspage">
-				<p>Voici mon adresse !  </p><br>
-				<?=  $currentadresse; ?>			
+			<p>Voici mon adresse !  </p><br>
+			<?=  $currentadresse; ?>			
 		</div>
 	</div>	
 </div>

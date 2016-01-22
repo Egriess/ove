@@ -112,6 +112,11 @@ class DefaultController extends Controller
 			$optionManager->changeAvatar(3, $filePath);
 		}
 
+		//modification du titre du site
+		if(isset($_POST['submit_title'])){
+			$optionManager->updateTitle($title);
+		}
+
 		//modification du text testimonial
 		if(isset($_POST['submit_text1'])){
 			$optionManager->UpdateTesti(1, $_POST['testi-area']);
@@ -133,25 +138,27 @@ class DefaultController extends Controller
 		if(isset($_POST['submit_Sectiontext3'])){
 			$optionManager->changeText(3, $_POST['sec_text']);
 		}
-
+		//header 
+		$optionTitleToDisplay 	= $optionManager->getTitle();
 		//testimoniaux
 		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
 		$optionAvatarToDisplay2 = $optionManager->getAvatar(2);
 		$optionAvatarToDisplay3 = $optionManager->getAvatar(3);
 
-		$optionTestiToDisplay1 = $optionManager->GetTestimonial(1);
-		$optionTestiToDisplay2 = $optionManager->GetTestimonial(2);
-		$optionTestiToDisplay3 = $optionManager->GetTestimonial(3);
+		$optionTestiToDisplay1 	= $optionManager->GetTestimonial(1);
+		$optionTestiToDisplay2	= $optionManager->GetTestimonial(2);
+		$optionTestiToDisplay3 	= $optionManager->GetTestimonial(3);
 		
 		//sextion_text
-		$optionTextToDisplay1 = $optionManager->getText(1);
-		$optionTextToDisplay2 = $optionManager->getText(2);
-		$optionTextToDisplay3 = $optionManager->getText(3);
+		$optionTextToDisplay1 	= $optionManager->getText(1);
+		$optionTextToDisplay2 	= $optionManager->getText(2);
+		$optionTextToDisplay3 	= $optionManager->getText(3);
 
 		$this->show('default/backoffice',[
-			'avatars'=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
-			'testis'=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
-			'texts'=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
+			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
+			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
+			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
+			'titledisplay'		=> [$optionTitleToDisplay],
 		]);
 
 	}
@@ -164,25 +171,27 @@ class DefaultController extends Controller
 	public function onepage()
 	{
 		$optionManager = new \Manager\OptionsManager();
-
+		//header
+		$optionTitleToDisplay 	= $optionManager->getTitle();
 		//testimoniaux
 		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
 		$optionAvatarToDisplay2 = $optionManager->getAvatar(2);
 		$optionAvatarToDisplay3 = $optionManager->getAvatar(3);
 
-		$optionTestiToDisplay1 = $optionManager->GetTestimonial(1);
-		$optionTestiToDisplay2 = $optionManager->GetTestimonial(2);
-		$optionTestiToDisplay3 = $optionManager->GetTestimonial(3);
+		$optionTestiToDisplay1 	= $optionManager->GetTestimonial(1);
+		$optionTestiToDisplay2 	= $optionManager->GetTestimonial(2);
+		$optionTestiToDisplay3 	= $optionManager->GetTestimonial(3);
 
 		//sextion_text
-		$optionTextToDisplay1 = $optionManager->getText(1);
-		$optionTextToDisplay2 = $optionManager->getText(2);
-		$optionTextToDisplay3 = $optionManager->getText(3);
+		$optionTextToDisplay1 	= $optionManager->getText(1);
+		$optionTextToDisplay2 	= $optionManager->getText(2);
+		$optionTextToDisplay3 	= $optionManager->getText(3);
 
 		$this->show('default/onepage',[
 			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
 			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
+			'titledisplay'		=> [$optionTitleToDisplay],
 		]);
 
 	}
@@ -251,6 +260,22 @@ class DefaultController extends Controller
 
 	
 	}
+
+	/*
+	* HEADER
+	*/
+
+	public function updateTitle()
+	{	
+		$title = $_POST['title'];
+		$optionManager = new \Manager\OptionsManager();
+		$optionTitleToDisplay = $optionManager->updateTitle($title);
+		$this->redirectToRoute('backoffice');
+	}
+
+	
+
+
 
 	/*
 	* TESTIMONIAL
