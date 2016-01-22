@@ -9,6 +9,11 @@ class OptionsManager extends \W\Manager\Manager
 		//...
 	}
 
+	public function ContactForm()
+	{
+
+	}
+
 
 	function saveAdress($address){
 
