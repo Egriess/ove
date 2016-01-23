@@ -78,7 +78,7 @@
 	          		<hr/>
 	          </div>
 	          <div id="slidecomp">
-		          <h3>Slider</h3>
+		          	<h3>Slider</h3>
 		          		<p>La section slider permet d'afficher un carrousel au contenu personnalisable, l'utilisateur peut déterminer si le contenu de celui si ce sont des images ou des vidéos. Il est bien-sur possible de mixer l'affichage d'une photo puis de transiter vers une vidéo. il exploite 100% de la largeur du navigateur de façon responsive. (à condition que la source img/vidéo soit de taille appropriée.)
 		          		</p> 
 		          		<div class="illu">
@@ -87,19 +87,26 @@
 		          		<hr> 
 	          </div>
 	          <div id="galerycomp">
-	          ... galerie 
+	          
 	          </div>
 	          <div id="testiscomp">
-	          ... testis 
+	          
 	          </div>
 	          <div id="mapscomp">
-	          ... maps  
+	          		<h3>Map</h3>
+	          			<p>La section Map permet à l'utilisateur de pouvoir être localisé par les visiteurs de son site qui songerais prendre contact avec lui. Si l'utilisateur est une entreprise par exemple, les visiteurs du site pourrons directement savoir ou celle ci ce trouve. 
+	          			Les champs renseignés sont enregistrés en base de donnée, et peuvent être changés à la volonté de celui ci. Cela s'actualisera automatiquement en base de donnée.
+	          			<br>
+	          			Autre que les champs renseigné, la longitude et latitude sont également prise en compte en base de donnée, ce qui a pour but de charger ses informations dynamiquement dans chaque page concernée.</p>
+	          			<div class="illu">
+		          			<img src="img/map.png" alt="map"></img>
+		          		</div>
 	          </div>
 	          <div id="contactcomp">
-	          ... contact form 
+	          
 	          </div>
 	          <div id="textcomp">
-	          ... Text libre 
+	          
 	          </div>
         </div> 
          <div id="section4"> 
@@ -117,7 +124,19 @@
 	          ... testis 
 	          </div>
 	          <div id="mapsfunc">
-	          ... maps  
+	          	<div id="code">
+           			<p class="title">
+           				function saveAdress($address) {</p class="title">{ <br>
+           			<p class="corp">
+           					$sql = "UPDATE options SET option_value = :option_value WHERE option_name = 'adresse'";<br>
+							$stmt = $this->dbh->prepare($sql);
+							$stmt->bindParam(':option_value', $address);<br>
+							$stmt->execute(); 
+						 <br>
+           			<br></p class="corp">}
+		
+           </p>
+          </div>
 	          </div>
 	          <div id="textfunc">
 	          ... Texte libre

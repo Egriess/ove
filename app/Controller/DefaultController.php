@@ -29,8 +29,7 @@ class DefaultController extends Controller
 
 		$this->show('default/backoffice', ['currentadresse' => $adressToDisplay]);
 
-		$optionManager = new \Manager\OptionsManager();
-
+		
 		if(isset($_POST['submit_avatar_1'])) {
 
 			// Upload du fichier (move_uploaded_file, etc.)
