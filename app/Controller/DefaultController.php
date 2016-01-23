@@ -347,7 +347,7 @@ class DefaultController extends Controller
 	/*
 	* CONTACT_FORM
 	*/
-	public function contactForm($errName, $errEmail, $errMessage, $errHuman, $name, $email, $message, $human)
+	public function contact($errName, $errEmail, $errMessage, $errHuman, $name, $email, $message, $human)
 	{
 		$optionManager = new \Manager\OptionsManager();
 
@@ -394,8 +394,8 @@ class DefaultController extends Controller
 			 		$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
 			 	}
 			}
+	 	$this->redirectToRoute('onepage');
 	 	}
-	 	$this->show('default/onepage');
 	}
 	
 }

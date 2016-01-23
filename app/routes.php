@@ -10,4 +10,6 @@
 
 		['POST', '/saveAdress', 'Default#saveAdress', 'saveAdress' ],
 		['GET', '/getAdress', 'Default#getAdress', 'getAdress' ],
+
+		['POST', '/contact','Default#contact', 'contact'], // Contact
 	);
