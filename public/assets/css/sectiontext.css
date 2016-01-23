@@ -1,0 +1,28 @@
+#text{
+	background-image: url("assets/imgs/beautyback.png");
+}
+h2{
+	text-align: center;
+	color: #FFF;
+	font-family: verdana, sans-serif;
+}
+.text{
+	width: 25%; 	
+	float: left;
+	margin-left: 7em;
+	margin-top: 6em;
+	text-align: justify;
+	font-family: verdana, sans-serif;
+	padding-right: 5em;	
+}
+#sectionText_1{
+	border-right: groove 2px #FFF;
+
+}
+#sectionText_2{
+	border-right: groove 2px #FFF;
+}
+hr{
+	border-color:#CCC;
+	width: 25%
+}
