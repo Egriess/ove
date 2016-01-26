@@ -20,8 +20,8 @@ class DefaultController extends Controller
 
 		$optionManager= new \Manager\OptionsManager();
 		// Recuperer les coordonnees
-		$address = $_POST['address'];
-     	$adressToDisplay=$optionManager->getAdress($address);
+
+     	$adressToDisplay=$optionManager->getAdress();
      
 		// Recuperer l'adresse en texte
 
@@ -118,6 +118,11 @@ class DefaultController extends Controller
 			$optionManager->updateTitle($title);
 		}
 
+		if(isset($_POST['submit_color'])){
+			$color = $_POST['textcolor'];
+			$optionManager->updateColor($color);
+		}
+
 		//modification du text testimonial
 		if(isset($_POST['submit_text1'])){
 			$optionManager->UpdateTesti(1, $_POST['testi-area']);
@@ -141,6 +146,7 @@ class DefaultController extends Controller
 		}
 		//header 
 		$optionTitleToDisplay 	= $optionManager->getTitle();
+		$optionTitleToDisplay 	= $optionManager->getColor();
 		//testimoniaux
 		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
 		$optionAvatarToDisplay2 = $optionManager->getAvatar(2);
@@ -160,6 +166,7 @@ class DefaultController extends Controller
 			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
 			'titledisplay'		=> [$optionTitleToDisplay],
+			'color'		=>[$optionColorToDisplay],
 		]);
 
 	}
@@ -173,6 +180,7 @@ class DefaultController extends Controller
 	{
 		$optionManager = new \Manager\OptionsManager();
 		//header
+		$optionColorToDisplay   = $optionManager->getColor();
 		$optionTitleToDisplay 	= $optionManager->getTitle();
 		//testimoniaux
 		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
@@ -193,6 +201,7 @@ class DefaultController extends Controller
 			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
 			'titledisplay'		=> [$optionTitleToDisplay],
+			'color'		=>[$optionColorToDisplay],
 		]);
 
 	}
@@ -262,10 +271,20 @@ class DefaultController extends Controller
 	
 	}
 
+
+
 	/*
 	* HEADER
 	*/
+	public function getColor(){
+		$optionManager = new \Manager\OptionsManager();
+		
+		
+     	$adressToDisplay=$optionManager->getColor($color);
+     	$this->show('default/backoffice', ['currentcolor' => $adressToDisplay]);
 
+	
+	}
 	public function updateTitle()
 	{	
 		$title = $_POST['title'];
@@ -273,6 +292,17 @@ class DefaultController extends Controller
 		$optionTitleToDisplay = $optionManager->updateTitle($title);
 		$this->redirectToRoute('backoffice');
 	}
+
+	public function updateColor()
+	{	
+	
+		$color = $_POST['textcolor'];
+		$optionManager = new \Manager\OptionsManager();
+		$optionColorToDisplay = $optionManager->updateColor($color);
+		$this->redirectToRoute('backoffice');
+
+	
+}
 
 	
 

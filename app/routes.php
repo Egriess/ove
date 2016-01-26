@@ -10,6 +10,8 @@
 
 		['POST', '/saveAdress', 'Default#saveAdress', 'saveAdress' ],
 		['GET', '/getAdress', 'Default#getAdress', 'getAdress' ],
-		['POST', '/updateTitle', 'Default#updateTitle', 'updateTitle'], // 
 		['GET', '/getTitle', 'Default#getTitle', 'getTitle'],
+		['POST', '/updateTitle', 'Default#updateTitle', 'updateTitle'], // 
+		['GET', '/getColor', 'Default#getColor', 'getColor'],
+		['POST', '/updateColor', 'Default#updateColor', 'updateColor'],
 	);

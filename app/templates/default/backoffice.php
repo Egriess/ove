@@ -17,9 +17,14 @@
 					<div id="titlepopup" class="white-popup mfp-with-anim mfp-hide">
 						<form action="/updateTitle" method="post" accept-charset="utf-8">
 							<span>Choisir le titre du site</span><br>
-							<input type="text" name="title" value="" placeholder="Votre titre"><br>
+							<input type="text" name="title"  placeholder="Votre titre"><br>
 							<span>Choisir la couleur du texte</span><br>
-							<input type="color" value="#383535" name="textcolor"><br>
+
+							<form action="/updateColor" method="post" accept-charset="utf-8">
+								<input type="color" name="textcolor"><br>
+								<input type="submit" name="submit_color" value="envoyer">
+							</form>
+
 							<span>Choisir le style d'ecriture</span><br>
 							<select name="fonts">
 								<option style="font-family:'Roboto';"value="Roboto">Roboto</option>

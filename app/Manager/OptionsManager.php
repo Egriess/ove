@@ -25,8 +25,24 @@ class OptionsManager extends \W\Manager\Manager
 		$stmt = $this->dbh-> query($sql);
 		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
 		return $row['option_value'];
-
 	}
+
+		function updateColor($color){
+
+			$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'color_title'";
+			$stmt = $this->dbh->prepare($sql);
+			$stmt->bindParam(':option_value', $color);
+			$stmt->execute();
+		}
+
+		function getColor(){
+
+		$sql="SELECT option_value FROM options WHERE option_name = 'color_title'";
+		$stmt = $this->dbh-> query($sql);
+		$color = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $color['option_value'];
+	}
+	
 	/*
 	* END function Header
 	*/
@@ -39,7 +55,7 @@ class OptionsManager extends \W\Manager\Manager
 		$stmt->execute();
 	}
 
-	function getAdress($address){
+	function getAdress(){
 
 		$sql="SELECT option_value from options where option_name = 'adresse'";
 		$stmt = $this->dbh-> query($sql);
@@ -60,7 +76,7 @@ class OptionsManager extends \W\Manager\Manager
 	/*
 	*function Testimonial
 	*/
-	public function GetTestimonial($testiNb)
+	function GetTestimonial($testiNb)
 	{
 		$sql="SELECT option_value FROM options WHERE option_name='testimonial_".$testiNb."'";
 		$stmt= $this->dbh->query($sql);
@@ -68,7 +84,7 @@ class OptionsManager extends \W\Manager\Manager
 		return $row['option_value'];
 	}
 
-	public function UpdateTesti($testiNb, $newText)
+	function UpdateTesti($testiNb, $newText)
 	{
 		$sql="UPDATE options SET option_value ='$newText' WHERE option_name = 'testimonial_".$testiNb."'";
 		$stmt = $this->dbh->prepare($sql);
@@ -78,7 +94,7 @@ class OptionsManager extends \W\Manager\Manager
 
 	//function change_avatar
 
-	public function changeAvatar($avatarNb, $newUrl)
+	function changeAvatar($avatarNb, $newUrl)
 	{
 		$sql ="UPDATE options SET option_value ='$newUrl' WHERE option_name = 'avatar_".$avatarNb."'";
 		$stmt = $this->dbh->prepare($sql);
@@ -86,7 +102,7 @@ class OptionsManager extends \W\Manager\Manager
 		$stmt->execute();
 	}
 
-	public function getAvatar($avatarNb)
+	function getAvatar($avatarNb)
 	{
 		$sql="SELECT option_value FROM options WHERE option_name = 'avatar_".$avatarNb."'";
 		$stmt = $this->dbh->query($sql);
@@ -98,7 +114,7 @@ class OptionsManager extends \W\Manager\Manager
 	=====Function Text=====
 	*/
 
-	public function getText($textNb)
+	function getText($textNb)
 	{
 		$sql="SELECT option_value FROM options WHERE option_name = 'text_".$textNb."'";
 		$stmt = $this->dbh->query($sql);
@@ -106,7 +122,7 @@ class OptionsManager extends \W\Manager\Manager
 		return $row['option_value'];
 	}
 
-	public function changeText($textNb, $newSecText)
+	function changeText($textNb, $newSecText)
 	{
 		$sql ="UPDATE options SET option_value ='$newSecText' WHERE option_name = 'text_".$textNb."'";
 		$stmt = $this->dbh->prepare($sql);
