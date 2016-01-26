@@ -457,4 +457,6 @@ class DefaultController extends Controller
 		echo "Message has been sent";
 		$this->redirectToRoute('onepage');
 	}
+
+	
 }
