@@ -109,7 +109,7 @@ class DefaultController extends Controller
 				die();
 			}
 			if(move_uploaded_file($_FILES['img_avatar_3']['tmp_name'], $destinationFilePath)) {
-			} else {
+			} else{
 				echo 'Erreur lors de l\'enregistrement.';
 			}
 
@@ -354,6 +354,11 @@ class DefaultController extends Controller
 		// $errName, $errEmail, $errMessage, $errHuman, $name, $email, $message, $human
 		$_POST['name'];
 		$_POST['email'];
+		$_POST['message'];
+		$_POST['human'];
+		$_POST['errName'];
+		$_POST['errEmail'];
+		$_POST['errMessage'];
 		print_r($_POST);
 		// Si j'ai recu une soumission du formulaire mail
 		// Si j'ai tous les champs
@@ -406,5 +411,50 @@ class DefaultController extends Controller
 			}
 	 	$this->redirectToRoute('onepage');
 	 	}
+	}
+
+	public function mailer()
+	{
+		$optionManager = new \Manager\OptionsManager();
+
+		$mail = new \PHPMailer();
+		// $email and $message are the data that is being
+		// posted to this page from our html contact form
+		//$email = '' ;
+		$email = $_REQUEST['email'] ;
+		$name = $_REQUEST['name'];
+		$message = $_REQUEST['message'] ;
+
+		//$mail->SMTPDebug = 2;
+		$mail->isSMTP();                                      // Set mailer to use SMTP
+		$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+		$mail->SMTPAuth = true;                               // Enable SMTP authentication
+		$mail->Username = 'one.page.editor@gmail.com';                 // SMTP username
+		$mail->Password = 'oveonepageeditor';                           // SMTP password
+		$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+		$mail->Port = 587;                                    // TCP port to connect to
+		$mail->setFrom($email);
+
+		// below we want to set the email address we will be sending our email to.
+		$mail->AddAddress("mathieu.baldassi@gmail.com");
+		$mail->addReplyTo('info@example.com', 'Information');
+		$mail->addCC('cc@example.com');
+		$mail->addBCC('bcc@example.com');
+
+		$mail->isHTML(true);                                  // Set email format to HTML
+
+		$mail->Subject = 'Here is the subject';
+		$mail->Body    = $message;
+		$mail->AltBody = $message;
+
+		if(!$mail->send())
+		{
+		   echo "Message could not be sent. <p>";
+		   echo "Mailer Error: " . $mail->ErrorInfo;
+		   exit;
+		}
+
+		echo "Message has been sent";
+		$this->redirectToRoute('onepage');
 	}
 }

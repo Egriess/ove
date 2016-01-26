@@ -70,12 +70,12 @@
 			<form enctype="multipart/form-data" action="#" method="post">
 				<input type="hidden" name="MAX_FILE_SIZE" value="300000000" />
 				Sélectionner un fichier : <input name="my-file" type="file" />
-				<input type="submit" name="submit" value="Envoyer le fichier" />	
+				<input type="submit" name="submit_gal" value="Envoyer le fichier" />	
 			</form>
 
 			<?php 
 
-				if (isset($_POST['submit'])){
+				if (isset($_POST['submit_gal'])){
 
 			$finfo = new \finfo(FILEINFO_MIME_TYPE);
 
@@ -306,6 +306,21 @@
 				<div class="text"id="sectionText_3">
 					<?= $texts[2] ?>
 				</div>
+			</div>
+		</div>
+		<div id="email">
+			<div class="container">
+				<h2>Formulaire SMTP</h2>
+				<p>Compte gmail requis.</p>
+				<form action="#" method="POST" accept-charset="utf-8">
+
+					<label>votre adresse mail</label>
+					<input type="email" name="email" value="<?php echo 'test'; ?>" placeholder="ex: john.doe@domain.com">
+
+					<label>mot de passe de votre compte mail</label>
+					<input type="password" name="password" value="<?php  echo 'test'; ?>" placeholder="Votre mot de passe">
+					<input type="submit" name="submit-mail" value="Valider">
+				</form>
 			</div>
 		</div>
 	</div>

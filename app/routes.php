@@ -12,4 +12,5 @@
 		['GET', '/getAdress', 'Default#getAdress', 'getAdress' ],
 
 		['POST', '/contact','Default#contact', 'contact'], // Contact
+		['POST', '/sendmail','Default#mailer', 'sendmail'], // Contact
 	);
