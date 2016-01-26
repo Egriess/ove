@@ -299,11 +299,11 @@
 				<form action="#" method="POST" accept-charset="utf-8">
 
 					<label>votre adresse mail</label>
-					<input type="email" name="email_contact" value="<?php echo 'test'; ?>" placeholder="ex: john.doe@domain.com">
-
+					<input type="email" name="email_contact" value="" placeholder="ex: john.doe@domain.com">
+					<p><?= $email_contact; ?></p>
 					<label>mot de passe de votre compte mail</label>
-					<input type="password" name="password_mail" value="<?php  echo 'test'; ?>" placeholder="Votre mot de passe">
-					<input type="submit" name="submit-mail" value="Valider">
+					<input type="password" name="password_mail" value="<?= $password_mail; ?>" placeholder="Votre mot de passe">
+					<input type="submit" name="submit_mail" value="Valider">
 				</form>
 			</div>
 		</div>
