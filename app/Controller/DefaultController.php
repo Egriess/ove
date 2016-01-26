@@ -302,4 +302,5 @@ class DefaultController extends Controller
 		$this->show('default/backoffice',['text'=>[$optionUpTextToDisplay1, $optionUpTextToDisplay2, $optionUpTextToDisplay3]]);
 	}
 
+
 }

@@ -26,21 +26,33 @@ function geocodeAddress(geocoder, resultsMap) {
         
       });
 
-    
-    var lat = results[0].geometry.location.lat();
-    var lon = results[0].geometry.location.lng();
-      // Si on recu un resultat
-    document.getElementById('lat').value = lat;
-    document.getElementById('lon').value = lon;
-   
-  
+         var lat = results[0].geometry.location.lat();
+          var lon = results[0].geometry.location.lng();
+           
+          document.getElementById('lat').value = lat;
+          document.getElementById('lon').value = lon;
+
+      $.ajax({
+        url: '/changeMap',
+        type: 'POST',
+        data: ( lat, lon),
+      })
+      .done(function(results) {
+        console.log(results);     
+        
+        })
+      .fail(function() {
+        console.log("error");
+      })
+      .always(function() {
+        console.log("complete");
+      });
+        
 
 
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
-
-
-
 }
+

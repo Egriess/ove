@@ -18,6 +18,8 @@ class OptionsManager extends \W\Manager\Manager
 		$stmt->execute();
 	}
 
+
+
 	function getAdress($address){
 
 		$sql="SELECT option_value from options where option_name = 'adresse'";

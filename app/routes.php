@@ -10,4 +10,5 @@
 
 		['POST', '/saveAdress', 'Default#saveAdress', 'saveAdress' ],
 		['GET', '/getAdress', 'Default#getAdress', 'getAdress' ],
+		['POST', '/changeMap', 'Default#changeMap', 'changeMap' ],
 	);
