@@ -413,6 +413,23 @@ class DefaultController extends Controller
 	 	}
 	}
 
+	public function getMail($email_contact, $password_mail)
+	{
+		$optionManager = new \Manager\OptionsManager();
+
+		if (isset($_POST['submit_mail']) && isset($_POST['email_contact'])) 
+		{
+			if(isset($_POST['password_mail']))
+			{
+				$hashedPass = password_hash($_POST['password_mail'], PASSWORD_DEFAULT);
+			}	
+		}
+		else
+		{
+			echo 'Il doit manquer une donné au formulaire';
+		}
+	}
+
 	public function mailer()
 	{
 		$optionManager = new \Manager\OptionsManager();
@@ -429,8 +446,8 @@ class DefaultController extends Controller
 		$mail->isSMTP();                                      // Set mailer to use SMTP
 		$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 		$mail->SMTPAuth = true;                               // Enable SMTP authentication
-		$mail->Username = 'one.page.editor@gmail.com';                 // SMTP username
-		$mail->Password = 'oveonepageeditor';                           // SMTP password
+		$mail->Username =  $email_contact ;                 // SMTP username
+		$mail->Password =  $password_mail ;            // SMTP password
 		$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 		$mail->Port = 587;                                    // TCP port to connect to
 		$mail->setFrom($email);
