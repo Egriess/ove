@@ -8,7 +8,7 @@ C'est ici que vous définissez vos contrôleurs, vos gestionnaires, vos fichiers
 
 * config.php : le fichier principal, où vous devez configurer vos accés
 * routes.php : contient toutes vos routes
-* 
+
 
 --------------
 
