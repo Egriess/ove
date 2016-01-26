@@ -6,7 +6,7 @@
 <header>
 		
 			<nav class="navbar navbar-fixed-top">
-				<h1 id="text_shadow" style="text-shadow: rgb(150, 150, 150) 4px 4px 2px;" ><?= $titledisplay ?></h1>
+				<h1 id="text_shadow" style="text-shadow: rgb(150, 150, 150) 4px 4px 2px;" ><?= $titledisplay[0] ?></h1>
 				<!-- POP UP edit end -->
 				<ul class="nav nav-pills">
 				  <li role="presentation"><a href="/login">Loginpage</a></li>

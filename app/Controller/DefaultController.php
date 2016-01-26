@@ -154,7 +154,7 @@ class DefaultController extends Controller
 		$optionTextToDisplay2 	= $optionManager->getText(2);
 		$optionTextToDisplay3 	= $optionManager->getText(3);
 
-		$this->show('default/backoffice',[
+		$this->show('Default/backoffice',[
 			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
 			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
@@ -210,7 +210,7 @@ class DefaultController extends Controller
 			if(!isset($_POST['login']) || empty($_POST['login']) || !isset($_POST['password']) || empty($_POST['password'])) {
 				// S'il manque des informations
 
-				$this->redirectToRoute('login');
+				$this->redirectToRoute('backoffice');
 			}
 
 			$authManager = new \W\Security\AuthentificationManager();
@@ -227,13 +227,13 @@ class DefaultController extends Controller
 				// Enregistrement des infos utilisateur en session
 				$authManager->logUserIn($user);
 
-				$this->redirectToRoute('default/login');
+				$this->redirectToRoute('backoffice');
 			}
 
-			$this->show('default/login', ['errorConnection' => true]);
+			$this->show('Default/login', ['errorConnection' => true]);
 		}
 		
-		$this->show('default/login');
+		$this->show('Default/login');
 	}
 
 	public function logoff()
@@ -274,10 +274,10 @@ class DefaultController extends Controller
 	public function getDynpage($username){
 		$usersManager = new \Manager\UsersManager();
 		$page_nameToDis = $usersManager->usernameExists($username);
-		if(isset($page_nameToDis)){
+		if($page_nameToDis == true){
 		$this->show('default/onepage', ['titledisplay' => $page_nameToDis]);
 		}else {
-			echo 'il semble que cette page n existe pas';
+			$this->showNotFound();
 		}
 	}
 

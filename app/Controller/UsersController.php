@@ -25,6 +25,12 @@ class UsersController extends Controller
 					'passwrd' 	=> password_hash($_POST['passwrd'], PASSWORD_DEFAULT),
 					'mail' 		=> $_POST['mail']
 				]);
+
+			$usersManager->insertInit([
+					'page_name' => $_POST['page_name'],
+					'passwrd' 	=> password_hash($_POST['passwrd'], PASSWORD_DEFAULT),
+					'mail' 		=> $_POST['mail']
+				]);
 		}
 
 		$this->redirectToRoute('backoffice');

@@ -8,6 +8,7 @@
 		['GET|POST', '/backoffice', 'Default#backoffice', 'backoffice'], // Page de gestion et édition
 		['GET', '/page', 'Default#onepage', 'onepage'],
 		['GET', '/[a:username]', 'Default#getDynpage', 'page'],
+		['GET', '/404', 'w_errors#404', '404'], 		// gestion de la page d'erreur
 
 		['POST', '/saveAdress', 'Default#saveAdress', 'saveAdress' ],
 		['GET', '/getAdress', 'Default#getAdress', 'getAdress' ],
