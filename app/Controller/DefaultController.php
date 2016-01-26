@@ -347,8 +347,18 @@ class DefaultController extends Controller
 	/*
 	* CONTACT_FORM
 	*/
-	public function contact($errName, $errEmail, $errMessage, $errHuman, $name, $email, $message, $human)
+	public function contact()
 	{
+
+
+		// $errName, $errEmail, $errMessage, $errHuman, $name, $email, $message, $human
+		$_POST['name'];
+		$_POST['email'];
+		print_r($_POST);
+		// Si j'ai recu une soumission du formulaire mail
+		// Si j'ai tous les champs
+			// Si erreur dans
+
 		$optionManager = new \Manager\OptionsManager();
 
 		if (isset($_POST["submit"])) 
@@ -359,9 +369,9 @@ class DefaultController extends Controller
 	 		$human = intval($_POST['human']);
 	 		/*$from = 'Demo Contact Form'; 
 	 		$to = 'example@domain.com'; 
-	 		$subject = 'Message from Contact Demo ';
+	 		$subject = 'Message from Contact Demo ';*/
 	 		
-	 		$body ="From: $name\n E-Mail: $email\n Message:\n $message";*/
+	 		$body ="From: $name\n E-Mail: $email\n Message:\n $message";
 	 
 	 		// Check if name has been entered
 	 		if (!isset($_POST['name'])) {
@@ -397,5 +407,4 @@ class DefaultController extends Controller
 	 	$this->redirectToRoute('onepage');
 	 	}
 	}
-	
 }

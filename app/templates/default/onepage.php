@@ -179,33 +179,33 @@ closedir($dir_handle);
 	
 		<h2>Contact</h2>
 		
-		<form class="form-horizontal" method="POST" action="contact">
+		<form class="form-horizontal" method="POST" action="/contact">
 		    <div class="form-group">
 		        <label for="name" class="col-sm-2 control-label">Name</label>
 		        <div class="col-sm-10">
-		            <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="<?php if(isset($_POST['name'])){echo $this->e($_POST['name']);}; ?>">
+		            <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="<?php //echo $this->e($_POST['name']); ?>">
 		            <?php echo "<p class='text-danger'>$errName</p>";?>
 		        </div>
 		    </div>
 		    <div class="form-group">
 		        <label for="email" class="col-sm-2 control-label">Email</label>
 		        <div class="col-sm-10">
-		            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="<?php if(isset($_POST['submit'])){echo $this->e($_POST['email']);}; ?>">
-		            <?php if(isset($_POST['submit'])){echo "<p class='text-danger'>$errEmail</p>";};?>
+		            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="<?php //echo $this->e($_POST['email']); ?>">
+		            <?php echo "<p class='text-danger'>errEmail</p>";?>
 		        </div>
 		    </div>
 		    <div class="form-group">
 		        <label for="message" class="col-sm-2 control-label">Message</label>
 		        <div class="col-sm-10">
-		            <textarea class="form-control" rows="4" name="message"><?php if(isset($_POST['submit'])){echo $this->e($_POST['message']);}?></textarea>
-		            <?php if(isset($_POST['submit'])){echo "<p class='text-danger'>$errMessage</p>";};?>
+		            <textarea class="form-control" rows="4" name="message"><?php //echo $this->e($_POST['message']);?></textarea>
+		            <?php echo "<p class='text-danger'>errMessage</p>";?>
 		        </div>
 		    </div>
 		    <div class="form-group">
 		        <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
 		        <div class="col-sm-10">
 		            <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
-		            <?php echo "<p class='text-danger'>$errHuman</p>";?>
+		            <?php echo "<p class='text-danger'>errHuman</p>";?>
 		        </div>
 		    </div>
 		    <div class="form-group">
