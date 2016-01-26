@@ -1,5 +1,7 @@
 ###Répertoire W/
 
-Ce répertoire contient le code du framework W.
+Ce répertoire contient le code de base du framework PHP.
 
-*Attention : Vous ne devez jamais rien y modifier !*
+-------
+This directory contains the basic code of PHP framework .
+
