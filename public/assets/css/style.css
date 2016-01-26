@@ -46,6 +46,8 @@ header nav h1 {
   width: 100%;
   height: 860px;
   background: #408ff4;
+  margin: auto;
+  text-align: center;
 }
 
 #backheader{
@@ -68,7 +70,52 @@ header nav h1 {
 #titlepopup span {
   font-weight: bold;
 }
+
+#regandlog{
+  padding-top: 75px;
+  border-radius: 25px;
+  margin: auto;
+  width: 550px;
+  height: 450px;
+  background: #CECACA;
+}
+
+#reg{
+  margin: auto;
+  width: 450px;
+}
+
+#reg input{
+  width: 450px;
+  height: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+#input-group{
+  width: 300px;
+}
+
 /* CSS Library */ 
+
+
+.describ{
+  margin: auto;
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  font-family: verdana;
+  color: white;
+}
+
+#homefooter{
+  width: 100%;
+  height: 100px;
+  background: #3E3E3E;
+  border-top: 2px solid #D0CECE;
+  color: white;
+  text-align: center;
+}
 
 .input .control { width: 160px; float: left; margin-right: 15px; text-align: center; }
 

@@ -172,6 +172,11 @@ class DefaultController extends Controller
 	public function onepage()
 	{
 		$optionManager = new \Manager\OptionsManager();
+		$userManager = new \Manager\UsersManager();
+		
+		// routing infos
+
+
 		//header
 		$optionTitleToDisplay 	= $optionManager->getTitle();
 		//testimoniaux
@@ -193,6 +198,7 @@ class DefaultController extends Controller
 			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
 			'titledisplay'		=> [$optionTitleToDisplay],
+			
 		]);
 
 	}
@@ -222,7 +228,7 @@ class DefaultController extends Controller
 				// Enregistrement des infos utilisateur en session
 				$authManager->logUserIn($user);
 
-				$this->redirectToRoute('todolist_list');
+				$this->redirectToRoute('default/login');
 			}
 
 			$this->show('default/login', ['errorConnection' => true]);
@@ -265,6 +271,16 @@ class DefaultController extends Controller
 	/*
 	* HEADER
 	*/
+
+	public function getDynpage($username){
+		$usersManager = new \Manager\UsersManager();
+		$page_nameToDis = $usersManager->usernameExists($username);
+		if(isset($page_nameToDis)){
+		$this->show('default/onepage', ['titledisplay' => $page_nameToDis]);
+		}else {
+			echo 'il semble que cette page n existe pas';
+		}
+	}
 
 	public function updateTitle()
 	{	
