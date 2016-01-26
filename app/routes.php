@@ -12,8 +12,11 @@
 
 		['POST', '/saveAdress', 'Default#saveAdress', 'saveAdress' ],
 		['GET', '/getAdress', 'Default#getAdress', 'getAdress' ],
+
 		['POST', '/updateTitle', 'Default#updateTitle', 'updateTitle'], // 
 		['GET', '/getTitle', 'Default#getTitle', 'getTitle'],
+
+		['POST', '/contact','Default#contact', 'contact'], // Contact
+		['POST', '/sendmail','Default#mailer', 'sendmail'], // Contact
 	);
 
-	

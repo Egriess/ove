@@ -133,4 +133,19 @@ class OptionsManager extends \W\Manager\Manager
 		$stmt->execute();
 	}
 
+	public function insertMail($email_contact, $password_mail)
+	{	
+		$email_contact		= $_POST["email_contact"];
+		$password_mail		= $_POST["password_mail"];
+
+		$sql = "INSERT INTO `ove`.`options` (\n"
+	    . "	`id`, `option_name`, `option_value`, \n"
+	    . "	`user_option_id`\n"
+	    . ") \n"
+	    . "VALUES \n"
+	    . "	(NULL, 'adresse_mail', '".$email_contact."', '1'), \n"
+	    . "	(NULL, 'pw_mail', '".$password_mail."', '1')";
+	    $this->dbh->exec($sql);
+	}
+
 }

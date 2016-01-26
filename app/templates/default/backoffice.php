@@ -46,6 +46,57 @@
 			<a href="#gallerypopup" class="hinge">Choisir les image de la galerie</a>
 					<div id="gallerypopup" class="white-popup mfp-with-anim mfp-hide">
 					<span> Choisir les images</span>
+
+	<div id="galleryback">
+		<div class="containerback">
+					<!-- POP UP edit -->
+
+			<form enctype="multipart/form-data" action="#" method="post">
+				<input type="hidden" name="MAX_FILE_SIZE" value="300000000" />
+				Sélectionner un fichier : <input name="my-file" type="file" />
+				<input type="submit" name="submit_gal" value="Envoyer le fichier" />	
+			</form>
+
+			<?php 
+
+				if (isset($_POST['submit_gal'])){
+
+			$finfo = new \finfo(FILEINFO_MIME_TYPE);
+
+	
+			$mimeType = $finfo->file($_FILES['my-file']['tmp_name']);
+
+
+			$extFoundInArray = array_search(
+       		 $mimeType,
+        		array(
+        	    	'jpg' => 'image/jpeg',
+        	   		'png' => 'image/png',
+      		     	 'gif' => 'image/gif',
+       			 )
+   			 );
+
+    		if ($extFoundInArray === false) {
+    			echo 'Le fichier n\'est pas une image';
+    		die();
+   			 }
+
+
+			$path = 'assets/img/thumbs/'. sha1_file($_FILES['my-file']['tmp_name']) . '.' . $extFoundInArray;	
+			$path2 = 'assets/img/original/'. sha1_file($_FILES['my-file']['tmp_name']) . '.' . $extFoundInArray;	
+			$moved = move_uploaded_file($_FILES['my-file']['tmp_name'], $path);
+			
+			if($moved){
+				copy($path,$path2);
+			};
+		
+}	
+		
+	?>		
+		
+	</div>					
+
+		</div>
 	</div>
 	<a href="#titlepopup" class="hinge">Editer le titre du site</a>
 	<div id="testimoniaux">
@@ -239,6 +290,21 @@
 				<div class="text"id="sectionText_3">
 					<?= $texts[2] ?>
 				</div>
+			</div>
+		</div>
+		<div id="email">
+			<div class="container">
+				<h2>Formulaire SMTP</h2>
+				<p>Compte gmail requis.</p>
+				<form action="#" method="POST" accept-charset="utf-8">
+
+					<label>votre adresse mail</label>
+					<input type="email" name="email_contact" value="<?php echo 'test'; ?>" placeholder="ex: john.doe@domain.com">
+
+					<label>mot de passe de votre compte mail</label>
+					<input type="password" name="password_mail" value="<?php  echo 'test'; ?>" placeholder="Votre mot de passe">
+					<input type="submit" name="submit-mail" value="Valider">
+				</form>
 			</div>
 		</div>
 	</div>
