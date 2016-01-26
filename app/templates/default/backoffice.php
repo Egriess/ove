@@ -230,15 +230,15 @@
 		<div id="map"></div>
 			<div id="floating-panel">
 				<form action="/saveAdress" method="POST" accept-charset="utf-8">
-				<input id="lat" type="hidden" name="lat" value="<?=  $lat; ?>">
-				<input id="lon" type="hidden" name="lon" value="<?=  $lon; ?>">
-      			<input id="address" name="address" type="textbox" value="" placeholder="Entrer votre nouvelle adresse">
-      			<input id="setMap" type="button" value="Trouver l'adresse">
-      			<input id="submit" name="button" type="submit" value="Valider">
-     		 </form>
+					<input id="lat" type="hidden" name="lat" value="<?= $lat; ?>">
+					<input id="lon" type="hidden" name="lon" value="<?= $lon; ?>">
+      				<input id="address" name="address" type="textbox" value="" placeholder="Entrer votre nouvelle adresse">
+      				<input id="setMap" type="button" value="Trouver l'adresse">
+      				<input name="saveAdress" type="submit" value="Valider">
+     			 </form>
 
-			<h3>Mon adresse actuel :</h3>
-     		<p><?=  $currentadresse; ?></p>
+				<h3>Mon adresse actuel :</h3>
+     			<p><?=  $currentadresse; ?></p>
   			</div>
 	</div>
 </div>

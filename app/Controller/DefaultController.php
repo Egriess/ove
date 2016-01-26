@@ -7,7 +7,7 @@ use \W\Controller\Controller;
 class DefaultController extends Controller
 {
 
-	/**
+	/** 
 	 * Page d'accueil par défaut
 	 */
 	public function home()
@@ -20,14 +20,16 @@ class DefaultController extends Controller
 
 		$optionManager= new \Manager\OptionsManager();
 		// Recuperer les coordonnees
-		$address = $_POST['address'];
-     	$adressToDisplay=$optionManager->getAdress($address);
+		//$address = $_POST['address'];
+     	$adressToDisplay=$optionManager->getAdress();
+     	$lat=$optionManager->getLat();
+     	$lon=$optionManager->getLon();
      
 		// Recuperer l'adresse en texte
 
 		// Les passer a la vue
 
-		$this->show('default/backoffice', ['currentadresse' => $adressToDisplay]);
+		//$this->show('default/backoffice', ['currentadresse' => $adressToDisplay]);
 
 		$optionManager = new \Manager\OptionsManager();
 
@@ -154,6 +156,8 @@ class DefaultController extends Controller
 			'testis'=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 			'texts'=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
 			'currentadresse' => $adressToDisplay,
+			'lat' => $lat,
+			'lon' => $lon,
 		]);
 
 	}
@@ -168,8 +172,10 @@ class DefaultController extends Controller
 		$optionManager = new \Manager\OptionsManager();
 
 		//map
-		$address = $_POST['address'];
-     	$adressToDisplay=$optionManager->getAdress($address);
+		
+     	$lat=$optionManager->getLat();
+     	$lon=$optionManager->getLon();
+     	$adressToDisplay=$optionManager->getAdress();
 
 		//testimoniaux
 		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
@@ -190,6 +196,8 @@ class DefaultController extends Controller
 			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
 			'currentadresse' => $adressToDisplay,
+			'lat' => $lat,
+			'lon' => $lon,
 		]);
 
 	}
@@ -239,7 +247,7 @@ class DefaultController extends Controller
 	// Controller Function to save the address in bdd
 	public function saveAdress(){
 				$optionManager = new \Manager\OptionsManager();
-     		 	if(isset( $_POST["button"])){
+     		 	if(isset( $_POST["saveAdress"])){
 					$address = $_POST['address'];
 					$lat = $_POST['lat'];
 					$lon = $_POST['lon'];
@@ -251,7 +259,7 @@ class DefaultController extends Controller
      		 	$this->redirectToRoute('backoffice');
 
 	}
-
+/*
 	public function getAdress(){
 		$optionManager = new \Manager\OptionsManager();
 		
@@ -261,7 +269,7 @@ class DefaultController extends Controller
 
 	
 	}
-
+*/
 	/*
 	* TESTIMONIAL
 	*/

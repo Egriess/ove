@@ -1,16 +1,20 @@
 function initMap(geocoder, resultsMap) {
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 6,
-    center: {lat: 43.296, lng: 5.3697}
+    zoom: 8,
+    center: {lat: parseInt($('#lat').val()), lng: parseInt($('#lon').val())}
        });
+  var marker = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: {lat: parseInt($('#lat').val()), lng: parseInt($('#lon').val())}
+        
+  });
   var geocoder = new google.maps.Geocoder();
 
   document.getElementById('setMap').addEventListener('click', function() {
     geocodeAddress(geocoder, map);
 
   });
-
-
 
 }
 
@@ -32,21 +36,6 @@ function geocodeAddress(geocoder, resultsMap) {
           document.getElementById('lat').value = lat;
           document.getElementById('lon').value = lon;
 
-      $.ajax({
-        url: '/changeMap',
-        type: 'POST',
-        data: ( lat, lon),
-      })
-      .done(function(results) {
-        console.log(results);     
-        
-        })
-      .fail(function() {
-        console.log("error");
-      })
-      .always(function() {
-        console.log("complete");
-      });
         
 
 
@@ -55,4 +44,3 @@ function geocodeAddress(geocoder, resultsMap) {
     }
   });
 }
-

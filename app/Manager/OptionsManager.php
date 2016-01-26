@@ -20,9 +20,25 @@ class OptionsManager extends \W\Manager\Manager
 
 
 
-	function getAdress($address){
+	function getAdress(){
 
 		$sql="SELECT option_value from options where option_name = 'adresse'";
+		$stmt = $this->dbh-> query($sql);
+		$adresse = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $adresse['option_value'];
+
+	}
+	function getLon(){
+
+		$sql="SELECT option_value from options where option_name = 'longitude'";
+		$stmt = $this->dbh-> query($sql);
+		$adresse = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $adresse['option_value'];
+
+	}
+	function getLat(){
+
+		$sql="SELECT option_value from options where option_name = 'latitude'";
 		$stmt = $this->dbh-> query($sql);
 		$adresse = $stmt->fetch(\PDO::FETCH_ASSOC);
 		return $adresse['option_value'];

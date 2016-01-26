@@ -92,14 +92,11 @@ closedir($dir_handle);
 
 <div id="maps">
 	<div class="container">
-		<div id="map">
-			<div id="floating-panel">
-			</div>
-		</div>	
-
-		<div id="adresspage">
-				<p>Voici mon adresse : <?=  $currentadresse; ?> </p><br>
-							
+		<div id="map"></div>	
+		<input id="lat" type="hidden" name="lat" value="<?= $lat; ?>">
+					<input id="lon" type="hidden" name="lon" value="<?= $lon; ?>">
+					<div id="adresspage">
+				<p>Voici mon adresse : <?=  $currentadresse; ?> </p><br>		
 		</div>
 	</div>	
 </div>
