@@ -62,7 +62,7 @@
 			<div class="testimonial">
 				<div class="testiFlip">
 					<img class="avat" alt="Avatar" src="assets/imgs/<?= $avatars[0] ?>">
-					<p>John Doe</p>
+					<p><?= $names[0] ?></p>
 				</div>
 
 				<div class="sponsorData">
@@ -76,7 +76,7 @@
 			<div title="Click to flip" class="testimonial">
 				<div id="back50" class="testiFlip">
 					<img class="avat" alt="Avatar" src="assets/imgs/<?= $avatars[1] ?>">
-					<p>John Doe 2</p>
+					<p><?= $names[1] ?></p>
 				</div>
 
 				<div class="sponsorData">
@@ -91,7 +91,7 @@
 			<div title="Click to flip" class="testimonial">
 				<div id="back100" class="testiFlip">
 					<img class="avat" alt="Avatar" src="assets/imgs/<?= $avatars[2]?>">
-					<p>John Doe 3</p>
+					<p><?= $names[2] ?></p>
 				</div>
 
 				<div class="sponsorData">
@@ -120,6 +120,57 @@
 		<div class="text"id="sectionText_3">
 			<?= $texts[2] ?>
 		</div>
+	</div>
+</div>
+
+<!--
+	=====Contact form=====
+-->
+<div id="contact">
+	<div class="container">
+	
+		<h2>Contact</h2>
+		
+		<form class="form-horizontal" method="POST" action="default/page">
+		    <div class="form-group">
+		        <label for="name" class="col-sm-2 control-label">Name</label>
+		        <div class="col-sm-10">
+		            <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="<?php echo $this->e($_POST['name']); ?>">
+		            <?php echo "<p class='text-danger'>$errName</p>";?>
+		        </div>
+		    </div>
+		    <div class="form-group">
+		        <label for="email" class="col-sm-2 control-label">Email</label>
+		        <div class="col-sm-10">
+		            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="<?php echo $this->e($_POST['email']); ?>">
+		            <?php echo "<p class='text-danger'>$errEmail</p>";?>
+		        </div>
+		    </div>
+		    <div class="form-group">
+		        <label for="message" class="col-sm-2 control-label">Message</label>
+		        <div class="col-sm-10">
+		            <textarea class="form-control" rows="4" name="message"><?php echo $this->e($_POST['message']);?></textarea>
+		            <?php echo "<p class='text-danger'>$errMessage</p>";?>
+		        </div>
+		    </div>
+		    <div class="form-group">
+		        <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+		        <div class="col-sm-10">
+		            <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+		            <?php echo "<p class='text-danger'>$errHuman</p>";?>
+		        </div>
+		    </div>
+		    <div class="form-group">
+		        <div class="col-sm-10 col-sm-offset-2">
+		            <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+		        </div>
+		    </div>
+		    <div class="form-group">
+		        <div class="col-sm-10 col-sm-offset-2">
+		            <?php echo $result; ?>    
+		        </div>
+		    </div>
+		</form>
 	</div>
 </div>
 <?php $this->stop('main_content') ?>

@@ -15,9 +15,11 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/sectiontext.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/testimonial.css') ?>">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-2.2.0.min.js')?>"></script>  
-	  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/modal.js')?>" ></script>
+	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-2.2.0.min.js') ?>"></script>
+	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-ui.min.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jscolor.min.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery.flip.min.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/bootstrap.min.js') ?>"></script>
