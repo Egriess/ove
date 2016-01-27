@@ -158,6 +158,12 @@ class DefaultController extends Controller
 			$optionManager->changeText(3, $_POST['sec_text']);
 		}
 
+		if (isset($_POST['submit_mail']))
+		{	
+			$emailpost = $_POST['email_recipe'];
+			$optionManager->updateMail($emailpost);
+		}
+
 		//testimoniaux
 			//view name
 		$optionNameToDisplay1 = $optionManager->getName(1);
@@ -179,11 +185,20 @@ class DefaultController extends Controller
 		$optionTextToDisplay2 = $optionManager->getText(2);
 		$optionTextToDisplay3 = $optionManager->getText(3);
 
+		
+
+		
+		
+
+		
+
 		$this->show('default/backoffice',[
 			'names'		=> [$optionNameToDisplay1, $optionNameToDisplay2, $optionNameToDisplay3],
 			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
 			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
+			'mail'		=>	[$optionmailToDisplay],
+			'updateMail'=>	[$optionmailToUpdate],
 		]);
 
 	}
@@ -217,12 +232,15 @@ class DefaultController extends Controller
 		$optionTextToDisplay1 = $optionManager->getText(1);
 		$optionTextToDisplay2 = $optionManager->getText(2);
 		$optionTextToDisplay3 = $optionManager->getText(3);
+		$emailToDisplay		  = $optionManager->getMail();
+
 
 		$this->show('default/onepage',[
 			'names'		=> [$optionNameToDisplay1, $optionNameToDisplay2, $optionNameToDisplay3],
 			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
 			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
+			'mailrecipe' => [$emailToDisplay],
 		]);
 
 	}
@@ -330,7 +348,6 @@ class DefaultController extends Controller
 		$this->show('default/backoffice',['Testi'=>[$optionUpTestiToDisplay1, $optionUpTestiToDisplay2, $optionUpTestiToDisplay3]]);
 	}
 
-
 	/*
 	* SECTION_TEXT
 	*/
@@ -413,23 +430,10 @@ class DefaultController extends Controller
 	 	}
 	}
 
-	public function getMail($email_contact, $password_mail)
-	{
-		$optionManager = new \Manager\OptionsManager();
-
-		if (isset($_POST['submit_mail']))
-		{
-			 if(isset($_POST['email_contact']))
-			{
-				echo 'email bien enregistré';
-			}
-		}
-	}
-
 	public function mailer($email_contact)
 	{
 		$optionManager = new \Manager\OptionsManager();
-
+		$mailrecipe = $optionManager->getMail();
 		$mail = new \PHPMailer();
 		// $email and $message are the data that is being
 		// posted to this page from our html contact form
@@ -449,14 +453,14 @@ class DefaultController extends Controller
 		$mail->setFrom($email);
 
 		// below we want to set the email address we will be sending our email to.
-		$mail->AddAddress($email_contact);
-		$mail->addReplyTo('info@example.com', 'Information');
-		$mail->addCC('cc@example.com');
-		$mail->addBCC('bcc@example.com');
+		$mail->AddAddress($mailrecipe);
+		$mail->addReplyTo('');
+		$mail->addCC('');
+		$mail->addBCC('');
 
 		$mail->isHTML(true);                                  // Set email format to HTML
 
-		$mail->Subject = 'Here is the subject';
+		$mail->Subject = 'Message reçu depuis votre site OVE.';
 		$mail->Body    = $message;
 		$mail->AltBody = $message;
 
@@ -470,4 +474,6 @@ class DefaultController extends Controller
 		echo "Message has been sent";
 		$this->redirectToRoute('onepage');
 	}
+
+	
 }

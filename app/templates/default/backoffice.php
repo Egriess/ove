@@ -258,7 +258,7 @@
 	<div class="container">
 		<div id="map"></div>
 			<div id="floating-panel">
-				<form action="/saveAdress" method="POST" accept-charset="utf-8">
+				<form action="#" method="POST" accept-charset="utf-8">
 				<!--deux hidden qui se remplissent quand on clique sur trouver l'adresse-->
 				<input type="hidden" name="lat" value="<?=  $lat; ?>">
 				<input type="hidden" name="lon" value="<?=  $lon; ?>">
@@ -317,12 +317,13 @@
 				<form action="#" method="POST" accept-charset="utf-8">
 
 					<label>votre adresse mail</label>
-					<input type="email" name="email_contact" value="<?= $email_contact ?>" placeholder="ex: john.doe@domain.com">
-					<input type="submit" name="submit-mail" value="Valider">
+					<input type="email" name="email_recipe" value="" placeholder="<?= $mail[0] ?>">
+					<input type="submit" name="submit_mail" value="Valider">
 				</form>
+					
 			</div>
 		</div>
-	</div>
+	</di
 	
 
 <?php $this->stop('main_content') ?>

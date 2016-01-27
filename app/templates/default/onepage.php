@@ -179,11 +179,11 @@ closedir($dir_handle);
 	
 		<h2>Contact</h2>
 		<?php 
-			$errName='';
+			/*$errName='';
 			$errEmail='';
 			$errMessage='';
 			$errHuman='';
-			$result='';
+			$result='';*/
 		
 		 ?>
 		<form class="form-horizontal" method="POST" action="/sendmail">
@@ -198,7 +198,7 @@ closedir($dir_handle);
 		        <label for="email" class="col-sm-2 control-label">Email</label>
 		        <div class="col-sm-10">
 		            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
-		            <?php echo "<p class='text-danger'>$errEmail</p>";?>
+		            <?php echo "<p class='text-danger'>$errEmail</p>";?><?php var_dump($email) ?>
 		        </div>
 		    </div>
 		    <div class="form-group">

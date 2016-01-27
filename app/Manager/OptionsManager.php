@@ -113,20 +113,20 @@ class OptionsManager extends \W\Manager\Manager
 	/*
 	=====Contact Form (backOffice)=====
 	*/
-	public function insertMail($email_contact)
+	public function updateMail($emailpost)
 	{
-		$sql= "INSERT INTO options (adresse_mail) VALUES (:ad_mail)";
+		$sql ="UPDATE options SET option_value = :option_value WHERE option_name = 'adresse_mail'";
 		$stmt = $this->dbh->prepare($sql);
-		$stmt->bindParam(':ad_mail', $email_contact);
+		$stmt->bindParam(':option_value', $emailpost);
 		$stmt->execute();
 	}
 
-	public function viewMail()
+	public function getMail()
 	{
-		$sql="SELECT option_value FROM option WHERE option_name = 'adresse_mail' ";
+		$sql="SELECT option_value FROM options WHERE option_name = 'adresse_mail' ";
 		$stmt = $this->dbh->query($sql);
-		$showMail = $stmt->fetch(\PDO::FETCH_ASSOC);
-		return $showMail['option_value'];
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];
 	}
 	
 }

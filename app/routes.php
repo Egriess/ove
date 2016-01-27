@@ -13,4 +13,5 @@
 
 		['POST', '/contact','Default#contact', 'contact'], // Contact
 		['POST', '/sendmail','Default#mailer', 'sendmail'], // Contact
+		
 	);
