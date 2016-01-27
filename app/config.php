@@ -14,7 +14,7 @@ $w_config = [
 	//authentification, autorisation
 	'security_user_table' => 'users',				//nom de la table contenant les infos des utilisateurs
 	'security_id_property' => 'id',					//nom de la colonne pour la clef primaire
-	'security_username_property' => 'username',		//nom de la colonne pour le "pseudo"
+	'security_username_property' => 'page_name',		//nom de la colonne pour le "pseudo"
 	'security_email_property' => 'mail',			//nom de la colonne pour l'"email"
 	'security_password_property' => 'passwrd',		//nom de la colonne pour le "mot de passe"
 	'security_role_property' => 'role',				//nom de la colonne pour le "role"

@@ -5,7 +5,8 @@
         "altorouter/altorouter": "^1.0",
         "league/plates": "^3.0",
         "ircmaxell/random-lib": "^1.1",
-        "ircmaxell/password-compat": "^1.0"
+        "ircmaxell/password-compat": "^1.0",
+        "phpmailer/phpmailer": "^5.2"
     },
     "autoload": {
         "psr-4": {

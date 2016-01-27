@@ -46,12 +46,15 @@ header nav h1 {
   width: 100%;
   height: 860px;
   background: #408ff4;
+  margin: auto;
+  text-align: center;
 }
 
 #backheader{
+  margin-top: 300px;
   padding: 20px;
   width: 100%;
-  height: 30px;
+  height: 100px;
   background: #9bdbf4;
   margin:auto;
 }
@@ -67,7 +70,52 @@ header nav h1 {
 #titlepopup span {
   font-weight: bold;
 }
+
+#regandlog{
+  padding-top: 75px;
+  border-radius: 25px;
+  margin: auto;
+  width: 550px;
+  height: 450px;
+  background: #CECACA;
+}
+
+#reg{
+  margin: auto;
+  width: 450px;
+}
+
+#reg input{
+  width: 450px;
+  height: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+#input-group{
+  width: 300px;
+}
+
 /* CSS Library */ 
+
+
+.describ{
+  margin: auto;
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  font-family: verdana;
+  color: white;
+}
+
+#homefooter{
+  width: 100%;
+  height: 100px;
+  background: #3E3E3E;
+  border-top: 2px solid #D0CECE;
+  color: white;
+  text-align: center;
+}
 
 .input .control { width: 160px; float: left; margin-right: 15px; text-align: center; }
 
@@ -367,84 +415,111 @@ h4 {
   max-width: 650px;
 }
 
-
+ /* The pics container */
 #gallery{
-  /* The pics container */
- 
+  padding: 20px;
+  padding-top: 100px;
   width:100%;
-  position:relative;
   height: 450px;
-  background: url("https://michelelie.files.wordpress.com/2013/10/3097-mur-en-bois-wallfizz.jpg");
+  background: url(../imgs/gallery/wood_bg.jpg);
  
+}
+.gallery li{
+  margin: 10px;
+  float: left;
+  list-style-type: none;
+  padding: 10px 10px 25px 10px;
+  background: #eee;
+  border: 1px solid #fff;
+}
+
+ul.gallery li a {
+  float: left;
+  padding: 10px 10px 25px 10px;
+  background: #eee;
+  border: 1px solid #fff;
+}
+
+.pics1{
+  z-index: 1;
+  -moz-box-shadow: 2px 2px 10px 0px #656565;
+  -webkit-box-shadow: 2px 2px 10px 0px #656565;
+  -o-box-shadow: 2px 2px 10px 0px #656565;
+  box-shadow: 2px 2px 10px 0px #656565;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=10);
+  transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+}
+
+.pics2{
+  z-index: 1;
+  -moz-box-shadow: 2px 2px 10px 0px #656565;
+  -webkit-box-shadow: 2px 2px 10px 0px #656565;
+  -o-box-shadow: 2px 2px 10px 0px #656565;
+  box-shadow: 2px 2px 10px 0px #656565;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=10);
+  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+}
+
+.pics3{
+  z-index: 1;
+  -moz-box-shadow: 2px 2px 10px 0px #656565;
+  -webkit-box-shadow: 2px 2px 10px 0px #656565;
+  -o-box-shadow: 2px 2px 10px 0px #656565;
+  box-shadow: 2px 2px 10px 0px #656565;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=10);
+  transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+}
+
+.pics4{
+  z-index: 1;
+  -moz-box-shadow: 2px 2px 10px 0px #656565;
+  -webkit-box-shadow: 2px 2px 10px 0px #656565;
+  -o-box-shadow: 2px 2px 10px 0px #656565;
+  box-shadow: 2px 2px 10px 0px #656565;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=10);
+  transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+}
+
+.pics5{
+  z-index: 1;
+  -moz-box-shadow: 2px 2px 10px 0px #656565;
+  -webkit-box-shadow: 2px 2px 10px 0px #656565;
+  -o-box-shadow: 2px 2px 10px 0px #656565;
+  box-shadow: 2px 2px 10px 0px #656565;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=10);
+  transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+}
+
+.pics6{
+  z-index: 1;
+  -moz-box-shadow: 2px 2px 10px 0px #656565;
+  -webkit-box-shadow: 2px 2px 10px 0px #656565;
+  -o-box-shadow: 2px 2px 10px 0px #656565;
+  box-shadow: 2px 2px 10px 0px #656565;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=10);
+  transform: rotate(7deg);
+  -webkit-transform: rotate(7deg);
+  -moz-transform: rotate(7deg);
 }
 
 #galleryback{
-    width:100%;
-  position:relative;
+  width:100%;
   height: 450px;
+  background:  url(../imgs/gallery/wood_bg.jpg);
 }
  
-.pic, .pic a{
-  /* Each picture and the hyperlink inside it */
-  width:100px;
-  height:100px;
-  overflow:hidden;
-}
- 
-.pic{
-  /* Styles specific to the pic class */
-  position:absolute;
-  border:5px solid #EEEEEE;
-  border-bottom:18px solid #eeeeee;
-  /* CSS3 Box Shadow */
-  -moz-box-shadow:2px 2px 3px #333333;
-  -webkit-box-shadow:2px 2px 3px #333333;
-  box-shadow:2px 2px 3px #333333;
-}
- 
-.pic a{
-  /* Specific styles for the hyperlinks */
-  text-indent:-999px;
-  display:block;
-  /* Setting display to block enables advanced styling for links */
-}
- 
-.drop-box{
-  /* The share box */
-  width:240px;
-  height:130px;
-  position:absolute;
-  bottom:0;
-  right:0;
-  z-index:0;
- 
-  background:url(img/drop_box.png) no-repeat;
-}
- 
-.drop-box.active{
-  /* The active style is in effect when there is a pic hovering above the box */
-  background-position:bottom left;
-}
- 
-label, input{
-  /* The modal dialog URL field */
-  display:block;
-  padding:3px;
-}
- 
-label{
-  font-size:10px;
-}
- 
-fieldset{
-  border:0;
-  margin-top:10px;
-}
- 
-#url{
-  /* The URL field */
-  width:240px;
-}
+/* END OF The pics container */
+
 #loginform{
   width: 50%;
 }
