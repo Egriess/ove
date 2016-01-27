@@ -4,7 +4,7 @@
 	padding: 20px;
 	background: #EBEAEA;
 	width: 800px;
-	height: 1500px;
+	height: 300px;
 }
 
 .col-sm-3{
@@ -31,7 +31,7 @@
 	padding: 20px;
 	background: #EBEAEA;
 	width: 800px;
-	height: 1500px;
+	height: 300px;
 }
 
 #section4{
@@ -40,7 +40,7 @@
 	padding: 20px;
 	background: #EBEAEA;
 	width: 800px;
-	height: 1500px;
+	height: 2000px;
 }
 
 #section5{
@@ -49,7 +49,7 @@
 	padding: 20px;
 	background: #EBEAEA;
 	width: 800px;
-	height: 1500px;
+	height: 300px;
 }
  /* fenetre de code */ 
 #code{
@@ -58,7 +58,7 @@
 	padding: 10px;
 	margin-bottom: 10px;
 	width: 700px;
-	height: 200px;
+	height: 260px;
 	border: 2px solid grey;
 	background: #5C5B5B;
 	border-radius: 5px;
