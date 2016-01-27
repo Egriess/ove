@@ -1,12 +1,13 @@
+
 function initMap(geocoder, resultsMap) {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 8,
-    center: {lat: parseInt($('#lat').val()), lng: parseInt($('#lon').val())}
+    center: {lat: parseFloat($('#lat').val()), lng: parseFloat($('#lon').val())}
        });
   var marker = new google.maps.Marker({
       map: map,
       animation: google.maps.Animation.DROP,
-      position: {lat: parseInt($('#lat').val()), lng: parseInt($('#lon').val())}
+      position: {lat: parseFloat($('#lat').val()), lng: parseFloat($('#lon').val())}
         
   });
   var geocoder = new google.maps.Geocoder();
