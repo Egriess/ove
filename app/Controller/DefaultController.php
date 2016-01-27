@@ -359,7 +359,7 @@ class DefaultController extends Controller
 		$_POST['errName'];
 		$_POST['errEmail'];
 		$_POST['errMessage'];
-		print_r($_POST);
+		
 		// Si j'ai recu une soumission du formulaire mail
 		// Si j'ai tous les champs
 			// Si erreur dans
@@ -417,20 +417,16 @@ class DefaultController extends Controller
 	{
 		$optionManager = new \Manager\OptionsManager();
 
-		if (isset($_POST['submit_mail']) && isset($_POST['email_contact'])) 
+		if (isset($_POST['submit_mail']))
 		{
-			if(isset($_POST['password_mail']))
+			 if(isset($_POST['email_contact']))
 			{
-				$hashedPass = password_hash($_POST['password_mail'], PASSWORD_DEFAULT);
-			}	
-		}
-		else
-		{
-			echo 'Il doit manquer une donné au formulaire';
+				echo 'email bien enregistré';
+			}
 		}
 	}
 
-	public function mailer()
+	public function mailer($email_contact)
 	{
 		$optionManager = new \Manager\OptionsManager();
 
@@ -446,14 +442,14 @@ class DefaultController extends Controller
 		$mail->isSMTP();                                      // Set mailer to use SMTP
 		$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 		$mail->SMTPAuth = true;                               // Enable SMTP authentication
-		$mail->Username =  $email_contact ;                 // SMTP username
-		$mail->Password =  $password_mail ;            // SMTP password
+		$mail->Username =  'one.page.editor@gmail.com';                 // SMTP username
+		$mail->Password =  'oveonepageeditor';            // SMTP password
 		$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 		$mail->Port = 587;                                    // TCP port to connect to
 		$mail->setFrom($email);
 
 		// below we want to set the email address we will be sending our email to.
-		$mail->AddAddress("mathieu.baldassi@gmail.com");
+		$mail->AddAddress($email_contact);
 		$mail->addReplyTo('info@example.com', 'Information');
 		$mail->addCC('cc@example.com');
 		$mail->addBCC('bcc@example.com');
@@ -474,6 +470,4 @@ class DefaultController extends Controller
 		echo "Message has been sent";
 		$this->redirectToRoute('onepage');
 	}
-
-	
 }

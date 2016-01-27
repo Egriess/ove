@@ -9,11 +9,6 @@ class OptionsManager extends \W\Manager\Manager
 		//...
 	}
 
-	public function ContactForm()
-	{
-
-	}
-
 
 	function saveAdress($address){
 
@@ -116,20 +111,14 @@ class OptionsManager extends \W\Manager\Manager
 	}
 
 	/*
-	=====Contact Form=====
+	=====Contact Form (backOffice)=====
 	*/
-	public function insertMail($email_contact, $password_mail)
+	public function insertMail($email_contact)
 	{
-		$sql= "INSERT INTO options (adresse_mail, pw_mail) VALUES (:ad_mail, pass_mail)";
+		$sql= "INSERT INTO options (adresse_mail) VALUES (:ad_mail)";
 		$stmt = $this->dbh->prepare($sql);
 		$stmt->bindParam(':ad_mail', $email_contact);
-		$stmt->bindParam(':pass_mail', $password_mail);
 		$stmt->execute();
-		/*$sql="(UPDATE options SET option_value = :ad_mail  WHERE option_name = 'adresse_mail') UNION (UPDATE options SET option_value = :pass_mail  WHERE option_name = 'pw_mail')";
-		$stmt = $this->dbh->prepare($sql);
-		$stmt->bindParam(':ad_mail', $email_contact);
-		$stmt->bindParam(':pass_mail', $password_mail);
-		$stmt->execute();*/
 	}
 
 	public function viewMail()

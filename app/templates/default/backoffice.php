@@ -310,18 +310,14 @@
 		</div>
 		<div id="email">
 			<div class="container">
-				<?php 
-					
-				?>
-				<h2>Formulaire SMTP</h2>
-				<p>Compte gmail requis.</p>
+				<h2>E-mail</h2>
+				<p>Voulez-vous recevoir des mails de vos utilisateurs?</p>
+				<p>Il vous suffit simplement de remplir ce champ.</p>
+				
 				<form action="#" method="POST" accept-charset="utf-8">
 
 					<label>votre adresse mail</label>
-					<input type="email" name="email_contact" value="<?=  $email_contact; ?>" placeholder="ex: john.doe@domain.com">
-
-					<label>mot de passe de votre compte mail</label>
-					<input type="password" name="password_mail" value="<?php echo 'test'; ?>" placeholder="Votre mot de passe">
+					<input type="email" name="email_contact" value="<?= $email_contact ?>" placeholder="ex: john.doe@domain.com">
 					<input type="submit" name="submit-mail" value="Valider">
 				</form>
 			</div>
