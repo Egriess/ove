@@ -55,9 +55,7 @@
       <div class="col-sm-9">
         <div id="section1"> 
           <h1>Présentation</h1>
-          <p>Onepage Visual Editor, alias OVE, est un générateur de mono page de six sections. Toutes ces sections sont bien sûr éditable, au bon vouloir de l'utilisateur. Le but de ce projet est de donner aux utilisateurs un moyen de construire une page web personnalisable sans aucune connaissance en codage. Nous avons donc rendu ce générateur de site simple et clair d'utilisation.
-			<br><br>
-		D'une autre part, pour les plus curieux nous avons conçu cette documentation afin de montrer le fonctionnement du site. De ce fait, l'utilisateur pourra aussi comprendre comme nous sommes arrivés à ce rendu.</p>
+          <p>générateur de monopage de 6 sections chacune editable individuellement </p>
           <!-- block de rendu code -->
          
         </div> 
@@ -69,7 +67,6 @@
 
         <div id="section2"> 
           <h1>Components</h1>
-          	<p>Il y a donc six sections, chacune comportant un composant. Plus ou moins tous modifiables. Chaque section peux ce retrouvé plusieurs fois sur la onepage. Cela laisse donc place à plusieurs types de page. Entrepreneur avec la section Map pour localiser son entreprise. Musicien pouvant montrer ses talents avec Music. Photographe avec Slider et Gallery. Vous l'aurez compris, vous pouvez en faire ce que bon vous semble.</p>
 	          <div id="headercomp">
 	          		<h3>Header</h3>
 	          		<p>L'entête du site reste fixe lors de la navigation. son titre est personnalisable avec la possibilité d'ajouter son propre logo.
@@ -81,7 +78,7 @@
 	          		<hr/>
 	          </div>
 	          <div id="slidecomp">
-		          <h3>Slider</h3>
+		          	<h3>Slider</h3>
 		          		<p>La section slider permet d'afficher un carrousel au contenu personnalisable, l'utilisateur peut déterminer si le contenu de celui si ce sont des images ou des vidéos. Il est bien-sur possible de mixer l'affichage d'une photo puis de transiter vers une vidéo. il exploite 100% de la largeur du navigateur de façon responsive. (à condition que la source img/vidéo soit de taille appropriée.)
 		          		</p> 
 		          		<div class="illu">
@@ -90,151 +87,126 @@
 		          		<hr> 
 	          </div>
 	          <div id="galerycomp">
-	         
-	          </div>
-	          <div id="testiscomp">
-	         
-	          </div>
-	          <div id="mapscomp">
-	          		<h3>Map</h3>
-	          		<p>La section Map permet d'afficher une carte ou l'emplacement géographique correspond au coordonné que l'utilisateur a informer. Effectivement, grâce au formulaire présent dans le Backoffice, les coordonnées gps, latitude et longitude sont enregistrées en base de données, pour plus de précision au chargement de la page.
-	          		</p>
-	          		<div class="illu">
-		          		<img src="img/map.png" alt="header"></img>
-		          	</div>
-		          		<hr> 
-	          </div>
-	          <div id="contactcomp">
-	         
-	          </div>
-	          <div id="textcomp">
 	          
 	          </div>
+	          <hr/>
+	          <div id="testiscomp">
+
+	          	<h3>Testimonial</h3>
+	          	<p>
+	          		Le testimonial permet de laisser un commentaire choisie par l'utilisateur pour fidéliser les utilisateurs de services.
+ 					Il permet d'afficher le nom et prénom, entre autres d'afficher l'avatar de celui qui souhaiterait laisser un commentaire.
+	          	</p>
+	          	<div class="illu">
+		          	<img src="img/testi.png" alt="testimonial"></img>
+		        </div>
+	          </div>
+	          <hr/>
+	          <div id="mapscomp">
+	          		<h3>Map</h3>
+	          			<p>La section Map permet à l'utilisateur de pouvoir être localisé par les visiteurs de son site qui songerais prendre contact avec lui. Si l'utilisateur est une entreprise par exemple, les visiteurs du site pourrons directement savoir ou celle ci ce trouve. 
+	          			Les champs renseignés sont enregistrés en base de donnée, et peuvent être changés à la volonté de celui ci. Cela s'actualisera automatiquement en base de donnée.
+	          			<br>
+	          			Autre que les champs renseigné, la longitude et latitude sont également prise en compte en base de donnée, ce qui a pour but de charger ses informations dynamiquement dans chaque page concernée.</p>
+	          			<div class="illu">
+		          			<img src="img/map.png" alt="map"></img>
+		          		</div>
+	          </div>
+	          <div id="contactcomp">
+	          
+	          </div>
+	          <div id="textcomp">
+
+		           <h2>Text libre</h2>
+		           <p>
+		         		La section Texte libre permet à l'utilisateur d'écrire ce que bon lui semble. Il peux en conséquence laisser allez son imagination. Chaque texte, est éditable, et peux retranscrire des informations plus ou moins importante.
+		           </p>
+			        <div class="illu">
+			          	<img src="img/section_text.PNG" alt="section texte libre"></img>
+			        </div>
+
+	          </div>
+	          <hr/>
         </div> 
          <div id="section4"> 
           <h1>Fonctionalités</h1>
           <div id="headerfunc">
-	         
+	          ... header 
 	          </div>
 	          <div id="slidefunc">
-	         
+	          ... slider 
 	          </div>
 	          <div id="galeryfunc">
-	          
+	          ... galerie 
 	          </div>
 	          <div id="testisfunc">
-	          
+	         	<h3>Testimonial</h3>
+	         	<p>Affiche les données du testimonial.</p>
+	         	<div id="code">
+		           <p class="title">
+		           	function backoffice() </p class="title">{ <br>
+		           	<p class="corp">$this->show('default/backoffice',[ <br>
+		           		&nbsp;&nbsp;&nbsp;'names' => [$optionNameToDisplay1, $...2, $...3],<br>
+						&nbsp;&nbsp;&nbsp;'avatars' => [$optionAvatarToDisplay1, $...2, $...3],<br>
+						&nbsp;&nbsp;&nbsp;'testis' => [$optionTestiToDisplay1, $...2, $...3],<br></p class="corp">
+		           		}
+           	
+          			 </p>
+          		</div>
 	          </div>
 	          <div id="mapsfunc">
-	          	<h4>Function saveAdress($address) dans le Manager.</h4>
-	          	<p>La fonction énoncée ci dessus sert à mettre à jour l'adresse renseignée pas l'utilisateur en base de données.</p>
-
 	          	<div id="code">
-          			<p class="title">
-           				function saveAdress($address); </p class="title">{ <br>
-           					<p class="corp">
-           						$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'adresse'";<br>
-								$stmt = $this->dbh->prepare($sql);<br>
-								$stmt->bindParam(':option_value', $address);<br>
-								$stmt->execute();<br>
-							</p class="corp">
-           					}
-           	
-          			 </p>
-          		</div>
-          		<hr>
-
-          		<h4>Function saveAdress($address) dans le Controller.</h4>
-	          	<p>La fonction énoncée ci dessus sert à sauvergarder l'adresse renseignée pas l'utilisateur ainsi que ces coordonnées GPS en base de données à chaque fois que celui-ci veux la changer.</p>
-
-	          	<div id="code">
-          			<p class="title">
-           				public function saveAdress(); </p class="title">{ <br>
-           					<p class="corp">
-           						$optionManager = new \Manager\OptionsManager();<br>
-           						<br>
-     		 					if(isset( $_POST["button"])){<br>
-									$address = $_POST['address'];<br>
-     		 						$optionManager -> saveAdress($address);<br>
-     		 						$optionManager -> saveLatLon($lat, $lon);<br>
-     		 					}<br>
-				
-     		 					$this->redirectToRoute('backoffice');<br>
-
-							</p class="corp">
-           					}
-           	
-          			 </p>
-          		</div>
-				<hr>
-          		<h4>Function getAdress($address) dans le Manager.</h4>
-	          	<p>La fonction énoncée ci dessus sert à aller chercher l'information en base de données pour pouvoir la réutiliser, pour l'afficher par exemple.</p>
-
-	          	<div id="code">
-          			<p class="title">
-           				function getAdress($address); </p class="title">{ <br>
-           					<p class="corp">
-           						$sql="SELECT option_value from options where option_name = 'adresse'";<br>
-								$stmt = $this->dbh-> query($sql);<br>
-								$adresse = $stmt->fetch(\PDO::FETCH_ASSOC);<br>
-								return $adresse['option_value'];<br>
-							</p class="corp">
-           					}
-           	
-          			 </p>
-          		</div>
-          		<hr>
-
-          		<h4>Function saveAdress($address) dans le Controller.</h4>
-	          	<p>La fonction énoncée ci dessus sert à afficher l'information récupérée précédemment.</p>
-
-	          	<div id="code">
-          			<p class="title">
-           				public function getAdress(); </p class="title">{ <br>
-           					<p class="corp">
-           						$optionManager = new \Manager\OptionsManager();<br>
-           						<br>
-     		 					$address = $_POST['address'];<br>
-     							$adressToDisplay=$optionManager->getAdress($address);<br>
-     							$this->show('default/backoffice', ['currentadresse' => $adressToDisplay]);<br>
-     		 					}<br>
-				
-     		 					$this->redirectToRoute('backoffice');<br>
-
-							</p class="corp">
-           					}
-           	
-          			 </p>
-          		</div>
-          		<hr>
-
-          		<h4>Function saveLatLon($lat, $lon) dans le Manager.</h4>
-	          	<p>La fonction énoncée ci dessus sert à sauvegarder la longitude et latitude en base de données.</p>
-
-	          	<div id="code">
-          			<p class="title">
-           				public functionsaveLatLon($lat, $lon); </p class="title">{ <br>
-           					<p class="corp">
-           						$sql = "(UPDATE options SET option_value = :option_value  WHERE option_name = 'latitude') UNION (UPDATE options SET option_value = :option_value  WHERE option_name = 'longitude')";<br>
-								$stmt = $this->dbh->prepare($sql);<br>
-								$stmt->bindParam(':option_value', $lat);<br>
-								$stmt->bindParam(':option_value', $lon);<br>
-								$stmt->execute();<br>
-
-							</p class="corp">
-           					}
-           	
-          			 </p>
-          		</div>
+           			<p class="title">
+           				function saveAdress($address) {</p class="title">{ <br>
+           			<p class="corp">
+           					$sql = "UPDATE options SET option_value = :option_value WHERE option_name = 'adresse'";<br>
+							$stmt = $this->dbh->prepare($sql);
+							$stmt->bindParam(':option_value', $address);<br>
+							$stmt->execute(); 
+						 <br>
+           			<br></p class="corp">}
+		
+           </p>
+          </div>
 	          </div>
 	          <div id="textfunc">
-	          
+	          	<h3>Texte libre</h3>
+	         	<p>Affiche les textes.</p>
+	         	<div id="code">
+		           <p class="title">
+		           	function backoffice() </p class="title">{ <br>
+		           	<p class="corp">$this->show('default/backoffice',[ <br>
+		           		'texts'	=> [$optionTextToDisplay1, $...2, $...3],<br></p class="corp">
+		           		}
+           	
+          			 </p>
+				</div>
 	          </div>
 	          <div id="contactfunc">
-	      
+	          ... contact form 
 	          </div>
           
-
+            <!-- block de rendu code -->
+           <div id="code">
+           <p class="title">
+           	function exemple_De_Fonction </p class="title">{ <br>
+           		<p class="corp">$this -> work(); <br>
+           		return $resultat <br></p class="corp">
+           	}
+           	
+           </p>
+          </div>
+          <!-- block de rendu code -->
+            <!-- block de rendu code -->
+           <div id="code">
+           <p class="title">
+           	function exemple_De_Fonction </p class="title">{ <br>
+           		<p class="corp">$this -> work(); <br>
+           		return $resultat <br></p class="corp">
+           	}
+           	
+           </p>
+          </div>
           <!-- block de rendu code -->
         </div> 
          <div id="section5"> 

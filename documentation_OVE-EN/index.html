@@ -21,6 +21,7 @@
         <ul class="nav nav-pills nav-stacked">
           <li><a href="#section1">Presentation</a></li>
            <li><a href="#section3">Install</a></li>
+
           <li role="presentation" class="dropdown">
 		    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 		      Components <span class="caret"></span>
@@ -29,7 +30,7 @@
 		      <li><a href="#headercomp">Navigation</a></li>
 		      <li><a href="#slidecomp">Slider</a></li>
 		      <li><a href="#galerycomp">Gallery</a></li>
-		      <li><a href="#testiscomp">Testimonial</a></li>
+		      <li><a href="#testiscomp">Testimonials</a></li>
 		      <li><a href="#mapscomp">Maps</a></li>
 		       <li><a href="#textcomp">Free text</a></li>
 		      <li><a href="#contactcomp">Contact form</a></li>
@@ -37,43 +38,53 @@
 		  </li>
              <li role="presentation" class="dropdown">
 		    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-		      Functionality <span class="caret"></span>
+
+		      Features <span class="caret"></span>
+
 		    </a>
 		    <ul class="dropdown-menu">
 		      <li><a href="#headerfunc">Navigation</a></li>
 		      <li><a href="#slidefunc">Slider</a></li>
 		      <li><a href="#galeryfunc">Gallery</a></li>
-		      <li><a href="#testisfunc">Testimonial</a></li>
+		      <li><a href="#testisfunc">Testimonials</a></li>
 		      <li><a href="#mapsfunc">Maps</a></li>
 		       <li><a href="#textfunc">Free text</a></li>
 		      <li><a href="#contactfunc">Contact form</a></li>
 		    </ul>
 		  </li>
-             <li><a href="#section5">Reference</a></li>
+             <li><a href="#section5">References</a></li>
+
         </ul>
       </nav>
       <div class="col-sm-9">
         <div id="section1"> 
           <h1>Presentation</h1>
+
           <p>Onepage Visual Editor, aka OVE, is a generator of a single page of six sections. All of these sections are of course editable, at the desire of the user. The purpose of this project is to give users a way to build a web page customizable without any knowledge of coding. We have therefore made this site builder is simple and clear to use.
 
 		On the other hand, for the more curious we have created this documentation to show the operation of the site. Because of this, the user will also be able to understand as we came to this rendering.</p>
+
           <!-- block de rendu code -->
          
         </div> 
        
          <div id="section3"> 
+
           <h1>Install</h1>
+
+
           <p>Try to scroll this page and look at the navigation list while scrolling!</p>
         </div> 
 
         <div id="section2"> 
           <h1>Components</h1>
+
           	<p>There are six sections, each with a component. These are more or less all changed. Each section, so each component, can this found several times on the onepage if the user wants to. This leaves several types of page. Contractor with the section Map to locate his business. Musician can show his talent with Music. Photographer with Slider and Gallery. You got it, you can do what seems good to you. So here is a detailed of each componant, with their function.</p>
 	          <div id="headercomp">
 	          		<h3>Header</h3>
 	          		<p>The header of the site remains fixed during the navigation. Its title is customizable with the possibility to add its own logo.
 					The menu points to each section of the page in the link to the ink, it does not offer the possibility to add external links or internal additional.
+
 	          		</p> 
 	          		<div class="illu">
 	          			<img src="img/header.png" alt="header"></img>
@@ -82,7 +93,9 @@
 	          </div>
 	          <div id="slidecomp">
 		          <h3>Slider</h3>
+
 		          		<p>The section slider allows you to display a carousel in the content customizable, the user can determine if the content if there are images or videos. It is of course possible to mix the display of a photo and then move to a video. It operates 100% of the width of the browser responsive. (provided that the source img/video will be of appropriate size.)
+
 		          		</p> 
 		          		<div class="illu">
 		          			<img src="img/slider.png" alt="header"></img>
@@ -90,6 +103,7 @@
 		          		<hr> 
 	          </div>
 	          <div id="galerycomp">
+
 	         
 	          </div>
 	          <div id="testiscomp">
@@ -223,10 +237,63 @@
 
 							</p class="corp">
            					}
+	          ... galerie 
+	          </div>
+	          <hr/>
+	          <div id="testiscomp">
+	          	<h3>Testimonial</h3>
+	          	<p>
+	          		The testimonial, leaving a comment is selected by the user for the loyalty of the users of services. It allows you to display the last name and first name, among other things, display the avatar of the one who wants to leave a comment.
+	          	</p>
+	          	<div class="illu">
+		          	<img src="img/testi.png" alt="testimonial"></img>
+		        </div>
+	          </div>
+	          <hr/>
+	          <div id="mapscomp">
+	          ... maps  
+	          </div>
+	          <div id="contactcomp">
+	          ... contact form 
+	          </div>
+	          <div id="textcomp">
+		           <h2>Free text</h2>
+		           <p>
+		         		The section of free Text allows the user to write what he pleases. It can accordingly let go his imagination. Every text is editable, and can convey information more or less important.
+		         	</p>
+			        <div class="illu">
+			          	<img src="img/section_text.PNG" alt="section texte libre"></img>
+			        </div>
+	          </div>
+	          <hr/>
+        </div> 
+         <div id="section4"> 
+          <h1>Features</h1>
+          <div id="headerfunc">
+	          ... header 
+	          </div>
+	          <div id="slidefunc">
+	          ... slider 
+	          </div>
+	          <div id="galeryfunc">
+	          ... galerie 
+	          </div>
+	          <div id="testisfunc">
+	         	<h3>Testimonial</h3>
+	         	<p>Displays the data of the testimonial.</p>
+	         	<div id="code">
+		           <p class="title">
+		           	function backoffice() </p class="title">{ <br>
+		           	<p class="corp">$this->show('default/backoffice',[ <br>
+		           		&nbsp;&nbsp;&nbsp;'names' => [$optionNameToDisplay1, $...2, $...3],<br>
+						&nbsp;&nbsp;&nbsp;'avatars' => [$optionAvatarToDisplay1, $...2, $...3],<br>
+						&nbsp;&nbsp;&nbsp;'testis' => [$optionTestiToDisplay1, $...2, $...3],<br></p class="corp">
+		           		}
            	
           			 </p>
           		</div>
 	          </div>
+
 	          <div id="textfunc">
 	          
 	          </div>
@@ -239,6 +306,52 @@
         </div> 
          <div id="section5"> 
           <h1>Reference</h1>
+
+	          <div id="mapsfunc">
+	          ... maps  
+	          </div>
+	          <div id="textfunc">
+	          	<h3>Free text</h3>
+	         	<p>Displays the texts.</p>
+	         	<div id="code">
+		           <p class="title">
+		           	fonction backoffice() </p class="title">{ <br>
+		           	<p class="corp">$this->show('default/backoffice',[ <br>
+		           		'texts'	=> [$optionTextToDisplay1, $...2, $...3],<br></p class="corp">
+		           		}
+           	
+          			 </p>
+				</div>
+	          </div>
+	          <div id="contactfunc">
+	          ... contact form 
+	          </div>
+          
+            <!-- block de rendu code -->
+           <div id="code">
+           <p class="title">
+           	function exemple_De_Fonction </p class="title">{ <br>
+           		<p class="corp">$this -> work(); <br>
+           		return $resultat <br></p class="corp">
+           	}
+           	
+           </p>
+          </div>
+          <!-- block de rendu code -->
+            <!-- block de rendu code -->
+           <div id="code">
+           <p class="title">
+           	function exemple_De_Fonction </p class="title">{ <br>
+           		<p class="corp">$this -> work(); <br>
+           		return $resultat <br></p class="corp">
+           	}
+           	
+           </p>
+          </div>
+          <!-- block de rendu code -->
+        </div> 
+         <div id="section5"> 
+          <h1>References</h1>
           <p>Try to scroll this page and look at the navigation list while scrolling!</p>
         </div> 
       </div>
