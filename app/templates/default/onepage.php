@@ -3,60 +3,37 @@
 	
 
 <?php $this->start('main_content') ?>
-<header>
-		
-			<nav class="navbar navbar-fixed-top">
-				<h1 id="text_shadow" style="text-shadow: rgb(150, 150, 150) 4px 4px 2px;" ></h1>
-				<!-- POP UP edit end -->
-				<ul class="nav nav-pills">
-				  <li role="presentation"><a href="/login">Loginpage</a></li>
-				  <li role="presentation"><a href="/backoffice">Backoffice</a></li>
-				  <li role="presentation"><a href="/register">Register</a></li>
-				  <li role="presentation"><a href="/page">Page coté client</a></li>
-				  <li role="presentation"><a href="#">Menu5</a></li>
-				  <li role="presentation"><a href="#">Menu6</a></li>  
-				</ul>
-			</nav>
 
-			
-		
-	</header>
-
-<div id="gallery">
-	<div class="container">
-		<ul class="gallery">
-
-			<li id="draggable " class="pics1 ui-widget-content"><img src="<?= $this->assetUrl('imgs/gallery/1.jpg') ?>" alt="Gallery img1" /><br>pics 1</li>
-
-			<li id="draggable" class="pics2"><img src="<?= $this->assetUrl('imgs/gallery/2.jpg') ?>" alt="Gallery img2" /><br>pics 2</li>
-
-			<li id="draggable" class="pics3"><img src="<?= $this->assetUrl('imgs/gallery/3.jpg') ?>" alt="Gallery img3" /><br>pics 3</li>
-
-			<li id="draggable" class="pics4"><img src="<?= $this->assetUrl('imgs/gallery/4.jpg') ?>" alt="Gallery img4" /><br>pics 4</li>
-
-			<li id="draggable" class="pics5"><img src="<?= $this->assetUrl('imgs/gallery/5.jpg') ?>" alt="Gallery img5" /><br>pics 5</li>
-
-			<li id="draggable" class="pics6"><img src="<?= $this->assetUrl('imgs/gallery/6.jpg') ?>" alt="Gallery img6" /><br>pics 6</li>
-
+<header>	
+	<nav class="navbar navbar-fixed-top">
+		<h1 id="text_shadow" style="text-shadow: rgb(150, 150, 150) 4px 4px 2px;" ><?= $titledisplay['page_name'] ?></h1>
+		<!-- POP UP edit end -->
+		<ul class="nav nav-pills">
+		  <li role="presentation"><a href="/login">Loginpage</a></li>
+		  <li role="presentation"><a href="/backoffice">Backoffice</a></li>
+		  <li role="presentation"><a href="/register">Register</a></li>
+		  <li role="presentation"><a href="/page">Page coté client</a></li>
+		  <li role="presentation"><a href="#">Menu5</a></li>
+		  <li role="presentation"><a href="#">Menu6</a></li>  
 		</ul>
- 	</div>
+	</nav>	
+</header>
+
+
+
+<div id="slider">
+	<figure>
+		<img class="sliding" src="assets/imgs/<?= $imgslider[0] ?>" alt="">
+		<img class="sliding" src="assets/imgs/<?= $imgslider[1] ?>" alt="">
+		<img class="sliding" src="assets/imgs/<?= $imgslider[2] ?>" alt="">
+		<img class="sliding" src="assets/imgs/<?= $imgslider[3] ?>" alt="">
+		<img class="sliding" src="assets/imgs/<?= $imgslider[4] ?>" alt="">
+	</figure>
 </div>
 
-
-<div id="maps">
-	<div class="container">
-		
-		<div id="map">
-			<div id="floating-panel">
-			</div>
-		</div>	
-
-		<div id="adresspage">
-			<p>Voici mon adresse !  </p><br>
-			<?=  $currentadresse; ?>			
-		</div>
-	</div>	
-</div>
+<!--
+	===== Testimonials section =====
+-->
 
 <div id="testimoniaux">
 		<div class="container">
@@ -106,13 +83,38 @@
 			
 		</div>
 	</div>
+<div id="blockquote">
+	<h3>Life is beautiful... </h3>
+</div>
 
+<div id="gallery">
+	 <div class="containergal">
+		<div id="carousel">
+			<figure><img src="http://lorempixel.com/186/116/nature/1" alt=""></figure>
+			<figure><img src="http://lorempixel.com/186/116/nature/2" alt=""></figure>
+			<figure><img src="http://lorempixel.com/186/116/nature/3" alt=""></figure>
+			<figure><img src="http://lorempixel.com/186/116/nature/4" alt=""></figure>
+			<figure><img src="http://lorempixel.com/186/116/nature/5" alt=""></figure>
+			<figure><img src="http://lorempixel.com/186/116/nature/6" alt=""></figure>
+			<figure><img src="http://lorempixel.com/186/116/nature/7" alt=""></figure>
+			<figure><img src="http://lorempixel.com/186/116/nature/8" alt=""></figure>
+			<figure><img src="http://lorempixel.com/186/116/people/9" alt=""></figure>
+		</div>
+	</div>
+</div>
+
+<!--
+	===== Soundcloud section =====
+-->
 <div id="sound">
-<iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/134686476&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+	<iframe width="100%" height="350" scrolling="no" frameborder="no" 
+	src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/134686476&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 </div>
 
 
-<!--	section Text	-->
+<!--
+	===== Text section =====
+-->
 <div id="text">
 	<div class="container">
 		<h2>Text</h2>
@@ -128,6 +130,25 @@
 		</div>
 	</div>
 </div>
+
+<!--
+	===== Map section =====
+-->
+<div id="maps">
+	<div class="container">
+		
+		<div id="map">
+			<div id="floating-panel">
+			</div>
+		</div>	
+
+		<div id="adresspage">
+			<p>Voici mon adresse !  </p><br>
+			<?=  $currentadresse; ?>			
+		</div>
+	</div>	
+</div>
+
 
 <!--
 	=====Contact form=====

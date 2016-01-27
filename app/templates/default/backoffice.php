@@ -12,6 +12,77 @@
 	<input type="hidden" name="" value="<?php $Lat ?>">
 	<input type="hidden" name="" value="<?php $Lng ?>">
 
+
+	<div id="sliderback">
+				<!--
+					change Slider images
+				-->
+			<div id="accordion">
+				<h3>Section 1</h3>
+				<div>
+					<form  enctype="multipart/form-data" action="#" method="post">
+						<img src="assets/imgs/<?= $imgslider[0] ?>" />
+						<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+						<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+						<div class="fileUpload btn btn-primary">
+							<span>Upload</span>
+							<input id="uploadBtn" type="file" name="img_slider_1" class="upload"/>
+						</div>
+						<input type="submit" name="submit_slider_1" value="Envoyer">	
+					</form>
+				</div>
+			
+				
+				<h3>Section 2</h3>
+				<div>	
+					<form  enctype="multipart/form-data" action="#" method="post">
+						<img src="assets/imgs/<?= $imgslider[1] ?>" />
+						<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+						<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+						<div class="fileUpload btn btn-primary">
+							<span>Upload</span>
+							<input id="uploadBtn" type="file" name="img_slider_2" class="upload"/>
+						</div>
+						<input type="submit" name="submit_slider_2" value="Envoyer">	
+					</form>
+				</div>
+			</div>
+				<form  enctype="multipart/form-data" action="#" method="post">
+					<img src="assets/imgs/<?= $imgslider[2] ?>" />
+					<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+					<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+					<div class="fileUpload btn btn-primary">
+						<span>Upload</span>
+						<input id="uploadBtn" type="file" name="img_slider_3" class="upload"/>
+					</div>
+					<input type="submit" name="submit_slider_3" value="Envoyer">	
+				</form>
+
+				<form  enctype="multipart/form-data" action="#" method="post">
+					<img src="assets/imgs/<?= $imgslider[3] ?>" />
+					<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+					<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+					<div class="fileUpload btn btn-primary">
+						<span>Upload</span>
+						<input id="uploadBtn" type="file" name="img_slider_4" class="upload"/>
+					</div>
+					<input type="submit" name="submit_slider_4" value="Envoyer">	
+				</form>
+
+				<form  enctype="multipart/form-data" action="#" method="post">
+					<img src="assets/imgs/<?= $imgslider[4] ?>" />
+					<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+					<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+					<div class="fileUpload btn btn-primary">
+						<span>Upload</span>
+						<input id="uploadBtn" type="file" name="img_slider_5" class="upload"/>
+					</div>
+					<input type="submit" name="submit_slider_5" value="Envoyer">	
+				</form>
+			</div>
+				
+
+	</div>			
 	<div id="backheader">
 		
 					<!-- POP UP edit -->
@@ -46,59 +117,9 @@
 	</div>
 			<a href="#gallerypopup" class="hinge">Choisir les image de la galerie</a>
 					<div id="gallerypopup" class="white-popup mfp-with-anim mfp-hide">
-					<span> Choisir les images</span>
-
-	<div id="galleryback">
-		<div class="containerback">
-					<!-- POP UP edit -->
-
-			<form enctype="multipart/form-data" action="#" method="post">
-				<input type="hidden" name="MAX_FILE_SIZE" value="300000000" />
-				Sélectionner un fichier : <input name="my-file" type="file" />
-				<input type="submit" name="submit_gal" value="Envoyer le fichier" />	
-			</form>
-
-			<?php 
-
-				if (isset($_POST['submit_gal'])){
-
-			$finfo = new \finfo(FILEINFO_MIME_TYPE);
-
+					<span> Choisir les images</span>		
 	
-			$mimeType = $finfo->file($_FILES['my-file']['tmp_name']);
 
-
-			$extFoundInArray = array_search(
-       		 $mimeType,
-        		array(
-        	    	'jpg' => 'image/jpeg',
-        	   		'png' => 'image/png',
-      		     	 'gif' => 'image/gif',
-       			 )
-   			 );
-
-    		if ($extFoundInArray === false) {
-    			echo 'Le fichier n\'est pas une image';
-    		die();
-   			 }
-
-
-			$path = 'assets/img/thumbs/'. sha1_file($_FILES['my-file']['tmp_name']) . '.' . $extFoundInArray;	
-			$path2 = 'assets/img/original/'. sha1_file($_FILES['my-file']['tmp_name']) . '.' . $extFoundInArray;	
-			$moved = move_uploaded_file($_FILES['my-file']['tmp_name'], $path);
-			
-			if($moved){
-				copy($path,$path2);
-			};
-		
-}	
-		
-	?>		
-		
-	</div>					
-
-		</div>
-	</div>
 	<a href="#titlepopup" class="hinge">Editer le titre du site</a>
 	<div id="testimoniaux">
 			<a href="#testimonialpopup" class="hinge">Editer le testimonial</a>

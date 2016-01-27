@@ -28,9 +28,153 @@ class DefaultController extends Controller
 
 		//$this->show('default/backoffice', ['currentadresse' => $adressToDisplay]);
 
+		if(isset($_POST['submit_slider_1']))
+		{
+
+
+			// Upload du fichier (move_uploaded_file, etc.)
+			$finfo = new \finfo(FILEINFO_MIME_TYPE);
+			$mimeType = $finfo->file($_FILES['img_slider_1']['tmp_name']);
+
+			$allowed =array_search(
+		        $mimeType, array('png' 	=> 'image/png',
+							 	'jpg'	=> 'image/jpeg',
+								 'gif' 	=> 'image/gif'));
+			$filePath = sha1_file($_FILES['img_slider_1']['tmp_name']). '.' . $allowed;
+			$destinationFilePath = 'assets/imgs/' . $filePath;
+			// Récupération du Mime
+			if ($allowed === false) {
+		    	echo 'Le fichier n\'est pas une image';
+		    	die();
+		    }
+			if ($_FILES['img_slider_1']['error'] != UPLOAD_ERR_OK) {
+				echo 'Erreur lors du téléchargement.';
+				die();
+			}
+			if(move_uploaded_file($_FILES['img_slider_1']['tmp_name'], $destinationFilePath)) {
+			} else {
+				echo 'Erreur lors de l\'enregistrement.';
+			}
+
+			$optionManager->changeImgSlider(1, $filePath);
+
+		}elseif(isset($_POST['submit_slider_2']))
+		{
+			// Upload du fichier (move_uploaded_file, etc.)
+			// Upload du fichier (move_uploaded_file, etc.)
+			$finfo = new \finfo(FILEINFO_MIME_TYPE);
+			$mimeType = $finfo->file($_FILES['img_slider_2']['tmp_name']);
+			$allowed =array_search(
+		        $mimeType, array('png' 	=> 'image/png',
+							 	'jpg'	=> 'image/jpeg',
+								 'gif' 	=> 'image/gif'));
+			$filePath = sha1_file($_FILES['img_slider_2']['tmp_name']). '.' . $allowed;
+			$destinationFilePath = 'assets/imgs/' . $filePath;
+			// Récupération du Mime
+			if ($allowed === false) {
+		    	echo 'Le fichier n\'est pas une image';
+		    	die();
+		    }
+			if ($_FILES['img_slider_2']['error'] != UPLOAD_ERR_OK) {
+				echo 'Erreur lors du téléchargement.';
+				die();
+			}
+			if(move_uploaded_file($_FILES['img_slider_2']['tmp_name'], $destinationFilePath)) {
+			} else {
+				echo 'Erreur lors de l\'enregistrement.';
+			}
+
+			$optionManager->changeImgSlider(2, $filePath);
+		}elseif(isset($_POST['submit_slider_3']))
+		{
+			// Upload du fichier (move_uploaded_file, etc.)
+			// Upload du fichier (move_uploaded_file, etc.)
+			$finfo = new \finfo(FILEINFO_MIME_TYPE);
+			$mimeType = $finfo->file($_FILES['img_slider_3']['tmp_name']);
+			$allowed =array_search(
+		        $mimeType, array('png' 	=> 'image/png',
+							 	'jpg'	=> 'image/jpeg',
+								 'gif' 	=> 'image/gif'));
+			$filePath = sha1_file($_FILES['img_slider_3']['tmp_name']). '.' . $allowed;
+			$destinationFilePath = 'assets/imgs/' . $filePath;
+			// Récupération du Mime
+			if ($allowed === false) {
+		    	echo 'Le fichier n\'est pas une image';
+		    	die();
+		    }
+			if ($_FILES['img_slider_3']['error'] != UPLOAD_ERR_OK) {
+				echo 'Erreur lors du téléchargement.';
+				die();
+			}
+			if(move_uploaded_file($_FILES['img_slider_3']['tmp_name'], $destinationFilePath)) {
+			} else {
+				echo 'Erreur lors de l\'enregistrement.';
+			}
+
+			$optionManager->changeImgSlider(3, $filePath);
+
+		}elseif(isset($_POST['submit_slider_4']))
+		{
+			// Upload du fichier (move_uploaded_file, etc.)
+			// Upload du fichier (move_uploaded_file, etc.)
+			$finfo = new \finfo(FILEINFO_MIME_TYPE);
+			$mimeType = $finfo->file($_FILES['img_slider_4']['tmp_name']);
+			$allowed =array_search(
+		        $mimeType, array('png' 	=> 'image/png',
+							 	'jpg'	=> 'image/jpeg',
+								 'gif' 	=> 'image/gif'));
+			$filePath = sha1_file($_FILES['img_slider_4']['tmp_name']). '.' . $allowed;
+			$destinationFilePath = 'assets/imgs/' . $filePath;
+			// Récupération du Mime
+			if ($allowed === false) {
+		    	echo 'Le fichier n\'est pas une image';
+		    	die();
+		    }
+			if ($_FILES['img_slider_4']['error'] != UPLOAD_ERR_OK) {
+				echo 'Erreur lors du téléchargement.';
+				die();
+			}
+			if(move_uploaded_file($_FILES['img_slider_4']['tmp_name'], $destinationFilePath)) {
+			} else {
+				echo 'Erreur lors de l\'enregistrement.';
+			}
+
+			$optionManager->changeImgSlider(4, $filePath);
+
+		}elseif(isset($_POST['submit_slider_5']))
+		{
+			// Upload du fichier (move_uploaded_file, etc.)
+			// Upload du fichier (move_uploaded_file, etc.)
+			$finfo = new \finfo(FILEINFO_MIME_TYPE);
+			$mimeType = $finfo->file($_FILES['img_slider_5']['tmp_name']);
+			$allowed =array_search(
+		        $mimeType, array('png' 	=> 'image/png',
+							 	'jpg'	=> 'image/jpeg',
+								 'gif' 	=> 'image/gif'));
+			$filePath = sha1_file($_FILES['img_slider_5']['tmp_name']). '.' . $allowed;
+			$destinationFilePath = 'assets/imgs/' . $filePath;
+			// Récupération du Mime
+			if ($allowed === false) {
+		    	echo 'Le fichier n\'est pas une image';
+		    	die();
+		    }
+			if ($_FILES['img_slider_5']['error'] != UPLOAD_ERR_OK) {
+				echo 'Erreur lors du téléchargement.';
+				die();
+			}
+			if(move_uploaded_file($_FILES['img_slider_5']['tmp_name'], $destinationFilePath)) {
+			} else {
+				echo 'Erreur lors de l\'enregistrement.';
+			}
+
+			$optionManager->changeImgSlider(5, $filePath);
+		} 
 
 
 
+
+
+		// Function avatar testimoniaux
 		if(isset($_POST['submit_avatar_1']))
 		{
 
@@ -167,6 +311,15 @@ class DefaultController extends Controller
 		}
 		//header 
 		$optionTitleToDisplay 	= $optionManager->getTitle();
+		
+		//slider
+		//view img slider 
+		$optionSliderToDisplay1 = $optionManager->getImgSlider(1);
+		$optionSliderToDisplay2 = $optionManager->getImgSlider(2);
+		$optionSliderToDisplay3 = $optionManager->getImgSlider(3);
+		$optionSliderToDisplay4 = $optionManager->getImgSlider(4);
+		$optionSliderToDisplay5 = $optionManager->getImgSlider(5);
+
 		//testimoniaux
 			//view name
 		$optionNameToDisplay1 = $optionManager->getName(1);
@@ -193,7 +346,8 @@ class DefaultController extends Controller
 			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
 			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
-			'titledisplay'		=> [$optionTitleToDisplay],
+			'title'		=> [$optionTitleToDisplay],
+			'imgslider' => [$optionSliderToDisplay1, $optionSliderToDisplay2, $optionSliderToDisplay3, $optionSliderToDisplay4, $optionSliderToDisplay5],
 		]);
 
 	}
@@ -210,9 +364,16 @@ class DefaultController extends Controller
 		
 		// routing infos
 
+		//Slider 
+		$optionSliderToDisplay1 = $optionManager->getImgSlider(1);
+		$optionSliderToDisplay2 = $optionManager->getImgSlider(2);
+		$optionSliderToDisplay3 = $optionManager->getImgSlider(3);
+		$optionSliderToDisplay4 = $optionManager->getImgSlider(4);
+		$optionSliderToDisplay5 = $optionManager->getImgSlider(5);
 
 		//header
 		$optionTitleToDisplay 	= $optionManager->getTitle();
+		
 		//testimoniaux
 			//view name
 		$optionNameToDisplay1 = $optionManager->getName(1);
@@ -241,6 +402,7 @@ class DefaultController extends Controller
 			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
 			'titledisplay'		=> [$optionTitleToDisplay],
+			'imgslider' => [$optionSliderToDisplay1, $optionSliderToDisplay2, $optionSliderToDisplay3, $optionSliderToDisplay4, $optionSliderToDisplay5],
 			
 		]);
 
@@ -364,7 +526,7 @@ class DefaultController extends Controller
 		$optionChangeAvaToDisplay = $optionManager->changeAvatar($avatarNb, $newUrl);
 		$this->show('default/backoffice',['backoffice'=>$optionChangeAvaToDisplay]);
 	}
-
+	
 	public function SubAva()
 	{
 		$optionManager = new \Manager\OptionsManager();
