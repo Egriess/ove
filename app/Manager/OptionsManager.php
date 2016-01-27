@@ -77,7 +77,23 @@ class OptionsManager extends \W\Manager\Manager
 		$stmt->bindParam(':newText', $newText, \PDO::PARAM_INT);
 		$stmt->execute();
 	}
+	//function change_slider img
 
+	public function getImgSlider($sliderNb)
+	{
+		$sql="SELECT option_value FROM options WHERE option_name = 'slider_".$sliderNb."'";
+		$stmt = $this->dbh->query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];
+	}
+
+	public function changeImgSlider($sliderNb, $newUrl)
+	{
+		$sql ="UPDATE options SET option_value ='$newUrl' WHERE option_name = 'slider_".$sliderNb."'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':newUrl', $newUrl, \PDO::PARAM_INT);
+		$stmt->execute();
+	}
 	//function change_avatar
 
 	public function getAvatar($avatarNb)

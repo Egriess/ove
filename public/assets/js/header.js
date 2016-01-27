@@ -24,7 +24,9 @@ $(function(){
 
 
 
-
+ $(function() {
+    $( "#accordion" ).accordion();
+  });
 
 
 // Hinge effect popup
