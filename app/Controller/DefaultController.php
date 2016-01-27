@@ -268,10 +268,17 @@ class DefaultController extends Controller
 				
 				unset($user['password']);
 
+				// insertion des datas initiales en db
+				
+
 				// Enregistrement des infos utilisateur en session
 				$authManager->logUserIn($user);
 
+
+
 				$this->redirectToRoute('backoffice');
+
+
 			}
 
 			$this->show('Default/login', ['errorConnection' => true]);

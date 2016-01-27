@@ -3,9 +3,10 @@
 <?php $this->start('main_content') ?>
 
 	<header>
-		<h1 id="text_shadow" style="text-align:center; text-shadow: rgb(150, 150, 150) 4px 4px 2px;" > ADMINISTRATION DE VOTRE PAGE </h1><br>
+		<h1 id="text_shadow" style="text-align:center; text-shadow: rgb(150, 150, 150) 4px 4px 2px;" > ADMINISTRATION DE <?= $_SESSION['user']['page_name'] ?> </h1><br>
 				
-		<a href="/page">Page coté client</a>
+		<a href="/page">Voir la page <?= $_SESSION['user']['page_name'] ?></a>
+		
 	</header>
 	
 	<input type="hidden" name="" value="<?php $Lat ?>">

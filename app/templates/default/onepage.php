@@ -6,7 +6,7 @@
 <header>
 		
 			<nav class="navbar navbar-fixed-top">
-				<h1 id="text_shadow" style="text-shadow: rgb(150, 150, 150) 4px 4px 2px;" ><?= $titledisplay[0] ?></h1>
+				<h1 id="text_shadow" style="text-shadow: rgb(150, 150, 150) 4px 4px 2px;" ></h1>
 				<!-- POP UP edit end -->
 				<ul class="nav nav-pills">
 				  <li role="presentation"><a href="/login">Loginpage</a></li>
@@ -17,6 +17,8 @@
 				  <li role="presentation"><a href="#">Menu6</a></li>  
 				</ul>
 			</nav>
+
+			
 		
 	</header>
 
@@ -104,6 +106,10 @@
 			
 		</div>
 	</div>
+
+<div id="sound">
+<iframe width="100%" height="350" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/134686476&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+</div>
 
 
 <!--	section Text	-->

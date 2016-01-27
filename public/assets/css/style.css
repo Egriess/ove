@@ -96,6 +96,12 @@ header nav h1 {
   width: 300px;
 }
 
+#sound{
+  width: 100%;
+  height: 300px;
+  background: #CBCBCB;
+}
+
 /* CSS Library */ 
 
 

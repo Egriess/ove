@@ -147,5 +147,20 @@ class OptionsManager extends \W\Manager\Manager
 	    . "	(NULL, 'pw_mail', '".$password_mail."', '1')";
 	    $this->dbh->exec($sql);
 	}
+	// inserer les datas lorem ipsum de base à la création d'un user 
+	
+	public function insertInit($userID, $name, $value)
+	{
+
+		$sql = "INSERT INTO options (option_name, option_value) VALUES (:name, :value, :user_option_id)" ;
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':name', $name);
+		$stmt->bindParam(':value', $value);
+		$stmt->bindParam(':user_option_id', $userID);
+		
+		
+		$stmt->execute();
+	}
 
 }
+

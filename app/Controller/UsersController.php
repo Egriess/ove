@@ -26,13 +26,24 @@ class UsersController extends Controller
 					'mail' 		=> $_POST['mail']
 				]);
 
-			$usersManager->insertInit([
-					'page_name' => $_POST['page_name'],
-					'passwrd' 	=> password_hash($_POST['passwrd'], PASSWORD_DEFAULT),
-					'mail' 		=> $_POST['mail']
-				]);
+			$userSession = new \W\Security\AuthentificationManager();
+			$userSession->logUserIn($user);
+
+				$usersManager = new \Manager\UsersManager();
+				$user = $usersManager->find($userId);
+				unset($user['password']);
+				// on instancie les datas de base en DB 
+				$userID = $user['id'];
+				$name 	= 'avatar_1';
+				$value 	= 'gergregegregergegregregregrege';
+				$initdata = new \Manager\OptionsManager();
+				$initdata->insertInit($userID, $name, $value);
+			
+
 		}
 
 		$this->redirectToRoute('backoffice');
 	}
+
+	
 }
