@@ -8,13 +8,9 @@
 		
 
 	<nav class="navbar navbar-fixed-top">
-<<<<<<< HEAD
 
-		<h1 id="text_shadow" style="text-shadow: rgb(150, 150, 150) 4px 4px 2px;" ><?= $titledisplay[0] ?></h1>
-
-=======
 		<h1 id="text_shadow" style="text-shadow: rgb(150, 150, 150) 4px 4px 2px; color:<?= $color[0] ?>;font-family:<?= $font[0] ?>" ><?= $titledisplay[0] ?></h1>
->>>>>>> header01
+
 		<!-- POP UP edit end -->
 		<ul class="nav nav-pills">
 		  <li role="presentation"><a href="/login">Loginpage</a></li>
