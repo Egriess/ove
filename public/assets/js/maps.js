@@ -1,8 +1,12 @@
 function initMap(Lat, Lng) {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 8,
-    center: {lat: -34.397, lng: 150.644}
+    center: {lat: parseFloat($('#lat').val()), lng: parseFloat($('#lon').val())}
        });
+   var marker = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: {lat: parseFloat($('#lat').val()), lng: parseFloat($('#lon').val())}
   var geocoder = new google.maps.Geocoder();
 
   document.getElementById('setMap').addEventListener('click', function() {

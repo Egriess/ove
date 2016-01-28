@@ -295,6 +295,13 @@ class DefaultController extends Controller
 
 		}
 
+		if(isset($_POST['submit_adress']))
+		{
+			$optionManager->saveLatLon( $_POST['lat']);
+			$optionManager->saveLatLon( $_POST['lon']);
+
+		}
+
 		if(isset($_POST['submit_title']))
 		{
 			$optionManager->UpdateFont( $_POST['fonts']);
