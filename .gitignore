@@ -218,4 +218,8 @@ pip-log.txt
 app/config.php
 W/README.md
 app/config.php
+<<<<<<< HEAD
+=======
+app/config.php
+>>>>>>> doc
 public/assets/imgs/babe8d740d39515f346aab5ac378ec1c2b49f80d.jpg

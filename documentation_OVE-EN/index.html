@@ -55,14 +55,18 @@
       <div class="col-sm-9">
         <div id="section1"> 
           <h1>Presentation</h1>
-          <p>Builder-single page of 6 sections, each editable individually </p>
+          <p>The site OVE, allows each user to create their own single page without having knowledge in development web. 
+			Builder-single page of 6 sections, each editable individually</p>
           <!-- block de rendu code -->
          
         </div> 
        
          <div id="section3"> 
           <h1>Installation</h1>
-          <p>Try to scroll this page and look at the navigation list while scrolling!</p>
+          <p>The installation is simple, you just need to register.</p>
+          <img src="" alt="page d'inscription">
+          <p> Put what you want in your single page. </p>
+          <img src="" alt="backoffice">
         </div> 
 
         <div id="section2"> 
@@ -76,19 +80,24 @@
 	          		</div>
 	          		<hr/>
 	          </div>
-	          <div id="slidecomp">
-		          <h3>Slider</h3>
-		          		<p>The section slider allows you to display a carousel in the content customizable, the user can determine if the content if there are images or videos. It is of course possible to mix the display of a photo and then move to a video. it operates 100% of the width of the browser responsive. (provided that the source img/video will be of appropriate size.)
-		          		</p> 
-		          		<div class="illu">
-		          			<img src="img/slider.png" alt="header"></img>
-		          		</div>
-		          		<hr> 
-	          </div>
-	          <div id="galerycomp">
-	          ... galerie 
-	          </div>
+	        <div id="slidecomp">
+		        <h3>Slider</h3>
+		        <p>The section slider allows you to display a carousel in the content customizable, the user can determine if the content if there are images or videos. It is of course possible to mix the display of a photo and then move to a video. it operates 100% of the width of the browser responsive. (provided that the source img/video will be of appropriate size.)</p> 
+		         <div class="illu">
+		         	<img src="img/slider.png" alt="header"></img>
+		         </div>
+	        </div>
+
+	        <hr> 
+
+	        <div id="galerycomp">
+	          	<h3>Gallery</h3>
+	          		<p>It makes it easier to view your photos, projects or want for your future visitors want to come back or is in need of your services.</p>
+	          		<img src="" alt="example of gallery">
+	        </div>
+
 	          <hr/>
+
 	          <div id="testiscomp">
 	          	<h3>Testimonial</h3>
 	          	<p>
@@ -97,14 +106,31 @@
 	          	<div class="illu">
 		          	<img src="img/testi.png" alt="testimonial"></img>
 		        </div>
-	          </div>
-	          <hr/>
-	          <div id="mapscomp">
-	          ... maps  
-	          </div>
-	          <div id="contactcomp">
-	          ... contact form 
-	          </div>
+	        </div>
+
+	        <hr/>
+
+	        <div id="mapscomp">
+	          	<h3>Map</h3>
+      			<p>The map section allows the user to be able to be located by visitors of the website who thought to make contact with him. If the user is a company, for example, the site visitors will be able to directly know or it is. 
+				The fields are saved in a database, and may be changed at the will of the one. This will automatically update in a database.
+      			<br>
+      			Other than the fields populated, the longitude and latitude are also taken into account in the database, the purpose of which is to load its information dynamically in each page.</p>
+      			<div class="illu">
+          			<img src="img/map.png" alt="map"></img>
+				</div> 
+	        </div>
+
+	        <hr>
+
+	        <div id="contactcomp">
+	          	<h3>Contact form</h3>
+				<p>the contact form allows you to receive emails for requests or information on your activity.</p>
+				<img src="" alt="form contact"> 
+	        </div>
+
+	        <hr/>
+
 	          <div id="textcomp">
 		           <h2>Free text</h2>
 		           <p>
@@ -118,14 +144,40 @@
         </div> 
          <div id="section4"> 
           <h1>Features</h1>
-          <div id="headerfunc">
-	          ... header 
-	          </div>
+		<div id="headerfunc">
+			<h3>Edition of the title</h3>
+				<p>Displays the title edit in the DB.</p>
+				<div id="code">
+		           <p class="title">
+		           	function backoffice() </p class="title">{ <br>
+		           	<p class="corp">$this->show('default/backoffice',[ <br>	
+						'title'=> [$optionTitleToDisplay],<br></p class="corp">
+		           		}
+          			</p>
+          		</div>
+          		<h3>Choice of the color of the title</h3>
+          		<p>Allows you to choose a color starting a color picker</p>
+          		...function color
+
+          		<h3>font the title</h3>
+          		<p>function that makes it easy to change the font for a site that is more custom</p>
+          		...function font
+			</div>
+    	</div>
 	          <div id="slidefunc">
-	          ... slider 
+	          	<h3>Slider</h3>
+	        	 <div id="code">
+		           <p class="title">
+		           	function backoffice() </p class="title">{ <br>
+		           	<p class="corp">$this->show('default/backoffice',[ <br>	
+						'imgslider' => [$optionSliderToDisplay1, $...2, $...3, $...4, $...5],<br></p class="corp">
+		           		}
+          			</p>
+          		</div>
 	          </div>
 	          <div id="galeryfunc">
-	          ... galerie 
+		          <h3>galerie</h3>
+		        	 ...function galerie
 	          </div>
 	          <div id="testisfunc">
 	         	<h3>Testimonial</h3>
@@ -142,9 +194,23 @@
           			 </p>
           		</div>
 	          </div>
-	          <div id="mapsfunc">
-	          ... maps  
-	          </div>
+	        <div id="mapsfunc">
+	            <h3>Map</h3>
+	          	<div id="code">
+           			<p class="title">
+           				function saveAdress($address) {</p class="title">{ <br>
+           			<p class="corp">
+           					$sql = "UPDATE options SET option_value = :option_value WHERE option_name = 'adresse'";<br>
+							$stmt = $this->dbh->prepare($sql);
+							$stmt->bindParam(':option_value', $address);<br>
+							$stmt->execute(); 
+						 <br>
+           			<br></p class="corp">}
+					$this->redirectToRoute('backoffice');
+		           </p>
+		        </div> 
+	        </div>
+
 	          <div id="textfunc">
 	          	<h3>Free text</h3>
 	         	<p>Displays the texts.</p>
