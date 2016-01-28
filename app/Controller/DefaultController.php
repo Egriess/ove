@@ -481,6 +481,12 @@ class DefaultController extends Controller
 
 		$emailToDisplay		  = $optionManager->getMail();
 
+		if(isset($_SESSION['errors'])) {
+			$errors = $_SESSION['errors'];
+		} else {
+			$errors = array();
+		}
+
 		$this->show('default/onepage',[
 			'names'		=> [$optionNameToDisplay1, $optionNameToDisplay2, $optionNameToDisplay3],
 			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
@@ -496,6 +502,7 @@ class DefaultController extends Controller
 			'gradiant_color2' => [$optionBgGradientColor2],
 			'adress'	=> [$optionAdressToDisplay],
 			'mailrecipe' => [$emailToDisplay],
+			'errors'	=> $errors,
 		]);
 
 	}
@@ -641,8 +648,6 @@ class DefaultController extends Controller
 	*/
 	public function contact()
 	{
-
-
 		// $errName, $errEmail, $errMessage, $errHuman, $name, $email, $message, $human
 		$_POST['name'];
 		$_POST['email'];
@@ -651,46 +656,43 @@ class DefaultController extends Controller
 		$_POST['errName'];
 		$_POST['errEmail'];
 		$_POST['errMessage'];
-		print_r($_POST);
+		
 		// Si j'ai recu une soumission du formulaire mail
 		// Si j'ai tous les champs
 			// Si erreur dans
 
 		$optionManager = new \Manager\OptionsManager();
 
-		if (isset($_POST["submit"])) 
+		if (isset($_POST["send-mail"])) 
 		{
 	  		$name = $_POST['name'];
 	  		$email = $_POST['email'];
 	  		$message = $_POST['message'];
 	 		$human = intval($_POST['human']);
-	 		/*$from = 'Demo Contact Form'; 
-	 		$to = 'example@domain.com'; 
-	 		$subject = 'Message from Contact Demo ';*/
-	 		
-	 		$body ="From: $name\n E-Mail: $email\n Message:\n $message";
+	 	
+	 		$errors = array();
 	 
 	 		// Check if name has been entered
-	 		if (!isset($_POST['name'])) {
-	 			$errName = 'Please enter your name';
+	 		if (!isset($_POST['name']) || empty($_POST['name'])) {
+	 			$errors['name'] = 'Please enter your name';
 	 		}
 	 		
 	 		// Check if email has been entered and is valid
 	 		if (!isset($_POST['email']) || !filter_var(isset($_POST['email']), FILTER_VALIDATE_EMAIL)) {
-	 			$errEmail = 'Please enter a valid email address';
+	 			$errors['email'] = 'Please enter a valid email address';
 	 		}
 	 		
 	 		//Check if message has been entered
 	 		if (!isset($_POST['message'])) {
-	 			$errMessage = 'Please enter your message';
+	 			$errors['message'] = 'Please enter your message';
 	 		}
 	 		//Check if simple anti-bot test is correct
 	 		if ($human !== 5) {
-	 			$errHuman = 'Your anti-spam is incorrect';
+	 			$errors['human'] = 'Your anti-spam is incorrect';
 	 		}
 	 
 		 // If there are no errors, send the email
-			if (!$errName && !$errEmail && !$errMessage && !$errHuman)
+			/*if (!$errName && !$errEmail && !$errMessage && !$errHuman)
 			{
 			 	if (mail ($to, $subject, $body, $from))
 			 	{
@@ -700,8 +702,16 @@ class DefaultController extends Controller
 			 	{
 			 		$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
 			 	}
+			}*/
+
+			$_SESSION['errors'] = $errors;
+
+			if(empty($errors)) {
+
+				$this->mailer($name, $email, $message);
 			}
-	 	$this->redirectToRoute('onepage');
+
+	 		$this->redirectToRoute('onepage');
 	 	}
 	}
 
@@ -720,7 +730,7 @@ class DefaultController extends Controller
 		}
 	}
 
-	public function mailer($email_contact)
+	private function mailer($name, $email, $message)
 	{
 		$optionManager = new \Manager\OptionsManager();
 		$mailrecipe = $optionManager->getMail();
@@ -728,9 +738,7 @@ class DefaultController extends Controller
 		// $email and $message are the data that is being
 		// posted to this page from our html contact form
 		//$email = '' ;
-		$email = $_REQUEST['email'] ;
-		$name = $_REQUEST['name'];
-		$message = $_REQUEST['message'] ;
+		
 
 		//$mail->SMTPDebug = 2;
 		$mail->isSMTP();                                      // Set mailer to use SMTP

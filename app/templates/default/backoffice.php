@@ -418,10 +418,7 @@
 				<form action="#" method="POST" accept-charset="utf-8">
 
 					<label>votre adresse mail</label>
-					<input type="email" name="email_contact" value="" placeholder="ex: john.doe@domain.com">
-					<p><?= $email_contact; ?></p>
-					<label>mot de passe de votre compte mail</label>
-					<input type="password" name="password_mail" value="<?= $password_mail; ?>" placeholder="Votre mot de passe">
+					<input type="email" name="email_recipe" value="" placeholder="<?= $mail[0] ?>">					
 					<input type="submit" name="submit_mail" value="Valider">
 				</form>
 			</div>
