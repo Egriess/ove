@@ -265,7 +265,8 @@ class DefaultController extends Controller
 
 		//modification du titre du site
 		if(isset($_POST['submit_title'])){
-			$optionManager->updateTitle($title);
+
+			$optionManager->updateTitle( $_POST['title']);
 		}
 		//rename
 		if(isset($_POST['submit_name1']))
@@ -284,9 +285,43 @@ class DefaultController extends Controller
 
 		if(isset($_POST['submit_title']))
 		{
-			$optionManager->UpdateColor($color);
+			$optionManager->UpdateColor( $_POST['textcolor']);
 
 		}
+
+		if(isset($_POST['submit_title']))
+		{
+			$optionManager->UpdateFont( $_POST['fonts']);
+
+		}
+
+		if(isset($_POST['submit_bg']))
+		{
+			$optionManager->UpdateBg( $_POST['textcolorbg']);
+
+		}
+
+		if(isset($_POST['submit_bg']))
+		{
+			$optionManager->updateBgGradientDirection( $_POST['gradient']);
+
+		}
+
+
+		if(isset($_POST['submit_bg']))
+		{
+			$optionManager->updateBgGradientColor1( $_POST['textcolorbg1']);
+
+		}
+
+
+		if(isset($_POST['submit_bg']))
+		{
+			$optionManager->updateBgGradientColor2( $_POST['textcolorbg2']);
+
+		}
+
+
 
 		//modification du text testimonial
 		if(isset($_POST['submit_text1']))
@@ -317,7 +352,11 @@ class DefaultController extends Controller
 		}
 		//header 
 		$optionTitleToDisplay 	= $optionManager->getTitle();
-		
+		$optionFontToDisplay 	= $optionManager->getFont();
+		$optionBgToDisplay 	= $optionManager->getBg();
+		$optionBgGradientDirection = $optionManager->getBgGradientDirection();
+		$optionBgGradientColor1 = $optionManager->getBgGradientColor1();
+		$optionBgGradientColor2 = $optionManager->getBgGradientColor2();
 		//slider
 		//view img slider 
 		$optionSliderToDisplay1 = $optionManager->getImgSlider(1);
@@ -354,6 +393,11 @@ class DefaultController extends Controller
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
 			'title'		=> [$optionTitleToDisplay],
 			'imgslider' => [$optionSliderToDisplay1, $optionSliderToDisplay2, $optionSliderToDisplay3, $optionSliderToDisplay4, $optionSliderToDisplay5],
+			'font'		=> [$optionFontToDisplay],
+			'bg'		=> [$optionBgToDisplay],
+			'direction'	=> [$optionBgGradientDirection],
+			'gradiant_color1' => [$optionBgGradientColor1],
+			'gradiant_color2' => [$optionBgGradientColor2],
 		]);
 
 	}
@@ -379,8 +423,12 @@ class DefaultController extends Controller
 
 		//header
 		$optionTitleToDisplay 	= $optionManager->getTitle();
-		
-		//testimoniaux
+		$optionColorToDisplay 	= $optionManager->getColor();
+		$optionFontToDisplay 	= $optionManager->getFont();
+		$optionBgToDisplay 	= $optionManager->getBg();
+		$optionBgGradientDirection = $optionManager->getBgGradientDirection();
+		$optionBgGradientColor1 = $optionManager->getBgGradientColor1();
+		$optionBgGradientColor2 = $optionManager->getBgGradientColor2();		//testimoniaux
 			//view name
 		$optionNameToDisplay1 = $optionManager->getName(1);
 		$optionNameToDisplay2 = $optionManager->getName(2);
@@ -409,7 +457,12 @@ class DefaultController extends Controller
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
 			'titledisplay'		=> [$optionTitleToDisplay],
 			'imgslider' => [$optionSliderToDisplay1, $optionSliderToDisplay2, $optionSliderToDisplay3, $optionSliderToDisplay4, $optionSliderToDisplay5],
-			
+			'color'		=> [$optionColorToDisplay],
+			'font'		=> [$optionFontToDisplay],
+			'bg'		=> [$optionBgToDisplay],
+			'direction'	=> [$optionBgGradientDirection],
+			'gradiant_color1' => [$optionBgGradientColor1],
+			'gradiant_color2' => [$optionBgGradientColor2],
 		]);
 
 	}
@@ -473,7 +526,6 @@ class DefaultController extends Controller
      		 	}
 
      		 	$this->redirectToRoute('backoffice');
-
 	}
 
 	public function getAdress(){
@@ -482,7 +534,6 @@ class DefaultController extends Controller
 		$address = $_POST['address'];
      	$adressToDisplay=$optionManager->getAdress($address);
      	$this->show('default/backoffice', ['currentadresse' => $adressToDisplay]);
-
 	
 	}
 
@@ -499,26 +550,6 @@ class DefaultController extends Controller
 			$this->showNotFound();
 		}
 	}
-
-	public function updateTitle()
-	{	
-		$title = $_POST['title'];
-		$optionManager = new \Manager\OptionsManager();
-		$optionTitleToDisplay = $optionManager->updateTitle($title);
-		$this->redirectToRoute('backoffice');
-	}
-
-	public function updateColor()
-	{	
-		$color = $_POST['textcolor'];
-		$optionManager = new \Manager\OptionsManager();
-		$optionColorToDisplay = $optionManager->updateColor($color);
-		$this->redirectToRoute('backoffice');
-	}
-
-	
-
-
 
 	/*
 	* TESTIMONIAL
