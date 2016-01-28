@@ -375,51 +375,8 @@
 	  		</div>
 		</div>
 	</div>
-
-	<div id="backheader">
-		
-					<!-- POP UP edit -->
-					<div id="titlepopup" class="white-popup mfp-with-anim mfp-hide">
-						<form action="/updateTitle" method="post" accept-charset="utf-8">
-							<span>Choisir le titre du site</span><br>
-							<input type="text" name="title" value="" placeholder="Votre titre"><br>
-							<span>Choisir la couleur du texte</span><br>
-							<input type="color" value="#383535" name="textcolor"><br>
-							<span>Choisir le style d'ecriture</span><br>
-							<select name="fonts">
-								<option style="font-family:'Roboto';"value="Roboto">Roboto</option>
-								<option style="font-family:'Raleway';"value="Raleway">Raleway</option>
-								<option style="font-family:'Ubuntu';"value="Ubuntu">Ubuntu</option>
-								<option style="font-family:'Droid Sans';"value="Droid">Droid</option>
-								<option style="font-family:'Monserrat';"value="Monserrat">Monserrat</option>
-								<option style="font-family:'Lora';"value="Lora">Lora</option>
-								<option style="font-family:'Open Sans Condensed';"value="Open Sans Condensed">Open Sans Condensed</option>
-							</select><br>
-							<!-- text shadow gen-->
-							<input type="submit" name="submit_title" value="envoyer">
-						</form>
-					</div>
-
-		<a href="#titlecolorpopup" class="hinge">Choisir la couleur du menu</a>
-					<!-- POP UP edit -->
-					<div id="titlecolorpopup" class="white-popup mfp-with-anim mfp-hide">
-						<span> Choisir la couleur du menu</span>
-						<input type="color" value="#fad345" name="menucolor">
-					</div>
-
-	</div>
-			<a href="#gallerypopup" class="hinge">Choisir les image de la galerie</a>
-					<div id="gallerypopup" class="white-popup mfp-with-anim mfp-hide">
-					<span> Choisir les images</span>		
-	
-
-	<a href="#titlepopup" class="hinge">Editer le titre du site</a>
-	
-
-
-
-	<!--	section Text	-->
-	<div id="text">
+	<!--	section Text Manage	-->
+	<div id="textback">
 		<a href="#textpopup" class="hinge">Editer les textes du site</a>
 			<!-- POP UP edit -->
 		<div id="textpopup" class="white-popup mfp-with-anim mfp-hide">
@@ -438,6 +395,7 @@
 			</form>
 
 		</div>
+	</div>
 		<div id="textes">
 			<div class="container">
 				<h2>text</h2>
@@ -469,6 +427,51 @@
 			</div>
 		</div>
 	</div>
+	<div id="backheader">
+		
+					<!-- POP UP edit -->
+					<div id="titlepopup" class="white-popup mfp-with-anim mfp-hide">
+						<form action="/updateTitle" method="post" accept-charset="utf-8">
+							<span>Choisir le titre du site</span><br>
+							<input type="text" name="title" value="" placeholder="Votre titre"><br>
+							<span>Choisir la couleur du texte</span><br>
+							<input type="color" value="#383535" name="textcolor"><br>
+							<span>Choisir le style d'ecriture</span><br>
+							<select name="fonts">
+								<option style="font-family:'Roboto';"value="Roboto">Roboto</option>
+								<option style="font-family:'Raleway';"value="Raleway">Raleway</option>
+								<option style="font-family:'Ubuntu';"value="Ubuntu">Ubuntu</option>
+								<option style="font-family:'Droid Sans';"value="Droid">Droid</option>
+								<option style="font-family:'Monserrat';"value="Monserrat">Monserrat</option>
+								<option style="font-family:'Lora';"value="Lora">Lora</option>
+								<option style="font-family:'Open Sans Condensed';"value="Open Sans Condensed">Open Sans Condensed</option>
+							</select><br>
+							<!-- text shadow gen-->
+							<input type="submit" name="submit_title" value="envoyer">
+						</form>
+	</div>
+
+
+
+		<a href="#titlecolorpopup" class="hinge">Choisir la couleur du menu</a>
+					<!-- POP UP edit -->
+					<div id="titlecolorpopup" class="white-popup mfp-with-anim mfp-hide">
+						<span> Choisir la couleur du menu</span>
+						<input type="color" value="#fad345" name="menucolor">
+					</div>
+
+	</div>
+			<a href="#gallerypopup" class="hinge">Choisir les image de la galerie</a>
+					<div id="gallerypopup" class="white-popup mfp-with-anim mfp-hide">
+					<span> Choisir les images</span>		
+	
+
+	<a href="#titlepopup" class="hinge">Editer le titre du site</a>
+	
+
+
+
+
 	
 
 <?php $this->stop('main_content') ?>

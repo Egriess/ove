@@ -584,6 +584,10 @@ img:hover{
   }
 }
 
+#textback{
+  height: 300px;
+  width: 100%;
+}
 
 #mapsback{
   height: 450px;
