@@ -17,7 +17,7 @@
 	padding: 20px;
 	background: #EBEAEA;
 	width: 800px;
-	height: 1760px;
+	height: 3000px;
 }
 
 .illu{
@@ -26,13 +26,16 @@
 }
 
 #section3{
+	margin: auto;
 	margin-left: 300px;
 	margin-bottom: 10px;
 	padding: 20px;
 	background: #EBEAEA;
 	width: 800px;
-	height: 1500px;
+	height: 1700px;
 }
+
+
 
 #section4{
 	margin-left: 300px;

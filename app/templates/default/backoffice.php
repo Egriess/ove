@@ -12,16 +12,16 @@
 	-->
 					
 	<div id="backheader">
-		
+		<div class="container">
 					<!-- POP UP edit -->
-		<a href="#titlebackgroundpopup" class="hinge">Choisir l'arrière plan</a>
-		<a href="#titlecolorpopup" class="hinge">Choisir la couleur du menu</a>
-		<a href="#titlepopup" class="hinge">Editer le titre du site</a>
-		<a href="#gallerypopup" class="hinge">Choisir les image de la galerie</a>
-		<a href="#backtesti" class="hinge">Choisir la couleur d'arrière plan des testi</a>
-		<a href="#backtext" class="hinge">Choisir la couleur d'arrière plan du texte</a>
-		<a href="#backmap" class="hinge">Choisir la couleur d'arrière plan de la carte</a>
-
+		<ul>
+			<li><a href="#titlebackgroundpopup" class="hinge">Choisir l'arrière plan</a></li>
+			<li><a href="#titlepopup" class="hinge">Editer le titre du site</a></li>
+			<li><a href="#backtesti" class="hinge">Choisir la couleur d'arrière plan des testi</a></li>
+			<li><a href="#backtext" class="hinge">Choisir la couleur d'arrière plan du texte</a></li>
+			<li><a href="#backmap" class="hinge">Choisir la couleur d'arrière plan de la carte</a></li>
+		</ul>
+	</div>
 					<div id="titlepopup" class="white-popup mfp-with-anim mfp-hide">
 
 						<form action="#" method="post" accept-charset="utf-8">

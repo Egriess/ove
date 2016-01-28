@@ -64,15 +64,19 @@ header nav h1 {
 /* BACKEND STYLE */
 #backheader{
   margin-top: 300px;
-  padding: 20px;
   width: 100%;
-  height: 100px;
+  height: 150px;
   background: #9bdbf4;
   margin:auto;
 }
+
+#backheader li{
+  float: left;
+  margin: auto;
+}
+
 #backheader a{
   text-decoration: none;
-  margin-left: 20px;
  
 }
 #titlepopup{
