@@ -356,6 +356,12 @@ class DefaultController extends Controller
 		{
 			$optionManager->changeText(3, $_POST['sec_text']);
 		}
+
+		if (isset($_POST['submit_mail']))
+		{	
+			$emailpost = $_POST['email_recipe'];
+			$optionManager->updateMail($emailpost);
+		}
 		//header 
 		$optionTitleToDisplay 	= $optionManager->getTitle();
 		$optionFontToDisplay 	= $optionManager->getFont();
@@ -408,6 +414,8 @@ class DefaultController extends Controller
 			'gradiant_color1' => [$optionBgGradientColor1],
 			'gradiant_color2' => [$optionBgGradientColor2],
 			'adress'	=> [$optionAdressToDisplay],
+			'mail'		=>	[$optionmailToDisplay],
+			'updateMail'=>	[$optionmailToUpdate],
 
 		]);
 
@@ -709,10 +717,10 @@ class DefaultController extends Controller
 		}
 	}
 
-	public function mailer()
+	public function mailer($email_contact)
 	{
 		$optionManager = new \Manager\OptionsManager();
-
+		$mailrecipe = $optionManager->getMail();
 		$mail = new \PHPMailer();
 		// $email and $message are the data that is being
 		// posted to this page from our html contact form
@@ -725,21 +733,21 @@ class DefaultController extends Controller
 		$mail->isSMTP();                                      // Set mailer to use SMTP
 		$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 		$mail->SMTPAuth = true;                               // Enable SMTP authentication
-		$mail->Username =  $email_contact ;                 // SMTP username
-		$mail->Password =  $password_mail ;            // SMTP password
+		$mail->Username =  'one.page.editor@gmail.com';                 // SMTP username
+		$mail->Password =  'oveonepageeditor';            // SMTP password
 		$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 		$mail->Port = 587;                                    // TCP port to connect to
 		$mail->setFrom($email);
 
 		// below we want to set the email address we will be sending our email to.
-		$mail->AddAddress("mathieu.baldassi@gmail.com");
-		$mail->addReplyTo('info@example.com', 'Information');
-		$mail->addCC('cc@example.com');
-		$mail->addBCC('bcc@example.com');
+		$mail->AddAddress($mailrecipe);
+		$mail->addReplyTo('');
+		$mail->addCC('');
+		$mail->addBCC('');
 
 		$mail->isHTML(true);                                  // Set email format to HTML
 
-		$mail->Subject = 'Here is the subject';
+		$mail->Subject = 'Message reçu depuis votre site OVE.';
 		$mail->Body    = $message;
 		$mail->AltBody = $message;
 
