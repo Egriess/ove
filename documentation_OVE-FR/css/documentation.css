@@ -17,7 +17,7 @@
 	padding: 20px;
 	background: #EBEAEA;
 	width: 800px;
-	height: 1760px;
+	height: 2500px;
 }
 
 .illu{
@@ -40,7 +40,7 @@
 	padding: 20px;
 	background: #EBEAEA;
 	width: 800px;
-	height: 1700px;
+	height: 2500px;
 }
 
 #section5{
@@ -86,4 +86,7 @@ hr{
  box-shadow: 0 0 10px 1px black;
  margin-top: 25px;
  margin-bottom: 25px;
+}
+.clearfix{
+	clear: both;
 }
