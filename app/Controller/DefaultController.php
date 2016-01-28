@@ -479,6 +479,8 @@ class DefaultController extends Controller
 		//map
 		$optionAdressToDisplay = $optionManager->getAdress();
 
+		$emailToDisplay		  = $optionManager->getMail();
+
 		$this->show('default/onepage',[
 			'names'		=> [$optionNameToDisplay1, $optionNameToDisplay2, $optionNameToDisplay3],
 			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
@@ -493,6 +495,7 @@ class DefaultController extends Controller
 			'gradiant_color1' => [$optionBgGradientColor1],
 			'gradiant_color2' => [$optionBgGradientColor2],
 			'adress'	=> [$optionAdressToDisplay],
+			'mailrecipe' => [$emailToDisplay],
 		]);
 
 	}
