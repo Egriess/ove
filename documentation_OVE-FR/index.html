@@ -55,14 +55,20 @@
       <div class="col-sm-9">
         <div id="section1"> 
           <h1>Présentation</h1>
-          <p>générateur de monopage de 6 sections chacune editable individuellement </p>
+          <p>Le site OVE, permet à chaque utilisateur de créer sa propre monopage sans avoir de connaissance en dévelopement web.   
+          Générateur de monopage de 6 sections chacune editable individuellement </p>
           <!-- block de rendu code -->
          
         </div> 
        
          <div id="section3"> 
           <h1>Installation</h1>
-          <p>Try to scroll this page and look at the navigation list while scrolling!</p>
+
+          <p>L'installation est simple il vous suffit juste de vous inscrire. </p>
+          <img src="" alt="page d'inscription">
+
+          <p> De mettre ce que vous souhaiter dans votre monopage. </p>
+          <img src="" alt="backoffice">
         </div> 
 
         <div id="section2"> 
@@ -76,22 +82,27 @@
 	          			<img src="img/header.png" alt="header"></img>
 	          		</div>
 	          		<hr/>
-	          </div>
-	          <div id="slidecomp">
-		          	<h3>Slider</h3>
+				</div>
+
+				<div id="slidecomp">
+					<h3>Slider</h3>
 		          		<p>La section slider permet d'afficher un carrousel au contenu personnalisable, l'utilisateur peut déterminer si le contenu de celui si ce sont des images ou des vidéos. Il est bien-sur possible de mixer l'affichage d'une photo puis de transiter vers une vidéo. il exploite 100% de la largeur du navigateur de façon responsive. (à condition que la source img/vidéo soit de taille appropriée.)
 		          		</p> 
 		          		<div class="illu">
 		          			<img src="img/slider.png" alt="header"></img>
 		          		</div>
 		          		<hr> 
-	          </div>
-	          <div id="galerycomp">
-	          
-	          </div>
-	          <hr/>
-	          <div id="testiscomp">
+	         	</div>
 
+	         	<div id="galerycomp">
+	          		<h3>Galerie</h3>
+	          		<p>Elle facilite la vue de vos photos, projets ou envie pour que votre futur visiteur est envie de revenir ou est besoin de vos services</p>
+	          		<img src="" alt="exemple de ga">
+	        	</div>
+
+	        	<hr/>
+
+	        	<div id="testiscomp">
 	          	<h3>Testimonial</h3>
 	          	<p>
 	          		Le testimonial permet de laisser un commentaire choisie par l'utilisateur pour fidéliser les utilisateurs de services.
@@ -101,22 +112,25 @@
 		          	<img src="img/testi.png" alt="testimonial"></img>
 		        </div>
 	          </div>
-	          <hr/>
-	          <div id="mapscomp">
-	          		<h3>Map</h3>
-	          			<p>La section Map permet à l'utilisateur de pouvoir être localisé par les visiteurs de son site qui songerais prendre contact avec lui. Si l'utilisateur est une entreprise par exemple, les visiteurs du site pourrons directement savoir ou celle ci ce trouve. 
-	          			Les champs renseignés sont enregistrés en base de donnée, et peuvent être changés à la volonté de celui ci. Cela s'actualisera automatiquement en base de donnée.
-	          			<br>
-	          			Autre que les champs renseigné, la longitude et latitude sont également prise en compte en base de donnée, ce qui a pour but de charger ses informations dynamiquement dans chaque page concernée.</p>
-	          			<div class="illu">
-		          			<img src="img/map.png" alt="map"></img>
-		          		</div>
-	          </div>
-	          <div id="contactcomp">
-	          
-	          </div>
-	          <div id="textcomp">
 
+	          <hr/>
+
+	        <div id="mapscomp">
+	          	<h3>Carte</h3>
+      			<p>La section carte permet à l'utilisateur de pouvoir être localisé par les visiteurs de son site qui songerais prendre contact avec lui. Si l'utilisateur est une entreprise par exemple, les visiteurs du site pourrons directement savoir ou celle ci ce trouve. 
+      			Les champs renseignés sont enregistrés en base de donnée, et peuvent être changés à la volonté de celui ci. Cela s'actualisera automatiquement en base de donnée.
+      			<br>
+      			Autre que les champs renseigné, la longitude et latitude sont également prise en compte en base de donnée, ce qui a pour but de charger ses informations dynamiquement dans chaque page concernée.</p>
+      			<div class="illu">
+          			<img src="img/map.png" alt="map"></img>
+			</div>
+
+			<div id="contactcomp">
+				<h3>Formulaire de contact</h3>
+				<p>le formulaire de contact permet de recevoir des mails pour des demandes ou renseignements sur votre activité.</p>
+				<img src="" alt="form contact"> 
+			</div>
+			<div id="textcomp">
 		           <h2>Text libre</h2>
 		           <p>
 		         		La section Texte libre permet à l'utilisateur d'écrire ce que bon lui semble. Il peux en conséquence laisser allez son imagination. Chaque texte, est éditable, et peux retranscrire des informations plus ou moins importante.
@@ -124,22 +138,50 @@
 			        <div class="illu">
 			          	<img src="img/section_text.PNG" alt="section texte libre"></img>
 			        </div>
-
 	          </div>
 	          <hr/>
         </div> 
-         <div id="section4"> 
-          <h1>Fonctionalités</h1>
-          <div id="headerfunc">
-	          ... header 
-	          </div>
-	          <div id="slidefunc">
-	          ... slider 
-	          </div>
-	          <div id="galeryfunc">
-	          ... galerie 
-	          </div>
-	          <div id="testisfunc">
+
+        <div id="section4"> 
+        	<h1>Fonctionalités</h1>
+			<div id="headerfunc">
+				<h3>Edition du titre</h3>
+				<p>Affiche le titre éditer en DB.</p>
+				<div id="code">
+		           <p class="title">
+		           	function backoffice() </p class="title">{ <br>
+		           	<p class="corp">$this->show('default/backoffice',[ <br>	
+						'title'=> [$optionTitleToDisplay],<br></p class="corp">
+		           		}
+          			</p>
+          		</div>
+          		<h3>choix de la couleur du titre</h3>
+          		<p>permet de choisir une couleur a patir d'un color picker</p>
+          		...function color
+
+          		<h3>font du titre</h3>
+          		<p>function qui facilite le changement de font pour un site plus personnalisé</p>
+          		...function font
+			</div>
+
+	        <div id="slidefunc">
+	        	<h3>Slider</h3>
+	        	 <div id="code">
+		           <p class="title">
+		           	function backoffice() </p class="title">{ <br>
+		           	<p class="corp">$this->show('default/backoffice',[ <br>	
+						'imgslider' => [$optionSliderToDisplay1, $...2, $...3, $...4, $...5],<br></p class="corp">
+		           		}
+          			</p>
+          		</div>
+	        </div>
+
+	        <div id="galeryfunc">
+	        	<h3>galerie</h3>
+	        	 ...function galerie
+	        </div>
+
+	        <div id="testisfunc">
 	         	<h3>Testimonial</h3>
 	         	<p>Affiche les données du testimonial.</p>
 	         	<div id="code">
@@ -153,8 +195,10 @@
            	
           			 </p>
           		</div>
-	          </div>
+	        </div>
+
 	          <div id="mapsfunc">
+          		<h3>Carte</h3>
 	          	<div id="code">
            			<p class="title">
            				function saveAdress($address) {</p class="title">{ <br>
@@ -165,10 +209,11 @@
 							$stmt->execute(); 
 						 <br>
            			<br></p class="corp">}
-		
-           </p>
-          </div>
+					$this->redirectToRoute('backoffice');
+		           </p>
+		         </div>  
 	          </div>
+
 	          <div id="textfunc">
 	          	<h3>Texte libre</h3>
 	         	<p>Affiche les textes.</p>
@@ -183,7 +228,8 @@
 				</div>
 	          </div>
 	          <div id="contactfunc">
-	          ... contact form 
+	          	<h3>fonction formulaire de contact </h3>
+	          	je ne sais pas quoi  mettre donc je demanderais plus tard.
 	          </div>
           
             <!-- block de rendu code -->
