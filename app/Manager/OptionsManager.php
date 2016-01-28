@@ -116,6 +116,98 @@ class OptionsManager extends \W\Manager\Manager
 		return $row['option_value'];	
 	}
 
+	function updateBgTesiColor1($bgTesti){
+
+		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'bg_testi_color1'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $bgTesti);
+		$stmt->execute();
+	}
+	function updateBgTesiColor2($bgTesti){
+
+		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'bg_testi_color2'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $bgTesti);
+		$stmt->execute();
+	}
+	function getBgTestiColor1(){
+
+		$sql="SELECT option_value FROM options WHERE option_name = 'bg_testi_color1'";
+		$stmt = $this->dbh-> query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];	
+	}
+
+	function getBgTestiColor2(){
+
+		$sql="SELECT option_value FROM options WHERE option_name = 'bg_testi_color2'";
+		$stmt = $this->dbh-> query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];	
+	}
+
+	function updateBgTextColor1($bgText){
+
+		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'bg_text_color1'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $bgText);
+		$stmt->execute();
+	}
+	function updateBgTextColor2($bgText){
+
+		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'bg_text_color2'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $bgText);
+		$stmt->execute();
+	}
+	function getBgTextColor1(){
+
+		$sql="SELECT option_value FROM options WHERE option_name = 'bg_text_color1'";
+		$stmt = $this->dbh-> query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];	
+	}
+
+	function getBgTextColor2(){
+
+		$sql="SELECT option_value FROM options WHERE option_name = 'bg_text_color2'";
+		$stmt = $this->dbh-> query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];	
+	}
+
+	function updateBgMapColor1($bgMap){
+
+		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'bg_map_color1'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $bgMap);
+		$stmt->execute();
+	}
+	function updateBgMapColor2($bgMap){
+
+		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'bg_map_color2'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $bgMap);
+		$stmt->execute();
+	}
+	function getBgMapColor1(){
+
+		$sql="SELECT option_value FROM options WHERE option_name = 'bg_map_color1'";
+		$stmt = $this->dbh-> query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];	
+	}
+
+	function getBgMapColor2(){
+
+		$sql="SELECT option_value FROM options WHERE option_name = 'bg_map_color2'";
+		$stmt = $this->dbh-> query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];	
+	}
+
+
+
 
 
 	/*

@@ -334,6 +334,41 @@ class DefaultController extends Controller
 
 		}
 
+		if(isset($_POST['submit_bg_testi']))
+		{
+			$optionManager->updateBgTesiColor1( $_POST['testicolorbg1']);
+
+		}
+
+		if(isset($_POST['submit_bg_testi']))
+		{
+			$optionManager->updateBgTesiColor2( $_POST['testicolorbg2']);
+
+		}
+
+		if(isset($_POST['submit_bg_text']))
+		{
+			$optionManager->updateBgTextColor1( $_POST['textcolorbg1']);
+
+		}
+
+		if(isset($_POST['submit_bg_text']))
+		{
+			$optionManager->updateBgTextColor2( $_POST['textcolorbg2']);
+
+		}
+
+		if(isset($_POST['submit_bg_map']))
+		{
+			$optionManager->updateBgMapColor1( $_POST['mapcolorbg1']);
+
+		}
+
+		if(isset($_POST['submit_bg_map']))
+		{
+			$optionManager->updateBgMapColor2( $_POST['mapcolorbg2']);
+
+		}
 
 
 		//modification du text testimonial
@@ -383,6 +418,8 @@ class DefaultController extends Controller
 		$optionNameToDisplay1 = $optionManager->getName(1);
 		$optionNameToDisplay2 = $optionManager->getName(2);
 		$optionNameToDisplay3 = $optionManager->getName(3);
+		$optionBgTestiColor1 = $optionManager->getBgTestiColor1();
+		$optionBgTestiColor2 = $optionManager->getBgTestiColor2();
 
 		//view avatar
 		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
@@ -398,9 +435,13 @@ class DefaultController extends Controller
 		$optionTextToDisplay1 	= $optionManager->getText(1);
 		$optionTextToDisplay2 	= $optionManager->getText(2);
 		$optionTextToDisplay3 	= $optionManager->getText(3);
+		$optionBgTextColor1 = $optionManager->getBgTextColor1();
+		$optionBgTextColor2 = $optionManager->getBgTextColor2();
 
 		//sextion Maps
 		$optionAdressToDisplay = $optionManager->getAdress();
+		$optionBgMapColor1 = $optionManager->getBgMapColor1();
+		$optionBgMapColor2 = $optionManager->getBgMapColor2();
 		$this->show('Default/backoffice',[
 			'names'		=> [$optionNameToDisplay1, $optionNameToDisplay2, $optionNameToDisplay3],
 			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
@@ -415,6 +456,13 @@ class DefaultController extends Controller
 			'gradiant_color1' => [$optionBgGradientColor1],
 			'gradiant_color2' => [$optionBgGradientColor2],
 			'adress'	=> [$optionAdressToDisplay],
+			'col_testi_1'	=> [$optionBgTestiColor1],
+			'col_testi_2'	=> [$optionBgTestiColor2],
+			'col_text_1'	=> [$optionBgTextColor1],
+			'col_text_2'	=> [$optionBgTextColor2],
+			'col_map_1'	=> [$optionBgMapColor1],
+			'col_map_2'	=> [$optionBgMapColor2],
+
 
 		]);
 
@@ -443,7 +491,8 @@ class DefaultController extends Controller
 
 		
 		//testimoniaux
-
+		$optionBgTestiColor1 = $optionManager->getBgTestiColor1();
+		$optionBgTestiColor2 = $optionManager->getBgTestiColor2();
 
 		//header
 		$optionTitleToDisplay 	= $optionManager->getTitle();
@@ -474,10 +523,12 @@ class DefaultController extends Controller
 		$optionTextToDisplay1 	= $optionManager->getText(1);
 		$optionTextToDisplay2 	= $optionManager->getText(2);
 		$optionTextToDisplay3 	= $optionManager->getText(3);
-
+		$optionBgTextColor1 = $optionManager->getBgTextColor1();
+		$optionBgTextColor2 = $optionManager->getBgTextColor2();
 		//map
 		$optionAdressToDisplay = $optionManager->getAdress();
-
+		$optionBgMapColor1 = $optionManager->getBgMapColor1();
+		$optionBgMapColor2 = $optionManager->getBgMapColor2();
 		$this->show('default/onepage',[
 			'names'		=> [$optionNameToDisplay1, $optionNameToDisplay2, $optionNameToDisplay3],
 			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
@@ -492,6 +543,13 @@ class DefaultController extends Controller
 			'gradiant_color1' => [$optionBgGradientColor1],
 			'gradiant_color2' => [$optionBgGradientColor2],
 			'adress'	=> [$optionAdressToDisplay],
+			'col_testi_1'	=> [$optionBgTestiColor1],
+			'col_testi_2'	=> [$optionBgTestiColor2],
+			'col_text_1'	=> [$optionBgTextColor1],
+			'col_text_2'	=> [$optionBgTextColor2],
+			'col_map_1'	=> [$optionBgMapColor1],
+			'col_map_2'	=> [$optionBgMapColor2],
+
 		]);
 
 	}

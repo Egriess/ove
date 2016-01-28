@@ -18,6 +18,9 @@
 		<a href="#titlecolorpopup" class="hinge">Choisir la couleur du menu</a>
 		<a href="#titlepopup" class="hinge">Editer le titre du site</a>
 		<a href="#gallerypopup" class="hinge">Choisir les image de la galerie</a>
+		<a href="#backtesti" class="hinge">Choisir la couleur d'arrière plan des testi</a>
+		<a href="#backtext" class="hinge">Choisir la couleur d'arrière plan du texte</a>
+		<a href="#backmap" class="hinge">Choisir la couleur d'arrière plan de la carte</a>
 
 					<div id="titlepopup" class="white-popup mfp-with-anim mfp-hide">
 
@@ -77,7 +80,27 @@
 	<!--
 		END Header Manager
 	-->
+	<div id="backtesti" class="white-popup mfp-with-anim mfp-hide">
+		<span> Choisir l'arrière plan(couleur unis)</span>
 
+				<form action="#" method="post" accept-charset="utf-8">
+
+					<input type="color" value="#383535" name="textcolorbg"><br>	
+
+					<span>Choix de dégradé</span><br>
+					<select name="gradient">
+
+						<option value="to right">to right</option>
+						<option value="to left">to left</option>
+
+					</select><br>
+
+					Couleur 1<input type="color" value="#383535" name="testicolorbg1"><br>
+					Couleur 2<input type="color" value="#383535" name="testicolorbg2"><br>
+
+					<hr><input type="submit" name="submit_bg_testi" value="envoyer"><br>
+				</form>
+	</div>
 
 	<!--
 		Section Slider Manager
@@ -355,6 +378,23 @@
 	<!--
 		Section Maps Manager
 	-->
+
+	<div id="backmap" class="white-popup mfp-with-anim mfp-hide">
+		
+
+				<form action="#" method="post" accept-charset="utf-8">
+
+				
+
+					<span>Choix de dégradé</span><br>
+					
+
+					Couleur 1<input type="color" value="#383535" name="mapcolorbg1"><br>
+					Couleur 2<input type="color" value="#383535" name="mapcolorbg2"><br>
+
+					<hr><input type="submit" name="submit_bg_map" value="envoyer"><br>
+				</form>
+	</div>
 	<div id="mapsback">
 		<div class="container">
 			<div id="map"></div>
@@ -376,6 +416,24 @@
 		</div>
 	</div>
 	<!--	section Text Manage	-->
+
+
+	<div id="backtext" class="white-popup mfp-with-anim mfp-hide">
+		
+
+				<form action="#" method="post" accept-charset="utf-8">
+
+				
+
+					<span>Choix de dégradé</span><br>
+					
+
+					Couleur 1<input type="color" value="#383535" name="textcolorbg1"><br>
+					Couleur 2<input type="color" value="#383535" name="textcolorbg2"><br>
+
+					<hr><input type="submit" name="submit_bg_text" value="envoyer"><br>
+				</form>
+	</div>
 	<div id="textback">
 		<a href="#textpopup" class="hinge">Editer les textes du site</a>
 			<!-- POP UP edit -->

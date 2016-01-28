@@ -38,7 +38,7 @@
 	===== Testimonials section =====
 -->
 
-<div id="testimoniaux">
+<div id="testimoniaux" style="background: linear-gradient(<?= $col_testi_1[0] ?> , <?= $col_testi_2[0] ?>">
 		<div class="container">
 			<!-- Testimonial 1-->
 			<div class="testimonial">
@@ -118,7 +118,7 @@
 <!--
 	===== Text section =====
 -->
-<div id="text">
+<div id="text" style="background: linear-gradient(<?= $col_text_1[0] ?> , <?= $col_text_2[0] ?>">
 	<div class="container">
 		<h2>Text</h2>
 		<hr>
@@ -137,7 +137,7 @@
 <!--
 	===== Map section =====
 -->
-<div id="maps">
+<div id="maps" style="background: linear-gradient(<?= $col_map_1[0] ?> , <?= $col_map_2[0] ?>">
 	<div class="container">
 		
 		<div id="map">
