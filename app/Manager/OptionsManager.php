@@ -131,7 +131,7 @@ class OptionsManager extends \W\Manager\Manager
 		$stmt->execute();
 	}
 
-	function getAdress($address){
+	function getAdress(){
 
 		$sql="SELECT option_value from options where option_name = 'adresse'";
 		$stmt = $this->dbh-> query($sql);
