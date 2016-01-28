@@ -4,15 +4,81 @@
 
 	<header>
 		<h1 id="text_shadow" style="text-align:center; text-shadow: rgb(150, 150, 150) 4px 4px 2px;" > ADMINISTRATION DE <?= $title[0] ?> </h1><br>
-
-				
 		<a href="/page">Voir la page <?= $title[0] ?></a>
-		
 	</header>
 	
-	<input type="hidden" name="" value="<?php $Lat ?>">
-	<input type="hidden" name="" value="<?php $Lng ?>">
+	<!--
+		END Header Manager
+	-->
+					
+	<div id="backheader">
+		
+					<!-- POP UP edit -->
+		<a href="#titlebackgroundpopup" class="hinge">Choisir l'arrière plan</a>
+		<a href="#titlecolorpopup" class="hinge">Choisir la couleur du menu</a>
+		<a href="#titlepopup" class="hinge">Editer le titre du site</a>
+		<a href="#gallerypopup" class="hinge">Choisir les image de la galerie</a>
+
+					<div id="titlepopup" class="white-popup mfp-with-anim mfp-hide">
+
+						<form action="#" method="post" accept-charset="utf-8">
+
+							<span>Choisir le titre du site</span><br>
+							<input type="text" name="title" value="" placeholder="Votre titre"><br>
+
+							<span>Choisir la couleur du texte</span><br>
+							<input type="color" value="#383535" name="textcolor"><br>
+
+							<span>Choisir le style d'ecriture</span><br>
+
+							<select name="fonts">
+								<option style="font-family:'Roboto';"value="Roboto">Roboto</option>
+								<option style="font-family:'Raleway';"value="Raleway">Raleway</option>
+								<option style="font-family:'Ubuntu';"value="Ubuntu">Ubuntu</option>
+								<option style="font-family:'Droid Sans';"value="Droid">Droid</option>
+								<option style="font-family:'IM Fell Double Pica';"value="IM Fell Double Pica">IM Fell Double Pica</option>
+								<option style="font-family:'Lora';"value="Lora">Lora</option>
+								<option style="font-family:'Open Sans Condensed';"value="Open Sans Condensed">Open Sans Condensed</option>
+							</select><br>
+
+							
+							<input type="submit" name="submit_title" value="envoyer">
+						</form>
+					</div>
+
+
+					<div id="titlebackgroundpopup" class="white-popup mfp-with-anim mfp-hide">
+
+						<span> Choisir l'arrière plan(couleur unis)</span>
+
+						<form action="#" method="post" accept-charset="utf-8">
+
+							<input type="color" value="#383535" name="textcolorbg"><br>	
+
+							<span>Choix de dégradé</span><br>
+							<select name="gradient">
+
+								<option value="to right">to right</option>
+								<option value="to left">to left</option>
+
+							</select><br>
+
+							Couleur 1<input type="color" value="#383535" name="textcolorbg1"><br>
+							Couleur 2<input type="color" value="#383535" name="textcolorbg2"><br>
+
+							<hr><input type="submit" name="submit_bg" value="envoyer"><br>
+						</form>
+					</div>
+
+					
+
+	</div>
 	
+	<!--
+		END Header Manager
+	-->
+
+
 	<!--
 		Section Slider Manager
 	-->
@@ -74,6 +140,7 @@
 					</form>
 				</div>
 
+
 				<a href="#slider4popup" class="myButton hinge">Choisir l'image 4</a>
 					<!-- POP UP edit -->
 				<div id="slider4popup" class="white-popup mfp-with-anim mfp-hide">
@@ -87,9 +154,8 @@
 						</div>
 						<input type="submit" name="submit_slider_4" value="Envoyer">	
 					</form>
-				</div>
-
-
+				</div>	
+	
 				<a href="#slider5popup" class="myButton hinge">Choisir l'image 5</a>
 					<!-- POP UP edit -->
 				<div id="slider5popup" class="white-popup mfp-with-anim mfp-hide">
