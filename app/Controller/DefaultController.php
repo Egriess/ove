@@ -289,6 +289,12 @@ class DefaultController extends Controller
 
 		}
 
+		if(isset($_POST['submit_adress']))
+		{
+			$optionManager->saveAdress( $_POST['address']);
+
+		}
+
 		if(isset($_POST['submit_title']))
 		{
 			$optionManager->UpdateFont( $_POST['fonts']);
@@ -387,7 +393,7 @@ class DefaultController extends Controller
 		$optionTextToDisplay3 	= $optionManager->getText(3);
 
 		//sextion Maps
-		$optionAdressToDisplay = $optionManager->getAdress($_POST['address']);
+		$optionAdressToDisplay = $optionManager->getAdress();
 		$this->show('Default/backoffice',[
 			'names'		=> [$optionNameToDisplay1, $optionNameToDisplay2, $optionNameToDisplay3],
 			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
@@ -401,6 +407,7 @@ class DefaultController extends Controller
 			'direction'	=> [$optionBgGradientDirection],
 			'gradiant_color1' => [$optionBgGradientColor1],
 			'gradiant_color2' => [$optionBgGradientColor2],
+			'adress'	=> [$optionAdressToDisplay],
 
 		]);
 
@@ -461,6 +468,9 @@ class DefaultController extends Controller
 		$optionTextToDisplay2 	= $optionManager->getText(2);
 		$optionTextToDisplay3 	= $optionManager->getText(3);
 
+		//map
+		$optionAdressToDisplay = $optionManager->getAdress();
+
 		$this->show('default/onepage',[
 			'names'		=> [$optionNameToDisplay1, $optionNameToDisplay2, $optionNameToDisplay3],
 			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
@@ -474,6 +484,7 @@ class DefaultController extends Controller
 			'direction'	=> [$optionBgGradientDirection],
 			'gradiant_color1' => [$optionBgGradientColor1],
 			'gradiant_color2' => [$optionBgGradientColor2],
+			'adress'	=> [$optionAdressToDisplay],
 		]);
 
 	}

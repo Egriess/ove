@@ -366,7 +366,7 @@
 					<input type="hidden" name="lon" value="<?=  $lon; ?>">
 	      			<input id="address" name="address" type="textbox" value="" placeholder="Entrer votre nouvelle adresse">
 	      			<input id="setMap" type="button" value="Trouver l'adresse">
-	      			<input id="submit" name="button" type="submit" value="Valider">
+	      			<input id="submit" name="submit_adress" type="submit" value="Valider">
 	      			
 	     		 </form>
 

@@ -147,7 +147,7 @@
 
 		<div id="adresspage">
 			<p>Voici mon adresse !  </p><br>
-			<?=  $currentadresse; ?>			
+			<?=  $adress; ?>			
 		</div>
 	</div>	
 </div>
