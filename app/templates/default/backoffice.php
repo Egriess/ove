@@ -2,6 +2,8 @@
 
 <?php $this->start('main_content') ?>
 
+
+
 	<header>
 		<h1 id="text_shadow" style="text-align:center; text-shadow: rgb(150, 150, 150) 4px 4px 2px;" > ADMINISTRATION DE <?= $title[0] ?> </h1><br>
 		<a href="/page">Voir la page <?= $title[0] ?></a>
@@ -133,7 +135,7 @@
 				</div>
 			
 				
-				<a href="#slider2popup" class="myButton hinge">Choisir l'image 2</a>
+				<a href="#slider2popup" class="myButton hinge">image 2</a>
 					<!-- POP UP edit -->
 				<div id="slider2popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -148,7 +150,7 @@
 					</form>
 				</div>
 			
-				<a href="#slider3popup" class="myButton hinge">Choisir l'image 3</a>
+				<a href="#slider3popup" class="myButton hinge">image 3</a>
 				<!-- POP UP edit -->
 				<div id="slider3popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -164,7 +166,7 @@
 				</div>
 
 
-				<a href="#slider4popup" class="myButton hinge">Choisir l'image 4</a>
+				<a href="#slider4popup" class="myButton hinge">image 4</a>
 					<!-- POP UP edit -->
 				<div id="slider4popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -179,7 +181,7 @@
 					</form>
 				</div>	
 	
-				<a href="#slider5popup" class="myButton hinge">Choisir l'image 5</a>
+				<a href="#slider5popup" class="myButton hinge">image 5</a>
 					<!-- POP UP edit -->
 				<div id="slider5popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -200,6 +202,159 @@
 		END Section Slider Manager
 	-->
 
+	<!--
+		Section Gallery Manager
+	-->
+	<div id="galeryback">
+				<!--
+					change Slider images
+				-->
+				<h3>Gestion des images de la gallery</h3>
+				<img src="assets/imgs/<?= $imggallery[0] ?>" />
+				<img src="assets/imgs/<?= $imggallery[1] ?>"/>
+				<img src="assets/imgs/<?= $imggallery[2] ?>" />
+				<img src="assets/imgs/<?= $imggallery[3] ?>" />
+				<img src="assets/imgs/<?= $imggallery[4] ?>" />
+				<img src="assets/imgs/<?= $imggallery[5] ?>" />
+				<img src="assets/imgs/<?= $imggallery[6] ?>" />
+				<img src="assets/imgs/<?= $imggallery[7] ?>" />
+				<img src="assets/imgs/<?= $imggallery[8] ?>" />
+				<br>
+				<a href="#galery1popup" class="myButton hinge">Choisir l'image 1</a>
+					<!-- POP UP edit -->
+				<div id="galery1popup" class="white-popup mfp-with-anim mfp-hide">
+					<form  enctype="multipart/form-data" action="#" method="post">
+						
+						<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+						<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+						<div class="fileUpload btn btn-primary">
+							<span>Upload</span>
+							<input id="uploadBtn" type="file" name="img_gal_1" class="upload"/>
+						</div>
+						<input type="submit" name="submit_gal_1" value="Envoyer">	
+					</form>
+				</div>
+
+				<a href="#galery2popup" class="myButton hinge">image 2</a>
+					<!-- POP UP edit -->
+				<div id="galery2popup" class="white-popup mfp-with-anim mfp-hide">
+					<form  enctype="multipart/form-data" action="#" method="post">
+						
+						<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+						<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+						<div class="fileUpload btn btn-primary">
+							<span>Upload</span>
+							<input id="uploadBtn" type="file" name="img_gal_2" class="upload"/>
+						</div>
+						<input type="submit" name="submit_gal_2" value="Envoyer">	
+					</form>
+				</div>
+
+				<a href="#galery3popup" class="myButton hinge">image 3</a>
+					<!-- POP UP edit -->
+				<div id="galery3popup" class="white-popup mfp-with-anim mfp-hide">
+					<form  enctype="multipart/form-data" action="#" method="post">
+						
+						<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+						<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+						<div class="fileUpload btn btn-primary">
+							<span>Upload</span>
+							<input id="uploadBtn" type="file" name="img_gal_3" class="upload"/>
+						</div>
+						<input type="submit" name="submit_gal_3" value="Envoyer">	
+					</form>
+				</div>
+
+				<a href="#galery4popup" class="myButton hinge">image 4</a>
+					<!-- POP UP edit -->
+				<div id="galery4popup" class="white-popup mfp-with-anim mfp-hide">
+					<form  enctype="multipart/form-data" action="#" method="post">
+						
+						<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+						<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+						<div class="fileUpload btn btn-primary">
+							<span>Upload</span>
+							<input id="uploadBtn" type="file" name="img_gal_4" class="upload"/>
+						</div>
+						<input type="submit" name="submit_gal_4" value="Envoyer">	
+					</form>
+				</div>
+
+				<a href="#galery5popup" class="myButton hinge">image 5</a>
+					<!-- POP UP edit -->
+				<div id="galery5popup" class="white-popup mfp-with-anim mfp-hide">
+					<form  enctype="multipart/form-data" action="#" method="post">
+						
+						<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+						<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+						<div class="fileUpload btn btn-primary">
+							<span>Upload</span>
+							<input id="uploadBtn" type="file" name="img_gal_5" class="upload"/>
+						</div>
+						<input type="submit" name="submit_gal_5" value="Envoyer">	
+					</form>
+				</div>
+
+				<a href="#galery6popup" class="myButton hinge">image 6</a>
+					<!-- POP UP edit -->
+				<div id="galery6popup" class="white-popup mfp-with-anim mfp-hide">
+					<form  enctype="multipart/form-data" action="#" method="post">
+						
+						<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+						<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+						<div class="fileUpload btn btn-primary">
+							<span>Upload</span>
+							<input id="uploadBtn" type="file" name="img_gal_6" class="upload"/>
+						</div>
+						<input type="submit" name="submit_gal_6" value="Envoyer">	
+					</form>
+				</div>
+
+				<a href="#galery7popup" class="myButton hinge">image 7</a>
+					<!-- POP UP edit -->
+				<div id="galery7popup" class="white-popup mfp-with-anim mfp-hide">
+					<form  enctype="multipart/form-data" action="#" method="post">
+						
+						<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+						<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+						<div class="fileUpload btn btn-primary">
+							<span>Upload</span>
+							<input id="uploadBtn" type="file" name="img_gal_7" class="upload"/>
+						</div>
+						<input type="submit" name="submit_gal_7" value="Envoyer">	
+					</form>
+				</div>
+
+				<a href="#galery8popup" class="myButton hinge">image 8</a>
+					<!-- POP UP edit -->
+				<div id="galery8popup" class="white-popup mfp-with-anim mfp-hide">
+					<form  enctype="multipart/form-data" action="#" method="post">
+						
+						<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+						<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+						<div class="fileUpload btn btn-primary">
+							<span>Upload</span>
+							<input id="uploadBtn" type="file" name="img_gal_8" class="upload"/>
+						</div>
+						<input type="submit" name="submit_gal_8" value="Envoyer">	
+					</form>
+				</div>
+
+				<a href="#galery9popup" class="myButton hinge">image 9</a>
+					<!-- POP UP edit -->
+				<div id="galery9popup" class="white-popup mfp-with-anim mfp-hide">
+					<form  enctype="multipart/form-data" action="#" method="post">
+						
+						<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+						<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+						<div class="fileUpload btn btn-primary">
+							<span>Upload</span>
+							<input id="uploadBtn" type="file" name="img_gal_9" class="upload"/>
+						</div>
+						<input type="submit" name="submit_gal_9" value="Envoyer">	
+					</form>
+				</div>
+	</div>
 	<!--
 		Section Testimonials Manager
 	-->
@@ -469,7 +624,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="email">
+		<div id="emailback">
 			<div class="container">
 				<h2>Formulaire SMTP</h2>
 				<p>Compte gmail requis.</p>

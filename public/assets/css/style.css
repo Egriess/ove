@@ -32,9 +32,9 @@ header nav h1 {
   text-align: center;
 }
 
-#loginform{
-  width: 50%;
-}
+
+
+
 
 #testimoniaux{
 	/*height: 360px;*/
@@ -113,6 +113,7 @@ header nav h1 {
 }
 
 #testimoniauxback{
+  border: 3px dashed #04325a;
   width: 100%;
   height: 200px;
   text-decoration: none;
@@ -591,11 +592,15 @@ img:hover{
 #textback{
   height: 300px;
   width: 100%;
+  border: 3px dashed #04325a;
+  border-bottom: none;
 }
 
 #mapsback{
   height: 450px;
   width: 100%;
+   border: 3px dashed #04325a;
+  border-bottom: none;
 }
 #panelback{
   margin-top: 120px;
@@ -609,11 +614,34 @@ img:hover{
   height: 400px;
   text-decoration: none;
   text-align: center;
+  border: 3px dashed #04325a;
+  border-bottom: none;
 
 }
 
 #sliderback img{
-  margin: 0 70px 0 70px;
+  margin: 2em;
+}
+
+#galeryback{
+  width: 100%;
+  height: 600px;
+  text-decoration: none;
+  text-align: center;
+  border: 3px dashed #04325a;
+  border-bottom: none;
+
+}
+
+#galeryback img{
+  margin: 2em;
+}
+
+#emailback{
+  width: 100%;
+  height: 150px;
+  border: 3px dashed #04325a;
+  border-bottom: none;
 }
 .myButton {
   -moz-box-shadow: 0px 10px 14px -7px #276873;

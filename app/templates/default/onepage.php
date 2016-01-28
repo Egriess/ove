@@ -93,15 +93,15 @@
 <div id="gallery">
 	 <div class="containergal">
 		<div id="carousel">
-			<figure><img src="http://lorempixel.com/186/116/nature/1" alt=""></figure>
-			<figure><img src="http://lorempixel.com/186/116/nature/2" alt=""></figure>
-			<figure><img src="http://lorempixel.com/186/116/nature/3" alt=""></figure>
-			<figure><img src="http://lorempixel.com/186/116/nature/4" alt=""></figure>
-			<figure><img src="http://lorempixel.com/186/116/nature/5" alt=""></figure>
-			<figure><img src="http://lorempixel.com/186/116/nature/6" alt=""></figure>
-			<figure><img src="http://lorempixel.com/186/116/nature/7" alt=""></figure>
-			<figure><img src="http://lorempixel.com/186/116/nature/8" alt=""></figure>
-			<figure><img src="http://lorempixel.com/186/116/people/9" alt=""></figure>
+			<figure><img src="assets/imgs/<?= $imggallery[0] ?>" alt=""></figure>
+			<figure><img src="assets/imgs/<?= $imggallery[1] ?>" alt=""></figure>
+			<figure><img src="assets/imgs/<?= $imggallery[2] ?>" alt=""></figure>
+			<figure><img src="assets/imgs/<?= $imggallery[3] ?>" alt=""></figure>
+			<figure><img src="assets/imgs/<?= $imggallery[4] ?>" alt=""></figure>
+			<figure><img src="assets/imgs/<?= $imggallery[5] ?>" alt=""></figure>
+			<figure><img src="assets/imgs/<?= $imggallery[6] ?>" alt=""></figure>
+			<figure><img src="assets/imgs/<?= $imggallery[7] ?>" alt=""></figure>
+			<figure><img src="assets/imgs/<?= $imggallery[8] ?>" alt=""></figure>
 		</div>
 	</div>
 </div>
