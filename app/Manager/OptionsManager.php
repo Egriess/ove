@@ -34,10 +34,94 @@ class OptionsManager extends \W\Manager\Manager
 		$stmt = $this->dbh->prepare($sql);
 		$stmt->bindParam(':option_value', $color);
 		$stmt->execute();
+
+	}
+	function getColor(){
+
+		$sql="SELECT option_value FROM options WHERE option_name = 'color_title'";
+		$stmt = $this->dbh-> query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];	
+	}
+
+	function updateFont($font){
+		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'font_title'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $font);
+		$stmt->execute();
+
+	}
+	function getFont(){
+
+		$sql="SELECT option_value FROM options WHERE option_name = 'font_title'";
+		$stmt = $this->dbh-> query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];	
+	}
+
+	function updateBg($bg){
+		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'background_header'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $bg);
+		$stmt->execute();
+
+	}
+	function getBg(){
+
+		$sql="SELECT option_value FROM options WHERE option_name = 'background_header'";
+		$stmt = $this->dbh-> query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];	
+	}
+
+	function updateBgGradientDirection($bgDr){
+		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'gradient_direction'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $bgDr);
+		$stmt->execute();
+	}
+	function getBgGradientDirection(){
+
+		$sql="SELECT option_value FROM options WHERE option_name = 'gradient_direction'";
+		$stmt = $this->dbh-> query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];	
+	}
+	
+	function updateBgGradientColor1($bgC1){
+		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'gradient_color1'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $bgC1);
+		$stmt->execute();
+	}
+	function getBgGradientColor1(){
+
+		$sql="SELECT option_value FROM options WHERE option_name = 'gradient_color1'";
+		$stmt = $this->dbh-> query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];	
+	}
+	function updateBgGradientColor2($bgC2){
+
+		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'gradient_color2'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $bgC2);
+		$stmt->execute();
+	}
+	function getBgGradientColor2(){
+
+		$sql="SELECT option_value FROM options WHERE option_name = 'gradient_color2'";
+		$stmt = $this->dbh-> query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];	
+	}
+
+
+
 	/*
 	* END function Header
 	*/
-}
+
 
 	function saveAdress($address){
 

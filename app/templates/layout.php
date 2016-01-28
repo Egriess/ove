@@ -15,7 +15,12 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/sectiontext.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/testimonial.css') ?>">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-	
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-2.2.0.min.js')?>"></script>  
 	<script type="text/javascript" src="<?= $this->assetUrl('js/modal.js')?>" ></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-2.2.0.min.js') ?>"></script>
