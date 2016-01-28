@@ -332,7 +332,7 @@ class DefaultController extends Controller
 		$optionNameToDisplay2 = $optionManager->getName(2);
 		$optionNameToDisplay3 = $optionManager->getName(3);
 
-			//view avatar
+		//view avatar
 		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
 		$optionAvatarToDisplay2 = $optionManager->getAvatar(2);
 		$optionAvatarToDisplay3 = $optionManager->getAvatar(3);
@@ -347,6 +347,8 @@ class DefaultController extends Controller
 		$optionTextToDisplay2 	= $optionManager->getText(2);
 		$optionTextToDisplay3 	= $optionManager->getText(3);
 
+		//sextion Maps
+		$optionAdressToDisplay = $optionManager->getAdress($_POST['address']);
 		$this->show('Default/backoffice',[
 			'names'		=> [$optionNameToDisplay1, $optionNameToDisplay2, $optionNameToDisplay3],
 			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
@@ -354,6 +356,7 @@ class DefaultController extends Controller
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
 			'title'		=> [$optionTitleToDisplay],
 			'imgslider' => [$optionSliderToDisplay1, $optionSliderToDisplay2, $optionSliderToDisplay3, $optionSliderToDisplay4, $optionSliderToDisplay5],
+			'adress'	=> [$optionAdressToDisplay],
 		]);
 
 	}
@@ -370,15 +373,14 @@ class DefaultController extends Controller
 		
 		// routing infos
 
+		//header 
+		$optionTitleToDisplay 	= $optionManager->getTitle();
 		//Slider 
 		$optionSliderToDisplay1 = $optionManager->getImgSlider(1);
 		$optionSliderToDisplay2 = $optionManager->getImgSlider(2);
 		$optionSliderToDisplay3 = $optionManager->getImgSlider(3);
 		$optionSliderToDisplay4 = $optionManager->getImgSlider(4);
 		$optionSliderToDisplay5 = $optionManager->getImgSlider(5);
-
-		//header
-		$optionTitleToDisplay 	= $optionManager->getTitle();
 		
 		//testimoniaux
 			//view name
