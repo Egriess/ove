@@ -282,6 +282,12 @@ class DefaultController extends Controller
 
 		}
 
+		if(isset($_POST['submit_title']))
+		{
+			$optionManager->UpdateColor($color);
+
+		}
+
 		//modification du text testimonial
 		if(isset($_POST['submit_text1']))
 		{
@@ -499,6 +505,14 @@ class DefaultController extends Controller
 		$title = $_POST['title'];
 		$optionManager = new \Manager\OptionsManager();
 		$optionTitleToDisplay = $optionManager->updateTitle($title);
+		$this->redirectToRoute('backoffice');
+	}
+
+	public function updateColor()
+	{	
+		$color = $_POST['textcolor'];
+		$optionManager = new \Manager\OptionsManager();
+		$optionColorToDisplay = $optionManager->updateColor($color);
 		$this->redirectToRoute('backoffice');
 	}
 

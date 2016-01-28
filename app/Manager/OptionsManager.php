@@ -28,10 +28,16 @@ class OptionsManager extends \W\Manager\Manager
 		return $row['option_value'];
 
 	}
+
+	function updateColor($color){
+		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'color_title'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $color);
+		$stmt->execute();
 	/*
 	* END function Header
 	*/
-
+}
 
 	function saveAdress($address){
 

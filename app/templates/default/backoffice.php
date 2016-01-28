@@ -3,7 +3,7 @@
 <?php $this->start('main_content') ?>
 
 	<header>
-		<h1 id="text_shadow" style="text-align:center; text-shadow: rgb(150, 150, 150) 4px 4px 2px;" > ADMINISTRATION DE <?= $_SESSION['user']['page_name'] ?> </h1><br>
+		<h1 id="text_shadow" style="text-align:center; text-shadow: rgb(150, 150, 150) 4px 4px 2px;" > ADMINISTRATION DE </h1><br>
 				
 		<a href="/page">Voir la page <?= $_SESSION['user']['page_name'] ?></a>
 		
@@ -86,8 +86,10 @@
 	<div id="backheader">
 		
 					<!-- POP UP edit -->
+
+		<a href="#titlecolorpopup" class="hinge">Choisir la couleur du menu</a>
 					<div id="titlepopup" class="white-popup mfp-with-anim mfp-hide">
-						<form action="/updateTitle" method="post" accept-charset="utf-8">
+						<form action="#" method="post" accept-charset="utf-8">
 							<span>Choisir le titre du site</span><br>
 							<input type="text" name="title" value="" placeholder="Votre titre"><br>
 							<span>Choisir la couleur du texte</span><br>
@@ -106,8 +108,6 @@
 							<input type="submit" name="submit_title" value="envoyer">
 						</form>
 					</div>
-
-		<a href="#titlecolorpopup" class="hinge">Choisir la couleur du menu</a>
 					<!-- POP UP edit -->
 					<div id="titlecolorpopup" class="white-popup mfp-with-anim mfp-hide">
 						<span> Choisir la couleur du menu</span>
@@ -115,12 +115,12 @@
 					</div>
 
 	</div>
+	<a href="#titlepopup" class="hinge">Editer le titre du site</a>
 			<a href="#gallerypopup" class="hinge">Choisir les image de la galerie</a>
 					<div id="gallerypopup" class="white-popup mfp-with-anim mfp-hide">
 					<span> Choisir les images</span>		
 	
 
-	<a href="#titlepopup" class="hinge">Editer le titre du site</a>
 	<div id="testimoniaux">
 			<a href="#testimonialpopup" class="hinge">Editer le testimonial</a>
 			<div id="testimonialpopup" class="white-popup mfp-with-anim mfp-hide">
