@@ -750,7 +750,7 @@ class DefaultController extends Controller
 			'col_text_2'	=> [$optionBgTextColor2],
 			'col_map_1'	=> [$optionBgMapColor1],
 			'col_map_2'	=> [$optionBgMapColor2],
-<<<<<<< HEAD
+
 			'lat'		=> [$optionLatToDisplay],
 			'lon'		=> [$optionLonToDisplay],
 
@@ -759,8 +759,6 @@ class DefaultController extends Controller
 
 
 
-=======
->>>>>>> origin/master
 		]);
 	
 		
