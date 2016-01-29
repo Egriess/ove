@@ -531,6 +531,19 @@
 	-->
 
 	<!--
+		Section Soundcloud Manager
+	-->
+
+	<div id="backsoundcloud">
+	<h3> Choisir le contenu du widget soundcloud </h3>
+
+	</div>
+
+	<!--
+		END Soundcloud Manager
+	-->
+
+	<!--
 		Section Maps Manager
 	-->
 
@@ -631,7 +644,7 @@
 				<form action="#" method="POST" accept-charset="utf-8">
 
 					<label>votre adresse mail</label>
-					<input type="email" name="email_recipe" value="" placeholder="<?= $mail[0] ?>">					
+					<input type="email" name="email_recipe" value="" placeholder="">					
 					<input type="submit" name="submit_mail" value="Valider">
 				</form>
 			</div>
