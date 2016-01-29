@@ -17,7 +17,7 @@
 		<div class="container">
 					<!-- POP UP edit -->
 		<ul>
-			<li><a href="#titlebackgroundpopup" class="hinge">Choisir l'arrière plan</a></li>
+			<li><a href="#titlebackgroundpopup" class="hinge">Choisir l'arrière plan du titre</a></li>
 			<li><a href="#titlepopup" class="hinge">Editer le titre du site</a></li>
 			<li><a href="#backtesti" class="hinge">Choisir la couleur d'arrière plan des testi</a></li>
 			<li><a href="#backtext" class="hinge">Choisir la couleur d'arrière plan du texte</a></li>
@@ -563,18 +563,19 @@
 					<hr><input type="submit" name="submit_bg_map" value="envoyer"><br>
 				</form>
 	</div>
-	<div id="mapsback">
+	<div id="premaps"><div id="maps">
+					<h3>Gerer mon adresse</h3>
 		<div class="container">
-			<div id="map"></div>
+			<div id="backmap"><div  id="map" style="width: 500px;" ></div></div>
+				
 				<div id="panelback">
-					<h3>Gerer la carte</h3>
 					<form action="#" method="POST" accept-charset="utf-8">
 					<!--deux hidden qui se remplissent quand on clique sur trouver l'adresse-->
 					<input id="lat" type="hidden" name="lat" value="<?=  $lat[0]; ?>">
 					<input id="lon" type="hidden" name="lon" value="<?=  $lon[0]; ?>">
-	      			<input id="address" name="address" type="textbox" value="" placeholder="Entrer votre nouvelle adresse">
-	      			<input id="setMap" type="button" value="Trouver l'adresse">
-	      			<input id="submit" name="submit_adress" type="submit" value="Valider">
+	      			<input id="address" name="address" type="textbox" value="" placeholder="Votre nouvelle adresse">
+	      			<input class="hinge myButton" id="setMap" type="button" value="Trouver l'adresse">
+	      			<input class="hinge myButton" id="submit" name="submit_adress" type="submit" value="Valider">
 	      			
 	     		 </form>
 
@@ -583,6 +584,7 @@
 	  		</div>
 		</div>
 	</div>
+</div>
 	<!--	section Text Manage	-->
 
 

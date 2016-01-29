@@ -566,19 +566,24 @@ img:hover{
   border-bottom: none;
 }
 
-#mapsback{
+#mapsback {
   height: 450px;
-  width: 100%;
-   border: 3px dashed #04325a;
-  border-bottom: none;
-}
-#panelback{
-  margin-top: 120px;
-  margin-left: 50px;
+  width:100%;
+  
+  border-radius: 20px;
   float: left;
-  width: 400px;
-  height: 100px;
+
+  border: 3px dashed #04325a;
+  border-bottom: none;
+  padding-top: 70px;
 }
+
+
+
+#panelback{ 
+  margin-top:auto;
+}
+
 #sliderback{
   width: 100%;
   height: 400px;
@@ -632,9 +637,9 @@ img:hover{
   cursor:pointer;
   color:#ffffff;
   font-family:Arial;
-  font-size:20px;
+  font-size:10px;
   font-weight:bold;
-  padding:13px 32px;
+  padding:5px 32px;
   text-decoration:none;
   text-shadow:0px 1px 0px #3d768a;
 }
@@ -725,34 +730,56 @@ img:hover{
 
 #maps form{
   
-  background-color:#E4E4E4; 
+  padding-top: 5px;
   display: inline-block;
 }
+
+#maps form input{
+  
+ background-color:hidden;
+}
+
 
 /* ====== Maps ====== */
 #maps{
   height: 450px;
   width: 100%;
-  background: #EEE364;
 
 }
+
+#maps h3{
+  text-align: center;
+}
+
+#maps .container{
+
+  padding-left: 300px;
+  padding-bottom: 10px;
+  padding-top: 70px;
+}
+
+#premaps .container{
+padding-top: 0px;
+ 
+}
+
 
 #map{
-  height: 400px;
-  width: 40%;
-  margin: 20px;
+  height: 300px;
+  width:60%;
+  
   border-radius: 20px;
   float: left;
-
-  
 }
-
+#backmap{
+   width:114%;
+}
 #floating-panel{
-  background-color: #D6D6D6;
-  margin-top: 20px;
-  padding: 20px;
+ 
+  margin-top:auto;
   border-radius: 10px;
-  display: inline-block;
+  float: right;
+  padding: 10px;
 
 }
 
@@ -770,7 +797,7 @@ img:hover{
   margin-top: 20px;
   padding: 20px;
   border-radius: 10px;
-  display:inline-block;
+
 
 
 /*
