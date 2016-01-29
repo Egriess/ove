@@ -644,7 +644,7 @@
 				<form action="#" method="POST" accept-charset="utf-8">
 
 					<label>votre adresse mail</label>
-					<input type="email" name="email_recipe" value="" placeholder="<?= $mail[0] ?>">					
+					<input type="email" name="email_recipe" value="" placeholder="">					
 					<input type="submit" name="submit_mail" value="Valider">
 				</form>
 			</div>
