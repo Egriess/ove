@@ -209,6 +209,12 @@
 				<!--
 					change Slider images
 				-->
+				<h3><?= $txtgallery[0]?></h3>
+				<form action="#" method="POST" accept-charset="utf-8">
+					<input type="text" name="txtgal" value="" placeholder="">
+					<input type="submit" name="submit_txtgal" value="Changer le texte">
+				</form>
+
 				<h3>Gestion des images de la gallery</h3>
 				<img src="assets/imgs/<?= $imggallery[0] ?>" />
 				<img src="assets/imgs/<?= $imggallery[1] ?>"/>

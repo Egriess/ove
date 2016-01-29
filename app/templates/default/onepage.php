@@ -87,7 +87,7 @@
 		</div>
 	</div>
 <div id="blockquote">
-	<h3>Life is beautiful... </h3>
+	<h3><?= $txtgallery[0]?></h3>
 </div>
 
 <div id="gallery">

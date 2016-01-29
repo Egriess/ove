@@ -36,6 +36,11 @@ class DefaultController extends Controller
 			$optionManager->updateSoundcloud($sound);
 		}
 
+		if(isset($_POST['submit_txtgal'])){
+			$txt= $_POST['txtgal'];
+			$optionManager->updateTxtGallery($txt);
+		}
+
 
 
 		// gallery Controler 
@@ -710,6 +715,9 @@ class DefaultController extends Controller
 		//Soundcloud
 		$optionSoundToDisplay = $optionManager->getSoundcloud();
 
+		//TxtGallery
+		$optionTxtGalToDisplay = $optionManager->getTxtGallery();
+
 		//testimoniaux
 			//view name
 		$optionNameToDisplay1 = $optionManager->getName(1);
@@ -749,6 +757,7 @@ class DefaultController extends Controller
 			'title'		=> [$optionTitleToDisplay],
 			'imgslider' => [$optionSliderToDisplay1, $optionSliderToDisplay2, $optionSliderToDisplay3, $optionSliderToDisplay4, $optionSliderToDisplay5],
 			'imggallery'=> [$optionGalleryToDisplay1, $optionGalleryToDisplay2, $optionGalleryToDisplay3, $optionGalleryToDisplay4, $optionGalleryToDisplay5, $optionGalleryToDisplay6, $optionGalleryToDisplay7, $optionGalleryToDisplay8, $optionGalleryToDisplay9],
+			'txtgallery'=> [$optionTxtGalToDisplay],
 			'adress'	=> [$optionAdressToDisplay],
 			'font'		=> [$optionFontToDisplay],
 			'bg'		=> [$optionBgToDisplay],
@@ -806,6 +815,7 @@ class DefaultController extends Controller
 		$optionGalleryToDisplay8 = $optionManager->getImgGallery(8);
 		$optionGalleryToDisplay9 = $optionManager->getImgGallery(9);
 		
+		$optionTxtGalToDisplay	= $optionManager->getTxtGallery();
 		//Soundcloud
 		$optionSoundToDisplay = $optionManager->getSoundcloud();
 
@@ -873,6 +883,7 @@ class DefaultController extends Controller
 			'titledisplay'		=> [$optionTitleToDisplay],
 			'imgslider' => [$optionSliderToDisplay1, $optionSliderToDisplay2, $optionSliderToDisplay3, $optionSliderToDisplay4, $optionSliderToDisplay5],
 			'imggallery'=> [$optionGalleryToDisplay1, $optionGalleryToDisplay2, $optionGalleryToDisplay3, $optionGalleryToDisplay4, $optionGalleryToDisplay5, $optionGalleryToDisplay6, $optionGalleryToDisplay7, $optionGalleryToDisplay8, $optionGalleryToDisplay9],
+			'txtgallery'=> [$optionTxtGalToDisplay],
 			'color'		=> [$optionColorToDisplay],
 			'font'		=> [$optionFontToDisplay],
 			'bg'		=> [$optionBgToDisplay],
