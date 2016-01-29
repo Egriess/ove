@@ -8,7 +8,7 @@ class DefaultController extends Controller
 {
 
 	/**
-	 * Page d'accueil par défaut
+ 	 * Page d'accueil par défaut
 	 */
 	public function home()
 	{
@@ -297,9 +297,14 @@ class DefaultController extends Controller
 
 		if(isset($_POST['submit_adress']))
 		{
-			$optionManager->saveLatLon( $_POST['lat']);
-			$optionManager->saveLatLon( $_POST['lon']);
+			$optionManager->saveLat( $_POST['lat']);
+			
+		}
 
+		if(isset($_POST['submit_adress']))
+		{
+			$optionManager->saveLon( $_POST['lon']);
+			
 		}
 
 		if(isset($_POST['submit_title']))
