@@ -702,6 +702,13 @@ img:hover{
   background: #408ff4;
 }
  
+#texthome{
+  padding-top: 50px;
+  text-align: center;
+  width: 100%;
+  height: 860px;
+  background: #408ff4;
+}
 #backheader{
   padding: 20px;
   width: 100%;
