@@ -754,11 +754,6 @@ class DefaultController extends Controller
 			'lat'		=> [$optionLatToDisplay],
 			'lon'		=> [$optionLonToDisplay],
 
-			'mail'		=>	[$optionmailToDisplay],
-			'updateMail'=>	[$optionmailToUpdate],
-
-
-
 		]);
 	
 		
