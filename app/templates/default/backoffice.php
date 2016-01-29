@@ -626,13 +626,13 @@
 			<div class="container">
 				<h2>text</h2>
 				<hr>
-				<div class="text" id="sectionText_1">
+				<div class="col-md-4 text" id="sectionText_1">
 					<?= $texts[0] ?>
 				</div>
-				<div class="text"id="sectionText_2">
+				<div class="col-md-4 text" id="sectionText_2">
 					<?= $texts[1] ?>
 				</div>
-				<div class="text"id="sectionText_3">
+				<div class="col-md-4 text" id="sectionText_3">
 					<?= $texts[2] ?>
 				</div>
 			</div>
