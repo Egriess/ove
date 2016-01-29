@@ -531,6 +531,19 @@
 	-->
 
 	<!--
+		Section Soundcloud Manager
+	-->
+
+	<div id="backsoundcloud">
+	<h3> Choisir le contenu du widget soundcloud </h3>
+
+	</div>
+
+	<!--
+		END Soundcloud Manager
+	-->
+
+	<!--
 		Section Maps Manager
 	-->
 
