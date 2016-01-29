@@ -402,8 +402,8 @@
 					<h3>Gerer la carte</h3>
 					<form action="#" method="POST" accept-charset="utf-8">
 					<!--deux hidden qui se remplissent quand on clique sur trouver l'adresse-->
-					<input id="lat" type="hidden" name="lat" value="<?=  $lat; ?>">
-					<input id="lon" type="hidden" name="lon" value="<?=  $lon; ?>">
+					<input id="lat" type="hidden" name="lat" value="<?=  $lat[0]; ?>">
+					<input id="lon" type="hidden" name="lon" value="<?=  $lon[0]; ?>">
 	      			<input id="address" name="address" type="textbox" value="" placeholder="Entrer votre nouvelle adresse">
 	      			<input id="setMap" type="button" value="Trouver l'adresse">
 	      			<input id="submit" name="submit_adress" type="submit" value="Valider">

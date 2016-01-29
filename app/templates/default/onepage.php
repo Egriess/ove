@@ -140,18 +140,20 @@
 <div id="maps" style="background: linear-gradient(<?= $col_map_1[0] ?> , <?= $col_map_2[0] ?>">
 	<div class="container">
 		
-		<div id="map">
+			<div id="map"></div>	
 			<div id="floating-panel">
+			
+				<input id="lat" type="hidden" name="lat" value="<?=  $lat[0]; ?>">
+				<input id="lon" type="hidden" name="lon" value="<?=  $lon[0]; ?>">
+				
+
+			<div id="adresspage">
+				<p>Voici mon adresse !  </p><br>
+				<?=  $adress[0]; ?>			
 			</div>
-		</div>	
-
-		<div id="adresspage">
-			<p>Voici mon adresse !  </p><br>
-			<?=  $adress; ?>			
-		</div>
-	</div>	
+			</div>	
+	</div>
 </div>
-
 
 <!--
 	=====Contact form=====

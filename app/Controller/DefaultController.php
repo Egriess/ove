@@ -445,6 +445,8 @@ class DefaultController extends Controller
 
 		//sextion Maps
 		$optionAdressToDisplay = $optionManager->getAdress();
+		$optionLatToDisplay = $optionManager->getLat();
+		$optionLonToDisplay = $optionManager->getLon();
 		$optionBgMapColor1 = $optionManager->getBgMapColor1();
 		$optionBgMapColor2 = $optionManager->getBgMapColor2();
 		$this->show('Default/backoffice',[
@@ -467,6 +469,8 @@ class DefaultController extends Controller
 			'col_text_2'	=> [$optionBgTextColor2],
 			'col_map_1'	=> [$optionBgMapColor1],
 			'col_map_2'	=> [$optionBgMapColor2],
+			'lat'		=> [$optionLatToDisplay],
+			'lon'		=> [$optionLonToDisplay],
 
 
 		]);
@@ -532,6 +536,8 @@ class DefaultController extends Controller
 		$optionBgTextColor2 = $optionManager->getBgTextColor2();
 		//map
 		$optionAdressToDisplay = $optionManager->getAdress();
+		$optionLatToDisplay = $optionManager->getLat();
+		$optionLonToDisplay = $optionManager->getLon();
 		$optionBgMapColor1 = $optionManager->getBgMapColor1();
 		$optionBgMapColor2 = $optionManager->getBgMapColor2();
 		$this->show('default/onepage',[
@@ -554,6 +560,8 @@ class DefaultController extends Controller
 			'col_text_2'	=> [$optionBgTextColor2],
 			'col_map_1'	=> [$optionBgMapColor1],
 			'col_map_2'	=> [$optionBgMapColor2],
+			'lat'		=> [$optionLatToDisplay],
+			'lon'		=> [$optionLonToDisplay],
 
 		]);
 

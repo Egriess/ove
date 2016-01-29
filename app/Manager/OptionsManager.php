@@ -245,6 +245,24 @@ class OptionsManager extends \W\Manager\Manager
 		$stmt->bindParam(':option_value', $lon);
 		$stmt->execute();
 	}
+
+	function getLat(){
+
+		$sql="SELECT option_value from options where option_name = 'latitude'";
+		$stmt = $this->dbh-> query($sql);
+		$adresse = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $adresse['option_value'];
+
+	}
+
+	function getLon(){
+
+		$sql="SELECT option_value from options where option_name = 'longitude'";
+		$stmt = $this->dbh-> query($sql);
+		$adresse = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $adresse['option_value'];
+
+	}
 	/*
 	=====function Testimonial=====
 	*/
