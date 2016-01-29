@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 	
-	<section id="text">
+	<section id="texthome">
 	<h2>Bienvenue sur Onepage Visual Editor</h2>
 	<p class="describ"> Onepage Visual Editor vous permet de creer votre page perso
 	 en un rien de temps et ce sans aucunes connaissances en développement web</p>
