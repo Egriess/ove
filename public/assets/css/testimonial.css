@@ -1,21 +1,18 @@
-
 .testimonial{
   width:250px;
   height:350px;
   float:left;
-  margin-right:80px;
-  margin-top: 6px;
+  margin-right:10%;
+  margin-top: 4%;
 
-  /* Giving the sponsor div a relative positioning: */
   position:relative;
-  left: 255px;
+  left: 10%;
   cursor:pointer;
+  box-shadow: 7px 3px 24px 0px rgba(0,0,0,0.6);
 }
 
-.testiFlip{
-  /*  The sponsor div will be positioned absolutely with respect
-    to its parent .sponsor div and fill it in entirely */
 
+.testiFlip{
   position:absolute;
   left:0;
   top:0;
@@ -34,7 +31,7 @@
   box-shadow:0 0 30px #999 inset;
 }
 .testiFlip img{
-  /* Centering the logo image in the middle of the .sponsorFlip div */
+  /* Centering the logo image in the middle of the .testiFlip div */
 
   position:absolute;
   top:50%;
