@@ -353,6 +353,25 @@ class OptionsManager extends \W\Manager\Manager
 	}
 
 	/*
+	=====Function Text Gallery=====
+	*/
+
+	function updateTxtGallery($txt){
+		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'txt_gallery';";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $txt);
+		$stmt->execute();
+	}
+
+	public function getTxtGallery()
+	{
+		$sql="SELECT option_value FROM options WHERE option_name = 'txt_gallery';";
+		$stmt = $this->dbh->query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];
+	}
+
+	/*
 	=====Function Soundcloud=====
 	*/
 
