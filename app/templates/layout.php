@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?= $this->e($title) ?></title>
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/animate.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/reset.css') ?>">

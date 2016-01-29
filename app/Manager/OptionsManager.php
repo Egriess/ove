@@ -353,6 +353,25 @@ class OptionsManager extends \W\Manager\Manager
 	}
 
 	/*
+	=====Function Soundcloud=====
+	*/
+
+	function updateSoundcloud($sound){
+		$sql = "UPDATE options SET option_value = :option_value  WHERE option_name = 'soundcloud';";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $sound);
+		$stmt->execute();
+	}
+
+	public function getSoundcloud()
+	{
+		$sql="SELECT option_value FROM options WHERE option_name = 'soundcloud';";
+		$stmt = $this->dbh->query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];
+	}
+
+	/*
 	=====Function Text=====
 	*/
 

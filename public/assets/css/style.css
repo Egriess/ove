@@ -1,6 +1,8 @@
-h1{
-	text-transform: uppercase;
-}
+/* DESKTOP MEDIA QUERY */ 
+
+
+
+
 
 header{
 	margin: auto;
@@ -86,6 +88,10 @@ header nav h1 {
   background: #FD710A;
 }
 
+#backsoundcloud input:first-of-type {
+  width: 250px;
+  margin-left: 50px;
+}
 #titlepopup{
   margin: auto;
 }
@@ -847,3 +853,10 @@ input[type="submit"]:hover{
 
 }
 
+@media screen and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+{
+ #testimoniaux{
+ display: none;
+} 
+}

@@ -28,6 +28,15 @@ class DefaultController extends Controller
 		// Les passer a la vue
 
 		//$this->show('default/backoffice', ['currentadresse' => $adressToDisplay]);
+		
+		//soundcloud
+
+		if(isset($_POST['submit_sound'])){
+			$sound= $_POST['sound'];
+			$optionManager->updateSoundcloud($sound);
+		}
+
+
 
 		// gallery Controler 
 		if(isset($_POST['submit_gal_1']))
@@ -697,6 +706,10 @@ class DefaultController extends Controller
 		$optionGalleryToDisplay7 = $optionManager->getImgGallery(7);
 		$optionGalleryToDisplay8 = $optionManager->getImgGallery(8);
 		$optionGalleryToDisplay9 = $optionManager->getImgGallery(9);
+		
+		//Soundcloud
+		$optionSoundToDisplay = $optionManager->getSoundcloud();
+
 		//testimoniaux
 			//view name
 		$optionNameToDisplay1 = $optionManager->getName(1);
@@ -743,6 +756,7 @@ class DefaultController extends Controller
 			'gradiant_color1' => [$optionBgGradientColor1],
 			'gradiant_color2' => [$optionBgGradientColor2],
 			'adress'	=> [$optionAdressToDisplay],
+			'soundcloud' => [$optionSoundToDisplay],
 
 			'col_testi_1'	=> [$optionBgTestiColor1],
 			'col_testi_2'	=> [$optionBgTestiColor2],
@@ -791,7 +805,10 @@ class DefaultController extends Controller
 		$optionGalleryToDisplay7 = $optionManager->getImgGallery(7);
 		$optionGalleryToDisplay8 = $optionManager->getImgGallery(8);
 		$optionGalleryToDisplay9 = $optionManager->getImgGallery(9);
-			
+		
+		//Soundcloud
+		$optionSoundToDisplay = $optionManager->getSoundcloud();
+
 		//testimoniaux
 		$optionBgTestiColor1 = $optionManager->getBgTestiColor1();
 		$optionBgTestiColor2 = $optionManager->getBgTestiColor2();
@@ -863,6 +880,7 @@ class DefaultController extends Controller
 			'gradiant_color1' => [$optionBgGradientColor1],
 			'gradiant_color2' => [$optionBgGradientColor2],
 			'adress'	=> [$optionAdressToDisplay],
+			'soundcloud' => [$optionSoundToDisplay],
 
 			'col_testi_1'	=> [$optionBgTestiColor1],
 			'col_testi_2'	=> [$optionBgTestiColor2],

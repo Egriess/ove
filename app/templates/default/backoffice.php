@@ -536,7 +536,11 @@
 
 	<div id="backsoundcloud">
 	<h3> Choisir le contenu du widget soundcloud </h3>
-
+	<p>Vous avez le choix entre integrer une seule chanson ou une playlist complete il vous suffit de copier le liens à l'aide du bouton share sur soundcloud.com</p>
+		<form action="#" method="post" accept-charset="utf-8">
+			<input type="text" name="sound" value="" placeholder="Adresse de la chanson ou playlist">
+			<input type="submit" name="submit_sound" value="Envoyer">
+		</form>
 	</div>
 
 	<!--
