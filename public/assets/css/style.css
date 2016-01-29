@@ -732,6 +732,7 @@ img:hover{
   height: 450px;
   width: 100%;
   background: #EEE364;
+
 }
 
 #map{
@@ -740,6 +741,7 @@ img:hover{
   margin: 20px;
   border-radius: 20px;
   float: left;
+
   
 }
 
@@ -749,10 +751,12 @@ img:hover{
   padding: 20px;
   border-radius: 10px;
   display: inline-block;
+
 }
 
+
 #adressActu{
-  background-color: #D6D6D6;
+
   margin-top: 20px;
   padding: 20px;
   border-radius: 10px;
@@ -760,7 +764,7 @@ img:hover{
 }
 
 #adresspage{
-   background-color: #D6D6D6;
+ 
   margin-top: 20px;
   padding: 20px;
   border-radius: 10px;
