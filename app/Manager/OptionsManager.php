@@ -354,19 +354,20 @@ class OptionsManager extends \W\Manager\Manager
 		$stmt->execute();
 	}
 
-	public function insertMail($email_contact, $password_mail)
-	{	
-		$email_contact		= $_POST["email_contact"];
-		$password_mail		= $_POST["password_mail"];
+	public function updateMail($emailpost)
+	{
+		$sql ="UPDATE options SET option_value = :option_value WHERE option_name = 'adresse_mail'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $emailpost);
+		$stmt->execute();
+	}
 
-		$sql = "INSERT INTO `ove`.`options` (\n"
-	    . "	`id`, `option_name`, `option_value`, \n"
-	    . "	`user_option_id`\n"
-	    . ") \n"
-	    . "VALUES \n"
-	    . "	(NULL, 'adresse_mail', '".$email_contact."', '1'), \n"
-	    . "	(NULL, 'pw_mail', '".$password_mail."', '1')";
-	    $this->dbh->exec($sql);
+	public function getMail()
+	{
+		$sql="SELECT option_value FROM options WHERE option_name = 'adresse_mail' ";
+		$stmt = $this->dbh->query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];
 	}
 	// inserer les datas lorem ipsum de base à la création d'un user 
 	
