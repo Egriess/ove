@@ -17,6 +17,7 @@ class DefaultController extends Controller
 
 	public function backoffice()
 	{
+
 		$optionManager= new \Manager\OptionsManager();
 		// Recuperer les coordonnees
 		//$address = $_POST['address'];
@@ -27,6 +28,269 @@ class DefaultController extends Controller
 		// Les passer a la vue
 
 		//$this->show('default/backoffice', ['currentadresse' => $adressToDisplay]);
+
+		// gallery Controler 
+		if(isset($_POST['submit_gal_1']))
+		{
+
+
+			// Upload du fichier (move_uploaded_file, etc.)
+			$finfo = new \finfo(FILEINFO_MIME_TYPE);
+			$mimeType = $finfo->file($_FILES['img_gal_1']['tmp_name']);
+
+			$allowed =array_search(
+		        $mimeType, array('png' 	=> 'image/png',
+							 	'jpg'	=> 'image/jpeg',
+								 'gif' 	=> 'image/gif'));
+			$filePath = sha1_file($_FILES['img_gal_1']['tmp_name']). '.' . $allowed;
+			$destinationFilePath = 'assets/imgs/' . $filePath;
+			// Récupération du Mime
+			if ($allowed === false) {
+		    	echo 'Le fichier n\'est pas une image';
+		    	die();
+		    }
+			if ($_FILES['img_gal_1']['error'] != UPLOAD_ERR_OK) {
+				echo 'Erreur lors du téléchargement.';
+				die();
+			}
+			if(move_uploaded_file($_FILES['img_gal_1']['tmp_name'], $destinationFilePath)) {
+			} else {
+				echo 'Erreur lors de l\'enregistrement.';
+			}
+
+			$optionManager->changeImgGalery(1, $filePath);
+
+			}elseif(isset($_POST['submit_gal_2']))
+		{
+
+
+			// Upload du fichier (move_uploaded_file, etc.)
+			$finfo = new \finfo(FILEINFO_MIME_TYPE);
+			$mimeType = $finfo->file($_FILES['img_gal_2']['tmp_name']);
+
+			$allowed =array_search(
+		        $mimeType, array('png' 	=> 'image/png',
+							 	'jpg'	=> 'image/jpeg',
+								 'gif' 	=> 'image/gif'));
+			$filePath = sha1_file($_FILES['img_gal_2']['tmp_name']). '.' . $allowed;
+			$destinationFilePath = 'assets/imgs/' . $filePath;
+			// Récupération du Mime
+			if ($allowed === false) {
+		    	echo 'Le fichier n\'est pas une image';
+		    	die();
+		    }
+			if ($_FILES['img_gal_2']['error'] != UPLOAD_ERR_OK) {
+				echo 'Erreur lors du téléchargement.';
+				die();
+			}
+			if(move_uploaded_file($_FILES['img_gal_2']['tmp_name'], $destinationFilePath)) {
+			} else {
+				echo 'Erreur lors de l\'enregistrement.';
+			}
+
+			$optionManager->changeImgGalery(2, $filePath);
+
+			}elseif(isset($_POST['submit_gal_3']))
+		{
+
+
+			// Upload du fichier (move_uploaded_file, etc.)
+			$finfo = new \finfo(FILEINFO_MIME_TYPE);
+			$mimeType = $finfo->file($_FILES['img_gal_3']['tmp_name']);
+
+			$allowed =array_search(
+		        $mimeType, array('png' 	=> 'image/png',
+							 	'jpg'	=> 'image/jpeg',
+								 'gif' 	=> 'image/gif'));
+			$filePath = sha1_file($_FILES['img_gal_3']['tmp_name']). '.' . $allowed;
+			$destinationFilePath = 'assets/imgs/' . $filePath;
+			// Récupération du Mime
+			if ($allowed === false) {
+		    	echo 'Le fichier n\'est pas une image';
+		    	die();
+		    }
+			if ($_FILES['img_gal_3']['error'] != UPLOAD_ERR_OK) {
+				echo 'Erreur lors du téléchargement.';
+				die();
+			}
+			if(move_uploaded_file($_FILES['img_gal_3']['tmp_name'], $destinationFilePath)) {
+			} else {
+				echo 'Erreur lors de l\'enregistrement.';
+			}
+
+			$optionManager->changeImgGalery(3, $filePath);
+
+			}elseif(isset($_POST['submit_gal_4']))
+		{
+
+
+			// Upload du fichier (move_uploaded_file, etc.)
+			$finfo = new \finfo(FILEINFO_MIME_TYPE);
+			$mimeType = $finfo->file($_FILES['img_gal_4']['tmp_name']);
+
+			$allowed =array_search(
+		        $mimeType, array('png' 	=> 'image/png',
+							 	'jpg'	=> 'image/jpeg',
+								 'gif' 	=> 'image/gif'));
+			$filePath = sha1_file($_FILES['img_gal_4']['tmp_name']). '.' . $allowed;
+			$destinationFilePath = 'assets/imgs/' . $filePath;
+			// Récupération du Mime
+			if ($allowed === false) {
+		    	echo 'Le fichier n\'est pas une image';
+		    	die();
+		    }
+			if ($_FILES['img_gal_4']['error'] != UPLOAD_ERR_OK) {
+				echo 'Erreur lors du téléchargement.';
+				die();
+			}
+			if(move_uploaded_file($_FILES['img_gal_4']['tmp_name'], $destinationFilePath)) {
+			} else {
+				echo 'Erreur lors de l\'enregistrement.';
+			}
+
+			$optionManager->changeImgGalery(4, $filePath);
+
+			}elseif(isset($_POST['submit_gal_5']))
+		{
+
+
+			// Upload du fichier (move_uploaded_file, etc.)
+			$finfo = new \finfo(FILEINFO_MIME_TYPE);
+			$mimeType = $finfo->file($_FILES['img_gal_5']['tmp_name']);
+
+			$allowed =array_search(
+		        $mimeType, array('png' 	=> 'image/png',
+							 	'jpg'	=> 'image/jpeg',
+								 'gif' 	=> 'image/gif'));
+			$filePath = sha1_file($_FILES['img_gal_5']['tmp_name']). '.' . $allowed;
+			$destinationFilePath = 'assets/imgs/' . $filePath;
+			// Récupération du Mime
+			if ($allowed === false) {
+		    	echo 'Le fichier n\'est pas une image';
+		    	die();
+		    }
+			if ($_FILES['img_gal_5']['error'] != UPLOAD_ERR_OK) {
+				echo 'Erreur lors du téléchargement.';
+				die();
+			}
+			if(move_uploaded_file($_FILES['img_gal_5']['tmp_name'], $destinationFilePath)) {
+			} else {
+				echo 'Erreur lors de l\'enregistrement.';
+			}
+
+			$optionManager->changeImgGalery(5, $filePath);
+
+		}elseif(isset($_POST['submit_gal_6']))
+		{
+			// Upload du fichier (move_uploaded_file, etc.)
+			// Upload du fichier (move_uploaded_file, etc.)
+			$finfo = new \finfo(FILEINFO_MIME_TYPE);
+			$mimeType = $finfo->file($_FILES['img_gal_6']['tmp_name']);
+			$allowed =array_search(
+		        $mimeType, array('png' 	=> 'image/png',
+							 	'jpg'	=> 'image/jpeg',
+								 'gif' 	=> 'image/gif'));
+			$filePath = sha1_file($_FILES['img_gal_6']['tmp_name']). '.' . $allowed;
+			$destinationFilePath = 'assets/imgs/' . $filePath;
+			// Récupération du Mime
+			if ($allowed === false) {
+		    	echo 'Le fichier n\'est pas une image';
+		    	die();
+		    }
+			if ($_FILES['img_gal_6']['error'] != UPLOAD_ERR_OK) {
+				echo 'Erreur lors du téléchargement.';
+				die();
+			}
+			if(move_uploaded_file($_FILES['img_gal_6']['tmp_name'], $destinationFilePath)) {
+			} else {
+				echo 'Erreur lors de l\'enregistrement.';
+			}
+				$optionManager->changeImgGalery(6, $filePath);
+
+			}elseif(isset($_POST['submit_gal_7']))
+		{
+			// Upload du fichier (move_uploaded_file, etc.)
+			// Upload du fichier (move_uploaded_file, etc.)
+			$finfo = new \finfo(FILEINFO_MIME_TYPE);
+			$mimeType = $finfo->file($_FILES['img_gal_7']['tmp_name']);
+			$allowed =array_search(
+		        $mimeType, array('png' 	=> 'image/png',
+							 	'jpg'	=> 'image/jpeg',
+								 'gif' 	=> 'image/gif'));
+			$filePath = sha1_file($_FILES['img_gal_7']['tmp_name']). '.' . $allowed;
+			$destinationFilePath = 'assets/imgs/' . $filePath;
+			// Récupération du Mime
+			if ($allowed === false) {
+		    	echo 'Le fichier n\'est pas une image';
+		    	die();
+		    }
+			if ($_FILES['img_gal_7']['error'] != UPLOAD_ERR_OK) {
+				echo 'Erreur lors du téléchargement.';
+				die();
+			}
+			if(move_uploaded_file($_FILES['img_gal_7']['tmp_name'], $destinationFilePath)) {
+			} else {
+				echo 'Erreur lors de l\'enregistrement.';
+			}
+				$optionManager->changeImgGalery(7, $filePath);
+
+			}elseif(isset($_POST['submit_gal_8']))
+		{
+			// Upload du fichier (move_uploaded_file, etc.)
+			// Upload du fichier (move_uploaded_file, etc.)
+			$finfo = new \finfo(FILEINFO_MIME_TYPE);
+			$mimeType = $finfo->file($_FILES['img_gal_8']['tmp_name']);
+			$allowed =array_search(
+		        $mimeType, array('png' 	=> 'image/png',
+							 	'jpg'	=> 'image/jpeg',
+								 'gif' 	=> 'image/gif'));
+			$filePath = sha1_file($_FILES['img_gal_8']['tmp_name']). '.' . $allowed;
+			$destinationFilePath = 'assets/imgs/' . $filePath;
+			// Récupération du Mime
+			if ($allowed === false) {
+		    	echo 'Le fichier n\'est pas une image';
+		    	die();
+		    }
+			if ($_FILES['img_gal_8']['error'] != UPLOAD_ERR_OK) {
+				echo 'Erreur lors du téléchargement.';
+				die();
+			}
+			if(move_uploaded_file($_FILES['img_gal_8']['tmp_name'], $destinationFilePath)) {
+			} else {
+				echo 'Erreur lors de l\'enregistrement.';
+			}
+				$optionManager->changeImgGalery(8, $filePath);
+
+			}elseif(isset($_POST['submit_gal_9']))
+		{
+			// Upload du fichier (move_uploaded_file, etc.)
+			// Upload du fichier (move_uploaded_file, etc.)
+			$finfo = new \finfo(FILEINFO_MIME_TYPE);
+			$mimeType = $finfo->file($_FILES['img_gal_9']['tmp_name']);
+			$allowed =array_search(
+		        $mimeType, array('png' 	=> 'image/png',
+							 	'jpg'	=> 'image/jpeg',
+								 'gif' 	=> 'image/gif'));
+			$filePath = sha1_file($_FILES['img_gal_9']['tmp_name']). '.' . $allowed;
+			$destinationFilePath = 'assets/imgs/' . $filePath;
+			// Récupération du Mime
+			if ($allowed === false) {
+		    	echo 'Le fichier n\'est pas une image';
+		    	die();
+		    }
+			if ($_FILES['img_gal_9']['error'] != UPLOAD_ERR_OK) {
+				echo 'Erreur lors du téléchargement.';
+				die();
+			}
+			if(move_uploaded_file($_FILES['img_gal_9']['tmp_name'], $destinationFilePath)) {
+			} else {
+				echo 'Erreur lors de l\'enregistrement.';
+			}
+				$optionManager->changeImgGalery(9, $filePath);
+		
+		}
+
+		// END gallery Controler
 
 		if(isset($_POST['submit_slider_1']))
 		{
@@ -403,6 +667,12 @@ class DefaultController extends Controller
 		{
 			$optionManager->changeText(3, $_POST['sec_text']);
 		}
+
+		if (isset($_POST['submit_mail']))
+		{	
+			$emailpost = $_POST['email_recipe'];
+			$optionManager->updateMail($emailpost);
+		}
 		//header 
 		$optionTitleToDisplay 	= $optionManager->getTitle();
 		$optionFontToDisplay 	= $optionManager->getFont();
@@ -417,7 +687,16 @@ class DefaultController extends Controller
 		$optionSliderToDisplay3 = $optionManager->getImgSlider(3);
 		$optionSliderToDisplay4 = $optionManager->getImgSlider(4);
 		$optionSliderToDisplay5 = $optionManager->getImgSlider(5);
-
+		// gallery
+		$optionGalleryToDisplay1 = $optionManager->getImgGallery(1);
+		$optionGalleryToDisplay2 = $optionManager->getImgGallery(2);
+		$optionGalleryToDisplay3 = $optionManager->getImgGallery(3);
+		$optionGalleryToDisplay4 = $optionManager->getImgGallery(4);
+		$optionGalleryToDisplay5 = $optionManager->getImgGallery(5);
+		$optionGalleryToDisplay6 = $optionManager->getImgGallery(6);
+		$optionGalleryToDisplay7 = $optionManager->getImgGallery(7);
+		$optionGalleryToDisplay8 = $optionManager->getImgGallery(8);
+		$optionGalleryToDisplay9 = $optionManager->getImgGallery(9);
 		//testimoniaux
 			//view name
 		$optionNameToDisplay1 = $optionManager->getName(1);
@@ -456,6 +735,7 @@ class DefaultController extends Controller
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
 			'title'		=> [$optionTitleToDisplay],
 			'imgslider' => [$optionSliderToDisplay1, $optionSliderToDisplay2, $optionSliderToDisplay3, $optionSliderToDisplay4, $optionSliderToDisplay5],
+			'imggallery'=> [$optionGalleryToDisplay1, $optionGalleryToDisplay2, $optionGalleryToDisplay3, $optionGalleryToDisplay4, $optionGalleryToDisplay5, $optionGalleryToDisplay6, $optionGalleryToDisplay7, $optionGalleryToDisplay8, $optionGalleryToDisplay9],
 			'adress'	=> [$optionAdressToDisplay],
 			'font'		=> [$optionFontToDisplay],
 			'bg'		=> [$optionBgToDisplay],
@@ -463,6 +743,7 @@ class DefaultController extends Controller
 			'gradiant_color1' => [$optionBgGradientColor1],
 			'gradiant_color2' => [$optionBgGradientColor2],
 			'adress'	=> [$optionAdressToDisplay],
+
 			'col_testi_1'	=> [$optionBgTestiColor1],
 			'col_testi_2'	=> [$optionBgTestiColor2],
 			'col_text_1'	=> [$optionBgTextColor1],
@@ -472,9 +753,15 @@ class DefaultController extends Controller
 			'lat'		=> [$optionLatToDisplay],
 			'lon'		=> [$optionLonToDisplay],
 
+			'mail'		=>	[$optionmailToDisplay],
+			'updateMail'=>	[$optionmailToUpdate],
+
+
 
 		]);
-
+	
+		
+	
 	}
 
 	public function register(){
@@ -498,7 +785,17 @@ class DefaultController extends Controller
 		$optionSliderToDisplay4 = $optionManager->getImgSlider(4);
 		$optionSliderToDisplay5 = $optionManager->getImgSlider(5);
 
-		
+		//Gallery
+		$optionGalleryToDisplay1 = $optionManager->getImgGallery(1);
+		$optionGalleryToDisplay2 = $optionManager->getImgGallery(2);
+		$optionGalleryToDisplay3 = $optionManager->getImgGallery(3);
+		$optionGalleryToDisplay4 = $optionManager->getImgGallery(4);
+		$optionGalleryToDisplay5 = $optionManager->getImgGallery(5);
+		$optionGalleryToDisplay6 = $optionManager->getImgGallery(6);
+		$optionGalleryToDisplay7 = $optionManager->getImgGallery(7);
+		$optionGalleryToDisplay8 = $optionManager->getImgGallery(8);
+		$optionGalleryToDisplay9 = $optionManager->getImgGallery(9);
+			
 		//testimoniaux
 		$optionBgTestiColor1 = $optionManager->getBgTestiColor1();
 		$optionBgTestiColor2 = $optionManager->getBgTestiColor2();
@@ -536,10 +833,25 @@ class DefaultController extends Controller
 		$optionBgTextColor2 = $optionManager->getBgTextColor2();
 		//map
 		$optionAdressToDisplay = $optionManager->getAdress();
+
 		$optionLatToDisplay = $optionManager->getLat();
 		$optionLonToDisplay = $optionManager->getLon();
+
+
+
 		$optionBgMapColor1 = $optionManager->getBgMapColor1();
 		$optionBgMapColor2 = $optionManager->getBgMapColor2();
+
+
+		$emailToDisplay		  = $optionManager->getMail();
+
+		if(isset($_SESSION['errors'])) {
+			$errors = $_SESSION['errors'];
+		} else {
+			$errors = array();
+		}
+
+
 		$this->show('default/onepage',[
 			'names'		=> [$optionNameToDisplay1, $optionNameToDisplay2, $optionNameToDisplay3],
 			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
@@ -547,6 +859,7 @@ class DefaultController extends Controller
 			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
 			'titledisplay'		=> [$optionTitleToDisplay],
 			'imgslider' => [$optionSliderToDisplay1, $optionSliderToDisplay2, $optionSliderToDisplay3, $optionSliderToDisplay4, $optionSliderToDisplay5],
+			'imggallery'=> [$optionGalleryToDisplay1, $optionGalleryToDisplay2, $optionGalleryToDisplay3, $optionGalleryToDisplay4, $optionGalleryToDisplay5, $optionGalleryToDisplay6, $optionGalleryToDisplay7, $optionGalleryToDisplay8, $optionGalleryToDisplay9],
 			'color'		=> [$optionColorToDisplay],
 			'font'		=> [$optionFontToDisplay],
 			'bg'		=> [$optionBgToDisplay],
@@ -554,6 +867,7 @@ class DefaultController extends Controller
 			'gradiant_color1' => [$optionBgGradientColor1],
 			'gradiant_color2' => [$optionBgGradientColor2],
 			'adress'	=> [$optionAdressToDisplay],
+
 			'col_testi_1'	=> [$optionBgTestiColor1],
 			'col_testi_2'	=> [$optionBgTestiColor2],
 			'col_text_1'	=> [$optionBgTextColor1],
@@ -562,6 +876,10 @@ class DefaultController extends Controller
 			'col_map_2'	=> [$optionBgMapColor2],
 			'lat'		=> [$optionLatToDisplay],
 			'lon'		=> [$optionLonToDisplay],
+
+
+			'mailrecipe' => [$emailToDisplay],
+			'errors'	=> $errors,
 
 		]);
 
@@ -575,7 +893,7 @@ class DefaultController extends Controller
 			if(!isset($_POST['login']) || empty($_POST['login']) || !isset($_POST['password']) || empty($_POST['password'])) {
 				// S'il manque des informations
 
-				$this->redirectToRoute('backoffice');
+				$this->redirectToRoute('login');
 			}
 
 			$authManager = new \W\Security\AuthentificationManager();
@@ -708,56 +1026,51 @@ class DefaultController extends Controller
 	*/
 	public function contact()
 	{
-
-
 		// $errName, $errEmail, $errMessage, $errHuman, $name, $email, $message, $human
-		$_POST['name'];
+		/*$_POST['name'];
 		$_POST['email'];
 		$_POST['message'];
 		$_POST['human'];
 		$_POST['errName'];
 		$_POST['errEmail'];
-		$_POST['errMessage'];
-		print_r($_POST);
+		$_POST['errMessage'];*/
+		
 		// Si j'ai recu une soumission du formulaire mail
 		// Si j'ai tous les champs
 			// Si erreur dans
 
 		$optionManager = new \Manager\OptionsManager();
 
-		if (isset($_POST["submit"])) 
+		if (isset($_POST["send-mail"])) 
 		{
 	  		$name = $_POST['name'];
 	  		$email = $_POST['email'];
 	  		$message = $_POST['message'];
 	 		$human = intval($_POST['human']);
-	 		/*$from = 'Demo Contact Form'; 
-	 		$to = 'example@domain.com'; 
-	 		$subject = 'Message from Contact Demo ';*/
-	 		
-	 		$body ="From: $name\n E-Mail: $email\n Message:\n $message";
+	 	
+	 		$errors = array();
 	 
 	 		// Check if name has been entered
-	 		if (!isset($_POST['name'])) {
-	 			$errName = 'Please enter your name';
+	 		if (!isset($_POST['name']) || empty($_POST['name'])) {
+	 			$errors['name'] = 'Please enter your name';
 	 		}
 	 		
 	 		// Check if email has been entered and is valid
-	 		if (!isset($_POST['email']) || !filter_var(isset($_POST['email']), FILTER_VALIDATE_EMAIL)) {
-	 			$errEmail = 'Please enter a valid email address';
-	 		}
+	 		//if (!isset($_POST['email']) || !filter_var(isset($_POST['email']), FILTER_VALIDATE_EMAIL)) {
+	 		//	$errors['email'] = 'Please enter a valid email address';
+	 		//}
 	 		
 	 		//Check if message has been entered
 	 		if (!isset($_POST['message'])) {
-	 			$errMessage = 'Please enter your message';
+	 			$errors['message'] = 'Please enter your message';
 	 		}
 	 		//Check if simple anti-bot test is correct
 	 		if ($human !== 5) {
-	 			$errHuman = 'Your anti-spam is incorrect';
+	 			$errors['human'] = 'Your anti-spam is incorrect';
 	 		}
 	 
 		 // If there are no errors, send the email
-			if (!$errName && !$errEmail && !$errMessage && !$errHuman)
+			/*if (!$errName && !$errEmail && !$errMessage && !$errHuman)
 			{
 			 	if (mail ($to, $subject, $body, $from))
 			 	{
@@ -767,8 +1080,18 @@ class DefaultController extends Controller
 			 	{
 			 		$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
 			 	}
+			}*/
+
+			$_SESSION['errors'] = $errors;
+
+			if(empty($errors)) {
+
+				//$completeMessage = 'Vous avez recu un mail de ' .$email ;
+
+				$this->mailer($name, $email, $message);
 			}
-	 	$this->redirectToRoute('onepage');
+
+	 		$this->redirectToRoute('onepage');
 	 	}
 	}
 
@@ -787,38 +1110,36 @@ class DefaultController extends Controller
 		}
 	}
 
-	public function mailer()
+	private function mailer($name, $email, $message)
 	{
 		$optionManager = new \Manager\OptionsManager();
-
+		$mailrecipe = $optionManager->getMail();
 		$mail = new \PHPMailer();
 		// $email and $message are the data that is being
 		// posted to this page from our html contact form
 		//$email = '' ;
-		$email = $_REQUEST['email'] ;
-		$name = $_REQUEST['name'];
-		$message = $_REQUEST['message'] ;
-
+		
+			$completeMessage = 'Vous avez recu un mail de ' .$email ;
 		//$mail->SMTPDebug = 2;
 		$mail->isSMTP();                                      // Set mailer to use SMTP
 		$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 		$mail->SMTPAuth = true;                               // Enable SMTP authentication
-		$mail->Username =  $email_contact ;                 // SMTP username
-		$mail->Password =  $password_mail ;            // SMTP password
+		$mail->Username =  'one.page.editor@gmail.com';                 // SMTP username
+		$mail->Password =  'oveonepageeditor';            // SMTP password
 		$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 		$mail->Port = 587;                                    // TCP port to connect to
 		$mail->setFrom($email);
 
 		// below we want to set the email address we will be sending our email to.
-		$mail->AddAddress("mathieu.baldassi@gmail.com");
-		$mail->addReplyTo('info@example.com', 'Information');
-		$mail->addCC('cc@example.com');
-		$mail->addBCC('bcc@example.com');
+		$mail->AddAddress($mailrecipe);
+		$mail->addReplyTo('');
+		$mail->addCC('');
+		$mail->addBCC('');
 
 		$mail->isHTML(true);                                  // Set email format to HTML
 
-		$mail->Subject = 'Here is the subject';
-		$mail->Body    = $message;
+		$mail->Subject = 'Message recu depuis votre site OVE.';
+		$mail->Body    = $message."<br><br>". $completeMessage;
 		$mail->AltBody = $message;
 
 		if(!$mail->send())
