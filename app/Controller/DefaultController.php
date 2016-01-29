@@ -649,13 +649,13 @@ class DefaultController extends Controller
 	public function contact()
 	{
 		// $errName, $errEmail, $errMessage, $errHuman, $name, $email, $message, $human
-		$_POST['name'];
+		/*$_POST['name'];
 		$_POST['email'];
 		$_POST['message'];
 		$_POST['human'];
 		$_POST['errName'];
 		$_POST['errEmail'];
-		$_POST['errMessage'];
+		$_POST['errMessage'];*/
 		
 		// Si j'ai recu une soumission du formulaire mail
 		// Si j'ai tous les champs
@@ -678,9 +678,9 @@ class DefaultController extends Controller
 	 		}
 	 		
 	 		// Check if email has been entered and is valid
-	 		if (!isset($_POST['email']) || !filter_var(isset($_POST['email']), FILTER_VALIDATE_EMAIL)) {
-	 			$errors['email'] = 'Please enter a valid email address';
-	 		}
+	 		//if (!isset($_POST['email']) || !filter_var(isset($_POST['email']), FILTER_VALIDATE_EMAIL)) {
+	 		//	$errors['email'] = 'Please enter a valid email address';
+	 		//}
 	 		
 	 		//Check if message has been entered
 	 		if (!isset($_POST['message'])) {
@@ -707,6 +707,8 @@ class DefaultController extends Controller
 			$_SESSION['errors'] = $errors;
 
 			if(empty($errors)) {
+
+				//$completeMessage = 'Vous avez recu un mail de ' .$email ;
 
 				$this->mailer($name, $email, $message);
 			}
@@ -739,7 +741,7 @@ class DefaultController extends Controller
 		// posted to this page from our html contact form
 		//$email = '' ;
 		
-
+			$completeMessage = 'Vous avez recu un mail de ' .$email ;
 		//$mail->SMTPDebug = 2;
 		$mail->isSMTP();                                      // Set mailer to use SMTP
 		$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
@@ -758,8 +760,8 @@ class DefaultController extends Controller
 
 		$mail->isHTML(true);                                  // Set email format to HTML
 
-		$mail->Subject = 'Message reçu depuis votre site OVE.';
-		$mail->Body    = $message;
+		$mail->Subject = 'Message recu depuis votre site OVE.';
+		$mail->Body    = $message."<br><br>". $completeMessage;
 		$mail->AltBody = $message;
 
 		if(!$mail->send())

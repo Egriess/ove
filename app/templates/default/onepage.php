@@ -164,15 +164,15 @@
 		    <div class="form-group">
 		        <label for="name" class="col-sm-2 control-label">Name</label>
 		        <div class="col-sm-10">
-		            <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
-		            <?php if(isset($errors['name'])) echo "<p class='text-danger'>" . $errors['name'] . "</p>";?>
+		            <input type="text" class="form-control" id="ename" name="name" placeholder="First & Last Name" value="">
+		            <?php if(isset($errors['ename'])) echo "<p class='text-danger'>" . $errors['ename'] . "</p>";?>
 		        </div>
 		    </div>
 		    <div class="form-group">
 		        <label for="email" class="col-sm-2 control-label">Email</label>
 		        <div class="col-sm-10">
-		            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
-		            <?php if(isset($errors['email'])) echo "<p class='text-danger'>" . $errors['email'] . "</p>";?>
+		            <input type="email" class="form-control" id="eemail" name="email" placeholder="example@domain.com" value="">
+		            <?php //if(isset($errors['email'])) echo "<p class='text-danger'>" . $errors['email'] . "</p>";?>
 		        </div>
 		    </div>
 		    <div class="form-group">
@@ -196,7 +196,7 @@
 		    </div>
 		    <div class="form-group">
 		        <div class="col-sm-10 col-sm-offset-2">
-		            <?php echo $result; ?>    
+		            <?php //echo $result; ?>    
 		        </div>
 		    </div>
 		</form>
