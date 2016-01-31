@@ -635,7 +635,7 @@
 		<div id="textes">
 			<div class="container">
 				<h2>text</h2>
-				<hr>
+				
 				<div class="col-md-4 text" id="sectionText_1">
 					<?= $texts[0] ?>
 				</div>
