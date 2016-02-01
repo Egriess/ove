@@ -122,7 +122,6 @@
 -->
 <div id="text" style="background: linear-gradient(<?= $col_text_1[0] ?> , <?= $col_text_2[0] ?>">
 	<div class="container">
-		<h2>Text</h2>
 		
 		<div class="col-md-4 text" class="text" id="sectionText_1">
 			<?= $texts[0] ?>

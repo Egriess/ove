@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/magnific-popup.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/modals.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/bootstrap.min.css') ?>">
+	<link rel="stylesheet" href="<?= $this->assetUrl('css/bootstrap-responsive.min.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/jquery-ui.min.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/sectiontext.css') ?>">

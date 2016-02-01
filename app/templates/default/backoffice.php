@@ -619,15 +619,18 @@
 		<div id="textpopup" class="white-popup mfp-with-anim mfp-hide">
 
 			<form action="#" method="POST" accept-charset="utf-8">
-				<textarea name="sec_text" placeholder="dit un truc: 'un truc?'"><?= $texts[0] ?></textarea>
+				<span>Limité à 500 caractères</span>
+				<textarea name="sec_text" placeholder="dit un truc: 'un truc?'" maxlength="500" ><?= $texts[0] ?></textarea>
 				<input type="submit" name="submit_Sectiontext1" value="Envoyer">
 			</form>
 			<form action="#" method="POST" accept-charset="utf-8">
-				<textarea name="sec_text" placeholder="dit un truc: 'un truc?'"><?= $texts[1] ?></textarea>
+				<span>Limité à 500 caractères</span>
+				<textarea name="sec_text" placeholder="dit un truc: 'un truc?'" maxlength="500"><?= $texts[1] ?></textarea>
 				<input type="submit" name="submit_Sectiontext2" value="Envoyer">
 			</form>
 			<form action="#" method="POST" accept-charset="utf-8">
-				<textarea name="sec_text" placeholder="dit un truc: 'un truc?'"><?= $texts[2] ?></textarea>
+				<span>Limité à 500 caractères</span>
+				<textarea name="sec_text" placeholder="dit un truc: 'un truc?'" maxlength="500"><?= $texts[2] ?></textarea>
 				<input type="submit" name="submit_Sectiontext3" value="Envoyer">
 			</form>
 
