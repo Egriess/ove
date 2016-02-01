@@ -57,6 +57,13 @@
           <h1>Presentation</h1>
           <p>The site OVE, allows each user to create their own single page without having knowledge in development web. 
 			Builder-single page of 6 sections, each editable individually</p>
+			 <img src="img/slider.png" alt="slider">
+          <img src="img/testi.png" alt="testimonial">
+          <img src="img/galery.png" alt="galery">
+          <img src="img/soundcloud.PNG" alt="soundcloud">
+          <img src="img/text_libre.PNG" alt="text_libre">
+          <img src="img/maps.PNG" alt="maps">
+          <img src="img/contact.PNG" alt="contact">
           <!-- block de rendu code -->
          
         </div> 
@@ -64,9 +71,9 @@
          <div id="section3"> 
           <h1>Installation</h1>
           <p>The installation is simple, you just need to register.</p>
-          <img src="" alt="page d'inscription">
+         <img src="img/inscription.PNG" alt="page d'inscription">
           <p> Put what you want in your single page. </p>
-          <img src="" alt="backoffice">
+          <img src="img/back.PNG" alt="backoffice">
         </div> 
 
         <div id="section2"> 
@@ -76,7 +83,7 @@
 	          		<p>The header of the site remains fixed during the navigation. its title is customizable with the possibility to add its own logo. The menu points to each section of the page in the link to the ink, it does not offer the possibility to add external links or internal additional.
 	          		</p> 
 	          		<div class="illu">
-	          			<img src="img/header.png" alt="header"></img>
+	          			<img src="img/header.png" alt="header">
 	          		</div>
 	          		<hr/>
 	          </div>
@@ -84,7 +91,7 @@
 		        <h3>Slider</h3>
 		        <p>The section slider allows you to display a carousel in the content customizable, the user can determine if the content if there are images or videos. It is of course possible to mix the display of a photo and then move to a video. it operates 100% of the width of the browser responsive. (provided that the source img/video will be of appropriate size.)</p> 
 		         <div class="illu">
-		         	<img src="img/slider.png" alt="header"></img>
+		         	<img src="img/slider.png" alt="header">
 		         </div>
 	        </div>
 
@@ -93,7 +100,7 @@
 	        <div id="galerycomp">
 	          	<h3>Gallery</h3>
 	          		<p>It makes it easier to view your photos, projects or want for your future visitors want to come back or is in need of your services.</p>
-	          		<img src="" alt="example of gallery">
+	          		 <img src="img/galery.png" alt="galery">
 	        </div>
 
 	          <hr/>
@@ -104,7 +111,7 @@
 	          		The testimonial, leaving a comment is selected by the user for the loyalty of the users of services. It allows you to display the last name and first name, among other things, display the avatar of the one who wants to leave a comment.
 	          	</p>
 	          	<div class="illu">
-		          	<img src="img/testi.png" alt="testimonial"></img>
+		          	<img src="img/testi.png" alt="testimonial">
 		        </div>
 	        </div>
 
@@ -117,19 +124,11 @@
       			<br>
       			Other than the fields populated, the longitude and latitude are also taken into account in the database, the purpose of which is to load its information dynamically in each page.</p>
       			<div class="illu">
-          			<img src="img/map.png" alt="map"></img>
+          			<img src="img/map.png" alt="map">
 				</div> 
 	        </div>
 
 	        <hr>
-
-	        <div id="contactcomp">
-	          	<h3>Contact form</h3>
-				<p>the contact form allows you to receive emails for requests or information on your activity.</p>
-				<img src="" alt="form contact"> 
-	        </div>
-
-	        <hr/>
 
 	          <div id="textcomp">
 		           <h2>Free text</h2>
@@ -137,11 +136,19 @@
 		         		The section of free Text allows the user to write what he pleases. It can accordingly let go his imagination. Every text is editable, and can convey information more or less important.
 		         	</p>
 			        <div class="illu">
-			          	<img src="img/section_text.PNG" alt="section texte libre"></img>
+			          	 <img src="img/text_libre.PNG" alt="text_libre">
 			        </div>
 	          </div>
-	          <hr/>
+
+	           <hr/>
+	          
+	        <div id="contactcomp">
+	          	<h3>Contact form</h3>
+				<p>the contact form allows you to receive emails for requests or information on your activity.</p>
+				 <img src="img/contact.PNG" alt="contact">
+	        </div>
         </div> 
+
          <div id="section4"> 
           <h1>Features</h1>
 		<div id="headerfunc">
@@ -153,7 +160,7 @@
 		           	<p class="corp">$this->show('default/backoffice',[ <br>	
 						'title'=> [$optionTitleToDisplay],<br></p class="corp">
 		           		}
-          			</p>
+          			
           		</div>
           		<h3>Choice of the color of the title</h3>
           		<p>Allows you to choose a color starting a color picker</p>
@@ -163,7 +170,7 @@
           		<p>function that makes it easy to change the font for a site that is more custom</p>
           		...function font
 			</div>
-    	</div>
+    	
 	          <div id="slidefunc">
 	          	<h3>Slider</h3>
 	        	 <div id="code">
@@ -172,7 +179,7 @@
 		           	<p class="corp">$this->show('default/backoffice',[ <br>	
 						'imgslider' => [$optionSliderToDisplay1, $...2, $...3, $...4, $...5],<br></p class="corp">
 		           		}
-          			</p>
+          			
           		</div>
 	          </div>
 	          <div id="galeryfunc">
@@ -191,7 +198,7 @@
 						&nbsp;&nbsp;&nbsp;'testis' => [$optionTestiToDisplay1, $...2, $...3],<br></p class="corp">
 		           		}
            	
-          			 </p>
+          			 
           		</div>
 	          </div>
 	        <div id="mapsfunc">
@@ -207,7 +214,7 @@
 						 <br>
            			<br></p class="corp">}
 					$this->redirectToRoute('backoffice');
-		           </p>
+		           
 		        </div> 
 	        </div>
 
@@ -221,7 +228,7 @@
 		           		'texts'	=> [$optionTextToDisplay1, $...2, $...3],<br></p class="corp">
 		           		}
            	
-          			 </p>
+          			 
 				</div>
 	          </div>
 	          <div id="contactfunc">
@@ -236,7 +243,7 @@
            		return $resultat <br></p class="corp">
            	}
            	
-           </p>
+           
           </div>
           <!-- block de rendu code -->
             <!-- block de rendu code -->
@@ -247,7 +254,7 @@
            		return $resultat <br></p class="corp">
            	}
            	
-           </p>
+           
           </div>
           <!-- block de rendu code -->
         </div> 
@@ -255,9 +262,9 @@
           <h1>References</h1>
           <p>Try to scroll this page and look at the navigation list while scrolling!</p>
         </div> 
-      </div>
     </div>
-  </div>
+   </div>
+  
 
 </body>
 </html>
