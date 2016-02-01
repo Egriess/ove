@@ -5,6 +5,7 @@
 	<meta name="viewport" content="initial-scale=1.0">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?= $this->e($title) ?></title>
+	<link rel="shortcut icon" href="<?= $this->assetUrl('imgs/favicon.ico') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/animate.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/reset.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/effeckt.css') ?>">
@@ -22,8 +23,8 @@
 	<link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" media="screen and (min-device-width: 375px) and (max-device-width: 627px)" href="media_queries_smartphones.css" />
-	<link rel="stylesheet" media="screen and (min-device-width: 768px) and (max-device-width: 1024px) " href="media_queries_tablets.css" />
+	<link rel="stylesheet" media="screen and (min-device-width: 375px) and (max-device-width: 627px)" href="<?= $this->assetUrl('css/media_queries_smartphones.css') ?>" />
+	<link rel="stylesheet" media="screen and (min-device-width: 768px) and (max-device-width: 1024px) "href="<?= $this->assetUrl('css/media_queries_tablets.css') ?>" />
 
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-2.2.0.min.js')?>"></script>  
 	<script type="text/javascript" src="<?= $this->assetUrl('js/modal.js')?>" ></script>
