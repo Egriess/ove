@@ -44,6 +44,7 @@
 								<option style="font-family:'IM Fell Double Pica';"value="IM Fell Double Pica">IM Fell Double Pica</option>
 								<option style="font-family:'Lora';"value="Lora">Lora</option>
 								<option style="font-family:'Open Sans Condensed';"value="Open Sans Condensed">Open Sans Condensed</option>
+								<option style="font-family:'Pacifico';"value="Pacifico">Pacifico</option>
 							</select><br>
 
 							

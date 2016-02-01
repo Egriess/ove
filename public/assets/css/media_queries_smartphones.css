@@ -3,7 +3,61 @@
   and (max-device-width: 627px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
-  	.testimoniaux{
-  		display: block;
+  
+  	.clearfix{
+  		clear: both;
   	}
+
+	.text{
+		width: 100%;
+		margin-left: 0px;
+		margin-bottom: 20px;
+
+	}
+
+	#sectionText_3{
+		
+		margin-bottom: 70px;
+
+	}
+	#testimoniaux{
+		height: 100%;
+	}
+	#text{
+		height: 100%;
+	}
+
+	#testimoniaux .container{
+		width: 92%;
+	}
+
+
+
+	 #map{
+	 	width: 80%;
+	 	height: 277px;
+	 	box-shadow: 1px 5px 10px;
+	 	margin-left: 20px;
+	 }
+	
+	a{
+		font-size: 100%;
+	}
+	
+	#floating-panel{
+		margin-top: 0px;
+		margin-left: 40px;
+		padding: 0px;	
+		border-top:1px solid grey;
+		box-shadow: 1px 5px 10px;
+		background-color: #EAEAEA;
+	}
+
+	#adresspage{
+ 		margin: 0px;
+ 		padding: 10px;
+ 		background-color: #EAEAEA;
+ 		margin-left: 1em;
 }
+	
+} 

@@ -23,6 +23,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" media="screen and (min-device-width: 375px) and (max-device-width: 627px)" href="<?= $this->assetUrl('css/media_queries_smartphones.css') ?>" />
 	<link rel="stylesheet" media="screen and (min-device-width: 768px) and (max-device-width: 1024px) "href="<?= $this->assetUrl('css/media_queries_tablets.css') ?>" />
 

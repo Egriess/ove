@@ -9,7 +9,7 @@
 
 	<nav class="navbar navbar-fixed-top">
 
-		<h1 id="text_shadow" style="text-shadow: rgb(150, 150, 150) 4px 4px 2px; color:<?= $color[0] ?>;font-family:<?= $font[0] ?>" ><?= $titledisplay[0] ?></h1>
+		<h1 id="text_shadow" style="text-shadow: rgb(150, 150, 150) 2px 2px 2px; margin-bottom:15px; color:<?= $color[0] ?>;font-family:<?= $font[0] ?>" ><?= $titledisplay[0] ?></h1>
 
 		<!-- POP UP edit end -->
 		<ul class="nav nav-pills">
@@ -77,7 +77,7 @@
 				</div>
 
 				<div class="sponsorData">
-					<div class="sponsorDescription">
+			 		<div class="sponsorDescription">
 						<p id="back100text"><?= $testis[2] ?></p>
 						
 					</div>
@@ -86,7 +86,9 @@
 			
 		</div>
 	</div>
-<div id="blockquote">
+	<div class="clearfix"></div>
+<div id="blockquote">Life is beautiful..</div>
+<div class="clearfix"></div>
 	<h3><?= $txtgallery[0]?></h3>
 </div>
 
@@ -133,6 +135,7 @@
 		</div>
 	</div>
 </div>
+<div class="clearfix"></div>
 
 <!--
 	===== Map section =====
@@ -154,11 +157,12 @@
 			</div>	
 	</div>
 </div>
-
+<div class="clearfix"></div>
 <!--
 	=====Contact form=====
 -->
 <div id="contact">
+
 	<div class="container">
 	
 		<h2>Contact</h2>

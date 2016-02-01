@@ -455,12 +455,13 @@ h3 {
 
 a,
 a:visited {
-  color: #1760bf;
+  background-color: rgba(244,244,244, 0.7);
   text-decoration: none;
+  opacity: 0.7;
 }
 
 a:hover {
-  color: #408ff4;
+  background-color: #F7F7F7;
   cursor: pointer;
 }
 
@@ -518,7 +519,6 @@ h4 {
 #carousel figure{
   display: block;
   position: absolute;
-  width: 186px;
   height: 116px;
   left: 10px;
   top: 10px;
@@ -757,16 +757,19 @@ img:hover{
   margin: 20px;
   border-radius: 20px;
   float: left;
+  margin-left:382px;
 
   
 }
 
 #floating-panel{
-  background-color: #D6D6D6;
+  border-top:1px solid grey;
+    box-shadow: 1px 5px 10px;
   margin-top: 20px;
   padding: 20px;
   border-radius: 10px;
   display: inline-block;
+  background-color: #E6E6E6
 
 }
 
