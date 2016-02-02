@@ -4,7 +4,7 @@
 
 
 
-	<header>
+	<header id="backtop">
 		<h1 id="text_shadow" style="text-align:center; text-shadow: rgb(150, 150, 150) 4px 4px 2px;" > ADMINISTRATION DE <?= $title[0] ?> </h1><br>
 		<a href="/page">Voir la page <?= $title[0] ?></a>
 	</header>
@@ -13,15 +13,15 @@
 		END Header Manager
 	-->
 					
-	<div id="backheader">
+	<div id="backheader" >
 		<div class="container">
 					<!-- POP UP edit -->
 		<ul>
-			<li><a href="#titlebackgroundpopup" class="hinge">Choisir l'arrière plan</a></li>
-			<li><a href="#titlepopup" class="hinge">Editer le titre du site</a></li>
-			<li><a href="#backtesti" class="hinge">Choisir la couleur d'arrière plan des testi</a></li>
-			<li><a href="#backtext" class="hinge">Choisir la couleur d'arrière plan du texte</a></li>
-			<li><a href="#backmap" class="hinge">Choisir la couleur d'arrière plan de la carte</a></li>
+			<li><a class="button2 hinge" href="#titlebackgroundpopup" >Choisir l'arrière plan</a></li>
+			<li><a class="button2 hinge" href="#titlepopup" >Editer le titre du site</a></li>
+			<li><a class="button2 hinge" href="#backtesti" >Couleur d'arrière plan des testi</a></li>
+			<li><a class="button2 hinge" href="#backtext" >Couleur d'arrière plan du texte</a></li>
+			<li><a class="button2 hinge" href="#backmap" >Couleur d'arrière plan de la carte</a></li>
 		</ul>
 	</div>
 					<div id="titlepopup" class="white-popup mfp-with-anim mfp-hide">
@@ -113,14 +113,15 @@
 				<!--
 					change Slider images
 				-->
-				<h3>Gestion des images du slider</h3>
+				<h3>Slider Manager</h3>
 				<img src="assets/imgs/<?= $imgslider[0] ?>" />
 				<img src="assets/imgs/<?= $imgslider[1] ?>"/>
 				<img src="assets/imgs/<?= $imgslider[2] ?>" />
 				<img src="assets/imgs/<?= $imgslider[3] ?>" />
 				<img src="assets/imgs/<?= $imgslider[4] ?>" />
 				<br>
-				<a href="#slider1popup" class="myButton hinge">Choisir l'image 1</a>
+
+				<a href="#slider1popup" class="button2 hinge ">Choisir l'image 1</a>
 					<!-- POP UP edit -->
 				<div id="slider1popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -136,7 +137,7 @@
 				</div>
 			
 				
-				<a href="#slider2popup" class="myButton hinge">image 2</a>
+				<a href="#slider2popup" class="hinge button2">image 2</a>
 					<!-- POP UP edit -->
 				<div id="slider2popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -151,7 +152,7 @@
 					</form>
 				</div>
 			
-				<a href="#slider3popup" class="myButton hinge">image 3</a>
+				<a href="#slider3popup" class="hinge button2">image 3</a>
 				<!-- POP UP edit -->
 				<div id="slider3popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -167,7 +168,7 @@
 				</div>
 
 
-				<a href="#slider4popup" class="myButton hinge">image 4</a>
+				<a href="#slider4popup" class="hinge button2">image 4</a>
 					<!-- POP UP edit -->
 				<div id="slider4popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -182,7 +183,7 @@
 					</form>
 				</div>	
 	
-				<a href="#slider5popup" class="myButton hinge">image 5</a>
+				<a href="#slider5popup" class="hinge button2">image 5</a>
 					<!-- POP UP edit -->
 				<div id="slider5popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -197,7 +198,7 @@
 					</form>
 				</div>
 				
-			<hr style="margin:auto;">
+			
 	</div>	
 	<!--
 		END Section Slider Manager
@@ -210,13 +211,16 @@
 				<!--
 					change Slider images
 				-->
-				<h3><?= $txtgallery[0]?></h3>
+				
+
+				<h3>Gallery Manager</h3>
+
+				<h4><?= $txtgallery[0]?></h4>
 				<form action="#" method="POST" accept-charset="utf-8">
 					<input type="text" name="txtgal" value="" placeholder="">
-					<input type="submit" name="submit_txtgal" value="Changer le texte">
+					<input class="button2" type="submit" name="submit_txtgal" value="Changer le titre">
 				</form>
 
-				<h3>Gestion des images de la gallery</h3>
 				<img src="assets/imgs/<?= $imggallery[0] ?>" />
 				<img src="assets/imgs/<?= $imggallery[1] ?>"/>
 				<img src="assets/imgs/<?= $imggallery[2] ?>" />
@@ -227,7 +231,7 @@
 				<img src="assets/imgs/<?= $imggallery[7] ?>" />
 				<img src="assets/imgs/<?= $imggallery[8] ?>" />
 				<br>
-				<a href="#galery1popup" class="myButton hinge">Choisir l'image 1</a>
+				<a href="#galery1popup" class="button2 hinge">Choisir l'image 1</a>
 					<!-- POP UP edit -->
 				<div id="galery1popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -242,7 +246,7 @@
 					</form>
 				</div>
 
-				<a href="#galery2popup" class="myButton hinge">image 2</a>
+				<a href="#galery2popup" class="button2 hinge">2</a>
 					<!-- POP UP edit -->
 				<div id="galery2popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -257,7 +261,7 @@
 					</form>
 				</div>
 
-				<a href="#galery3popup" class="myButton hinge">image 3</a>
+				<a href="#galery3popup" class="button2 hinge">3</a>
 					<!-- POP UP edit -->
 				<div id="galery3popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -272,7 +276,7 @@
 					</form>
 				</div>
 
-				<a href="#galery4popup" class="myButton hinge">image 4</a>
+				<a href="#galery4popup" class="button2 hinge">4</a>
 					<!-- POP UP edit -->
 				<div id="galery4popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -287,7 +291,7 @@
 					</form>
 				</div>
 
-				<a href="#galery5popup" class="myButton hinge">image 5</a>
+				<a href="#galery5popup" class="button2 hinge">5</a>
 					<!-- POP UP edit -->
 				<div id="galery5popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -302,7 +306,7 @@
 					</form>
 				</div>
 
-				<a href="#galery6popup" class="myButton hinge">image 6</a>
+				<a href="#galery6popup" class="button2 hinge">6</a>
 					<!-- POP UP edit -->
 				<div id="galery6popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -317,7 +321,7 @@
 					</form>
 				</div>
 
-				<a href="#galery7popup" class="myButton hinge">image 7</a>
+				<a href="#galery7popup" class="button2 hinge">7</a>
 					<!-- POP UP edit -->
 				<div id="galery7popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -332,7 +336,7 @@
 					</form>
 				</div>
 
-				<a href="#galery8popup" class="myButton hinge">image 8</a>
+				<a href="#galery8popup" class="button2 hinge">8</a>
 					<!-- POP UP edit -->
 				<div id="galery8popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -347,7 +351,7 @@
 					</form>
 				</div>
 
-				<a href="#galery9popup" class="myButton hinge">image 9</a>
+				<a href="#galery9popup" class="button2 hinge">9</a>
 					<!-- POP UP edit -->
 				<div id="galery9popup" class="white-popup mfp-with-anim mfp-hide">
 					<form  enctype="multipart/form-data" action="#" method="post">
@@ -367,12 +371,12 @@
 	-->
 		<div id="testimoniauxback">
 
-			<h3>Gestion des testimoniaux</h3>
+			<h3>Testimonials Manager</h3>
 			
 			<!--
 					Testi 1 Manager
 			-->
-			<a href="#testimonial1popup" class="hinge myButton">Editer le testimonial 1</a>
+			<a href="#testimonial1popup" class="hinge button2">Editer le testimonial 1</a>
 			
 			<div id="testimonial1popup" class="white-popup mfp-with-anim mfp-hide">
 				<!--
@@ -411,7 +415,7 @@
 			<!--
 					Testi 2 Manager
 			-->
-			<a href="#testimonial2popup" class="hinge myButton">Editer le testimonial 2</a>
+			<a href="#testimonial2popup" class="hinge button2">testimonial 2</a>
 			
 			<div id="testimonial2popup" class="white-popup mfp-with-anim mfp-hide">
 				<!--
@@ -447,7 +451,7 @@
 				</form>
 			</div>
 				
-			<a href="#testimonial3popup" class="hinge myButton">Editer le testimonial 3</a>
+			<a href="#testimonial3popup" class="hinge button2">testimonial 3</a>
 			
 			<div id="testimonial3popup" class="white-popup mfp-with-anim mfp-hide">
 				<!--
