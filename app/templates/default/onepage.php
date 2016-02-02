@@ -13,12 +13,13 @@
 
 		<!-- POP UP edit end -->
 		<ul class="nav nav-pills">
-		  <li role="presentation"><a href="/login">Loginpage</a></li>
-		  <li role="presentation"><a href="/backoffice">Backoffice</a></li>
-		  <li role="presentation"><a href="/register">Register</a></li>
-		  <li role="presentation"><a href="/page">Page coté client</a></li>
-		  <li role="presentation"><a href="#">Menu5</a></li>
-		  <li role="presentation"><a href="#">Menu6</a></li>  
+		  <li role="presentation"><a href="#slider">slider</a></li>
+		  <li role="presentation"><a href="#testimoniaux">Testimonial</a></li>
+		  <li role="presentation"><a href="#gallery">Galerie</a></li>
+		  <li role="presentation"><a href="#sound">Musique</a></li>
+		  <li role="presentation"><a href="#text">Présentation</a></li>
+		  <li role="presentation"><a href="#map">Localisation</a></li>  
+		  <li role="presentation"><a href="#contact">Contact</a></li>  
 		</ul>
 	</nav>	
 </header>
