@@ -1132,15 +1132,15 @@ class DefaultController extends Controller
 		// posted to this page from our html contact form
 		//$email = '' ;
 		
-			$completeMessage = 'Vous avez recu un mail de ' .$email ;
+			$completeMessage 	= 'Vous avez recu un mail de ' .$email ;
 		//$mail->SMTPDebug = 2;
-		$mail->isSMTP();                                      	// Set mailer to use SMTP
-		$mail->Host = 'smtp.gmail.com';  						// Specify main and backup SMTP servers
-		$mail->SMTPAuth = true;                               	// Enable SMTP authentication
-		$mail->Username =  'one.page.editor@gmail.com';         // SMTP username
-		$mail->Password =  'oveonepageeditor';            		// SMTP password
-		$mail->SMTPSecure = 'tls';                            	// Enable TLS encryption, `ssl` also accepted
-		$mail->Port = 587;                                    	// TCP port to connect to
+		$mail->isSMTP();                                      				// Set mailer to use SMTP
+		$mail->Host 			= 'smtp.gmail.com';  						// Specify main and backup SMTP servers
+		$mail->SMTPAuth 		= true;                               		// Enable SMTP authentication
+		$mail->Username 		=  'one.page.editor@gmail.com';         	// SMTP username
+		$mail->Password 		=  'oveonepageeditor';            			// SMTP password
+		$mail->SMTPSecure 		= 'tls';                            		// Enable TLS encryption, `ssl` also accepted
+		$mail->Port = 587;                                    				// TCP port to connect to
 		$mail->setFrom($email);
 
 		// below we want to set the email address we will be sending our email to.

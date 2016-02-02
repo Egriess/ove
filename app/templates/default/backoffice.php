@@ -6,7 +6,39 @@
 
 	<header id="backtop">
 		<h1 id="text_shadow" style="text-align:center; text-shadow: rgb(150, 150, 150) 4px 4px 2px;" > ADMINISTRATION DE <?= $title[0] ?> </h1><br>
-		<a href="/page">Voir la page <?= $title[0] ?></a>
+		<a class="button2" href="/page">Voir la page <?= $title[0] ?></a>
+		<a class="button2" href="#titlepopup" class="hinge">Editer le titre du site</a>
+		<a class="button2" href="#titlecolorpopup" class="hinge">Choisir la couleur du menu</a>
+					
+					<div id="titlepopup" class="white-popup mfp-with-anim mfp-hide">
+						<form action="/updateTitle" method="post" accept-charset="utf-8">
+							<span>Choisir le titre du site</span><br>
+							<input type="text" name="title" value="" placeholder="Votre titre"><br>
+							<span>Choisir la couleur du texte</span><br>
+							<input type="color" value="#383535" name="textcolor"><br>
+							<span>Choisir le style d'ecriture</span><br>
+							<select name="fonts">
+								<option style="font-family:'Roboto';"value="Roboto">Roboto</option>
+								<option style="font-family:'Raleway';"value="Raleway">Raleway</option>
+								<option style="font-family:'Ubuntu';"value="Ubuntu">Ubuntu</option>
+								<option style="font-family:'Droid Sans';"value="Droid">Droid</option>
+								<option style="font-family:'Monserrat';"value="Monserrat">Monserrat</option>
+								<option style="font-family:'Lora';"value="Lora">Lora</option>
+								<option style="font-family:'Open Sans Condensed';"value="Open Sans Condensed">Open Sans Condensed</option>
+							</select><br>
+							<!-- text shadow gen-->
+							<input type="submit" name="submit_title" value="envoyer">
+						</form>
+					</div>
+
+					
+					<!-- POP UP edit -->
+					<div id="titlecolorpopup" class="white-popup mfp-with-anim mfp-hide">
+						<span> Choisir la couleur du menu</span>
+						<input type="color" value="#fad345" name="menucolor">
+					</div>
+
+
 	</header>
 	
 	<!--
@@ -488,7 +520,7 @@
 		</div>
 	</div>
 
-	<div id="testimoniaux">
+	<div id="testimoniauxend">
 		<div class="container">
 			<!-- Testimonial 1-->
 			<div class="testimonial">
@@ -587,7 +619,7 @@
 					<!--deux hidden qui se remplissent quand on clique sur trouver l'adresse-->
 					<input id="lat" type="hidden" name="lat" value="<?=  $lat[0]; ?>">
 					<input id="lon" type="hidden" name="lon" value="<?=  $lon[0]; ?>">
-	      			<input id="address" name="address" type="textbox" value="" placeholder="Entrer votre nouvelle adresse">
+	      			<input id="address" name="address" type="textbox" value="" placeholder="Entrez votre adresse">
 	      			<input id="setMap" type="button" value="Trouver l'adresse">
 	      			<input id="submit" name="submit_adress" type="submit" value="Valider">
 	      			
@@ -618,7 +650,7 @@
 				</form>
 	</div>
 	<div id="textback">
-		<a href="#textpopup" class="hinge">Editer les textes du site</a>
+		<a href="#textpopup" class="button2">Editer les textes du site</a>
 			<!-- POP UP edit -->
 		<div id="textpopup" class="white-popup mfp-with-anim mfp-hide">
 
@@ -657,57 +689,21 @@
 		</div>
 		<div id="emailback">
 			<div class="container">
-				<h2>Formulaire SMTP</h2>
-				<p>Compte gmail requis.</p>
+				<h2>Mailer Manager</h2>
+				<p>Entrez l'adresse sur laquelle vous souhaitez recevoir les email à partir de votre page .</p>
 				<form action="#" method="POST" accept-charset="utf-8">
 
 					<label>votre adresse mail</label>
 					<input type="email" name="email_recipe" value="" placeholder="">					
-					<input type="submit" name="submit_mail" value="Valider">
+					<input class="button2"type="submit" name="submit_mail" value="Valider">
 				</form>
 			</div>
 		</div>
 	</div>
-	<div id="backheader">
 		
-					<!-- POP UP edit -->
-					<div id="titlepopup" class="white-popup mfp-with-anim mfp-hide">
-						<form action="/updateTitle" method="post" accept-charset="utf-8">
-							<span>Choisir le titre du site</span><br>
-							<input type="text" name="title" value="" placeholder="Votre titre"><br>
-							<span>Choisir la couleur du texte</span><br>
-							<input type="color" value="#383535" name="textcolor"><br>
-							<span>Choisir le style d'ecriture</span><br>
-							<select name="fonts">
-								<option style="font-family:'Roboto';"value="Roboto">Roboto</option>
-								<option style="font-family:'Raleway';"value="Raleway">Raleway</option>
-								<option style="font-family:'Ubuntu';"value="Ubuntu">Ubuntu</option>
-								<option style="font-family:'Droid Sans';"value="Droid">Droid</option>
-								<option style="font-family:'Monserrat';"value="Monserrat">Monserrat</option>
-								<option style="font-family:'Lora';"value="Lora">Lora</option>
-								<option style="font-family:'Open Sans Condensed';"value="Open Sans Condensed">Open Sans Condensed</option>
-							</select><br>
-							<!-- text shadow gen-->
-							<input type="submit" name="submit_title" value="envoyer">
-						</form>
-	</div>
-
-
-
-		<a href="#titlecolorpopup" class="hinge">Choisir la couleur du menu</a>
-					<!-- POP UP edit -->
-					<div id="titlecolorpopup" class="white-popup mfp-with-anim mfp-hide">
-						<span> Choisir la couleur du menu</span>
-						<input type="color" value="#fad345" name="menucolor">
-					</div>
-
-	</div>
-			<a href="#gallerypopup" class="hinge">Choisir les image de la galerie</a>
-					<div id="gallerypopup" class="white-popup mfp-with-anim mfp-hide">
-					<span> Choisir les images</span>		
 	
 
-	<a href="#titlepopup" class="hinge">Editer le titre du site</a>
+	
 	
 
 
