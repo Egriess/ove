@@ -17,7 +17,7 @@ importer la base de donnée initiale du répository, voici un petit exemple de c
 
 Configuration du smtp
 -
-Ensuite le Smtp allez dans app/controller/defaultcontroller puis entre votre adresse mail et votre mot de passe, l'utilisateur aura juste lui à entrer dans le back office du site son adresse mail et il recevra les mails qui lui sont attribués.
+app/controller/defaultcontroller entrez votre adresse mail et votre mot de passe, l'utilisateur aura juste lui à entrer dans le back office du site son adresse mail et il recevra les mails qui lui sont attribués.
 ![configSMTP](http://img15.hostingpics.net/pics/431787configsmtp.png)
 
 
