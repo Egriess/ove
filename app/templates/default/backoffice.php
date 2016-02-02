@@ -650,7 +650,7 @@
 				</form>
 	</div>
 	<div id="textback">
-		<a href="#textpopup" class="button2">Editer les textes du site</a>
+		<a href="#textpopup" class="hinge button2">Editer les textes du site</a>
 			<!-- POP UP edit -->
 		<div id="textpopup" class="white-popup mfp-with-anim mfp-hide">
 

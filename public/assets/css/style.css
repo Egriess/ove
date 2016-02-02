@@ -686,11 +686,9 @@ img:hover{
 }
 
 #textback{
-  height: 25px;
+  height: 0;
   width: 100%;
-  border: 3px dashed #04325a;
-  border-bottom: none;
-}
+ }
 
 #textback a{
 
