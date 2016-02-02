@@ -1,6 +1,6 @@
 ![OVE](http://img15.hostingpics.net/pics/336299ove300170.png)
 
-Instalation d'OVE
+Installation d'OVE
 -
 
 
@@ -11,11 +11,11 @@ Pour l'instalation vous devez allez sur config.php, puis entrer le nom de la bas
 
 Base de donnée
 -
-Voici la db OVE c'est un petit exemple de ce qu'elle contient.
+importer la base de donnée initiale du répository, voici un petit exemple de ce qu'elle contient.
 ![oveDB](http://img15.hostingpics.net/pics/728466oveDB.png)
 
 
-Instalation du smtp
+Configuration du smtp
 -
 Ensuite le Smtp allez dans app/controller/defaultcontroller puis entre votre adresse mail et votre mot de passe, l'utilisateur aura juste lui à entrer dans le back office du site son adresse mail et il recevra les mails qui lui sont attribués.
 ![configSMTP](http://img15.hostingpics.net/pics/431787configsmtp.png)
