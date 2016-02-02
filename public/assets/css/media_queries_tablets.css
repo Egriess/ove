@@ -8,6 +8,10 @@ and (-webkit-min-device-pixel-ratio: 1)
 		left: 25%;
 		margin-right: 10%;
 	}
+
+	div#slider figure{
+		position: absolute;
+	}
 	a{
 		font-size:156%
 	}
@@ -30,6 +34,7 @@ and (-webkit-min-device-pixel-ratio: 1)
 		height: 275px;
 		position: relative;
 		left: 5%;
+		margin-left: 40px;
 	}
 	#maps{
 		height: 540px;
