@@ -3,7 +3,14 @@
   and (max-device-width: 627px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
-  
+  	body{
+  		padding-right: 0px;
+  		padding-left: 0px;
+  	}
+
+  	header{
+  		height: 140px;
+  	}
   	.clearfix{
   		clear: both;
   	}
@@ -29,9 +36,16 @@
 
 	#testimoniaux .container{
 		width: 92%;
+		margin-left: 13px;
 	}
-
-
+	
+	.nav-pills>li{
+		margin:5px; 
+	}
+	.nav>li>a{
+		display: inline;
+		padding: 6px 27px;
+	}
 
 	 #map{
 	 	width: 80%;
@@ -58,6 +72,9 @@
  		padding: 10px;
  		background-color: #EAEAEA;
  		margin-left: 1em;
+}
+div#slider figure{
+	position: absolute;
 }
 	
 } 

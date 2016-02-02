@@ -110,6 +110,16 @@
 	-->
 
 	<div id="sliderback">
+				<form  action="#" method="post">
+							<p>Voulez vous afficher cette section ?</p>
+							<select name="sliderDisplay">
+
+								<option value="block">Oui</option>
+								<option value="none">Non</option>
+
+							</select><br>
+								<input type="submit" name="submit_display_slider" value="Valider votre choix">
+				</form>
 				<!--
 					change Slider images
 				-->
@@ -207,6 +217,16 @@
 		Section Gallery Manager
 	-->
 	<div id="galeryback">
+	<form  action="#" method="post">
+							<p>Voulez vous afficher cette section ?</p>
+							<select name="galleryDisplay">
+
+								<option value="block">Oui</option>
+								<option value="none">Non</option>
+
+							</select><br>
+								<input type="submit" name="submit_display_gallery" value="Valider votre choix">
+							</form>
 				<!--
 					change Slider images
 				-->
@@ -366,6 +386,16 @@
 		Section Testimonials Manager
 	-->
 		<div id="testimoniauxback">
+		<form  action="#" method="post">
+							<p>Voulez vous afficher cette section ?</p>
+							<select name="testiDisplay">
+
+								<option value="block">Oui</option>
+								<option value="none">Non</option>
+
+							</select><br>
+								<input type="submit" name="submit_display_testi" value="Valider votre choix">
+							</form>
 
 			<h3>Gestion des testimoniaux</h3>
 			
@@ -542,6 +572,16 @@
 	-->
 
 	<div id="backsoundcloud">
+	<form  action="#" method="post">
+							<p>Voulez vous afficher cette section ?</p>
+							<select name="soundDisplay">
+
+								<option value="block">Oui</option>
+								<option value="none">Non</option>
+
+							</select><br>
+								<input type="submit" name="submit_display_sound" value="Valider votre choix">
+							</form>
 	<h3> Choisir le contenu du widget soundcloud </h3>
 	<p>Vous avez le choix entre integrer une seule chanson ou une playlist complete il vous suffit de copier le liens à l'aide du bouton share sur soundcloud.com</p>
 		<form action="#" method="post" accept-charset="utf-8">
@@ -578,6 +618,16 @@
 		<div class="container">
 			<div id="map"></div>
 				<div id="panelback">
+				<form  action="#" method="post">
+							<p>Voulez vous afficher cette section ?</p>
+							<select name="mapDisplay">
+
+								<option value="block">Oui</option>
+								<option value="none">Non</option>
+
+							</select><br>
+								<input type="submit" name="submit_display_map" value="Valider votre choix">
+							</form>
 					<h3>Gerer la carte</h3>
 					<form action="#" method="POST" accept-charset="utf-8">
 					<!--deux hidden qui se remplissent quand on clique sur trouver l'adresse-->
@@ -614,6 +664,16 @@
 				</form>
 	</div>
 	<div id="textback">
+	<form  action="#" method="post">
+							<p>Voulez vous afficher cette section ?</p>
+							<select name="textDisplay">
+
+								<option value="block">Oui</option>
+								<option value="none">Non</option>
+
+							</select><br>
+								<input type="submit" name="submit_display_text" value="Valider votre choix">
+							</form>
 		<a href="#textpopup" class="hinge">Editer les textes du site</a>
 			<!-- POP UP edit -->
 		<div id="textpopup" class="white-popup mfp-with-anim mfp-hide">

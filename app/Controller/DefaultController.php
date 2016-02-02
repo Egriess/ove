@@ -687,6 +687,36 @@ class DefaultController extends Controller
 			$emailpost = $_POST['email_recipe'];
 			$optionManager->updateMail($emailpost);
 		}
+
+		if(isset($_POST['submit_display_testi']))
+		{
+			$optionManager->UpdateTestiDisplay($_POST['testiDisplay']);
+		}
+
+		if(isset($_POST['submit_display_slider']))
+		{
+			$optionManager->UpdateSliderDisplay($_POST['sliderDisplay']);
+		}
+
+		if(isset($_POST['submit_display_gallery']))
+		{
+			$optionManager->UpdateGalleryDisplay($_POST['galleryDisplay']);
+		}
+
+		if(isset($_POST['submit_display_sound']))
+		{
+			$optionManager->UpdateSoundDisplay($_POST['soundDisplay']);
+		}
+
+		if(isset($_POST['submit_display_map']))
+		{
+			$optionManager->UpdateMapDisplay($_POST['mapDisplay']);
+		}
+
+		if(isset($_POST['submit_display_text']))
+		{
+			$optionManager->UpdateTextDisplay($_POST['textDisplay']);
+		}
 		//header 
 		$optionTitleToDisplay 	= $optionManager->getTitle();
 		$optionFontToDisplay 	= $optionManager->getFont();
@@ -701,6 +731,7 @@ class DefaultController extends Controller
 		$optionSliderToDisplay3 = $optionManager->getImgSlider(3);
 		$optionSliderToDisplay4 = $optionManager->getImgSlider(4);
 		$optionSliderToDisplay5 = $optionManager->getImgSlider(5);
+		$optionSliderDisplay = $optionManager->getSliderDisplay();
 		// gallery
 		$optionGalleryToDisplay1 = $optionManager->getImgGallery(1);
 		$optionGalleryToDisplay2 = $optionManager->getImgGallery(2);
@@ -711,6 +742,7 @@ class DefaultController extends Controller
 		$optionGalleryToDisplay7 = $optionManager->getImgGallery(7);
 		$optionGalleryToDisplay8 = $optionManager->getImgGallery(8);
 		$optionGalleryToDisplay9 = $optionManager->getImgGallery(9);
+		$optionGalleryDisplay = $optionManager->getGalleryDisplay();
 		
 		//Soundcloud
 		$optionSoundToDisplay = $optionManager->getSoundcloud();
@@ -735,6 +767,7 @@ class DefaultController extends Controller
 		$optionTestiToDisplay1 	= $optionManager->GetTestimonial(1);
 		$optionTestiToDisplay2	= $optionManager->GetTestimonial(2);
 		$optionTestiToDisplay3 	= $optionManager->GetTestimonial(3);
+		$optionTestiDisplay = $optionManager->getTestiDisplay();
 		
 		//sextion_text
 		$optionTextToDisplay1 	= $optionManager->getText(1);
@@ -742,6 +775,7 @@ class DefaultController extends Controller
 		$optionTextToDisplay3 	= $optionManager->getText(3);
 		$optionBgTextColor1 = $optionManager->getBgTextColor1();
 		$optionBgTextColor2 = $optionManager->getBgTextColor2();
+		$optionTextDisplay = $optionManager->getTextDisplay();
 
 		//sextion Maps
 		$optionAdressToDisplay = $optionManager->getAdress();
@@ -749,6 +783,11 @@ class DefaultController extends Controller
 		$optionLonToDisplay = $optionManager->getLon();
 		$optionBgMapColor1 = $optionManager->getBgMapColor1();
 		$optionBgMapColor2 = $optionManager->getBgMapColor2();
+		$optionMapDisplay = $optionManager->getMapDisplay();
+
+		//soundcloud
+		$optionSoundDisplay = $optionManager->getSoundDisplay();
+
 		$this->show('Default/backoffice',[
 			'names'		=> [$optionNameToDisplay1, $optionNameToDisplay2, $optionNameToDisplay3],
 			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
@@ -777,6 +816,13 @@ class DefaultController extends Controller
 			'lat'		=> [$optionLatToDisplay],
 			'lon'		=> [$optionLonToDisplay],
 
+			'testi_display'	=> [$optionTestiDisplay],
+			'slider_display'	=> [$optionSliderDisplay],
+			'gallery_display'	=> [$optionGalleryDisplay],
+			'sound_display'	=> [$optionSoundDisplay],
+			'map_display'	=> [$optionMapDisplay],
+			'text_display'	=> [$optionTextDisplay],
+
 		]);
 	
 		
@@ -803,6 +849,7 @@ class DefaultController extends Controller
 		$optionSliderToDisplay3 = $optionManager->getImgSlider(3);
 		$optionSliderToDisplay4 = $optionManager->getImgSlider(4);
 		$optionSliderToDisplay5 = $optionManager->getImgSlider(5);
+		$optionSliderDisplay = $optionManager->getSliderDisplay();
 
 		//Gallery
 		$optionGalleryToDisplay1 = $optionManager->getImgGallery(1);
@@ -814,6 +861,7 @@ class DefaultController extends Controller
 		$optionGalleryToDisplay7 = $optionManager->getImgGallery(7);
 		$optionGalleryToDisplay8 = $optionManager->getImgGallery(8);
 		$optionGalleryToDisplay9 = $optionManager->getImgGallery(9);
+		$optionGalleryDisplay = $optionManager->getGalleryDisplay();
 		
 		$optionTxtGalToDisplay	= $optionManager->getTxtGallery();
 		//Soundcloud
@@ -822,6 +870,7 @@ class DefaultController extends Controller
 		//testimoniaux
 		$optionBgTestiColor1 = $optionManager->getBgTestiColor1();
 		$optionBgTestiColor2 = $optionManager->getBgTestiColor2();
+		$optionTestiDisplay = $optionManager->getTestiDisplay();
 
 		//header
 		$optionTitleToDisplay 	= $optionManager->getTitle();
@@ -854,16 +903,20 @@ class DefaultController extends Controller
 		$optionTextToDisplay3 	= $optionManager->getText(3);
 		$optionBgTextColor1 = $optionManager->getBgTextColor1();
 		$optionBgTextColor2 = $optionManager->getBgTextColor2();
+		$optionTextDisplay = $optionManager->getTextDisplay();
 		//map
 		$optionAdressToDisplay = $optionManager->getAdress();
 
 		$optionLatToDisplay = $optionManager->getLat();
 		$optionLonToDisplay = $optionManager->getLon();
+		$optionMapDisplay = $optionManager->getMapDisplay();
 
 
 
 		$optionBgMapColor1 = $optionManager->getBgMapColor1();
 		$optionBgMapColor2 = $optionManager->getBgMapColor2();
+
+		$optionSoundDisplay = $optionManager->getSoundDisplay();
 
 
 		$emailToDisplay		  = $optionManager->getMail();
@@ -904,7 +957,14 @@ class DefaultController extends Controller
 
 
 			'mailrecipe' => [$emailToDisplay],
-			'errors'	=> $errors,
+			'errors'	=> [$errors],
+
+			'testi_display'	=> [$optionTestiDisplay],
+			'slider_display'	=> [$optionSliderDisplay],
+			'gallery_display'	=> [$optionGalleryDisplay],
+			'sound_display'	=> [$optionSoundDisplay],
+			'map_display'	=> [$optionMapDisplay],
+			'text_display'	=> [$optionTextDisplay],
 
 		]);
 

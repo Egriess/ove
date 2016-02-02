@@ -24,7 +24,7 @@
 </header>
 
 
-<div id="slider">
+<div id="slider" style=" display: <?= $slider_display[0] ?>">
 	<figure>
 		<img class="sliding" src="assets/imgs/<?= $imgslider[0] ?>" alt="">
 		<img class="sliding" src="assets/imgs/<?= $imgslider[1] ?>" alt="">
@@ -38,7 +38,7 @@
 	===== Testimonials section =====
 -->
 
-<div id="testimoniaux" style="background: linear-gradient(<?= $col_testi_1[0] ?> , <?= $col_testi_2[0] ?>">
+<div id="testimoniaux" style="background: linear-gradient(<?= $col_testi_1[0] ?> , <?= $col_testi_2[0] ?>); display: <?= $testi_display[0] ?>">
 		<div class="container">
 			<!-- Testimonial 1-->
 			<div class="testimonial">
@@ -87,12 +87,12 @@
 		</div>
 	</div>
 	<div class="clearfix"></div>
-<div id="blockquote">Life is beautiful..</div>
 <div class="clearfix"></div>
 	<h3><?= $txtgallery[0]?></h3>
 </div>
 
-<div id="gallery">
+<div id="gallery" style=" display: <?= $gallery_display[0] ?>">
+<div id="blockquote">Life is beautiful..</div>
 	 <div class="containergal">
 		<div id="carousel">
 			<figure><img src="assets/imgs/<?= $imggallery[0] ?>" alt=""></figure>
@@ -111,7 +111,7 @@
 <!--
 	===== Soundcloud section =====
 -->
-<div id="sound">
+<div id="sound" style=" display: <?= $sound_display[0] ?>;">
 	<iframe width="100%" height="350" scrolling="no" frameborder="no" 
 	src="https://w.soundcloud.com/player/?url=<?= $soundcloud[0] ?>&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 </div>
@@ -120,7 +120,7 @@
 <!--
 	===== Text section =====
 -->
-<div id="text" style="background: linear-gradient(<?= $col_text_1[0] ?> , <?= $col_text_2[0] ?>">
+<div id="text" style="background: linear-gradient(<?= $col_text_1[0] ?> , <?= $col_text_2[0] ?>);display: <?= $text_display[0] ?>;">
 	<div class="container">
 		
 		<div class="col-md-4 text" class="text" id="sectionText_1">
@@ -139,7 +139,7 @@
 <!--
 	===== Map section =====
 -->
-<div id="maps" style="background: linear-gradient(<?= $col_map_1[0] ?> , <?= $col_map_2[0] ?>">
+<div id="maps" style="background: linear-gradient(<?= $col_map_1[0] ?> , <?= $col_map_2[0] ?>);  display: <?= $map_display[0] ?>;">
 	<div class="container">
 		
 			<div id="map"></div>	
@@ -150,7 +150,7 @@
 				
 
 			<div id="adresspage">
-				<p>Voici mon adresse !  </p><br>
+				<p>Voici mon adresse :  </p><br>
 				<?=  $adress[0]; ?>			
 			</div>
 			</div>	

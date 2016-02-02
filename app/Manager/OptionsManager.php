@@ -439,6 +439,102 @@ class OptionsManager extends \W\Manager\Manager
 		
 		$stmt->execute();
 	}
+	// Display Section
 
+	public function GetTestiDisplay()
+	{
+		$sql="SELECT option_value FROM options WHERE option_name='testi_display'";
+		$stmt= $this->dbh->query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];
+	}
+
+		public function UpdateTestiDisplay($testiDisplay)
+	{
+		$sql="UPDATE options SET option_value = :option_value WHERE option_name = 'testi_display'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $testiDisplay);
+		$stmt->execute();
+	}
+
+	public function GetSliderDisplay()
+	{
+		$sql="SELECT option_value FROM options WHERE option_name='slider_display'";
+		$stmt= $this->dbh->query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];
+	}
+
+		public function UpdateSliderDisplay($sliderDisplay)
+	{
+		$sql="UPDATE options SET option_value = :option_value WHERE option_name = 'slider_display'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $sliderDisplay);
+		$stmt->execute();
+	}
+
+	public function GetGalleryDisplay()
+	{
+		$sql="SELECT option_value FROM options WHERE option_name='gallery_display'";
+		$stmt= $this->dbh->query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];
+	}
+
+		public function UpdateGalleryDisplay($galleryDisplay)
+	{
+		$sql="UPDATE options SET option_value = :option_value WHERE option_name = 'gallery_display'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $galleryDisplay);
+		$stmt->execute();
+	}
+
+	public function GetSoundDisplay()
+	{
+		$sql="SELECT option_value FROM options WHERE option_name='sound_display'";
+		$stmt= $this->dbh->query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];
+	}
+
+		public function UpdateSoundDisplay($soundDisplay)
+	{
+		$sql="UPDATE options SET option_value = :option_value WHERE option_name = 'sound_display'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $soundDisplay);
+		$stmt->execute();
+	}
+
+	public function GetMapDisplay()
+	{
+		$sql="SELECT option_value FROM options WHERE option_name='map_display'";
+		$stmt= $this->dbh->query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];
+	}
+
+		public function UpdateMapDisplay($mapDisplay)
+	{
+		$sql="UPDATE options SET option_value = :option_value WHERE option_name = 'map_display'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $mapDisplay);
+		$stmt->execute();
+	}
+
+	public function GetTextDisplay()
+	{
+		$sql="SELECT option_value FROM options WHERE option_name='text_display'";
+		$stmt= $this->dbh->query($sql);
+		$row = $stmt->fetch(\PDO::FETCH_ASSOC);
+		return $row['option_value'];
+	}
+
+		public function UpdateTextDisplay($textDisplay)
+	{
+		$sql="UPDATE options SET option_value = :option_value WHERE option_name = 'text_display'";
+		$stmt = $this->dbh->prepare($sql);
+		$stmt->bindParam(':option_value', $textDisplay);
+		$stmt->execute();
+	}
 }
 
