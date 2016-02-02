@@ -207,4 +207,7 @@
 		</form>
 	</div>
 </div>
+<footer id="homefooter">
+		<p>Copyright &copy; 2016, Onepage Visual Editor</p>
+</footer>
 <?php $this->stop('main_content') ?>
