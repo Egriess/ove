@@ -29,15 +29,15 @@ class UsersController extends Controller
 			$userSession = new \W\Security\AuthentificationManager();
 			$userSession->logUserIn($user);
 
-				$usersManager = new \Manager\UsersManager();
-				$user = $usersManager->find($userId);
+				$usersManager 	= new \Manager\UsersManager();
+				$user 			= $usersManager->find($userId);
 				unset($user['password']);
 				// on instancie les datas de base en DB 
-				$userID = $user['id'];
-				$name 	= 'avatar_1';
-				$value 	= 'gergregegregergegregregregrege';
-				$initdata = new \Manager\OptionsManager();
-				$initdata->insertInit($userID, $name, $value);
+				$userID 	= $user['id'];
+				$name 		= 'avatar_1';
+				$value 		= 'gergregegregergegregregregrege';
+				$initdata 	= new \Manager\OptionsManager();
+				$initdata	->insertInit($userID, $name, $value);
 			
 
 		}

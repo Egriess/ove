@@ -19,15 +19,6 @@ class DefaultController extends Controller
 	{
 
 		$optionManager= new \Manager\OptionsManager();
-		// Recuperer les coordonnees
-		//$address = $_POST['address'];
-     	//$adressToDisplay=$optionManager->getAdress($address);
-     
-		// Recuperer l'adresse en texte
-
-		// Les passer a la vue
-
-		//$this->show('default/backoffice', ['currentadresse' => $adressToDisplay]);
 		
 		//soundcloud
 
@@ -687,95 +678,95 @@ class DefaultController extends Controller
 			$emailpost = $_POST['email_recipe'];
 			$optionManager->updateMail($emailpost);
 		}
+		
 		//header 
-		$optionTitleToDisplay 	= $optionManager->getTitle();
-		$optionFontToDisplay 	= $optionManager->getFont();
-		$optionBgToDisplay 	= $optionManager->getBg();
-		$optionBgGradientDirection = $optionManager->getBgGradientDirection();
-		$optionBgGradientColor1 = $optionManager->getBgGradientColor1();
-		$optionBgGradientColor2 = $optionManager->getBgGradientColor2();
+		$optionTitleToDisplay 		= $optionManager->getTitle();
+		$optionFontToDisplay 		= $optionManager->getFont();
+		$optionBgToDisplay 			= $optionManager->getBg();
+		$optionBgGradientDirection 	= $optionManager->getBgGradientDirection();
+		$optionBgGradientColor1 	= $optionManager->getBgGradientColor1();
+		$optionBgGradientColor2 	= $optionManager->getBgGradientColor2();
 		//slider
 		//view img slider 
-		$optionSliderToDisplay1 = $optionManager->getImgSlider(1);
-		$optionSliderToDisplay2 = $optionManager->getImgSlider(2);
-		$optionSliderToDisplay3 = $optionManager->getImgSlider(3);
-		$optionSliderToDisplay4 = $optionManager->getImgSlider(4);
-		$optionSliderToDisplay5 = $optionManager->getImgSlider(5);
+		$optionSliderToDisplay1 	= $optionManager->getImgSlider(1);
+		$optionSliderToDisplay2 	= $optionManager->getImgSlider(2);
+		$optionSliderToDisplay3 	= $optionManager->getImgSlider(3);
+		$optionSliderToDisplay4 	= $optionManager->getImgSlider(4);
+		$optionSliderToDisplay5 	= $optionManager->getImgSlider(5);
 		// gallery
-		$optionGalleryToDisplay1 = $optionManager->getImgGallery(1);
-		$optionGalleryToDisplay2 = $optionManager->getImgGallery(2);
-		$optionGalleryToDisplay3 = $optionManager->getImgGallery(3);
-		$optionGalleryToDisplay4 = $optionManager->getImgGallery(4);
-		$optionGalleryToDisplay5 = $optionManager->getImgGallery(5);
-		$optionGalleryToDisplay6 = $optionManager->getImgGallery(6);
-		$optionGalleryToDisplay7 = $optionManager->getImgGallery(7);
-		$optionGalleryToDisplay8 = $optionManager->getImgGallery(8);
-		$optionGalleryToDisplay9 = $optionManager->getImgGallery(9);
+		$optionGalleryToDisplay1 	= $optionManager->getImgGallery(1);
+		$optionGalleryToDisplay2 	= $optionManager->getImgGallery(2);
+		$optionGalleryToDisplay3 	= $optionManager->getImgGallery(3);
+		$optionGalleryToDisplay4 	= $optionManager->getImgGallery(4);
+		$optionGalleryToDisplay5 	= $optionManager->getImgGallery(5);
+		$optionGalleryToDisplay6 	= $optionManager->getImgGallery(6);
+		$optionGalleryToDisplay7 	= $optionManager->getImgGallery(7);
+		$optionGalleryToDisplay8 	= $optionManager->getImgGallery(8);
+		$optionGalleryToDisplay9 	= $optionManager->getImgGallery(9);
 		
 		//Soundcloud
-		$optionSoundToDisplay = $optionManager->getSoundcloud();
+		$optionSoundToDisplay 		= $optionManager->getSoundcloud();
 
 		//TxtGallery
-		$optionTxtGalToDisplay = $optionManager->getTxtGallery();
+		$optionTxtGalToDisplay 		= $optionManager->getTxtGallery();
 
 		//testimoniaux
 			//view name
-		$optionNameToDisplay1 = $optionManager->getName(1);
-		$optionNameToDisplay2 = $optionManager->getName(2);
-		$optionNameToDisplay3 = $optionManager->getName(3);
-		$optionBgTestiColor1 = $optionManager->getBgTestiColor1();
-		$optionBgTestiColor2 = $optionManager->getBgTestiColor2();
+		$optionNameToDisplay1 		= $optionManager->getName(1);
+		$optionNameToDisplay2 		= $optionManager->getName(2);
+		$optionNameToDisplay3 		= $optionManager->getName(3);
+		$optionBgTestiColor1 		= $optionManager->getBgTestiColor1();
+		$optionBgTestiColor2 		= $optionManager->getBgTestiColor2();
 
 		//view avatar
-		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
-		$optionAvatarToDisplay2 = $optionManager->getAvatar(2);
-		$optionAvatarToDisplay3 = $optionManager->getAvatar(3);
+		$optionAvatarToDisplay1 	= $optionManager->getAvatar(1);
+		$optionAvatarToDisplay2 	= $optionManager->getAvatar(2);
+		$optionAvatarToDisplay3 	= $optionManager->getAvatar(3);
 
 
-		$optionTestiToDisplay1 	= $optionManager->GetTestimonial(1);
-		$optionTestiToDisplay2	= $optionManager->GetTestimonial(2);
-		$optionTestiToDisplay3 	= $optionManager->GetTestimonial(3);
+		$optionTestiToDisplay1 		= $optionManager->GetTestimonial(1);
+		$optionTestiToDisplay2		= $optionManager->GetTestimonial(2);
+		$optionTestiToDisplay3 		= $optionManager->GetTestimonial(3);
 		
 		//sextion_text
-		$optionTextToDisplay1 	= $optionManager->getText(1);
-		$optionTextToDisplay2 	= $optionManager->getText(2);
-		$optionTextToDisplay3 	= $optionManager->getText(3);
-		$optionBgTextColor1 = $optionManager->getBgTextColor1();
-		$optionBgTextColor2 = $optionManager->getBgTextColor2();
+		$optionTextToDisplay1 		= $optionManager->getText(1);
+		$optionTextToDisplay2 		= $optionManager->getText(2);
+		$optionTextToDisplay3 		= $optionManager->getText(3);
+		$optionBgTextColor1 		= $optionManager->getBgTextColor1();
+		$optionBgTextColor2 		= $optionManager->getBgTextColor2();
 
 		//sextion Maps
-		$optionAdressToDisplay = $optionManager->getAdress();
-		$optionLatToDisplay = $optionManager->getLat();
-		$optionLonToDisplay = $optionManager->getLon();
-		$optionBgMapColor1 = $optionManager->getBgMapColor1();
-		$optionBgMapColor2 = $optionManager->getBgMapColor2();
+		$optionAdressToDisplay 		= $optionManager->getAdress();
+		$optionLatToDisplay 		= $optionManager->getLat();
+		$optionLonToDisplay 		= $optionManager->getLon();
+		$optionBgMapColor1 			= $optionManager->getBgMapColor1();
+		$optionBgMapColor2 			= $optionManager->getBgMapColor2();
+		
 		$this->show('Default/backoffice',[
-			'names'		=> [$optionNameToDisplay1, $optionNameToDisplay2, $optionNameToDisplay3],
-			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
-			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
-			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
-			'title'		=> [$optionTitleToDisplay],
-			'imgslider' => [$optionSliderToDisplay1, $optionSliderToDisplay2, $optionSliderToDisplay3, $optionSliderToDisplay4, $optionSliderToDisplay5],
-			'imggallery'=> [$optionGalleryToDisplay1, $optionGalleryToDisplay2, $optionGalleryToDisplay3, $optionGalleryToDisplay4, $optionGalleryToDisplay5, $optionGalleryToDisplay6, $optionGalleryToDisplay7, $optionGalleryToDisplay8, $optionGalleryToDisplay9],
-			'txtgallery'=> [$optionTxtGalToDisplay],
-			'adress'	=> [$optionAdressToDisplay],
-			'font'		=> [$optionFontToDisplay],
-			'bg'		=> [$optionBgToDisplay],
-			'direction'	=> [$optionBgGradientDirection],
-			'gradiant_color1' => [$optionBgGradientColor1],
-			'gradiant_color2' => [$optionBgGradientColor2],
-			'adress'	=> [$optionAdressToDisplay],
-			'soundcloud' => [$optionSoundToDisplay],
-
-			'col_testi_1'	=> [$optionBgTestiColor1],
-			'col_testi_2'	=> [$optionBgTestiColor2],
-			'col_text_1'	=> [$optionBgTextColor1],
-			'col_text_2'	=> [$optionBgTextColor2],
-			'col_map_1'	=> [$optionBgMapColor1],
-			'col_map_2'	=> [$optionBgMapColor2],
-
-			'lat'		=> [$optionLatToDisplay],
-			'lon'		=> [$optionLonToDisplay],
+			'names'				=> [$optionNameToDisplay1, $optionNameToDisplay2, $optionNameToDisplay3],
+			'avatars'			=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
+			'testis'			=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
+			'texts'				=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
+			'title'				=> [$optionTitleToDisplay],
+			'imgslider' 		=> [$optionSliderToDisplay1, $optionSliderToDisplay2, $optionSliderToDisplay3, $optionSliderToDisplay4, $optionSliderToDisplay5],
+			'imggallery'		=> [$optionGalleryToDisplay1, $optionGalleryToDisplay2, $optionGalleryToDisplay3, $optionGalleryToDisplay4, $optionGalleryToDisplay5, $optionGalleryToDisplay6, $optionGalleryToDisplay7, $optionGalleryToDisplay8, $optionGalleryToDisplay9],
+			'txtgallery'		=> [$optionTxtGalToDisplay],
+			'adress'			=> [$optionAdressToDisplay],
+			'font'				=> [$optionFontToDisplay],
+			'bg'				=> [$optionBgToDisplay],
+			'direction'			=> [$optionBgGradientDirection],
+			'gradiant_color1' 	=> [$optionBgGradientColor1],
+			'gradiant_color2' 	=> [$optionBgGradientColor2],
+			'adress'			=> [$optionAdressToDisplay],
+			'soundcloud' 		=> [$optionSoundToDisplay],
+			'col_testi_1'		=> [$optionBgTestiColor1],
+			'col_testi_2'		=> [$optionBgTestiColor2],
+			'col_text_1'		=> [$optionBgTextColor1],
+			'col_text_2'		=> [$optionBgTextColor2],
+			'col_map_1'			=> [$optionBgMapColor1],
+			'col_map_2'			=> [$optionBgMapColor2],
+			'lat'				=> [$optionLatToDisplay],
+			'lon'				=> [$optionLonToDisplay],
 
 		]);
 	
@@ -790,83 +781,83 @@ class DefaultController extends Controller
 
 	public function onepage()
 	{
-		$optionManager = new \Manager\OptionsManager();
-		$userManager = new \Manager\UsersManager();
+		$optionManager 	= new \Manager\OptionsManager();
+		$userManager 	= new \Manager\UsersManager();
 		
 		// routing infos
 
 		//header 
-		$optionTitleToDisplay 	= $optionManager->getTitle();
+		$optionTitleToDisplay 		= $optionManager->getTitle();
 		//Slider 
-		$optionSliderToDisplay1 = $optionManager->getImgSlider(1);
-		$optionSliderToDisplay2 = $optionManager->getImgSlider(2);
-		$optionSliderToDisplay3 = $optionManager->getImgSlider(3);
-		$optionSliderToDisplay4 = $optionManager->getImgSlider(4);
-		$optionSliderToDisplay5 = $optionManager->getImgSlider(5);
+		$optionSliderToDisplay1 	= $optionManager->getImgSlider(1);
+		$optionSliderToDisplay2 	= $optionManager->getImgSlider(2);
+		$optionSliderToDisplay3 	= $optionManager->getImgSlider(3);
+		$optionSliderToDisplay4 	= $optionManager->getImgSlider(4);
+		$optionSliderToDisplay5 	= $optionManager->getImgSlider(5);
 
 		//Gallery
-		$optionGalleryToDisplay1 = $optionManager->getImgGallery(1);
-		$optionGalleryToDisplay2 = $optionManager->getImgGallery(2);
-		$optionGalleryToDisplay3 = $optionManager->getImgGallery(3);
-		$optionGalleryToDisplay4 = $optionManager->getImgGallery(4);
-		$optionGalleryToDisplay5 = $optionManager->getImgGallery(5);
-		$optionGalleryToDisplay6 = $optionManager->getImgGallery(6);
-		$optionGalleryToDisplay7 = $optionManager->getImgGallery(7);
-		$optionGalleryToDisplay8 = $optionManager->getImgGallery(8);
-		$optionGalleryToDisplay9 = $optionManager->getImgGallery(9);
+		$optionGalleryToDisplay1 	= $optionManager->getImgGallery(1);
+		$optionGalleryToDisplay2 	= $optionManager->getImgGallery(2);
+		$optionGalleryToDisplay3 	= $optionManager->getImgGallery(3);
+		$optionGalleryToDisplay4 	= $optionManager->getImgGallery(4);
+		$optionGalleryToDisplay5 	= $optionManager->getImgGallery(5);
+		$optionGalleryToDisplay6 	= $optionManager->getImgGallery(6);
+		$optionGalleryToDisplay7 	= $optionManager->getImgGallery(7);
+		$optionGalleryToDisplay8 	= $optionManager->getImgGallery(8);
+		$optionGalleryToDisplay9 	= $optionManager->getImgGallery(9);
 		
-		$optionTxtGalToDisplay	= $optionManager->getTxtGallery();
+		$optionTxtGalToDisplay		= $optionManager->getTxtGallery();
 		//Soundcloud
-		$optionSoundToDisplay = $optionManager->getSoundcloud();
+		$optionSoundToDisplay 		= $optionManager->getSoundcloud();
 
 		//testimoniaux
-		$optionBgTestiColor1 = $optionManager->getBgTestiColor1();
-		$optionBgTestiColor2 = $optionManager->getBgTestiColor2();
+		$optionBgTestiColor1 		= $optionManager->getBgTestiColor1();
+		$optionBgTestiColor2 		= $optionManager->getBgTestiColor2();
 
 		//header
-		$optionTitleToDisplay 	= $optionManager->getTitle();
-		$optionColorToDisplay 	= $optionManager->getColor();
-		$optionFontToDisplay 	= $optionManager->getFont();
-		$optionBgToDisplay 	= $optionManager->getBg();
-		$optionBgGradientDirection = $optionManager->getBgGradientDirection();
-		$optionBgGradientColor1 = $optionManager->getBgGradientColor1();
-		$optionBgGradientColor2 = $optionManager->getBgGradientColor2();		//testimoniaux
+		$optionTitleToDisplay 		= $optionManager->getTitle();
+		$optionColorToDisplay 		= $optionManager->getColor();
+		$optionFontToDisplay 		= $optionManager->getFont();
+		$optionBgToDisplay 			= $optionManager->getBg();
+		$optionBgGradientDirection 	= $optionManager->getBgGradientDirection();
+		$optionBgGradientColor1 	= $optionManager->getBgGradientColor1();
+		$optionBgGradientColor2 	= $optionManager->getBgGradientColor2();		
 
 			//view name
-		$optionNameToDisplay1 = $optionManager->getName(1);
-		$optionNameToDisplay2 = $optionManager->getName(2);
-		$optionNameToDisplay3 = $optionManager->getName(3);
+		$optionNameToDisplay1 		= $optionManager->getName(1);
+		$optionNameToDisplay2 		= $optionManager->getName(2);
+		$optionNameToDisplay3 		= $optionManager->getName(3);
 
 			//view avatar
-		$optionAvatarToDisplay1 = $optionManager->getAvatar(1);
-		$optionAvatarToDisplay2 = $optionManager->getAvatar(2);
-		$optionAvatarToDisplay3 = $optionManager->getAvatar(3);
+		$optionAvatarToDisplay1 	= $optionManager->getAvatar(1);
+		$optionAvatarToDisplay2 	= $optionManager->getAvatar(2);
+		$optionAvatarToDisplay3 	= $optionManager->getAvatar(3);
 
 			//view description
-		$optionTestiToDisplay1 	= $optionManager->GetTestimonial(1);
-		$optionTestiToDisplay2 	= $optionManager->GetTestimonial(2);
-		$optionTestiToDisplay3 	= $optionManager->GetTestimonial(3);
+		$optionTestiToDisplay1 		= $optionManager->GetTestimonial(1);
+		$optionTestiToDisplay2 		= $optionManager->GetTestimonial(2);
+		$optionTestiToDisplay3 		= $optionManager->GetTestimonial(3);
 
 
 		//sextion_text
-		$optionTextToDisplay1 	= $optionManager->getText(1);
-		$optionTextToDisplay2 	= $optionManager->getText(2);
-		$optionTextToDisplay3 	= $optionManager->getText(3);
-		$optionBgTextColor1 = $optionManager->getBgTextColor1();
-		$optionBgTextColor2 = $optionManager->getBgTextColor2();
+		$optionTextToDisplay1 		= $optionManager->getText(1);
+		$optionTextToDisplay2 		= $optionManager->getText(2);
+		$optionTextToDisplay3 		= $optionManager->getText(3);
+		$optionBgTextColor1 		= $optionManager->getBgTextColor1();
+		$optionBgTextColor2 		= $optionManager->getBgTextColor2();
 		//map
-		$optionAdressToDisplay = $optionManager->getAdress();
+		$optionAdressToDisplay 		= $optionManager->getAdress();
 
-		$optionLatToDisplay = $optionManager->getLat();
-		$optionLonToDisplay = $optionManager->getLon();
-
-
-
-		$optionBgMapColor1 = $optionManager->getBgMapColor1();
-		$optionBgMapColor2 = $optionManager->getBgMapColor2();
+		$optionLatToDisplay 		= $optionManager->getLat();
+		$optionLonToDisplay 		= $optionManager->getLon();
 
 
-		$emailToDisplay		  = $optionManager->getMail();
+
+		$optionBgMapColor1 			= $optionManager->getBgMapColor1();
+		$optionBgMapColor2 			= $optionManager->getBgMapColor2();
+
+
+		$emailToDisplay		  		= $optionManager->getMail();
 
 		if(isset($_SESSION['errors'])) {
 			$errors = $_SESSION['errors'];
@@ -876,35 +867,32 @@ class DefaultController extends Controller
 
 
 		$this->show('default/onepage',[
-			'names'		=> [$optionNameToDisplay1, $optionNameToDisplay2, $optionNameToDisplay3],
-			'avatars'	=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
-			'testis'	=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
-			'texts'		=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
+			'names'				=> [$optionNameToDisplay1, $optionNameToDisplay2, $optionNameToDisplay3],
+			'avatars'			=> [$optionAvatarToDisplay1, $optionAvatarToDisplay2, $optionAvatarToDisplay3],
+			'testis'			=> [$optionTestiToDisplay1, $optionTestiToDisplay2, $optionTestiToDisplay3],
+			'texts'				=> [$optionTextToDisplay1, $optionTextToDisplay2, $optionTextToDisplay3],
 			'titledisplay'		=> [$optionTitleToDisplay],
-			'imgslider' => [$optionSliderToDisplay1, $optionSliderToDisplay2, $optionSliderToDisplay3, $optionSliderToDisplay4, $optionSliderToDisplay5],
-			'imggallery'=> [$optionGalleryToDisplay1, $optionGalleryToDisplay2, $optionGalleryToDisplay3, $optionGalleryToDisplay4, $optionGalleryToDisplay5, $optionGalleryToDisplay6, $optionGalleryToDisplay7, $optionGalleryToDisplay8, $optionGalleryToDisplay9],
-			'txtgallery'=> [$optionTxtGalToDisplay],
-			'color'		=> [$optionColorToDisplay],
-			'font'		=> [$optionFontToDisplay],
-			'bg'		=> [$optionBgToDisplay],
-			'direction'	=> [$optionBgGradientDirection],
-			'gradiant_color1' => [$optionBgGradientColor1],
-			'gradiant_color2' => [$optionBgGradientColor2],
-			'adress'	=> [$optionAdressToDisplay],
-			'soundcloud' => [$optionSoundToDisplay],
-
-			'col_testi_1'	=> [$optionBgTestiColor1],
-			'col_testi_2'	=> [$optionBgTestiColor2],
-			'col_text_1'	=> [$optionBgTextColor1],
-			'col_text_2'	=> [$optionBgTextColor2],
-			'col_map_1'	=> [$optionBgMapColor1],
-			'col_map_2'	=> [$optionBgMapColor2],
-			'lat'		=> [$optionLatToDisplay],
-			'lon'		=> [$optionLonToDisplay],
-
-
-			'mailrecipe' => [$emailToDisplay],
-			'errors'	=> $errors,
+			'imgslider' 		=> [$optionSliderToDisplay1, $optionSliderToDisplay2, $optionSliderToDisplay3, $optionSliderToDisplay4, $optionSliderToDisplay5],
+			'imggallery'		=> [$optionGalleryToDisplay1, $optionGalleryToDisplay2, $optionGalleryToDisplay3, $optionGalleryToDisplay4, $optionGalleryToDisplay5, $optionGalleryToDisplay6, $optionGalleryToDisplay7, $optionGalleryToDisplay8, $optionGalleryToDisplay9],
+			'txtgallery'		=> [$optionTxtGalToDisplay],
+			'color'				=> [$optionColorToDisplay],
+			'font'				=> [$optionFontToDisplay],
+			'bg'				=> [$optionBgToDisplay],
+			'direction'			=> [$optionBgGradientDirection],
+			'gradiant_color1' 	=> [$optionBgGradientColor1],
+			'gradiant_color2' 	=> [$optionBgGradientColor2],
+			'adress'			=> [$optionAdressToDisplay],
+			'soundcloud' 		=> [$optionSoundToDisplay],
+			'col_testi_1'		=> [$optionBgTestiColor1],
+			'col_testi_2'		=> [$optionBgTestiColor2],
+			'col_text_1'		=> [$optionBgTextColor1],
+			'col_text_2'		=> [$optionBgTextColor2],
+			'col_map_1'			=> [$optionBgMapColor1],
+			'col_map_2'			=> [$optionBgMapColor2],
+			'lat'				=> [$optionLatToDisplay],
+			'lon'				=> [$optionLonToDisplay],
+			'mailrecipe' 		=> [$emailToDisplay],
+			'errors'			=> $errors,
 
 		]);
 
@@ -1146,13 +1134,13 @@ class DefaultController extends Controller
 		
 			$completeMessage = 'Vous avez recu un mail de ' .$email ;
 		//$mail->SMTPDebug = 2;
-		$mail->isSMTP();                                      // Set mailer to use SMTP
-		$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-		$mail->SMTPAuth = true;                               // Enable SMTP authentication
-		$mail->Username =  'one.page.editor@gmail.com';                 // SMTP username
-		$mail->Password =  'oveonepageeditor';            // SMTP password
-		$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-		$mail->Port = 587;                                    // TCP port to connect to
+		$mail->isSMTP();                                      	// Set mailer to use SMTP
+		$mail->Host = 'smtp.gmail.com';  						// Specify main and backup SMTP servers
+		$mail->SMTPAuth = true;                               	// Enable SMTP authentication
+		$mail->Username =  'one.page.editor@gmail.com';         // SMTP username
+		$mail->Password =  'oveonepageeditor';            		// SMTP password
+		$mail->SMTPSecure = 'tls';                            	// Enable TLS encryption, `ssl` also accepted
+		$mail->Port = 587;                                    	// TCP port to connect to
 		$mail->setFrom($email);
 
 		// below we want to set the email address we will be sending our email to.
