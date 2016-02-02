@@ -209,5 +209,6 @@
 </div>
 <footer id="homefooter">
 		<p>Copyright &copy; 2016, Onepage Visual Editor</p>
+		<a href="/backoffice" title="">Paramètre</a>
 </footer>
 <?php $this->stop('main_content') ?>
