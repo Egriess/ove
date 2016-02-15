@@ -14,8 +14,8 @@
 						<li><a href="#galeryback"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>  Galerie</a></li>
 						<li><a href="#testimoniauxback"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>  Testimoniaux</a></li>
 						<li><a href="#backsoundcloud"><span class="glyphicon glyphicon-music" aria-hidden="true"></span> Souncloud</a></li>
-						<li><a href="chart.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Google Map</a></li>
-						<li><a href="typography.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Textes libres</a></li>
+						<li><a href="#mapsback"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Google Map</a></li>
+						<li><a href="#textback"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Textes libres</a></li>
 						<li><a href="gallery.html"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact</a></li>
 						<li><a href="calendar.html"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Social</a></li>
 						<li><a href="table.html"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Support</a></li>
@@ -178,7 +178,7 @@
 				<!--
 					change Slider images
 				-->
-				<h3>Changez les images du slider</h3>
+				<h3>Changer les images du slider</h3>
 				<img src="assets/imgs/<?= $imgslider[0] ?>" />
 				<img src="assets/imgs/<?= $imgslider[1] ?>"/>
 				<img src="assets/imgs/<?= $imgslider[2] ?>" />
@@ -444,7 +444,7 @@
 			
 			
 			<div class="backbloctesti">
-				<h4 class="backh4">Edition testimonial 1<h4>
+				<h4 class="backh4">Edition testimonial 1</h4>
 				<!--
 					name change
 				-->
@@ -489,7 +489,7 @@
 					name change
 				-->
 				<form class="name" action="#" method="POST" accept-charset="utf-8">
-					<span>Limité à 25 caractères</span>
+					<span>(Limité à 25 caractères)</span><br>
 					<label>nom et prénom</label>
 					<input type="text" name="name_area" value="<?= $names[1] ?>"maxlength="25">
 					<input class="button2" type="submit" name="submit_name2" value="Envoyer">
@@ -512,7 +512,7 @@
 					change text
 				-->
 				<form class="testitext" action="#" method="POST" accept-charset="utf-8">
-					<span>Limité à 170 caractères</span>
+					<span>Limité à 170 caractères<br>éditez le texte</span>
 					<textarea name="testi-area" placeholder="" maxlength="170"><?= $testis[1] ?></textarea>
 					<input class="button2" type="submit" name="submit_text2" value="Envoyer">
 				</form>
@@ -520,12 +520,12 @@
 				
 			
 			<div class="backbloctesti" >
-				<h4 class="button2">Edition testimonial 3</h4>
+				<h4 class="backh4">Edition testimonial 3</h4>
 				<!--
 					name change
 				-->
 				<form class="name" action="#" method="POST" accept-charset="utf-8">
-					<span>Limité à 25 caractères</span>
+					<span>(Limité à 25 caractères)</span><br>
 					<label>nom et prénom</label>
 					<input type="text" name="name_area" value="<?= $names[2] ?>"maxlength="25">
 					<input class="button2" type="submit" name="submit_name3" value="Envoyer">
@@ -547,7 +547,7 @@
 					Text change
 				-->
 				<form class="testitext" action="#" method="POST" accept-charset="utf-8">
-					<span>Limité à 170 caractères</span>
+					<span>Limité à 170 caractères<br>éditez le texte</span>
 					<textarea name="testi-area" placeholder="" maxlength="170"><?= $testis[2] ?></textarea>
 					<input class="button2" type="submit" name="submit_text3" value="Envoyer">
 				</form> 
@@ -614,10 +614,15 @@
 
 	<div id="backsoundcloud">
 	<h3> Choisir le contenu du widget soundcloud </h3>
-	<p>Vous avez le choix entre integrer une seule chanson ou une playlist complete il vous suffit de copier le liens à l'aide du bouton share sur soundcloud.com</p>
+	<p>Vous avez le choix entre integrer une seule chanson ou une playlist complète il vous suffit de copier le lien à l'aide du boutton share sur soundcloud.com</p>
+		
+		<video width="480" height="270" controls>
+		  <source src="assets/img/sharesoundove.mp4" type="video/mp4">
+		</video>
+		<a href="https://www.soundcloud.com" class="button2" >Aller sur Soundcloud</a>
 		<form action="#" method="post" accept-charset="utf-8">
 			<input type="text" name="sound" value="" placeholder="Adresse de la chanson ou playlist">
-			<input type="submit" name="submit_sound" value="Envoyer">
+			<input class="button2" type="submit" name="submit_sound" value="Envoyer">
 		</form>
 	</div>
 
@@ -633,7 +638,7 @@
 	<div id="mapsback">
 		<div class="container">
 			<div id="map"></div>
-				<div id="panelback">
+				<div class="blocbackform">
 					<h3>Gerer la carte</h3>
 					<form action="#" method="POST" accept-charset="utf-8">
 					<!--deux hidden qui se remplissent quand on clique sur trouver l'adresse-->
@@ -645,7 +650,7 @@
 	      			
 	     		 </form>
 
-				<h4>Mon adresse actuel :</h4>
+				<h4>Mon adresse actuelle :</h4>
 	     		<p><?=  $adress[0]; ?></p>
 	  		</div>
 		</div>

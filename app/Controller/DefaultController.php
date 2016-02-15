@@ -17,18 +17,35 @@ class DefaultController extends Controller
 
 	public function backoffice()
 	{
+		function securise($string)
+		{
+		
+		if(ctype_digit($string))
+		{
+			$string = intval($string);
+		}
+		
+		else
+		{
+			$string = mysql_real_escape_string($string);
+			$string = addcslashes($string, '%_');
+			$string = htmlspecialchars($string); 
+		}
+		
+		return $string;
+		}
 
 		$optionManager= new \Manager\OptionsManager();
 		
 		//soundcloud
 
 		if(isset($_POST['submit_sound'])){
-			$sound= $_POST['sound'];
+			$sound= securise($_POST['sound']);
 			$optionManager->updateSoundcloud($sound);
 		}
 
 		if(isset($_POST['submit_txtgal'])){
-			$txt= $_POST['txtgal'];
+			$txt= securise($_POST['txtgal']);
 			$optionManager->updateTxtGallery($txt);
 		}
 
@@ -534,33 +551,38 @@ class DefaultController extends Controller
 
 		//modification du titre du site
 		if(isset($_POST['submit_title'])){
-
-			$optionManager->updateTitle( $_POST['title']);
+			$title = securise($_POST['title']);
+			$optionManager->updateTitle($title);
 		}
 		//rename
 		if(isset($_POST['submit_name1']))
 		{
-			$optionManager->UpName(1, $_POST['name_area']);
+			$namearea = securise($_POST['name_area']);
+			$optionManager->UpName(1, $namearea);
 		}
 		if(isset($_POST['submit_name2']))
 		{
-			$optionManager->UpName(2, $_POST['name_area']);
+			$namearea = securise($_POST['name_area']);
+			$optionManager->UpName(2, $namearea);
 		}
 		if(isset($_POST['submit_name3']))
 		{
-			$optionManager->UpName(3, $_POST['name_area']);
+			$namearea = securise($_POST['name_area']);
+			$optionManager->UpName(3, $namearea);
 
 		}
 
 		if(isset($_POST['submit_title']))
 		{
-			$optionManager->UpdateColor( $_POST['textcolor']);
+			$textcolor = securise($_POST['textcolor']);
+			$optionManager->UpdateColor($textcolor);
 
 		}
 
 		if(isset($_POST['submit_adress']))
 		{
-			$optionManager->saveAdress( $_POST['address']);
+			$address = securise($_POST['address']);
+			$optionManager->saveAdress($address);
 
 		}
 
@@ -578,6 +600,7 @@ class DefaultController extends Controller
 
 		if(isset($_POST['submit_title']))
 		{
+
 			$optionManager->UpdateFont( $_POST['fonts']);
 
 		}
@@ -648,34 +671,40 @@ class DefaultController extends Controller
 		//modification du text testimonial
 		if(isset($_POST['submit_text1']))
 		{
-			$optionManager->UpdateTesti(1, $_POST['testi-area']);
+			$testiarea = securise($_POST['testi-area']);
+			$optionManager->UpdateTesti(1, $testiarea);
 		}
 		if(isset($_POST['submit_text2']))
 		{
-			$optionManager->UpdateTesti(2, $_POST['testi-area']);
+			$testiarea = securise($_POST['testi-area']);
+			$optionManager->UpdateTesti(2, $testiarea);
 		}
 		if(isset($_POST['submit_text3']))
 		{
-			$optionManager->UpdateTesti(3, $_POST['testi-area']);
+			$testiarea = securise($_POST['testi-area']);
+			$optionManager->UpdateTesti(3, $testiarea);
 		}
 
 		//modification de la sectin text
 		if(isset($_POST['submit_Sectiontext1']))
 		{
-			$optionManager->changeText(1, $_POST['sec_text']);
+			$sectext = securise($_POST['sec_text']);
+			$optionManager->changeText(1, $sectext);
 		}
 		if(isset($_POST['submit_Sectiontext2']))
 		{
-			$optionManager->changeText(2, $_POST['sec_text']);
+			$sectext = securise($_POST['sec_text']);
+			$optionManager->changeText(2, $sectext);
 		}
 		if(isset($_POST['submit_Sectiontext3']))
 		{
-			$optionManager->changeText(3, $_POST['sec_text']);
+			$sectext = securise($_POST['sec_text']);
+			$optionManager->changeText(3, $sectext);
 		}
 
 		if (isset($_POST['submit_mail']))
 		{	
-			$emailpost = $_POST['email_recipe'];
+			$emailpost = securise($_POST['email_recipe']);
 			$optionManager->updateMail($emailpost);
 		}
 		
@@ -900,6 +929,24 @@ class DefaultController extends Controller
 
 	public function login()
 	{
+		function securise($string)
+		{
+		
+		if(ctype_digit($string))
+		{
+			$string = intval($string);
+		}
+		
+		else
+		{
+			$string = mysql_real_escape_string($string);
+			$string = addcslashes($string, '%_');
+			$string = htmlspecialchars($string); 
+		}
+		
+		return $string;
+		}
+
 		if(isset($_POST['login-submit'])) {
 			// Si on a reçu une soumission de formulaire
 
@@ -911,7 +958,9 @@ class DefaultController extends Controller
 
 			$authManager = new \W\Security\AuthentificationManager();
 
-			$userId = $authManager->isValidLoginInfo($_POST['login'], $_POST['password']);
+			$login 		= securise($_POST['login']);
+			$password 	= securise($_POST['password']);
+			$userId 	= $authManager->isValidLoginInfo($login, $password);
 
 			if($userId) {
 				// Les infos sont coherentes
@@ -951,7 +1000,7 @@ class DefaultController extends Controller
 	public function saveAdress(){
 				$optionManager = new \Manager\OptionsManager();
      		 	if(isset( $_POST["button"])){
-					$address = $_POST['address'];
+					$address = securise($_POST['address']);
      		 		$optionManager -> saveAdress($address);
      		 		$optionManager -> saveLatLon($lat, $lon);
      		 	}
@@ -962,7 +1011,7 @@ class DefaultController extends Controller
 	public function getAdress(){
 		$optionManager = new \Manager\OptionsManager();
 		
-		$address = $_POST['address'];
+		$address = securise($_POST['address']);
      	$adressToDisplay=$optionManager->getAdress($address);
      	$this->show('default/backoffice', ['currentadresse' => $adressToDisplay]);
 	
@@ -1056,10 +1105,10 @@ class DefaultController extends Controller
 
 		if (isset($_POST["send-mail"])) 
 		{
-	  		$name = $_POST['name'];
-	  		$email = $_POST['email'];
-	  		$message = $_POST['message'];
-	 		$human = intval($_POST['human']);
+	  		$name 		= securise($_POST['name']);
+	  		$email 		= securise($_POST['email']);
+	  		$message 	= securise($_POST['message']);
+	 		$human 		= securise($_POST['human']);
 	 	
 	 		$errors = array();
 	 

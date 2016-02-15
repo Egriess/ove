@@ -100,7 +100,7 @@ header nav h1 {
   font-family: Raleway, verdana;
   text-align: left;
   margin: auto 10px;
-  width: 40%;
+  width: 30%;
   height: 750px;
   margin-bottom: 10px;
   padding: 10px;
@@ -208,7 +208,7 @@ a.button2:hover {
 #backsoundcloud{
   padding-top: 10px;
   width: 100%;
-  height: 800px;
+  height: 1000px;
   background: #FD710A;
   text-align: center;
 }
@@ -238,6 +238,28 @@ a.button2:hover {
   background: #D86C03;
 }
 
+#backsoundcloud p{
+  margin-bottom: 100px;
+}
+
+#backsoundcloud a{
+  -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  margin: 20px auto;
+  max-width: 180px;
+  background:  #F87F2F;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  display: block;
+}
+
+#backsoundcloud a:hover{
+  background: #D86C03;
+}
 #titlepopup{
   margin: auto;
 }
@@ -277,7 +299,7 @@ a.button2:hover {
   background: -webkit-linear-gradient(to left, #457fca , #5691c8); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #457fca , #5691c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   width: 100%;
-  height: 1800px;
+  height: 1000px;
   text-decoration: none;
   text-align: center;
 }
@@ -751,7 +773,7 @@ img:hover{
 }
 
 #mapsback{
-  height: 450px;
+  height: 1000px;
   width: 100%;
   background: #00d2ff; /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #00d2ff , #3a7bd5); /* Chrome 10-25, Safari 5.1-6 */
@@ -788,13 +810,19 @@ img:hover{
   display: block;
 }
 
-#panelback{
-  margin-top: 120px;
-  margin-left: 50px;
-  float: left;
-  width: 400px;
-  height: 100px;
+.blocbackform{
+  margin: auto;
+  margin-top: 450px;
+  font-family: Raleway, verdana;
+  text-align: left;
+  width: 40%;
+  height: 320px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: white;  
+  border-radius: 10px;
 }
+
 #sliderback{
   padding-top: 100px;
   width: 100%;
