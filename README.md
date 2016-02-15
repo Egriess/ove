@@ -9,7 +9,7 @@ Entrez vos paramètres dans config.php.
 
 Base de donnée
 -
-importer la base de donnée initiale du répository, voici un petit exemple de ce qu'elle contient.
+importez la base de donnée initiale du répository, voici un petit exemple de ce qu'elle contient.
 ![oveDB](http://img15.hostingpics.net/pics/728466oveDB.png)
 
 
