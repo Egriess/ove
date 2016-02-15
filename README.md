@@ -2,7 +2,7 @@
 
 Installation d'OVE
 -
-Entrez vos paramétres dans config.php.
+Entrez vos paramètres dans config.php.
 
 ![configPHP](http://img15.hostingpics.net/pics/584864config.png)
 
