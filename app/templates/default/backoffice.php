@@ -1,62 +1,40 @@
 <?php $this->layout('layout', ['title' => 'Gestion et édition']) ?>
 
 <?php $this->start('main_content') ?>
+<!-- start: Main Menu -->
 
-
-
-	<header id="backtop">
-		<h1 id="text_shadow" style="text-align:center; text-shadow: rgb(150, 150, 150) 4px 4px 2px;" > ADMINISTRATION DE <?= $title[0] ?> </h1><br>
-		<a class="button2" href="/page">Voir la page <?= $title[0] ?></a>
-		<a class="button2" href="#titlepopup" class="hinge">Editer le titre du site</a>
-		<a class="button2" href="#titlecolorpopup" class="hinge">Choisir la couleur du menu</a>
-					
-					<div id="titlepopup" class="white-popup mfp-with-anim mfp-hide">
-						<form action="/updateTitle" method="post" accept-charset="utf-8">
-							<span>Choisir le titre du site</span><br>
-							<input type="text" name="title" value="" placeholder="Votre titre"><br>
-							<span>Choisir la couleur du texte</span><br>
-							<input type="color" value="#383535" name="textcolor"><br>
-							<span>Choisir le style d'ecriture</span><br>
-							<select name="fonts">
-								<option style="font-family:'Roboto';"value="Roboto">Roboto</option>
-								<option style="font-family:'Raleway';"value="Raleway">Raleway</option>
-								<option style="font-family:'Ubuntu';"value="Ubuntu">Ubuntu</option>
-								<option style="font-family:'Droid Sans';"value="Droid">Droid</option>
-								<option style="font-family:'Monserrat';"value="Monserrat">Monserrat</option>
-								<option style="font-family:'Lora';"value="Lora">Lora</option>
-								<option style="font-family:'Open Sans Condensed';"value="Open Sans Condensed">Open Sans Condensed</option>
-							</select><br>
-							<!-- text shadow gen-->
-							<input type="submit" name="submit_title" value="envoyer">
-						</form>
-					</div>
-
-					
-					<!-- POP UP edit -->
-					<div id="titlecolorpopup" class="white-popup mfp-with-anim mfp-hide">
-						<span> Choisir la couleur du menu</span>
-						<input type="color" value="#fad345" name="menucolor">
-					</div>
-
-
-	</header>
-	
-	<!--
-		END Header Manager
-	-->
+			<div id="sidebar-left" class="span2">
+				<h3 id="text_shadow"  > Bienvenue <?= $title[0] ?> .</h3><br>
+				<div class="nav-collapse sidebar-nav">
+					<ul class="nav nav-tabs nav-stacked main-menu">
+						<li><a href="/page"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Voir la page </a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Utilisateur</a></li>	
+						<li><a href="#backheader"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Réglages Généraux</a></li>
+						<li><a href="#sliderback"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>  Slider</a></li>
+						<li><a href="#galeryback"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>  Galerie</a></li>
+						<li><a href="#testimoniauxback"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>  Testimoniaux</a></li>
+						<li><a href="#backsoundcloud"><span class="glyphicon glyphicon-music" aria-hidden="true"></span> Souncloud</a></li>
+						<li><a href="chart.html"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Google Map</a></li>
+						<li><a href="typography.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Textes libres</a></li>
+						<li><a href="gallery.html"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact</a></li>
+						<li><a href="calendar.html"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Social</a></li>
+						<li><a href="table.html"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Support</a></li>
+						<li><a href="calendar.html"><i class="icon-calendar"></i><span class="hidden-tablet"> Calendar</span></a></li>
+						<li><a href="file-manager.html"><i class="icon-folder-open"></i><span class="hidden-tablet"> File Manager</span></a></li>
+						<li><a href="icon.html"><i class="icon-star"></i><span class="hidden-tablet"> Icons</span></a></li>
+						<li><a href="login.html"><i class="icon-lock"></i><span class="hidden-tablet"> Login Page</span></a></li>
+					</ul>
+				</div>
+			</div>
 					
 	<div id="backheader" >
 		<div class="container">
+			
 					<!-- POP UP edit -->
-		<ul>
-			<li><a class="button2 hinge" href="#titlebackgroundpopup" >Choisir l'arrière plan</a></li>
-			<li><a class="button2 hinge" href="#titlepopup" >Editer le titre du site</a></li>
-			<li><a class="button2 hinge" href="#backtesti" >Couleur d'arrière plan des testi</a></li>
-			<li><a class="button2 hinge" href="#backtext" >Couleur d'arrière plan du texte</a></li>
-			<li><a class="button2 hinge" href="#backmap" >Couleur d'arrière plan de la carte</a></li>
-		</ul>
-	</div>
-					<div id="titlepopup" class="white-popup mfp-with-anim mfp-hide">
+	
+					<h3>Réglages généraux</h3>
+					<div class="backbloc" >
+						<h4 class="backh4"> Personnalisation du titre </h4>
 
 						<form action="#" method="post" accept-charset="utf-8">
 
@@ -78,15 +56,13 @@
 								<option style="font-family:'Open Sans Condensed';"value="Open Sans Condensed">Open Sans Condensed</option>
 								<option style="font-family:'Pacifico';"value="Pacifico">Pacifico</option>
 							</select><br>
-
-							
-							<input type="submit" name="submit_title" value="envoyer">
+							<input class="button2" type="submit" name="submit_title" value="envoyer">
 						</form>
 					</div>
 
-
-					<div id="titlebackgroundpopup" class="white-popup mfp-with-anim mfp-hide">
-
+					
+					<div class="backbloc">
+						<h4 class="backh4"> Personnalisation de l'en-tête </h4>
 						<span> Choisir l'arrière plan(couleur unis)</span>
 
 						<form action="#" method="post" accept-charset="utf-8">
@@ -104,48 +80,105 @@
 							Couleur 1<input type="color" value="#383535" name="textcolorbg1"><br>
 							Couleur 2<input type="color" value="#383535" name="textcolorbg2"><br>
 
-							<hr><input type="submit" name="submit_bg" value="envoyer"><br>
+							<input class="button2" type="submit" name="submit_bg" value="envoyer"><br>
 						</form>
 					</div>
 
 					
+					<div class="backbloc">
+						<h4 class="backh4"> Personnalisation de la section testimoniaux </h4>
+						<span> Choisir l'arrière plan(couleur unis)</span>
+
+								<form action="#" method="post" accept-charset="utf-8">
+
+									<input type="color" value="#383535" name="textcolorbg"><br>	
+
+									<span>Choix de dégradé</span><br>
+									<select name="gradient">
+
+										<option value="to right">to right</option>
+										<option value="to left">to left</option>
+
+									</select><br>
+
+									Couleur 1<input type="color" value="#383535" name="testicolorbg1"><br>
+									Couleur 2<input type="color" value="#383535" name="testicolorbg2"><br>
+
+									<input class="button2" type="submit" name="submit_bg_testi" value="envoyer"><br>
+								</form>
+					</div>
+					
+					
+					<div class="backbloc">
+						<h4 class="backh4"> Personnalisation de la section map </h4>
+						<form action="#" method="post" accept-charset="utf-8">
+						<span>Choix de dégradé</span><br>
+						Couleur 1<input type="color" value="#383535" name="mapcolorbg1"><br>
+						Couleur 2<input type="color" value="#383535" name="mapcolorbg2"><br>
+						<input class="button2" type="submit" name="submit_bg_map" value="envoyer"><br>
+						</form>
+					</div>
+					
+					<div class="backbloc">
+						<h4 class="backh4"> Personnalisation de la section texte </h4>
+						<form action="#" method="post" accept-charset="utf-8">
+						<span>Choix de dégradé</span><br>
+						Couleur 1<input type="color" value="#383535" name="textcolorbg1"><br>
+						Couleur 2<input type="color" value="#383535" name="textcolorbg2"><br>
+						<input class="button2" type="submit" name="submit_bg_text" value="envoyer"><br>
+						</form>
+					</div>
+
+					<div class="backbloc">
+						<h4 class="backh4"> Personnalisation du pied de page </h4>
+						<span> Choisir l'arrière plan(couleur unis)</span>
+
+						<form action="#" method="post" accept-charset="utf-8">
+
+							<input type="color" value="#383535" name="textcolorbg"><br>	
+
+							<span>Choix de dégradé</span><br>
+							<select name="gradient">
+
+								<option value="to right">to right</option>
+								<option value="to left">to left</option>
+
+							</select><br>
+
+							Couleur 1<input type="color" value="#383535" name="textcolorbg1"><br>
+							Couleur 2<input type="color" value="#383535" name="textcolorbg2"><br>
+
+							<input class="button2" type="submit" name="submit_bg" value="envoyer"><br>
+						</form>
+					</div>
+
 
 	</div>
-	
+
 	<!--
 		END Header Manager
 	-->
-	<div id="backtesti" class="white-popup mfp-with-anim mfp-hide">
-		<span> Choisir l'arrière plan(couleur unis)</span>
-
-				<form action="#" method="post" accept-charset="utf-8">
-
-					<input type="color" value="#383535" name="textcolorbg"><br>	
-
-					<span>Choix de dégradé</span><br>
-					<select name="gradient">
-
-						<option value="to right">to right</option>
-						<option value="to left">to left</option>
-
-					</select><br>
-
-					Couleur 1<input type="color" value="#383535" name="testicolorbg1"><br>
-					Couleur 2<input type="color" value="#383535" name="testicolorbg2"><br>
-
-					<hr><input type="submit" name="submit_bg_testi" value="envoyer"><br>
-				</form>
-	</div>
+	
 
 	<!--
 		Section Slider Manager
 	-->
 
 	<div id="sliderback">
+				<div id="slider">
+					<figure>
+						<img class="sliding" src="assets/imgs/<?= $imgslider[0] ?>" alt="">
+						<img class="sliding" src="assets/imgs/<?= $imgslider[1] ?>" alt="">
+						<img class="sliding" src="assets/imgs/<?= $imgslider[2] ?>" alt="">
+						<img class="sliding" src="assets/imgs/<?= $imgslider[3] ?>" alt="">
+						<img class="sliding" src="assets/imgs/<?= $imgslider[4] ?>" alt="">
+					</figure>
+				</div>
+
 				<!--
 					change Slider images
 				-->
-				<h3>Slider Manager</h3>
+				<h3>Changez les images du slider</h3>
 				<img src="assets/imgs/<?= $imgslider[0] ?>" />
 				<img src="assets/imgs/<?= $imgslider[1] ?>"/>
 				<img src="assets/imgs/<?= $imgslider[2] ?>" />
@@ -164,7 +197,7 @@
 							<span>Upload</span>
 							<input id="uploadBtn" type="file" name="img_slider_1" class="upload"/>
 						</div>
-						<input type="submit" name="submit_slider_1" value="Envoyer">	
+						<input class="button2" type="submit" name="submit_slider_1" value="Envoyer">	
 					</form>
 				</div>
 			
@@ -274,7 +307,7 @@
 							<span>Upload</span>
 							<input id="uploadBtn" type="file" name="img_gal_1" class="upload"/>
 						</div>
-						<input type="submit" name="submit_gal_1" value="Envoyer">	
+						<input class="button2" type="submit" name="submit_gal_1" value="Envoyer">	
 					</form>
 				</div>
 
@@ -289,7 +322,7 @@
 							<span>Upload</span>
 							<input id="uploadBtn" type="file" name="img_gal_2" class="upload"/>
 						</div>
-						<input type="submit" name="submit_gal_2" value="Envoyer">	
+						<input class="button2" type="submit" name="submit_gal_2" value="Envoyer">	
 					</form>
 				</div>
 
@@ -304,7 +337,7 @@
 							<span>Upload</span>
 							<input id="uploadBtn" type="file" name="img_gal_3" class="upload"/>
 						</div>
-						<input type="submit" name="submit_gal_3" value="Envoyer">	
+						<input class="button2" type="submit" name="submit_gal_3" value="Envoyer">	
 					</form>
 				</div>
 
@@ -319,7 +352,7 @@
 							<span>Upload</span>
 							<input id="uploadBtn" type="file" name="img_gal_4" class="upload"/>
 						</div>
-						<input type="submit" name="submit_gal_4" value="Envoyer">	
+						<input class="button2" type="submit" name="submit_gal_4" value="Envoyer">	
 					</form>
 				</div>
 
@@ -334,7 +367,7 @@
 							<span>Upload</span>
 							<input id="uploadBtn" type="file" name="img_gal_5" class="upload"/>
 						</div>
-						<input type="submit" name="submit_gal_5" value="Envoyer">	
+						<input class="button2" type="submit" name="submit_gal_5" value="Envoyer">	
 					</form>
 				</div>
 
@@ -349,7 +382,7 @@
 							<span>Upload</span>
 							<input id="uploadBtn" type="file" name="img_gal_6" class="upload"/>
 						</div>
-						<input type="submit" name="submit_gal_6" value="Envoyer">	
+						<input class="button2" type="submit" name="submit_gal_6" value="Envoyer">	
 					</form>
 				</div>
 
@@ -364,7 +397,7 @@
 							<span>Upload</span>
 							<input id="uploadBtn" type="file" name="img_gal_7" class="upload"/>
 						</div>
-						<input type="submit" name="submit_gal_7" value="Envoyer">	
+						<input class="button2" type="submit" name="submit_gal_7" value="Envoyer">	
 					</form>
 				</div>
 
@@ -379,7 +412,7 @@
 							<span>Upload</span>
 							<input id="uploadBtn" type="file" name="img_gal_8" class="upload"/>
 						</div>
-						<input type="submit" name="submit_gal_8" value="Envoyer">	
+						<input class="button2" type="submit" name="submit_gal_8" value="Envoyer">	
 					</form>
 				</div>
 
@@ -394,7 +427,7 @@
 							<span>Upload</span>
 							<input id="uploadBtn" type="file" name="img_gal_9" class="upload"/>
 						</div>
-						<input type="submit" name="submit_gal_9" value="Envoyer">	
+						<input class="button2" type="submit" name="submit_gal_9" value="Envoyer">	
 					</form>
 				</div>
 	</div>
@@ -403,22 +436,23 @@
 	-->
 		<div id="testimoniauxback">
 
-			<h3>Testimonials Manager</h3>
+			<h3>Testimoniaux Manager</h3>
 			
 			<!--
 					Testi 1 Manager
 			-->
-			<a href="#testimonial1popup" class="hinge button2">Editer le testimonial 1</a>
 			
-			<div id="testimonial1popup" class="white-popup mfp-with-anim mfp-hide">
+			
+			<div class="backbloctesti">
+				<h4 class="backh4">Edition testimonial 1<h4>
 				<!--
 					name change
 				-->
 				<form class="name" action="#" method="POST" accept-charset="utf-8">
-					<span>Limité à 25 caractères</span>
+					<span>(Limité à 25 caractères)</span><br>
 					<label>nom et prénom</label>
 					<input type="text" name="name_area" value="<?= $names[0] ?>"maxlength="25"> 
-					<input type="submit" name="submit_name1" value="Envoyer">
+					<input class="button2" type="submit" name="submit_name1" value="Envoyer">
 				</form>
 
 				<!--
@@ -427,29 +461,30 @@
 				<form class="selectAvatar" enctype="multipart/form-data" action="#" method="post">
 					<img src="assets/imgs/<?= $avatars[0] ?>" />
 					<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
-					<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+					<input id="uploadFile" placeholder="Choisir un ficher" disabled="disabled" />
 					<div class="fileUpload btn btn-primary">
 						<span>Upload</span>
 						<input id="uploadBtn" type="file" name="img_avatar_1" class="upload"/>
 					</div>
-					<input type="submit" name="submit_avatar_1" value="Envoyer">	
+					<input class="button2" type="submit" name="submit_avatar_1" value="Envoyer">	
 				</form>
 				<!--
 					change text
 				-->
 				<form class="testitext" action="#" method="POST" accept-charset="utf-8">
-					<span>Limité à 170 caractères</span>
+					<span>Limité à 170 caractères<br>éditez le texte</span>
 					<textarea name="testi-area" placeholder="" maxlength="170"><?= $testis[0] ?></textarea>
-					<input type="submit" name="submit_text1" value="Envoyer">
+					<input class="button2" type="submit" name="submit_text1" value="Envoyer">
 				</form>
 			</div>
 
 			<!--
 					Testi 2 Manager
 			-->
-			<a href="#testimonial2popup" class="hinge button2">testimonial 2</a>
 			
-			<div id="testimonial2popup" class="white-popup mfp-with-anim mfp-hide">
+			
+			<div class="backbloctesti">
+				<h4 class="backh4">Edition testimonial 2</h4>
 				<!--
 					name change
 				-->
@@ -457,7 +492,7 @@
 					<span>Limité à 25 caractères</span>
 					<label>nom et prénom</label>
 					<input type="text" name="name_area" value="<?= $names[1] ?>"maxlength="25">
-					<input type="submit" name="submit_name2" value="Envoyer">
+					<input class="button2" type="submit" name="submit_name2" value="Envoyer">
 				</form>
 
 				<!--
@@ -471,7 +506,7 @@
 						<span>Upload</span>
 						<input id="uploadBtn" type="file" name="img_avatar_2" class="upload"/>
 					</div>
-					<input type="submit" name="submit_avatar_2" value="Envoyer">	
+					<input class="button2" type="submit" name="submit_avatar_2" value="Envoyer">	
 				</form>
 				<!--
 					change text
@@ -479,13 +514,13 @@
 				<form class="testitext" action="#" method="POST" accept-charset="utf-8">
 					<span>Limité à 170 caractères</span>
 					<textarea name="testi-area" placeholder="" maxlength="170"><?= $testis[1] ?></textarea>
-					<input type="submit" name="submit_text2" value="Envoyer">
+					<input class="button2" type="submit" name="submit_text2" value="Envoyer">
 				</form>
 			</div>
 				
-			<a href="#testimonial3popup" class="hinge button2">testimonial 3</a>
 			
-			<div id="testimonial3popup" class="white-popup mfp-with-anim mfp-hide">
+			<div class="backbloctesti" >
+				<h4 class="button2">Edition testimonial 3</h4>
 				<!--
 					name change
 				-->
@@ -493,7 +528,7 @@
 					<span>Limité à 25 caractères</span>
 					<label>nom et prénom</label>
 					<input type="text" name="name_area" value="<?= $names[2] ?>"maxlength="25">
-					<input type="submit" name="submit_name3" value="Envoyer">
+					<input class="button2" type="submit" name="submit_name3" value="Envoyer">
 				</form>
 				<!--
 					change avatar
@@ -506,7 +541,7 @@
 						<span>Upload</span>
 						<input id="uploadBtn" type="file" name="img_avatar_3" value="Modifier" class="upload"/>
 					</div>
-					<input type="submit" name="submit_avatar_3" value="Envoyer">	
+					<input class="button2" type="submit" name="submit_avatar_3" value="Envoyer">	
 				</form>
 				<!--
 					Text change
@@ -514,7 +549,7 @@
 				<form class="testitext" action="#" method="POST" accept-charset="utf-8">
 					<span>Limité à 170 caractères</span>
 					<textarea name="testi-area" placeholder="" maxlength="170"><?= $testis[2] ?></textarea>
-					<input type="submit" name="submit_text3" value="Envoyer">
+					<input class="button2" type="submit" name="submit_text3" value="Envoyer">
 				</form> 
 			
 		</div>
@@ -594,22 +629,7 @@
 		Section Maps Manager
 	-->
 
-	<div id="backmap" class="white-popup mfp-with-anim mfp-hide">
-		
-
-				<form action="#" method="post" accept-charset="utf-8">
-
-				
- 
-					<span>Choix de dégradé</span><br>
-					
-
-					Couleur 1<input type="color" value="#383535" name="mapcolorbg1"><br>
-					Couleur 2<input type="color" value="#383535" name="mapcolorbg2"><br>
-
-					<hr><input type="submit" name="submit_bg_map" value="envoyer"><br>
-				</form>
-	</div>
+	
 	<div id="mapsback">
 		<div class="container">
 			<div id="map"></div>
@@ -633,22 +653,7 @@
 	<!--	section Text Manage	-->
 
 
-	<div id="backtext" class="white-popup mfp-with-anim mfp-hide">
-		
-
-				<form action="#" method="post" accept-charset="utf-8">
-
-				
-
-					<span>Choix de dégradé</span><br>
-					
-
-					Couleur 1<input type="color" value="#383535" name="textcolorbg1"><br>
-					Couleur 2<input type="color" value="#383535" name="textcolorbg2"><br>
-
-					<hr><input type="submit" name="submit_bg_text" value="envoyer"><br>
-				</form>
-	</div>
+	
 	<div id="textback">
 		<a href="#textpopup" class="hinge button2">Editer les textes du site</a>
 			<!-- POP UP edit -->

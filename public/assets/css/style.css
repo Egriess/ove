@@ -1,5 +1,11 @@
 /* DESKTOP MEDIA QUERY */ 
 
+#sidebar-left{
+  position: fixed;
+  top:50px;
+  width: 200px;
+ 
+}
 header{
 	margin: auto;
 	width: 100%;
@@ -13,6 +19,7 @@ header nav h1 {
 
 .container{
 	width: 80%;
+  padding-top: 50px;
 }
 
 .emptybg{
@@ -60,26 +67,6 @@ header nav h1 {
   padding-bottom: 20px;
 }
 
-#backtop{
-  margin: auto;
-  text-align: center;
-}
-
-#backtop a{
-  -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-  -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-  -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-  -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-  transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-  margin: 20px auto;
-  max-width: 180px;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 4px;
-  padding: 20px 30px;
-
-}
-
 #text{
   width: 100%;
   height: 560px;
@@ -89,12 +76,62 @@ header nav h1 {
 }
 /* BACKEND STYLE */
 #backheader{
-  margin:auto;
+  margin: auto;
+  margin-left: 15%;
   text-align: center;
-  width: 100%;
-  height:150px;
+  width: 85%;
   background: #3EA6EE;
   
+}
+
+.backbloc{
+  font-family: Raleway, verdana;
+  text-align: left;
+  margin: auto 10px;
+  width: 40%;
+  height: 320px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: white;  
+  border-radius: 10px;
+}
+
+.backbloctesti{
+  font-family: Raleway, verdana;
+  text-align: left;
+  margin: auto 10px;
+  width: 40%;
+  height: 750px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: white;  
+  border-radius: 10px;
+  float: left;
+}
+.backbloctesti input{
+  background: #B3D9FA;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.backbloctesti textarea{
+  margin-top: 25px;
+  background: #B3D9FA;
+  border-radius: 5px;
+}
+
+.backbloc input{
+  background: #B3D9FA;
+  margin-bottom: 10px;
+}
+
+.backh4{
+  font-family: Roboto, verdana ;
+  margin-bottom: 5px;
+}
+
+#backheader ul {
+  margin-left: 11%;
 }
 /* bg animation */
 .v{
@@ -123,7 +160,7 @@ header nav h1 {
 
 
 /* END bg anim */ 
-#backheader a{
+input[type="submit"]{
   -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
   -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
   -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
@@ -136,6 +173,16 @@ header nav h1 {
   padding: 20px 30px;
 
 }
+input[type="submit"].button2 {
+ text-align: center;
+  color: rgba(30, 22, 54, 0.6);
+  box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+}
+
+input[type="submit"].button2:hover {
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+}
 
 a.button2 {
   color: rgba(30, 22, 54, 0.6);
@@ -147,11 +194,8 @@ a.button2:hover {
   box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
 }
 
-#backheader li{
-  padding-top: 60px;
+#backheader .backbloc{
   float: left;
- 
-  margin: auto;
 }
 
 #backheader a{
@@ -164,7 +208,7 @@ a.button2:hover {
 #backsoundcloud{
   padding-top: 10px;
   width: 100%;
-  height: 150px;
+  height: 800px;
   background: #FD710A;
   text-align: center;
 }
@@ -233,7 +277,7 @@ a.button2:hover {
   background: -webkit-linear-gradient(to left, #457fca , #5691c8); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #457fca , #5691c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   width: 100%;
-  height: 200px;
+  height: 1800px;
   text-decoration: none;
   text-align: center;
 }
@@ -568,7 +612,8 @@ html {
 }
 
 h3 {
-  margin-top: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
   font-size: 24px;
   font-family: 'Pacifico', cursive;
 }
@@ -751,13 +796,12 @@ img:hover{
   height: 100px;
 }
 #sliderback{
+  padding-top: 100px;
   width: 100%;
-  height: 300px;
+  height: 950px;
   text-decoration: none;
   text-align: center;
-  background: #457fca; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #457fca , #5691c8); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #457fca , #5691c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #3EA6EE; 
         
 }
 
@@ -765,7 +809,9 @@ img:hover{
 
 #sliderback img{
   margin: 2em;
+  margin-bottom: 150px;
   border-radius: 25px;
+
 }
 
 #sliderback a{
@@ -779,13 +825,14 @@ img:hover{
   text-decoration: none;
   border-radius: 4px;
   padding: 20px 30px;
-  margin-top: 100px;
+  margin-top: 150px;
 
 }
 
 #galeryback{
+  padding-top: 100px;
   width: 100%;
-  height: 600px;
+  height: 950px;
   text-decoration: none;
   text-align: center;
   background: #00d2ff; /* fallback for old browsers */
@@ -797,7 +844,7 @@ img:hover{
 #galeryback img{
   margin: 2em;
   border-radius: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 #galeryback a{
@@ -977,14 +1024,14 @@ form{
 form.selectAvatar input[type="file"]{
   margin-top: 5px;
   color: white;
-  background-color: #39C7B7;
+  background-color: #87A3F5;
   border-radius: 10px;
   border-style: none;
   width: 8em;
   height: 2em;
 }
 form.selectAvatar input[type="file"]:hover{
-  background-color: #54C7A1;  
+  background-color: #87A3F5;  
   box-shadow: 5px 5px 30px 0px #CCCCCC;
 }
 

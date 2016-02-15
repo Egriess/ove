@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'Login page']) ?>
+<?php $this->layout('layout', ['title' => 'Page de connexion']) ?>
 <?php $this->start('main_content') ?>
 <style>
 body{

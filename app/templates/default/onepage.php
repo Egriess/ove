@@ -88,9 +88,9 @@
 		</div>
 	</div>
 	<div class="clearfix"></div>
-<div id="blockquote">Life is beautiful..</div>
+<div id="blockquote"><?= $txtgallery[0]?></div>
 <div class="clearfix"></div>
-	<h3><?= $txtgallery[0]?></h3>
+	
 </div>
 
 <div id="gallery">
